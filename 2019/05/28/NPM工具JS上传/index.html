@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="NPM上传包">
+<meta name="keywords" content="NPM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NPM上传JS包">
+<meta property="og:url" content="http://yoursite.com/2019/05/28/NPM工具JS上传/index.html">
+<meta property="og:site_name" content="记下点滴">
+<meta property="og:description" content="NPM上传包">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-27T08:41:47.685Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NPM上传JS包">
+<meta name="twitter:description" content="NPM上传包">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/05/28/NPM工具JS上传/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>NPM上传JS包 | 记下点滴</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">记下点滴</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">在街角的小巷中记下那些曾经</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/28/NPM工具JS上传/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="akCedar">
+      <meta itemprop="description" content="写给以后的自己">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记下点滴">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">NPM上传JS包
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-27 16:25:30 / 修改时间：08:41:47" itemprop="dateCreated datePublished" datetime="2019-05-27T16:25:30Z">2019-05-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/NPM/" itemprop="url" rel="index"><span itemprop="name">NPM</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="NPM上传包"><a href="#NPM上传包" class="headerlink" title="NPM上传包"></a>NPM上传包</h2><a id="more"></a>
+<h3 id="初始化JS"><a href="#初始化JS" class="headerlink" title="初始化JS"></a>初始化JS</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">运行npm init  目录如下</span><br><span class="line">|---index.js // 主文件</span><br><span class="line">|---package.json // 包文件</span><br><span class="line">|---README.md // 使用说明</span><br><span class="line">|---test.js // 测试JS</span><br></pre></td></tr></table></figure>
+<p>以下方的代码为例<br>index.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> region = <span class="built_in">require</span>(<span class="string">'./area.js'</span>)</span><br><span class="line"><span class="keyword">var</span> parse = &#123;</span><br><span class="line">	result:&#123;</span><br><span class="line">		name:<span class="string">""</span>,</span><br><span class="line">		mobile:<span class="string">""</span>,</span><br><span class="line">		phone:<span class="string">""</span>,</span><br><span class="line">		province:<span class="string">""</span>,</span><br><span class="line">		city:<span class="string">""</span>,</span><br><span class="line">		area:<span class="string">""</span>,</span><br><span class="line">		detail:<span class="string">''</span>,</span><br><span class="line">		zipCode:<span class="string">''</span></span><br><span class="line">	&#125;,</span><br><span class="line">	address:<span class="string">''</span>,</span><br><span class="line">	parseAddress:<span class="function"><span class="keyword">function</span>(<span class="params">address</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>( address &amp;&amp; <span class="keyword">typeof</span> address == <span class="string">'string'</span> )&#123;</span><br><span class="line">			<span class="keyword">this</span>.address = address.trim()</span><br><span class="line">			<span class="keyword">this</span>.parseResult()</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">this</span>.result = &#123;</span><br><span class="line">				name:<span class="string">""</span>,</span><br><span class="line">				mobile:<span class="string">""</span>,</span><br><span class="line">				phone:<span class="string">""</span>,</span><br><span class="line">				province:<span class="string">""</span>,</span><br><span class="line">				city:<span class="string">""</span>,</span><br><span class="line">				area:<span class="string">""</span>,</span><br><span class="line">				detail:<span class="string">''</span>,</span><br><span class="line">				zipCode:<span class="string">''</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>.result</span><br><span class="line">	&#125;,</span><br><span class="line">	parseResult:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(<span class="regexp">/\r\n/g</span>, <span class="string">' '</span>).replace(<span class="regexp">/\n/g</span>, <span class="string">' '</span>).replace(<span class="regexp">/\t/g</span>, <span class="string">' '</span>)</span><br><span class="line">		<span class="keyword">var</span> search = [<span class="string">'地址'</span>, <span class="string">'收货地址'</span>, <span class="string">'收货人'</span>, <span class="string">'收件人'</span>, <span class="string">'收货'</span>, <span class="string">'邮编'</span>, <span class="string">'电话'</span>, <span class="string">'：'</span>, <span class="string">':'</span>, <span class="string">'；'</span>, <span class="string">';'</span>, <span class="string">'，'</span>, <span class="string">','</span>, <span class="string">'。'</span>]</span><br><span class="line">		search.forEach(<span class="function"><span class="params">str</span> =&gt;</span> &#123;</span><br><span class="line">			<span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(str, <span class="string">'g'</span>), <span class="string">' '</span>)</span><br><span class="line">		&#125;);</span><br><span class="line">		<span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(<span class="regexp">/ &#123;2,&#125;/g</span>, <span class="string">' '</span>);</span><br><span class="line">		<span class="comment">// 找出手机</span></span><br><span class="line">		<span class="keyword">var</span> mobileReg = <span class="regexp">/(86-[1][0-9]&#123;10&#125;)|(86[1][0-9]&#123;10&#125;)|([1][0-9]&#123;10&#125;)/g</span>;</span><br><span class="line">		<span class="keyword">var</span> mobile = mobileReg.exec(<span class="keyword">this</span>.address);</span><br><span class="line">		<span class="keyword">if</span> (mobile) &#123;</span><br><span class="line">			<span class="keyword">this</span>.result.mobile = mobile[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(mobile[<span class="number">0</span>], <span class="string">' '</span>)</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 找出固话</span></span><br><span class="line">		<span class="keyword">var</span> phoneReg = <span class="regexp">/(([0-9]&#123;3,4&#125;-)[0-9]&#123;7,8&#125;)|([0-9]&#123;12&#125;)|([0-9]&#123;11&#125;)|([0-9]&#123;10&#125;)|([0-9]&#123;9&#125;)|([0-9]&#123;8&#125;)|([0-9]&#123;7&#125;)/g</span>;</span><br><span class="line">		<span class="keyword">var</span> phone = phoneReg.exec(<span class="keyword">this</span>.address);</span><br><span class="line">		<span class="keyword">if</span> (phone) &#123;</span><br><span class="line">			<span class="keyword">this</span>.result.phone = phone[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(phone[<span class="number">0</span>], <span class="string">' '</span>)</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 邮政编码</span></span><br><span class="line">		<span class="keyword">const</span> zipReg = <span class="regexp">/([0-9]&#123;6&#125;)/g</span>;</span><br><span class="line">		<span class="keyword">const</span> zip = zipReg.exec(<span class="keyword">this</span>.address);</span><br><span class="line">		<span class="keyword">if</span> (zip) &#123;</span><br><span class="line">			<span class="keyword">this</span>.result.zipCode = zip[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(zip[<span class="number">0</span>], <span class="string">''</span>)</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 空格缩减</span></span><br><span class="line">		<span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(<span class="regexp">/ &#123;2,&#125;/</span>,<span class="string">' '</span>);</span><br><span class="line">		<span class="comment">// 省市区的识别</span></span><br><span class="line">		<span class="keyword">var</span> region = <span class="keyword">this</span>.parseRegion()</span><br><span class="line">		<span class="keyword">if</span>(region.weights &gt;= <span class="number">2</span>)&#123;</span><br><span class="line">			<span class="keyword">this</span>.result.province = region.province</span><br><span class="line">			<span class="keyword">this</span>.result.city = region.city</span><br><span class="line">			<span class="keyword">this</span>.result.area = region.area</span><br><span class="line">			<span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(<span class="keyword">this</span>.result.province, <span class="string">''</span>)</span><br><span class="line">			<span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(<span class="keyword">this</span>.result.city, <span class="string">''</span>)</span><br><span class="line">			<span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(<span class="keyword">this</span>.result.area, <span class="string">''</span>)</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">var</span> provinceKey = [<span class="string">'特别行政区'</span>, <span class="string">'古自治区'</span>, <span class="string">'维吾尔自治区'</span>, <span class="string">'壮族自治区'</span>, <span class="string">'回族自治区'</span>, <span class="string">'自治区'</span>, <span class="string">'直辖'</span>, <span class="string">'省'</span>, <span class="string">'市'</span>];</span><br><span class="line">  		<span class="keyword">var</span> cityKey = [<span class="string">'布依族苗族自治州'</span>, <span class="string">'苗族侗族自治州'</span>, <span class="string">'自治州'</span>, <span class="string">'州'</span>, <span class="string">'市'</span>, <span class="string">'县'</span>];</span><br><span class="line">  		<span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> provinceKey) &#123;</span><br><span class="line">	        <span class="keyword">if</span> (<span class="keyword">this</span>.address.indexOf(provinceKey[k]) &gt;<span class="number">-1</span>) &#123;</span><br><span class="line">	          <span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(provinceKey[k], <span class="string">' '</span>);</span><br><span class="line">	        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> cityKey) &#123;</span><br><span class="line">	        <span class="keyword">if</span> (<span class="keyword">this</span>.address.indexOf(cityKey[key]) &gt;<span class="number">-1</span>) &#123;</span><br><span class="line">	          <span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(cityKey[key], <span class="string">' '</span>);</span><br><span class="line">	        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//  取消双空格  和  前后空格</span></span><br><span class="line">        <span class="keyword">this</span>.address = <span class="keyword">this</span>.address.replace(<span class="regexp">/ &#123;2,&#125;/</span>,<span class="string">' '</span>).trim();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> info = <span class="keyword">this</span>.address.split(<span class="string">' '</span>)</span><br><span class="line">        <span class="keyword">var</span> name = info[<span class="number">0</span>] || <span class="string">''</span></span><br><span class="line">        info.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</span><br><span class="line">        	<span class="keyword">if</span>(item.length &lt; name.length)&#123;</span><br><span class="line">        		name = item</span><br><span class="line">        	&#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">var</span> detail = <span class="keyword">this</span>.address.replace(name,<span class="string">' '</span>).replace(<span class="regexp">/ /</span>,<span class="string">''</span>).trim();</span><br><span class="line">        <span class="keyword">this</span>.result.name = name</span><br><span class="line">        <span class="keyword">this</span>.result.detail = detail</span><br><span class="line">	&#125;,</span><br><span class="line">	parseRegion:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> that = <span class="keyword">this</span></span><br><span class="line">		<span class="keyword">var</span> citys = []</span><br><span class="line">		<span class="keyword">var</span> result = &#123;</span><br><span class="line">			province:<span class="string">''</span>,</span><br><span class="line">			city:<span class="string">''</span>,</span><br><span class="line">			area:<span class="string">''</span>,</span><br><span class="line">			weights:<span class="number">0</span></span><br><span class="line">		&#125;</span><br><span class="line">		region.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">items</span>)</span>&#123;</span><br><span class="line">			<span class="keyword">if</span>(that.address.indexOf(items.name) &gt; <span class="number">-1</span>)&#123;</span><br><span class="line">				citys.push(&#123;</span><br><span class="line">					province:items.name,</span><br><span class="line">					weights:<span class="number">1</span></span><br><span class="line">				&#125;)</span><br><span class="line">				items.city.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</span><br><span class="line">					<span class="keyword">if</span>(that.address.indexOf(item.name) &gt; <span class="number">-1</span>)&#123;</span><br><span class="line">						<span class="built_in">Object</span>.assign(citys[citys.length<span class="number">-1</span>],&#123;</span><br><span class="line">							city:item.name,</span><br><span class="line">							weights:<span class="number">2</span></span><br><span class="line">						&#125;)</span><br><span class="line">						item.area.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">							<span class="keyword">if</span>(that.address.indexOf(name) &gt; <span class="number">-1</span>)&#123;</span><br><span class="line">								<span class="built_in">Object</span>.assign(citys[citys.length<span class="number">-1</span>],&#123;</span><br><span class="line">									area:name,</span><br><span class="line">									weights:<span class="number">3</span></span><br><span class="line">								&#125;)</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;)</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;)</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				items.city.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</span><br><span class="line">					citys.push(&#123;</span><br><span class="line">						province:items.name,</span><br><span class="line">					&#125;)</span><br><span class="line">					<span class="keyword">if</span>(that.address.indexOf(item.name) &gt; <span class="number">-1</span>)&#123;</span><br><span class="line">						<span class="built_in">Object</span>.assign(citys[citys.length<span class="number">-1</span>],&#123;</span><br><span class="line">							city:item.name,</span><br><span class="line">							weights:<span class="number">1</span></span><br><span class="line">						&#125;)</span><br><span class="line">						item.area.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">							<span class="keyword">if</span>(that.address.indexOf(name) &gt; <span class="number">-1</span>)&#123;</span><br><span class="line">								<span class="built_in">Object</span>.assign(citys[citys.length<span class="number">-1</span>],&#123;</span><br><span class="line">									area:name,</span><br><span class="line">									weights:<span class="number">2</span></span><br><span class="line">								&#125;)</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;)</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">		citys.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>)</span>&#123;</span><br><span class="line">			<span class="keyword">if</span>(result.weights &lt; item.weights)&#123;</span><br><span class="line">				<span class="built_in">Object</span>.assign(result,item)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">		<span class="keyword">return</span> result</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">module</span>.exports = parse</span><br></pre></td></tr></table></figure></p>
+<p>package.json<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"parse-address-cn"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"1.0.2"</span>,</span><br><span class="line">  <span class="string">"description"</span>: <span class="string">"解析地址姓名及电话"</span>,</span><br><span class="line">  <span class="string">"main"</span>: <span class="string">"index.js"</span>,</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"test"</span>: <span class="string">"node test.js"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"keywords"</span>:[</span><br><span class="line">  	<span class="string">"parse"</span>,</span><br><span class="line">  	<span class="string">"address"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"author"</span>: <span class="string">"akcedar@163.com"</span>,</span><br><span class="line">  <span class="string">"license"</span>: <span class="string">"MIT"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>test.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> aa = <span class="built_in">require</span>(<span class="string">'./index.js'</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(aa.parseAddress(<span class="string">'陕西省安康市汉滨区果园小区 13222222222 张三  725000'</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(aa.parseAddress(<span class="string">'上海市青浦区华南路555号 张三'</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(aa.parseAddress(<span class="string">'张三上海市青浦区华南路555号 12222222222'</span>))</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(aa.parseAddress(<span class="string">'张北京上海市青浦区华南路555号 12222222222'</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(aa.parseAddress(<span class="string">''</span>))</span><br><span class="line"><span class="built_in">console</span>.log(aa.parseAddress([]))</span><br></pre></td></tr></table></figure></p>
+<p>编写万上述文件后<br><code>npm login //输入以下命令，会提示输入用户名、密码、邮箱。</code><br>继续执行<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//退出当前文件夹，开始命令行发布包，命令如下：</span></span><br><span class="line">npm publish testxxxxx</span><br></pre></td></tr></table></figure></p>
+<p>验证下载<br><code>npm install testxxxxx</code><br>强制删除<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除要用force强制删除。超过24小时就不能删除了。自己把握好时间。</span></span><br><span class="line">npm --force unpublish testxxxxx</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NPM/" rel="tag"># NPM</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/27/HTML模板/" rel="next" title="html模板">
+                <i class="fa fa-chevron-left"></i> html模板
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpeg" alt="akCedar">
+            
+              <p class="site-author-name" itemprop="name">akCedar</p>
+              <div class="site-description motion-element" itemprop="description">写给以后的自己</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/myCedar" title="GitHub &rarr; https://github.com/myCedar" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/1301172947@qq.com" title="E-Mail &rarr; 1301172947@qq.com"><i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NPM上传包"><span class="nav-text">NPM上传包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化JS"><span class="nav-text">初始化JS</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">akCedar</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
