@@ -78,53 +78,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[构造函数]]></title>
-    <url>%2F2019%2F06%2F01%2F%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 闭包实现构造函数var Book=(function(){ //静态私有变量 var bookNum=100; //静态私有方法 function checkBook(name){} //创建类 function _book(newId, newName, newPrice){ //私有变量 //var name,price; //私有方法 function checkId(id){} //特权方法 this.getName=function(){} this.getPrice=function(){} this.setName=function(){} this.setPrice=function(){} //公有属性 this.id=newId; //公有方法 this.copy=function(){}; bookNum++; if(bookNum&gt;100) throw new Error(&quot;只有100本书可以被创建&quot;) //构造器 this.setName(name); this.setPrice(price); } //构建原型 _book.prototype = { //静态公有变量 isJsBook : false, //静态公有方法 display : function(){} }; //返回类 return _book; })() 安全模式12345678910//构造函数，防止未new直接var mybook = Book();var Book=function(title,time,type)&#123; if(this instanceof Book)&#123; this.title = title; this.time = time; this.type = type; &#125;else&#123; return new Book(title,time,type); &#125;&#125;]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[迭代器模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 实现迭代器12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364//迭代器var Iterator = function(items)&#123; //获取长度，下标 var length = items.length, index = 0, splice = [].splice; return &#123; //第一个元素 first : function()&#123; index = 0; return items[index]; &#125;, //最后一个元素 last : function()&#123; index = length-1; return items[index]; &#125;, //前一个元素 pre : function()&#123; if(--index &gt; 0)&#123; return items[index] &#125;else&#123; index = 0; return null; &#125; &#125;, //下一个元素 next : function()&#123; if(++index &lt; length)&#123; return items[index] &#125;else&#123; index = length-1; return null; &#125; &#125;, //获取某一个 num 的元素 get : function(num)&#123; index = num&gt;=0 ? num % length : num % length + length; return items[index]; &#125;, //进行 fn 的全量处理 dealEach : function(fn)&#123; var args = splice.call(arguments,1); for(var i=0;i&lt;length;i++)&#123; fn.apply(items[i],args); &#125; &#125;, //对某一个 num 的元素进行 fn 的处理 dealItem : function(num,fn)&#123; fn.apply(this.get(num),splice.call(arguments,2)) &#125;, //对 mem 中的元素 进行 numFn 的处理 allFn 针对所有的处理 exclusive : function(mem,allFn,numFn)&#123; this.dealEach(allFn); if(Array.isArray(mem))&#123; for(var i=0;i&lt;mem.length;i++)&#123; this.dealItem(mem[i],numFn) &#125; &#125;else&#123; this.dealItem(mem,numFn) &#125; &#125; &#125;&#125; 数组迭代器123456789var eachArray = function(arr,fn)&#123; var i = 0, len = arr.length; for(;i &lt; len;i++)&#123; if(fn.call(arr[i],i,arr[i]) === false)&#123; break; &#125; &#125;&#125; 对象迭代器1234567var eachObj = function(obj,fn)&#123; for(var i in obj)&#123; if(fn.call(obj[i],i,obj[i]) === false)&#123; break; &#125; &#125;&#125; 分支循环嵌套123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051/* 绘制特效图片*param t 类型*param x x坐标*param y y坐标*param w 宽度*param h 高度*param a 透明度*/function dealImage(t,x,y,w,h,a)&#123; var canvasData = ctx.getImageData(x,y,w,h), data = canvasData.data, //封装算法 Deal = function ()&#123; var method = &#123; default : function(i)&#123; return method["gray"](i) &#125;, red : function()&#123; data[i + 1] = 0; data[i + 2] = 0; data[i + 3] = a; &#125;, green : function()&#123; data[i + 0] = 0; data[i + 2] = 0; data[i + 3] = a; &#125; blue : function()&#123; data[i + 1] = 0; data[i + 0] = 0; data[i + 3] = a; &#125;, grey : function()&#123; data[i] = data[i + 1]=parseInt(data[i + 2] = (data[i + 0] + data[i + 1] +data[i + 2])/3); data[i + 3] = a; &#125; &#125; return function(type)&#123; return method[type] || method["default"] &#125; &#125;(); //迭代器处理数据 function eachData(fn)&#123; for(var i = 0,len = data.length;i &lt; len;i += 4)&#123; fn(i); &#125; &#125;; //处理数据 eachData(Deal(t)); ctx.putImageData(canvasData,width+x,y);&#125;]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[观察者模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E8%A7%82%E5%AF%9F%E8%80%85%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 创建一个观察者123456789101112131415161718192021222324252627282930313233343536373839404142434445464748var Observer=(function()&#123; //建立闭包保存消息 var _messages=&#123;&#125;; return&#123; //注册接口 regist : function(type,fn)&#123; //如果不存在这个消息类型，创建一个，否则推入对应的执行队列中去 if(typeof _messages[type] === "undefined")&#123; //将消息推入动作执行队列中 _messages[type] = [fn]; &#125;else&#123; //将消息推入动作执行队列中 _messages[type].push(fn); &#125; &#125; , //发布信息接口 fire : function(type,args)&#123; //如果不存在，直接退出 if(!_messages[type]) return; //定义消息的信息及参数 var events = &#123; type:type,//消息类型 args :args || &#123;&#125;//消息参数 &#125;,i = 0,len = _messages[type].length; //便利消息队列 for(;i&lt; len;i++)&#123; //依次执行对应的动作 _messages[type][i].call(this,events) &#125; &#125;, //移出信息接口 remove : function(type,fn)&#123; debugger; //判断消息队列存在 if(_messages[type] instanceof Array)&#123; //遍历消息队列 var i = _messages[type].length - 1; for(;i&gt;=0;i--)&#123; //移除相应的动作函数 _messages[type][i] === fn &amp;&amp; _messages[type].splice(i,1); &#125; &#125; &#125;, getMessages:function()&#123; return _messages; &#125; &#125;&#125;)() 对象间解耦1234567891011121314151617181920212223242526272829303132333435363738//学生类var Student = function(result)&#123; var that=this; //回答结果； that.result = result; //回答问题 that.say = function()&#123; console.log(that.result) &#125;&#125;//回答问题的方法Student.prototype.answer = function(quertion)&#123; Observer.regist(quertion,this.say)&#125;//增加睡觉的方法Student.prototype.sleep = function(quertion)&#123; //解除说话的队列 Observer.remove(quertion,this.say)&#125;//教师类var Teacher = function()&#123;&#125;//发布问题Teacher.prototype.ask = function(question)&#123; Observer.fire(question)&#125;var student1 = new Student("11");var student2 = new Student("22");var student3 = new Student("33");student1.answer("who")student2.answer("who")student3.answer("who")student1.answer("where")student2.answer("where")var teacher = new Teacher();teacher.ask("who")teacher.ask("where")]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[订阅者模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 中介者对象1234567891011121314151617181920212223//订阅者var Mediator = function()&#123; //内部存储 var _msg = &#123;&#125;; return &#123; //注册消息 register : function(type,action)&#123; if(_msg[type])&#123; _msg[type].push(action) &#125;else&#123; _msg[type]=[action] &#125; &#125;, //发布消息 send : function(type)&#123; if(_msg[type])&#123; for(var i=0;i&lt;_msg[type].length;i++)&#123; _msg[type][i]&amp;&amp;_msg[type][i](); &#125; &#125; &#125; &#125;&#125;]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[状态模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253//新建玛丽的类var MarryState = function()&#123; //内部私有变量 var _currentState = &#123;&#125;, //状态和方法的映射 states = &#123; jump : function()&#123; //跳 console.log("jump") &#125;, move : function()&#123; //移动 console.log("move") &#125;, shoot : function()&#123; //射击 console.log("shoot") &#125;, squat : function()&#123; //蹲下 console.log("squat") &#125; &#125;, //动作控制类 Action = &#123; //改变状态方法 changeState : function()&#123; var arg = arguments; //重置动作 _currentState = &#123;&#125;; //追加动作 if(arg.length)&#123; for(var i = 0,len = arg.length;i&lt;len;i++)&#123; _currentState[arg[i]] = true; &#125; &#125; return this; &#125;, //执行动作 goes : function()&#123; //遍历执行动作 for(var i in _currentState)&#123; states[i] &amp;&amp; states[i](); &#125; return this; &#125; &#125;; //返回动作类 return &#123; change : Action.changeState, goes : Action.goes &#125;&#125; 使用方法12345678910//new marry个人var marry = new MarryState();//方法的调用marry .change("jump","shoot") .goes() .change("move","shoot") .goes() .change("squat","shoot") .goes();]]></content>
+    <title><![CDATA[备忘录模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 列表缓存123456789101112131415161718192021//列表var Page = function()&#123; //定义缓存 var cache=&#123;&#125;; return function(page,fn)&#123; //命中缓存 if(cache[page])&#123; showPage(page,cacge[page]); fn&amp;&amp;fn(); &#125;else&#123; //对请求回来的数据进行缓存 $.post("",&#123;&#125;,function(res)&#123; if(res)&#123; showPage(page,res.data); cache[page]=res.data; fn&amp;&amp;fn() &#125; &#125;) &#125; &#125;&#125;]]></content>
       <categories>
         <category>设计模式</category>
       </categories>
@@ -144,14 +100,58 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[搭建本地运行环境]]></title>
-    <url>%2F2019%2F06%2F01%2F%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%2F</url>
-    <content type="text"><![CDATA[如何利用http-serve搭建环境 利用http-serverhttp http-server全局安装http-servernpm install http-server -g使用httphttp-server [path] [options]具体含义123456789101112131415161718192021222324252627282930313233-p 要使用的端口（默认为8080）-a 要使用的地址（默认为0.0.0.0）-d 显示目录列表（默认为“True”）-i 显示autoIndex（默认为“True”）-g或--gzip启用时（默认为“False”），它将用于./public/some-file.js.gz代替./public/some-file.jsgzip压缩版本的文件，并且该请求接受gzip编码。-e或--ext默认文件扩展名（如果没有提供）（默认为&apos;html&apos;）-s或--silent从输出中抑制日志消息--cors通过Access-Control-Allow-Origin标题启用CORS-o 启动服务器后打开浏览器窗口-c设置缓存控制max-age头的缓存时间（以秒为单位），例如-c10 10秒（默认为&apos;3600&apos;）。要禁用缓存，请使用-c-1。-U或--utc在日志消息中使用UTC时间格式。-P或--proxy代理无法在本地解决给定网址的所有请求。例如：-P http://someurl.com-S或--ssl启用https。-C或--certssl证书文件的路径（默认值：cert.pem）。-K或--keyssl密钥文件的路径（默认值：key.pem）。-r或者--robots提供一个/robots.txt（其内容默认为&apos;User-agent：* \ nDisallow：/&apos;）-h或--help打印此列表并退出。 使用httpsopenssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem http-server -S -C cert.pem -o 安装XAMPP利用xampp搭建本地服务第一步：安装第二部：找到 C:\xampp\htdocs 将文件放置在次目录下第三部：启动 config 可以对端口号进行配置]]></content>
+    <title><![CDATA[迭代器模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 实现迭代器12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364//迭代器var Iterator = function(items)&#123; //获取长度，下标 var length = items.length, index = 0, splice = [].splice; return &#123; //第一个元素 first : function()&#123; index = 0; return items[index]; &#125;, //最后一个元素 last : function()&#123; index = length-1; return items[index]; &#125;, //前一个元素 pre : function()&#123; if(--index &gt; 0)&#123; return items[index] &#125;else&#123; index = 0; return null; &#125; &#125;, //下一个元素 next : function()&#123; if(++index &lt; length)&#123; return items[index] &#125;else&#123; index = length-1; return null; &#125; &#125;, //获取某一个 num 的元素 get : function(num)&#123; index = num&gt;=0 ? num % length : num % length + length; return items[index]; &#125;, //进行 fn 的全量处理 dealEach : function(fn)&#123; var args = splice.call(arguments,1); for(var i=0;i&lt;length;i++)&#123; fn.apply(items[i],args); &#125; &#125;, //对某一个 num 的元素进行 fn 的处理 dealItem : function(num,fn)&#123; fn.apply(this.get(num),splice.call(arguments,2)) &#125;, //对 mem 中的元素 进行 numFn 的处理 allFn 针对所有的处理 exclusive : function(mem,allFn,numFn)&#123; this.dealEach(allFn); if(Array.isArray(mem))&#123; for(var i=0;i&lt;mem.length;i++)&#123; this.dealItem(mem[i],numFn) &#125; &#125;else&#123; this.dealItem(mem,numFn) &#125; &#125; &#125;&#125; 数组迭代器123456789var eachArray = function(arr,fn)&#123; var i = 0, len = arr.length; for(;i &lt; len;i++)&#123; if(fn.call(arr[i],i,arr[i]) === false)&#123; break; &#125; &#125;&#125; 对象迭代器1234567var eachObj = function(obj,fn)&#123; for(var i in obj)&#123; if(fn.call(obj[i],i,obj[i]) === false)&#123; break; &#125; &#125;&#125; 分支循环嵌套123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051/* 绘制特效图片*param t 类型*param x x坐标*param y y坐标*param w 宽度*param h 高度*param a 透明度*/function dealImage(t,x,y,w,h,a)&#123; var canvasData = ctx.getImageData(x,y,w,h), data = canvasData.data, //封装算法 Deal = function ()&#123; var method = &#123; default : function(i)&#123; return method["gray"](i) &#125;, red : function()&#123; data[i + 1] = 0; data[i + 2] = 0; data[i + 3] = a; &#125;, green : function()&#123; data[i + 0] = 0; data[i + 2] = 0; data[i + 3] = a; &#125; blue : function()&#123; data[i + 1] = 0; data[i + 0] = 0; data[i + 3] = a; &#125;, grey : function()&#123; data[i] = data[i + 1]=parseInt(data[i + 2] = (data[i + 0] + data[i + 1] +data[i + 2])/3); data[i + 3] = a; &#125; &#125; return function(type)&#123; return method[type] || method["default"] &#125; &#125;(); //迭代器处理数据 function eachData(fn)&#123; for(var i = 0,len = data.length;i &lt; len;i += 4)&#123; fn(i); &#125; &#125;; //处理数据 eachData(Deal(t)); ctx.putImageData(canvasData,width+x,y);&#125;]]></content>
       <categories>
-        <category>学习</category>
+        <category>设计模式</category>
       </categories>
       <tags>
-        <tag>HTTP</tag>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[订阅者模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 中介者对象1234567891011121314151617181920212223//订阅者var Mediator = function()&#123; //内部存储 var _msg = &#123;&#125;; return &#123; //注册消息 register : function(type,action)&#123; if(_msg[type])&#123; _msg[type].push(action) &#125;else&#123; _msg[type]=[action] &#125; &#125;, //发布消息 send : function(type)&#123; if(_msg[type])&#123; for(var i=0;i&lt;_msg[type].length;i++)&#123; _msg[type][i]&amp;&amp;_msg[type][i](); &#125; &#125; &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[观察者模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E8%A7%82%E5%AF%9F%E8%80%85%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 创建一个观察者123456789101112131415161718192021222324252627282930313233343536373839404142434445464748var Observer=(function()&#123; //建立闭包保存消息 var _messages=&#123;&#125;; return&#123; //注册接口 regist : function(type,fn)&#123; //如果不存在这个消息类型，创建一个，否则推入对应的执行队列中去 if(typeof _messages[type] === "undefined")&#123; //将消息推入动作执行队列中 _messages[type] = [fn]; &#125;else&#123; //将消息推入动作执行队列中 _messages[type].push(fn); &#125; &#125; , //发布信息接口 fire : function(type,args)&#123; //如果不存在，直接退出 if(!_messages[type]) return; //定义消息的信息及参数 var events = &#123; type:type,//消息类型 args :args || &#123;&#125;//消息参数 &#125;,i = 0,len = _messages[type].length; //便利消息队列 for(;i&lt; len;i++)&#123; //依次执行对应的动作 _messages[type][i].call(this,events) &#125; &#125;, //移出信息接口 remove : function(type,fn)&#123; debugger; //判断消息队列存在 if(_messages[type] instanceof Array)&#123; //遍历消息队列 var i = _messages[type].length - 1; for(;i&gt;=0;i--)&#123; //移除相应的动作函数 _messages[type][i] === fn &amp;&amp; _messages[type].splice(i,1); &#125; &#125; &#125;, getMessages:function()&#123; return _messages; &#125; &#125;&#125;)() 对象间解耦1234567891011121314151617181920212223242526272829303132333435363738//学生类var Student = function(result)&#123; var that=this; //回答结果； that.result = result; //回答问题 that.say = function()&#123; console.log(that.result) &#125;&#125;//回答问题的方法Student.prototype.answer = function(quertion)&#123; Observer.regist(quertion,this.say)&#125;//增加睡觉的方法Student.prototype.sleep = function(quertion)&#123; //解除说话的队列 Observer.remove(quertion,this.say)&#125;//教师类var Teacher = function()&#123;&#125;//发布问题Teacher.prototype.ask = function(question)&#123; Observer.fire(question)&#125;var student1 = new Student("11");var student2 = new Student("22");var student3 = new Student("33");student1.answer("who")student2.answer("who")student3.answer("who")student1.answer("where")student2.answer("where")var teacher = new Teacher();teacher.ask("who")teacher.ask("where")]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[状态模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253//新建玛丽的类var MarryState = function()&#123; //内部私有变量 var _currentState = &#123;&#125;, //状态和方法的映射 states = &#123; jump : function()&#123; //跳 console.log("jump") &#125;, move : function()&#123; //移动 console.log("move") &#125;, shoot : function()&#123; //射击 console.log("shoot") &#125;, squat : function()&#123; //蹲下 console.log("squat") &#125; &#125;, //动作控制类 Action = &#123; //改变状态方法 changeState : function()&#123; var arg = arguments; //重置动作 _currentState = &#123;&#125;; //追加动作 if(arg.length)&#123; for(var i = 0,len = arg.length;i&lt;len;i++)&#123; _currentState[arg[i]] = true; &#125; &#125; return this; &#125;, //执行动作 goes : function()&#123; //遍历执行动作 for(var i in _currentState)&#123; states[i] &amp;&amp; states[i](); &#125; return this; &#125; &#125;; //返回动作类 return &#123; change : Action.changeState, goes : Action.goes &#125;&#125; 使用方法12345678910//new marry个人var marry = new MarryState();//方法的调用marry .change("jump","shoot") .goes() .change("move","shoot") .goes() .change("squat","shoot") .goes();]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[构造函数]]></title>
+    <url>%2F2019%2F06%2F01%2F%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 闭包实现构造函数var Book=(function(){ //静态私有变量 var bookNum=100; //静态私有方法 function checkBook(name){} //创建类 function _book(newId, newName, newPrice){ //私有变量 //var name,price; //私有方法 function checkId(id){} //特权方法 this.getName=function(){} this.getPrice=function(){} this.setName=function(){} this.setPrice=function(){} //公有属性 this.id=newId; //公有方法 this.copy=function(){}; bookNum++; if(bookNum&gt;100) throw new Error(&quot;只有100本书可以被创建&quot;) //构造器 this.setName(name); this.setPrice(price); } //构建原型 _book.prototype = { //静态公有变量 isJsBook : false, //静态公有方法 display : function(){} }; //返回类 return _book; })() 安全模式12345678910//构造函数，防止未new直接var mybook = Book();var Book=function(title,time,type)&#123; if(this instanceof Book)&#123; this.title = title; this.time = time; this.type = type; &#125;else&#123; return new Book(title,time,type); &#125;&#125;]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
       </tags>
   </entry>
   <entry>
@@ -177,17 +177,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[惰性模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E6%83%B0%E6%80%A7%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 事件绑定方法一 加载的时候重新定义 on方法12345678910111213141516171819//对事件绑定的重新定义A.on = function(dom, type,fn)&#123; //不是ie的情况下 if(document.addEventListenter)&#123; return function(dom, type,fn)&#123; dom.addEventListenter(type,fn,false); &#125; &#125;else if(document.attachEvent)&#123; //IE的情况下 return function(dom, type,fn)&#123; dom.attachEvent("on" + type,fn); &#125; &#125;else&#123; //否则 return function(dom, type,fn)&#123; dom.attachEvent("on" + type) = fn; &#125; &#125;&#125;(); 方法二 执行的时候定义方法123456789101112131415161718192021//对事件绑定的重新定义A.on = function(dom, type,fn)&#123; //不是ie的情况下 if(document.addEventListenter)&#123; A.on = function(dom, type,fn)&#123; dom.addEventListenter(type,fn,false); &#125; &#125;else if(document.attachEvent)&#123; //IE的情况下 A.on = function(dom, type,fn)&#123; dom.attachEvent("on" + type,fn); &#125; &#125;else&#123; //否则 A.on = function(dom, type,fn)&#123; dom.attachEvent("on" + type) = fn; &#125; &#125; //定义后重新执行方法 A.on(dom, type,fn);&#125;();]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[节流模式]]></title>
     <url>%2F2019%2F06%2F01%2F%E8%8A%82%E6%B5%81%E6%A8%A1%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[设计模式在JS应用 节流函数12345678910111213141516171819202122232425262728293031//节流器var throttle = function()&#123; //获取第一个参数 var isClear = arguments[0],fn; //如果第一个参数是boolean类型，那么第一个参数则表示是否清楚计时器 if(typeof isClear === 'boolean')&#123; //第二个参数则为函数 fn = arguments[1]; //函数计时器句柄存在，则清楚函数计时器 fn._throttleID &amp;&amp; clearTimeout(fn._throttleID); //通过计时器延迟函数的执行 &#125;else&#123; //第一个参数为函数 fn = isClear; //第二个参数为函数执行时的参数 param = arguments[1]; //对执行时的参数适配默认值，这里我们用到以前学过的extend方法 var p = extend(&#123; context:null, args:[], time:300 &#125;,param); //清楚函数执行计时器句柄， arguments.callee(true,fn); //作为函数绑定延迟计时器句柄，延迟执行函数 fn._throttleID = setTimeout(function()&#123; //执行函数 fn.apply(p.context,p.args); &#125;,p.time); &#125;&#125;]]></content>
@@ -199,9 +188,20 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[备忘录模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 列表缓存123456789101112131415161718192021//列表var Page = function()&#123; //定义缓存 var cache=&#123;&#125;; return function(page,fn)&#123; //命中缓存 if(cache[page])&#123; showPage(page,cacge[page]); fn&amp;&amp;fn(); &#125;else&#123; //对请求回来的数据进行缓存 $.post("",&#123;&#125;,function(res)&#123; if(res)&#123; showPage(page,res.data); cache[page]=res.data; fn&amp;&amp;fn() &#125; &#125;) &#125; &#125;&#125;]]></content>
+    <title><![CDATA[搭建本地运行环境]]></title>
+    <url>%2F2019%2F06%2F01%2F%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%2F</url>
+    <content type="text"><![CDATA[如何利用http-serve搭建环境 利用http-serverhttp http-server全局安装http-servernpm install http-server -g使用httphttp-server [path] [options]具体含义123456789101112131415161718192021222324252627282930313233-p 要使用的端口（默认为8080）-a 要使用的地址（默认为0.0.0.0）-d 显示目录列表（默认为“True”）-i 显示autoIndex（默认为“True”）-g或--gzip启用时（默认为“False”），它将用于./public/some-file.js.gz代替./public/some-file.jsgzip压缩版本的文件，并且该请求接受gzip编码。-e或--ext默认文件扩展名（如果没有提供）（默认为&apos;html&apos;）-s或--silent从输出中抑制日志消息--cors通过Access-Control-Allow-Origin标题启用CORS-o 启动服务器后打开浏览器窗口-c设置缓存控制max-age头的缓存时间（以秒为单位），例如-c10 10秒（默认为&apos;3600&apos;）。要禁用缓存，请使用-c-1。-U或--utc在日志消息中使用UTC时间格式。-P或--proxy代理无法在本地解决给定网址的所有请求。例如：-P http://someurl.com-S或--ssl启用https。-C或--certssl证书文件的路径（默认值：cert.pem）。-K或--keyssl密钥文件的路径（默认值：key.pem）。-r或者--robots提供一个/robots.txt（其内容默认为&apos;User-agent：* \ nDisallow：/&apos;）-h或--help打印此列表并退出。 使用httpsopenssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem http-server -S -C cert.pem -o 安装XAMPP利用xampp搭建本地服务第一步：安装第二部：找到 C:\xampp\htdocs 将文件放置在次目录下第三部：启动 config 可以对端口号进行配置]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[继承]]></title>
+    <url>%2F2019%2F06%2F01%2F%E7%BB%A7%E6%89%BF%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 类式继承123456789101112131415161718//声明父类function SuperClass()&#123; this.superVal = true&#125;//为父类添加方法SuperClass.prototype.getSuperVal = function()&#123; return this.superVal&#125;//声明子类function SubClass()&#123; this.subVal=false&#125;//继承父类SubClass.prototype=new SuperClass();//添加子类方法SubClass.prototype.getSubVal = function()&#123; return this.subVal&#125; 构造函数继承12345678910111213141516171819//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id)&#123; //继承父类 SuperClass.call(this,id)&#125;//创建子类实例var instance1 = new SubClass(10);var instance2 = new SubClass(11); 组合继承12345678910111213141516171819202122232425262728//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id,time)&#123; //继承父类 SuperClass.call(this,id) //新增共有属性 this.time=time&#125;//类式继承SubClass.prototype = new SuperClass();//子类原型方法SubClass.prototype.getTime = function()&#123; console.log(this.time)&#125;//创建子类实例var instance1 = new SubClass(10,"2017");var instance2 = new SubClass(11,"2018"); 寄生组合式继承复制一个对象的prototype Object.create(o.prototype) function object(o){ function F(){} F.prototype = o; return new F(); } 寄生组合12345678function inheritPrototype(subType,superType)&#123; //object()方法是ES5前Object.create()的非规范化实现 var prototype=object(superType.prototype); //增强对象 prototype.constructor = subType; //指定对象 subType.prototype = prototype;&#125; 使用123456789101112131415161718192021222324//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id,time)&#123; //继承父类 SuperClass.call(this,id) //新增共有属性 this.time=time&#125;//继承inheritPrototype(SubClass,SuperClass)'//子类增加原型方法SubClass.prototype.getTime = function()&#123; console.log(this.time);&#125;]]></content>
       <categories>
         <category>设计模式</category>
       </categories>
@@ -210,9 +210,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[继承]]></title>
-    <url>%2F2019%2F06%2F01%2F%E7%BB%A7%E6%89%BF%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 类式继承123456789101112131415161718//声明父类function SuperClass()&#123; this.superVal = true&#125;//为父类添加方法SuperClass.prototype.getSuperVal = function()&#123; return this.superVal&#125;//声明子类function SubClass()&#123; this.subVal=false&#125;//继承父类SubClass.prototype=new SuperClass();//添加子类方法SubClass.prototype.getSubVal = function()&#123; return this.subVal&#125; 构造函数继承12345678910111213141516171819//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id)&#123; //继承父类 SuperClass.call(this,id)&#125;//创建子类实例var instance1 = new SubClass(10);var instance2 = new SubClass(11); 组合继承12345678910111213141516171819202122232425262728//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id,time)&#123; //继承父类 SuperClass.call(this,id) //新增共有属性 this.time=time&#125;//类式继承SubClass.prototype = new SuperClass();//子类原型方法SubClass.prototype.getTime = function()&#123; console.log(this.time)&#125;//创建子类实例var instance1 = new SubClass(10,"2017");var instance2 = new SubClass(11,"2018"); 寄生组合式继承复制一个对象的prototype Object.create(o.prototype) function object(o){ function F(){} F.prototype = o; return new F(); } 寄生组合12345678function inheritPrototype(subType,superType)&#123; //object()方法是ES5前Object.create()的非规范化实现 var prototype=object(superType.prototype); //增强对象 prototype.constructor = subType; //指定对象 subType.prototype = prototype;&#125; 使用123456789101112131415161718192021222324//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id,time)&#123; //继承父类 SuperClass.call(this,id) //新增共有属性 this.time=time&#125;//继承inheritPrototype(SubClass,SuperClass)'//子类增加原型方法SubClass.prototype.getTime = function()&#123; console.log(this.time);&#125;]]></content>
+    <title><![CDATA[惰性模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E6%83%B0%E6%80%A7%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 事件绑定方法一 加载的时候重新定义 on方法12345678910111213141516171819//对事件绑定的重新定义A.on = function(dom, type,fn)&#123; //不是ie的情况下 if(document.addEventListenter)&#123; return function(dom, type,fn)&#123; dom.addEventListenter(type,fn,false); &#125; &#125;else if(document.attachEvent)&#123; //IE的情况下 return function(dom, type,fn)&#123; dom.attachEvent("on" + type,fn); &#125; &#125;else&#123; //否则 return function(dom, type,fn)&#123; dom.attachEvent("on" + type) = fn; &#125; &#125;&#125;(); 方法二 执行的时候定义方法123456789101112131415161718192021//对事件绑定的重新定义A.on = function(dom, type,fn)&#123; //不是ie的情况下 if(document.addEventListenter)&#123; A.on = function(dom, type,fn)&#123; dom.addEventListenter(type,fn,false); &#125; &#125;else if(document.attachEvent)&#123; //IE的情况下 A.on = function(dom, type,fn)&#123; dom.attachEvent("on" + type,fn); &#125; &#125;else&#123; //否则 A.on = function(dom, type,fn)&#123; dom.attachEvent("on" + type) = fn; &#125; &#125; //定义后重新执行方法 A.on(dom, type,fn);&#125;();]]></content>
       <categories>
         <category>设计模式</category>
       </categories>
@@ -353,17 +353,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[注释规范]]></title>
-    <url>%2F2019%2F05%2F27%2F%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83%2F</url>
-    <content type="text"><![CDATA[遵循标准HTML注释规范写法应该遵循以下标准： Comments must start with the four character sequence U+003C LESS-THAN SIGN, U+0021 EXCLAMATION MARK, U+002D HYPHEN-MINUS, U+002D HYPHEN-MINUS (&lt;!–). Following this sequence, the comment may have text, with the additional restriction that the text must not start with a single “&gt;” (U+003E) character, nor start with a U+002D HYPHEN-MINUS character (-) followed by a “&gt;” (U+003E) character, nor contain two consecutive U+002D HYPHEN-MINUS characters (–), nor end with a U+002D HYPHEN-MINUS character (-). Finally, the comment must be ended by the three character sequence U+002D HYPHEN-MINUS, U+002D HYPHEN-MINUS, U+003E GREATER-THAN SIGN (–&gt;). 必须以4个有序字符开始：编码为 U+003C LESS-THAN SIGN 的小于号, 编码为 U+0021 EXCLAMATION MARK 的感叹号, 编码为 U+002D HYPHEN-MINUS 横线, 编码为 U+002D HYPHEN-MINUS横线 ，即 “&lt;!–” 在此之后是注释内容，注释的内容有以下限制： 不能以单个 “&gt;” (U+003E) 字符开始 不能以由 “-“（U+002D HYPHEN-MINUS）和 ”&gt;” (U+003E) 组合的字符开始，即 “-&gt;” 不能包含两个连续的 U+002D HYPHEN-MINUS 字符，即 “–” 不能以一个 U+002D HYPHEN-MINUS 字符结束，即 “-” 必须以3个有序字符结束：U+002D HYPHEN-MINUS, U+002D HYPHEN-MINUS, U+003E GREATER-THAN SIGN，即 “–&gt;” 标准写法： 1&lt;!--Comment Text--&gt; 错误的写法： 1234567&lt;!--&gt;The Wrong Comment Text--&gt;&lt;!---&gt;The Wrong Comment Text--&gt;&lt;!--The--Wrong--Comment Text--&gt;&lt;!--The Wrong Comment Text---&gt; 参考 www.w3.org #Comments 团队约定单行注释一般用于简单的描述，如某些状态描述、属性描述等 注释内容前后各一个空格字符，注释位于要注释代码的上面，单独占一行 推荐： 12&lt;!-- Comment Text --&gt;&lt;div&gt;...&lt;/div&gt; 不推荐： 12345&lt;div&gt;...&lt;/div&gt;&lt;!-- Comment Text --&gt; &lt;div&gt;&lt;!-- Comment Text --&gt; ...&lt;/div&gt; 模块注释一般用于描述模块的名称以及模块开始与结束的位置 注释内容前后各一个空格字符，&lt;!-- S Comment Text --&gt; 表示模块开始，&lt;!-- E Comment Text --&gt; 表示模块结束，模块与模块之间相隔一行 推荐写法： 1234567891011&lt;!-- S Comment Text A --&gt; &lt;div class="mod_a"&gt; ...&lt;/div&gt;&lt;!-- E Comment Text A --&gt; &lt;!-- S Comment Text B --&gt; &lt;div class="mod_b"&gt; ...&lt;/div&gt;&lt;!-- E Comment Text B --&gt; 不推荐写法： 12345678910&lt;!-- S Comment Text A --&gt;&lt;div class="mod_a"&gt; ...&lt;/div&gt;&lt;!-- E Comment Text A --&gt;&lt;!-- S Comment Text B --&gt; &lt;div class="mod_b"&gt; ...&lt;/div&gt;&lt;!-- E Comment Text B --&gt; 嵌套模块注释当模块注释内再出现模块注释的时候，为了突出主要模块，嵌套模块不再使用 12&lt;!-- S Comment Text --&gt;&lt;!-- E Comment Text --&gt; 而改用 1&lt;!-- /Comment Text --&gt; 注释写在模块结尾标签底部，单独一行。 123456789101112131415&lt;!-- S Comment Text A --&gt;&lt;div class="mod_a"&gt; &lt;div class="mod_b"&gt; ... &lt;/div&gt; &lt;!-- /mod_b --&gt; &lt;div class="mod_c"&gt; ... &lt;/div&gt; &lt;!-- /mod_c --&gt; &lt;/div&gt;&lt;!-- E Comment Text A --&gt;]]></content>
-      <categories>
-        <category>前端规范</category>
-      </categories>
-      <tags>
-        <tag>rules</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[vue组件]]></title>
     <url>%2F2019%2F05%2F27%2Fvue%E7%BB%84%E4%BB%B6npm%2F</url>
     <content type="text"><![CDATA[使用vue-cli3 创建项目 12vue create my-project目录 有 public src package.json readme.md 等文件 首先需要创建一个 packages 目录，用来存放组件然后将 src 目录改为 examples 用作示例 修改配置启动项目的时候，默认入口文件是 src/main.js将 src 目录改为 examples 之后，就需要重新配置入口文件在根目录下创建一个 vue.config.js 文件1234567891011121314// vue.config.jsmodule.exports = &#123; // 将 examples 目录添加为新的页面 pages: &#123; index: &#123; // page 的入口 entry: 'examples/main.js', // 模板来源 template: 'public/index.html', // 输出文件名 filename: 'index.html' &#125; &#125;&#125; 开发组件之前已经创建了一个 packages 目录，用来存放组件该目录下存放每个组件单独的开发目录，和一个 index.js 整合所有组件，并对外导出每个组件都应该归类于单独的目录下，包含其组件源码目录 src，和 index.js 便于外部引用123456789// packages/textarea/index.js// 导入组件，组件必须声明 nameimport Textarea from './main.vue'// 为组件添加 install 方法，用于按需引入Textarea.install = function (Vue) &#123; Vue.component(Textarea.name, Textarea)&#125;export default Textarea 打包组件vue-cli 3.x 提供了一个库文件打包命令主要需要四个参数： target: 默认为构建应用，改为 lib 即可启用构建库模式 name: 输出文件名 dest: 输出目录，默认为 dist，这里我们改为 lib entry: 入口文件路径，默认为 src/App.vue，这里改为 packages/index.js123456// pageage.json&#123; "scripts": &#123; "lib": "vue-cli-service build --target lib --name tag-textarea --dest lib packages/index.js" &#125;&#125; 然后执行 npm run lib 命令，编译组件 准备发布123456789首先需要在 package.json 添加组件信息name: 包名，该名不能和已有的名称冲突；version: 版本号，不能和历史版本号相同；description: 简介；main: 入口文件，应指向编译后的包文件；keyword：关键字，以空格分割；author：作者；private：是否私有，需要修改为 false 才能发布到 npm；license：开源协议。 然后创建 .npmignore 文件，设置忽略文件该文件的语法和 .gitignore 的语法一样，设置发布到 npm 时忽略哪些目录或文件123456789101112131415161718192021222324.DS_Storenode_modules/examples/packages/public/vue.config.jsbabel.config.js*.map*.html# local env files.env.local.env.*.local# Log filesnpm-debug.log*yarn-debug.log*yarn-error.log*# Editor directories and files.idea.vscode*.suo*.ntvs**.njsproj*.sln*.sw* 发布方法同普通的发布]]></content>
@@ -372,6 +361,17 @@
       </categories>
       <tags>
         <tag>NPM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[注释规范]]></title>
+    <url>%2F2019%2F05%2F27%2F%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83%2F</url>
+    <content type="text"><![CDATA[遵循标准HTML注释规范写法应该遵循以下标准： Comments must start with the four character sequence U+003C LESS-THAN SIGN, U+0021 EXCLAMATION MARK, U+002D HYPHEN-MINUS, U+002D HYPHEN-MINUS (&lt;!–). Following this sequence, the comment may have text, with the additional restriction that the text must not start with a single “&gt;” (U+003E) character, nor start with a U+002D HYPHEN-MINUS character (-) followed by a “&gt;” (U+003E) character, nor contain two consecutive U+002D HYPHEN-MINUS characters (–), nor end with a U+002D HYPHEN-MINUS character (-). Finally, the comment must be ended by the three character sequence U+002D HYPHEN-MINUS, U+002D HYPHEN-MINUS, U+003E GREATER-THAN SIGN (–&gt;). 必须以4个有序字符开始：编码为 U+003C LESS-THAN SIGN 的小于号, 编码为 U+0021 EXCLAMATION MARK 的感叹号, 编码为 U+002D HYPHEN-MINUS 横线, 编码为 U+002D HYPHEN-MINUS横线 ，即 “&lt;!–” 在此之后是注释内容，注释的内容有以下限制： 不能以单个 “&gt;” (U+003E) 字符开始 不能以由 “-“（U+002D HYPHEN-MINUS）和 ”&gt;” (U+003E) 组合的字符开始，即 “-&gt;” 不能包含两个连续的 U+002D HYPHEN-MINUS 字符，即 “–” 不能以一个 U+002D HYPHEN-MINUS 字符结束，即 “-” 必须以3个有序字符结束：U+002D HYPHEN-MINUS, U+002D HYPHEN-MINUS, U+003E GREATER-THAN SIGN，即 “–&gt;” 标准写法： 1&lt;!--Comment Text--&gt; 错误的写法： 1234567&lt;!--&gt;The Wrong Comment Text--&gt;&lt;!---&gt;The Wrong Comment Text--&gt;&lt;!--The--Wrong--Comment Text--&gt;&lt;!--The Wrong Comment Text---&gt; 参考 www.w3.org #Comments 团队约定单行注释一般用于简单的描述，如某些状态描述、属性描述等 注释内容前后各一个空格字符，注释位于要注释代码的上面，单独占一行 推荐： 12&lt;!-- Comment Text --&gt;&lt;div&gt;...&lt;/div&gt; 不推荐： 12345&lt;div&gt;...&lt;/div&gt;&lt;!-- Comment Text --&gt; &lt;div&gt;&lt;!-- Comment Text --&gt; ...&lt;/div&gt; 模块注释一般用于描述模块的名称以及模块开始与结束的位置 注释内容前后各一个空格字符，&lt;!-- S Comment Text --&gt; 表示模块开始，&lt;!-- E Comment Text --&gt; 表示模块结束，模块与模块之间相隔一行 推荐写法： 1234567891011&lt;!-- S Comment Text A --&gt; &lt;div class="mod_a"&gt; ...&lt;/div&gt;&lt;!-- E Comment Text A --&gt; &lt;!-- S Comment Text B --&gt; &lt;div class="mod_b"&gt; ...&lt;/div&gt;&lt;!-- E Comment Text B --&gt; 不推荐写法： 12345678910&lt;!-- S Comment Text A --&gt;&lt;div class="mod_a"&gt; ...&lt;/div&gt;&lt;!-- E Comment Text A --&gt;&lt;!-- S Comment Text B --&gt; &lt;div class="mod_b"&gt; ...&lt;/div&gt;&lt;!-- E Comment Text B --&gt; 嵌套模块注释当模块注释内再出现模块注释的时候，为了突出主要模块，嵌套模块不再使用 12&lt;!-- S Comment Text --&gt;&lt;!-- E Comment Text --&gt; 而改用 1&lt;!-- /Comment Text --&gt; 注释写在模块结尾标签底部，单独一行。 123456789101112131415&lt;!-- S Comment Text A --&gt;&lt;div class="mod_a"&gt; &lt;div class="mod_b"&gt; ... &lt;/div&gt; &lt;!-- /mod_b --&gt; &lt;div class="mod_c"&gt; ... &lt;/div&gt; &lt;!-- /mod_c --&gt; &lt;/div&gt;&lt;!-- E Comment Text A --&gt;]]></content>
+      <categories>
+        <category>前端规范</category>
+      </categories>
+      <tags>
+        <tag>rules</tag>
       </tags>
   </entry>
   <entry>
