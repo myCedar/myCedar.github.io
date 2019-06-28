@@ -99,7 +99,7 @@
   <meta name="description" content="写给以后的自己">
 <meta property="og:type" content="website">
 <meta property="og:title" content="记下点滴">
-<meta property="og:url" content="http://yoursite.com/tags/NPM/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/npm/index.html">
 <meta property="og:site_name" content="记下点滴">
 <meta property="og:description" content="写给以后的自己">
 <meta property="og:locale" content="zh-CN">
@@ -113,7 +113,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/tags/NPM/">
+  <link rel="canonical" href="http://yoursite.com/tags/npm/">
 
 
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>标签: NPM | 记下点滴</title>
+  <title>标签: npm | 记下点滴</title>
   
 
 
@@ -392,7 +392,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>NPM<small>标签</small>
+        <h1>npm<small>标签</small>
         </h1>
       </div>
 
@@ -404,61 +404,9 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/05/29/NPM搭建/" itemprop="url">
-            
-              <span itemprop="name">NPM搭建</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-28T20:20:16Z" content="2019-05-28">
-          05-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/05/28/NPM工具JS上传/" itemprop="url">
-            
-              <span itemprop="name">NPM上传JS包</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-27T16:25:30Z" content="2019-05-27">
-          05-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
           <a class="post-title-link" href="/2019/05/27/vue组件npm/" itemprop="url">
             
-              <span itemprop="name">vue组件</span>
+              <span itemprop="name">vue组件-npm</span>
             
           </a>
         
@@ -525,7 +473,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">47</span>
+                    <span class="site-state-item-count">48</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -554,11 +502,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -619,7 +563,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">22</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1123,6 +1071,61 @@
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
       e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+);
       if (isfetched === false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
       } else {
