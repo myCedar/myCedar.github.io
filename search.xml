@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[cedar]]></title>
+    <url>%2F2019%2F07%2F07%2Fcedar%2F</url>
+    <content type="text"><![CDATA[对自己现状的总结 基本信息 描述 描述信息 描述 描述信息 姓名 曹文松 性别 男 籍贯 陕西安康 电话 13167119769 生日 1992.01.20 邮箱 akcedar@163.com 学校 湖南大学 专业 热能与动力工程 基本技能html 熟练掌握各种标签 熟练掌握HTML5新增的属性及标签CSS 熟练掌握css属性 熟练运用CSS3特性实现各种动画 掌握flex及rem布局 掌握字体图标的制作及使用js 熟练掌握基本js知识 熟练运用DOM、BOM操作 熟练运用ES6基本语法框架 熟练运用jquery及相关插件、echats，了解three.js、go.js等js插件 掌握boostrap、layui、easyUI等 熟练运用vue，了解raect、react-native。微信 熟练开发微信小程序 微信公众号、微信机器人工具 熟练掌握git进行代码管理 会运用eslint规范代码编写 掌握webpack打包 掌握NPM，会编写NPM包并发布 搭建过公司私有的NPM仓库优化 了解网页渲染流程，会进行相关的性能优化 会对webpack打包进行优化 会对项目进行业务划分，抽离组件，实现组件开发 web安全 HTTP了解及优化后台+数据库 使用node.js（express）编写过后台应用 使用ssh框架写过简单的java 会写简单sql 项目 小程序+活动页面 数据可视化大屏开发 后台管理系统 H5页面app web开发小程序已上线小程序6个（最大的一个日活跃用户量2000+，腾讯评测性能优秀）自己开发两个（为点餐商城类，因为审核原因未上线）数据可视化大屏主要使用echarts、three.js、go.js等插件实现图表及数据的展示，并使用canvas、svg、css3绘制炫酷的动画效果，灵活多变的展现各种数据，将数据语言转化为图形语言，让用户更快更好的获取信息。后台管理系统技术：利用vue-cli搭建vue框架，并优化webpack打包优化项，使用vue、vue-router、vuex、axios、elementUI(ant-design-vue)编写中台管理页面。模块：主要包含菜单权限模块、用户模块、基础服务设置模块、订单模块、打印模块。特点：主要是后台用户操作，包含表单查询、数据报表增删改查、下单、详情页展示等主要功能，一般使用菜单、导航加主页面的页面结构，主页面为百分比宽度，自适应大小分辨率，追求统一的页面风格。H5页面APP技术：使用混合开发的方式，后台安卓以及ios提供壳子，利用技术bridge实现与NA的交互。主要使用vue全家桶+mint编写相应界面及交互。特点：利用原生嵌套h5页面的方式实现快速迭代开发，采用rem+flex布局方式，兼容大小屏，使用keepalive保持页面数据缓存，减少用户数据加载。web开发技术：利用vue全家桶，或者jquery实现快速开发，追求与UI的完美展现举例：以做过的人力招聘系统，为外部及内部人员提供岗位应聘的全流程服务，主要流程为信息发布、报名、笔试、面试（多轮）、最终是否聘用。此外还有应聘规则设置等页面为主流程提供服务。特点：追求好看的界面，一般采用定宽的页面结构，自定义编写各种页面组件效果，追求个性化，看中web安全。 自我总结对现有的前端技术有一定的了解，有一颗不停学习的心，阅读过一些书籍及代码文章，有合作进取的能力，希望以后能在某一方面有更加深入的研究。]]></content>
+      <categories>
+        <category>自己</category>
+      </categories>
+      <tags>
+        <tag>cedar</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[小程序]]></title>
+    <url>%2F2019%2F07%2F06%2F%E5%B0%8F%E7%A8%8B%E5%BA%8F%2F</url>
+    <content type="text"><![CDATA[学习小程序而不仅仅是学会用 小程序发展 微信webview（微信浏览器的广泛使用） 微信SDK（提供开发者在调用微信原生能力）（会出现加载延迟） 增强版JS-SDK，“微信 Web 资源离线存储” （解决的部分加载的问题，但是网页切换补流程，复杂的也会出现白屏） 微信小程序 小程序和web的区别 普通网页开发可以使用各种浏览器提供的 DOM API，进行 DOM 操作，小程序的逻辑层和渲染层是分开的，逻辑层运行在 JSCore中，并没有一个完整浏览器对象，因而缺少相关的DOM API和BOM API。 普通网页开发渲染线程和脚本线程是互斥的，这也是为什么长时间的脚本运行可能会导致页面失去响应，而在小程序中，二者是分开的，分别运行在不同的线程中。 网页开发者在开发网页的时候，只需要使用到浏览器，并且搭配上一些辅助工具或者编辑器即可。小程序的开发则有所不同，需要经过申请小程序帐号、安装小程序开发者工具、配置项目等等过程方可完成。 小程序的执行环境 环境 逻辑 视图 IOS javascriptcore wkwebview 安卓 V8 chromium 开发者工具 nwjs chrome webview 开发思路Hybrid 技术来渲染小程序小程序的渲染层和逻辑层分别由 2 个线程管理：视图层的界面使用了 WebView 进行渲染，逻辑层采用 JsCore 线程运行 JS脚本。 逻辑层：创建一个单独的线程去执行 JavaScript，在这里执行的都是有关小程序业务逻辑的代码，负责逻辑处理、数据请求、接口调用等视图层：界面渲染相关的任务全都在 WebView 线程里执行，通过逻辑层代码去控制渲染哪些界面。一个小程序存在多个界面，所以视图层存在多个 WebView 线程JSBridge 起到架起上层开发与Native（系统层）的桥梁，使得小程序可通过API使用原生的功能，且部分组件为原生组件实现，从而有良好体验 在渲染层把 WXML 转化成对应的 JS 对象。 在逻辑层发生数据变更的时候，通过宿主环境提供的 setData 方法把数据从逻辑层传递到 Native，再转发到渲染层。 经过对比前后差异，把差异应用在原来的 DOM 树上，更新界面。 小程序基础库小程序的基础库不会被打包在某个小程序的代码包里边，它会被提前内置在微信客户端。小程序的渲染层和逻辑层是两个线程管理，两个线程各自注入了基础库 在视图层，提供各类组件来组建界面的元素 在逻辑层，提供各类 API 来处理各种逻辑 处理数据绑定、组件系统、事件系统、通信系统等一系列框架逻辑Exparser 框架Exparser是微信小程序的组件组织框架，内置在小程序基础库中，为小程序的各种组件提供基础的支持。小程序内的所有组件，包括内置组件和自定义组件，都由Exparser组织管理。 基于ShadowDOM模型：模型上与WebComponents的ShadowDOM高度相似，但不依赖浏览器的原生支持，也没有其他依赖库；实现时，还针对性地增加了其他API以支持小程序组件编程。 可在纯JS环境中运行：这意味着逻辑层也具有一定的组件树组织能力。 高效轻量：性能表现好，在组件实例极多的环境下表现尤其优异，同时代码尺寸也较小。 基于Exparser框架，小程序内置了一套组件，提供了视图容器类、表单类、导航类、媒体类、开放类等几十种组件。有了这么丰富的组件，再配合WXSS，可以搭建出任何效果的界面。在功能层面上，也满足绝大部分需求。 运行小程序启动会有两种情况，一种是「冷启动」，一种是「热启动」。假如用户已经打开过某小程序，然后在一定时间内再次打开该小程序，此时无需重新启动，只需将后台状态的小程序切换到前台，这个过程就是热启动；冷启动指的是用户首次打开或小程序被微信主动销毁后再次打开的情况，此时小程序需要重新加载启动。 小程序没有重启的概念 当小程序进入后台，客户端会维持一段时间的运行状态，超过一定时间后（目前是5分钟）会被微信主动销毁 当短时间内（5s）连续收到两次以上收到系统内存告警，会进行小程序的销毁更新小程序冷启动时如果发现有新版本，将会异步下载新版本的代码包，并同时用客户端本地的包进行启动，即新版本的小程序需要等下一次冷启动才会应用上。 如果需要马上应用最新版本，可以使用 wx.getUpdateManager API 进行处理。性能优化 精简代码，降低WXML结构和JS代码的复杂性； 合理使用setData调用，减少setData次数和数据量； 必要时使用分包优化。视图及逻辑小程序的视图层目前使用 WebView 作为渲染载体，而逻辑层是由独立的 JavascriptCore 作为运行环境。在架构上，WebView 和 JavascriptCore 都是独立的模块，并不具备数据直接共享的通道。当前，视图层和逻辑层的数据传输，实际上通过两边提供的 evaluateJavascript 所实现。即用户传输的数据，需要将其转换为字符串形式传递，同时把转换后的数据内容拼接成一份 JS 脚本，再通过执行 JS 脚本的形式传递到两边独立环境。而 evaluateJavascript 的执行会受很多方面的影响，数据到达视图层并不是实时的。错误的做法频繁的去 setData在我们分析过的一些案例里，部分小程序会非常频繁（毫秒级）的去setData，其导致了两个后果：Android下用户在滑动时会感觉到卡顿，操作反馈延迟严重，因为 JS 线程一直在编译执行渲染，未能及时将用户操作事件传递到逻辑层，逻辑层亦无法及时将操作处理结果及时传递到视图层；渲染有出现延时，由于 WebView 的 JS 线程一直处于忙碌状态，逻辑层到页面层的通信耗时上升，视图层收到的数据消息时距离发出时间已经过去了几百毫秒，渲染的结果并不实时；每次 setData 都传递大量新数据由setData的底层实现可知，我们的数据传输实际是一次 evaluateJavascript脚本过程，当数据量过大时会增加脚本的编译执行时间，占用 WebView JS 线程， 后台态页面进行setData当页面进入后台态（用户不可见），不应该继续去进行setData，后台态页面的渲染用户是无法感受的，另外后台态页面去setData也会抢占前台页面的执行。 参考这个这个还有这个]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>埋点</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[埋点]]></title>
+    <url>%2F2019%2F07%2F03%2F%E5%9F%8B%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[本文主要讲了对埋点的一些学习。 埋点sdk 自主研发（大公司的必经之路） 百度统计（免费） TalkingData（收费） GrowingIo（全埋点） Google Analytics（免费） Mixpanel（可视化埋点） 友盟（收费） 神策（收费）埋点统计内容 who：行为背后的人，具有哪些属性、IP，账号 when：什么时候触发的这个行为？ where：事件发生的地点，城市地区甚至GPS what：描述用户所做的事件的具体内容 How：用户进行事件的方式埋点使用场景 页面浏览 用户点击交互 页面加载性能 JS报错 接口出错上报 自定义测速埋点方式 前端埋点（监控页面加载、浏览习惯、页面停留时长、点击交互、表单提交，接口报错、JS报错、用户设备、IP）（ 用户行为数据 + 前端健康度分析） 后台埋点 （IP、接口调用、用户信息、设备信息）SDK埋点分类 Web 移动端（IOS/Android） 小程序（微信、支付宝、百度） App第三方框架（RN,Flutter,Weex)埋点平台化 埋点规范埋点规范代码生成平台 埋点管理 注册埋点，添加、删除埋点 埋点可视化 埋点验证 测试埋点平台，可生成报告 埋点发布 独立的埋点发布平台 埋点监控 埋点数据回流 埋点错误上报埋点前端方式JS埋点1、提供全局的方法，让JS进行调用2、监控浏览器的事件，添加标识（自动上传，后期进行数据整合）（如添加click事件的监控）3、JS业务代码中添加JS代码。4、对需要进程埋点的DOM声明 data属性，遍历绑定事件。5、vue中可以利用路由钩子函数以及组件声明周期进行页面的监控。CSS埋点1、加载页面的时候，利用background、url等属性，直接调用接口上报数据。]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>埋点</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[jsBridge]]></title>
     <url>%2F2019%2F06%2F28%2FjsBridge%2F</url>
     <content type="text"><![CDATA[本文主要记下自己看过一下jsBridege的知识 参照网站 移动混合开发中的 JSBridge JSBridge实战 时下app分以下几种技术选型 UIWebView代码注入时机与姿势 JSSDK当前的技术选型 Webapp，框架有cordova，ionic等 Hybrid，即Native+h5方式 React Native, weex方向 纯Native，这个没啥好说的 flutter，明日之星bridge原理为了解决 H5和Native的双向通信的问题。主旨思想是在H5和NA之间搭建一个桥梁（Bridge），给两端留好更友好、更合理的接口。 H5调用NA方法梳理 平台 方法 备注 Android shouldOverrideUrlLoading scheme拦截方法 Android addJavascriptInterface API Android onJsAlert()、onJsConfirm()、onJsPrompt（） 无 IOS 拦截URL 无 IOS(UIwebview) JavaScriptCore API方法，IOS7+ 支持 IOS(WKwebview) window.webkit.messageHandlers APi方法，IOS8+支持 NA调用H5方法梳理 平台 方法 备注 Android loadurl() Android evaluateJavascript() Android 4.4 + IOS(UIwebview) stringByEvaluatingJavaScriptFromString IOS(UIwebview) JavaScriptCore IOS7.0+ IOS(Wkwebview) evaluateJavaScript:javaScriptString iOS8.0+ 用法拦截urlH5和NA通信方面，最简单直接的思路是：NA拦截H5的URL获取消息（一般是通过修改iframe的src来实现 ①），经过业务处理，NA执行JS（在H5侧提前注册好的全局方法）回调通知H5。 H5代码实现如下：1234567891011121314151617181920212223242526&lt;html&gt;...&lt;body&gt; &lt;div class=&quot;content&quot;&gt;XXXXX&lt;/div&gt;&lt;/body&gt; &lt;script&gt; // ① 注册全局函数,以便端调用 window.setAllContent = function()&#123; &#125; // ② 通用方法函数 var sendschema = function(action,param)&#123; let tempnode = document.createElement(&apos;iframe&apos;); tempnode.src = &quot;bdnews://&quot;+action+param; &#125; // ③ H5逻辑开始 运行函数 document.addEventListener(&quot;DOMContentLoaded&quot;,function()&#123; sendschema(&apos;load_finish&apos;); &#125;,false);&lt;/script&gt; ...&lt;/html&gt; Android原理大致如下：1234567891011121314151617181920webView.setWebViewClient(new WebViewClient() &#123; public boolean shouldOverrideUrlLoading(WebView view, String url) &#123; // 场景一： 拦截请求、接收schema if (url.equals(&quot;load_url&quot;)) &#123; // 处理逻辑 dosomething // 回掉 view.loadUrl(&quot;javascript:setAllContent(&quot; + json + &quot;);&quot;) &#125; // 场景二：端自己调用H5，没有请求发起 clickbutton()&#123; view.loadUrl(&quot;javascript:setAllContent(&quot; + json + &quot;);&quot;) &#125; &#125;&#125;); IOS大概逻辑如下:1234567891011121314151617181920212223242526// 初始化webviewUIWebView * view = [[UIWebView alloc]initWithFrame:self.view.frame];[view loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@&quot;http://www.xx.com&quot;]]];[self.view addSubview:view];&amp;nbsp;&amp;nbsp;/*webView协议中的方法shouldStartLoadWithRequest //准备加载内容时调用的方法，通过返回值来进行是否加载的设置webViewDidStartLoad //开始加载时调用的方法webViewDidFinishLoad //结束加载时调用的方法didFailLoadWithError //加载失败时调用的方法*/&amp;nbsp;- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType&#123; if ([urlString hasPrefix:@&quot;scheme://hybrid?info=&quot;]) &#123; if([name isEqualToString:@&quot;load_finish&quot;])&#123; // [self.webView setContent]; [self.webView stringByEvaluatingJavaScriptFromString:strFormat]; &#125; &#125;&#125; - clickbutton()&#123; [self.webView setContent];&#125; 函数名关联123456789101112131415161718192021222324252627let BDAPPnode = &#123; callbacks: &#123;&#125;, // 调用函数注册 invoke(action, params, successfnname, successfn) &#123; this.callbacks[successfnname] = &#123; success: successfn &#125;; sendschema(action, params); &#125;, // NA调用 callbackSuccess(callbackname, params) &#123; try &#123; BDAPPnode.callbackFromNative(callbackname, params, true); &#125; catch (e) &#123; console.log(&apos;Error in error callback: &apos; + callbackname + &apos; = &apos; + e); &#125; &#125;, callbackFromNative(callbackname, params, isSuccess) &#123; let callback = this.callbacks[callbackname]; if (callback) &#123; if (isSuccess) &#123; callback.success &amp;&amp; callback.success(params); &#125; &#125;; &#125;&#125;; ID关联12345678910111213141516171819202122232425262728293031323334353637let BDAPPnode = &#123; callbackId: Math.floor(Math.random() * 2000000000), callbacks: &#123;&#125;, invoke(action, params, onSuccess, onFail) &#123; this.callbackId++; this.callbacks[self.callbackId] = &#123; success: onSuccess, fail: onFail &#125;; sendschema(action, params, this.callbackId); &#125;, callbackSuccess(callbackId, params) &#123; try &#123; BDAPPnode.callbackFromNative(callbackId, params, true); &#125; catch (e) &#123; console.log(&apos;Error in error callback: &apos; + callbackId + &apos; = &apos; + e); &#125; &#125;, callbackError(callbackId, params) &#123; try &#123; BDAPPnode.callbackFromNative(callbackId, params, false); &#125; catch (e) &#123; console.log(&apos;Error in error callback: &apos; + callbackId + &apos; = &apos; + e); &#125; &#125;, callbackFromNative(callbackId, params, isSuccess) &#123; let callback = this.callbacks[callbackId]; if (callback) &#123; if (isSuccess) &#123; callback.success &amp;&amp; callback.success(callbackId, params); &#125; else &#123; callback.fail &amp;&amp; callback.fail(callbackId, params); &#125; delete BDAPPnode.callbacks[callbackId]; &#125;; &#125;&#125;; 注入API JavaScript 调用 Native 推荐使用 注入 API 的方式（iOS6 忽略，Android 4.2以下使用 WebViewClient 的 onJsPrompt 方式）。 Native 调用 JavaScript 则直接执行拼接好的 JavaScript 代码即可。 注入 API 方式的主要原理是，通过 WebView 提供的接口，向 JavaScript 的 Context（window）中注入对象或者方法，让 JavaScript 调用时，直接执行相应的 Native 代码逻辑，达到 JavaScript 调用 Native 的目的。在javascripte中 直接可以使用 利用window.method来使用注入的api唯一标识 id 是这个回调逻辑的关键。 JSBridge：用一个自增的唯一 id，来标识并存储回调函数，并把此 id 以参数形式传递给 Native，而 Native 也以此 id 作为回溯的标识。这样，即可实现 Callback 回调逻辑。一个案列12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758(function () &#123; // 保存id var id = 0, // 将回调函数用键值对的模式保存下来 callbacks = &#123;&#125;, // NA注册进来的方法 registerFuncs = &#123;&#125;; window.JSBridge = &#123; // 调用 Native invoke: function(bridgeName, callback, data) &#123; // 判断环境，获取不同的 nativeBridge var thisId = id ++; // 获取唯一 id callbacks[thisId] = callback; // 存储 Callback nativeBridge.postMessage(&#123; bridgeName: bridgeName, data: data || &#123;&#125;, callbackId: thisId // 传到 Native 端 &#125;); &#125;, receiveMessage: function(msg) &#123; var bridgeName = msg.bridgeName, data = msg.data || &#123;&#125;, callbackId = msg.callbackId, // Native 将 callbackId 原封不动传回 responstId = msg.responstId; // 具体逻辑 // bridgeName 和 callbackId 不会同时存在 if (callbackId) &#123; if (callbacks[callbackId]) &#123; // 找到相应句柄 callbacks[callbackId](msg.data); // 执行调用 &#125; &#125; else if (bridgeName) &#123; if (registerFuncs[bridgeName]) &#123; // 通过 bridgeName 找到句柄 var ret = &#123;&#125;, flag = false; registerFuncs[bridgeName].forEach(function(callback) =&gt; &#123; callback(data, function(r) &#123; flag = true; ret = Object.assign(ret, r); &#125;); &#125;); if (flag) &#123; nativeBridge.postMessage(&#123; // 回调 Native responstId: responstId, ret: ret &#125;); &#125; &#125; &#125; &#125;, register: function(bridgeName, callback) &#123; if (!registerFuncs[bridgeName]) &#123; registerFuncs[bridgeName] = []; &#125; registerFuncs[bridgeName].push(callback); // 存储回调 &#125; &#125;;&#125;)(); 注入方式native注入注入方式和 Native 调用 JavaScript 类似，直接执行桥的全部代码。它的优点在于：桥的版本很容易与 Native 保持一致，Native 端不用对不同版本的 JSBridge 进行兼容；与此同时，它的缺点是：注入时机不确定，需要实现注入失败后重试的机制，保证注入的成功率，同时 JavaScript 端在调用接口时，需要优先判断 JSBridge 是否已经注入成功。 js注入直接与 JavaScript 一起执行。与由 Native 端注入正好相反，它的优点在于：JavaScript 端可以确定 JSBridge 的存在，直接调用即可；缺点是：如果桥的实现方式有更改，JSBridge 需要兼容多版本的 Native Bridge 或者 Native Bridge 兼容多版本的 JSBridge。]]></content>
@@ -155,17 +188,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[VUE懒加载]]></title>
-    <url>%2F2019%2F06%2F02%2Fvue%E6%87%92%E5%8A%A0%E8%BD%BD%2F</url>
-    <content type="text"><![CDATA[本章会介绍 vue如何进行懒加载 什么是懒加载懒加载也叫延迟加载，即在需要的时候进行加载，随用随载。 如何与webpack配合实现组件懒加载 在webpack配置文件中的output路径配置chunkFilename属性123456output: &#123; path: resolve(__dirname, 'dist'), filename: options.dev ? '[name].js' : '[name].js?[chunkhash]', chunkFilename: 'chunk[id].js?[chunkhash]', publicPath: options.dev ? '/assets/' : publicPath&#125;, chunkFilename路径将会作为组件懒加载的路径 配合webpack支持的异步加载方法 resolve =&gt; require([URL], resolve), 支持性好 () =&gt; import(URL), webpack2官网推荐使用, 属于es7范畴, 需要配合babel的syntax-dynamic-import插件使用, 具体使用方法如下npm install --save-dev babel-core babel-loader babel-plugin-syntax-dynamic-import babel-preset-es20151234567use: [&#123; loader: 'babel-loader', options: &#123; presets: [['es2015', &#123;modules: false&#125;]], plugins: ['syntax-dynamic-import'] &#125; &#125;] 具体实例中实现懒加载 路由中配置异步组件 12345678910export default new Router(&#123; routes: [ &#123; mode: 'history', path: '/my', name: 'my', component: resolve =&gt; require(['../page/my/my.vue'], resolve),//懒加载 &#125;, ]&#125;) 实例中配置异步组件 1234components: &#123; historyTab: resolve =&gt; &#123;require(['../../component/historyTab/historyTab.vue'], resolve)&#125;,//懒加载 //historyTab: () =&gt; import('../../component/historyTab/historyTab.vue') &#125;, 全局注册异步组件 123Vue.component('mideaHeader', () =&gt; &#123; System.import('./component/header/header.vue')&#125;) 避免问题同时使用懒加载和正常引入1234567891011import historyTab from '../../component/historyTab/historyTab.vue';export default &#123; components: &#123; historyTab &#125;,&#125;export default &#123; components: &#123; historyTab: resolve =&gt; &#123;require(['../../component/historyTab/historyTab.vue'], resolve)&#125;,//懒加载 &#125;,&#125; 异步加载页面中载嵌入异步加载的组件因为在首次加载组件的时候会有加载时间，出现页面滞后，所以需要合理的进行页面结构设计，避免首次出现跳闪现象； 建议最终实现方案 路由页面全都使用懒加载 路由页面中的组件何磊安排 当一个页面中嵌套多个组件时将发送多次的http请求，可能会造成网页显示过慢且渲染参差不齐的问题，所以针对这种特殊情况需要合理安排 结合vuex 动态路由加载页面12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455 import Vue from 'vue'; import Vuex from 'vuex'; Vue.use(Vuex); export default new Vuex.Store(&#123; state: &#123; //路由组件存储器 routers: &#123;&#125; &#125;, getters: &#123; routers: state =&gt; &#123; return state.data; &#125; &#125;, mutations: &#123; //动态增加路由 addRouter: (state, data) =&gt; &#123; state.routers = Object.assign(&#123;&#125;, state.routers, &#123;[data.name]: data.component&#125;);&#125; &#125;, actions: &#123; acMethods(&#123;commit&#125;) &#123; &#125; &#125;,&#125;)//根目录中注册路由组件window.midea = &#123; registerRouter(name, component) &#123; Store.commit('addRouter', &#123; name: name, component: component &#125;) &#125;&#125;;//页面使用路由导航openAnyPage() &#123; midea.registerRouter('module', resolve =&gt; &#123;require(['../module/module.vue'], resolve)&#125;);//懒加载 this.$router.push(&#123;path: '/home/module', query: &#123;title: this.title&#125;&#125;);&#125;//页面中使用动态组件 &lt;template&gt;&lt;component :is="currentRouter" :moduleName="title"&gt;&lt;/component&gt; &lt;/template&gt;&lt;br&gt;&lt;script src="./any.js"&gt;export default &#123; data () &#123; return &#123; routeName: '', currentRouter: '', title: '', &#125; &#125;, created() &#123; this.routeName = this.$route.params.name; this.title = this.$route.query.title; this.currentRouter = this.$store.state.routers[this.routeName]; &#125;, methods: &#123; &#125;&#125;]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>VUE</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[QRCode]]></title>
     <url>%2F2019%2F06%2F02%2FQRCODE%20%E4%BA%8C%E7%BB%B4%E7%A0%81%2F</url>
     <content type="text"><![CDATA[QRCode.js 是一个用于生成二维码的 JavaScript 库。主要是通过获取 DOM 的标签,再通过 HTML5 Canvas 绘制而成,不依赖任何库QRCode.js ：https://www.jianshu.com/p/b53eae520de4 案例12345678910111213&lt;div id='qrcode'&gt;&lt;/div&gt;&lt;button onclick='createQrcode();'&gt;生成二维码&lt;button&gt;var qrcode = new QRCode('qrcode', &#123; width: 150, height: 150,&#125;)qrcode.clear();function createQrcode()&#123; qrcode.clear(); var QRCodeStr = "https://www.baidu.com" qrcode.makeCode(QRCodeStr);&#125; 小程序里面生成二维码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465&lt;view&gt; &lt;!-- 存放二维码的图片--&gt; &lt;view class='container'&gt; &lt;image style='width:310rpx;height:310rpx;margin-top:30rpx;' src="&#123;&#123;imagePath&#125;&#125;"&gt;&lt;/image&gt; &lt;/view&gt; &lt;!-- 画布，用来画二维码，只用来站位，不用来显示 --&gt; &lt;view class="canvas-box"&gt; &lt;canvas hidden="&#123;&#123;canvasHidden&#125;&#125;" style="width: 170px;height: 170px;background:#f1f1f1;" canvas-id="mycanvas" /&gt; &lt;/view&gt;&lt;/view&gt;//小程序js的配置var QR = require("../../utils/qrcode.js");/*** 页面的初始数据*/data: &#123; canvasHidden: false, //默认不让canvas二维码隐藏，否则不能生成二维码 imagePath: "" //弹出框二维码显示图片地址&#125;,/*** 生命周期函数--监听页面加载*/onLoad: function(options) &#123; var that = this; var initUrl = 'https://www.baidu.com?id='+id; //创建二维码 that.createQrCode(initUrl, "mycanvas", 170, 170);&#125;/*** 绘制二维码图片*/createQrCode: function(url, canvasId, cavW, cavH) &#123; //调用插件中的draw方法，绘制二维码图片 QR.api.draw(url, canvasId, cavW, cavH); setTimeout(() =&gt; &#123; this.canvasToTempImage(); &#125;, 500); &#125;,/*** 获取临时缓存照片路径，存入data中*/canvasToTempImage: function() &#123; var that = this; //把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径。 wx.canvasToTempFilePath(&#123; canvasId: 'mycanvas', success: function(res) &#123; var tempFilePath = res.tempFilePath; that.setData(&#123; imagePath: tempFilePath, // canvasHidden:true &#125;); &#125;, fail: function(res) &#123; console.log(res); &#125; &#125;);&#125;,]]></content>
@@ -174,6 +196,28 @@
       </categories>
       <tags>
         <tag>二维码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[tapable]]></title>
+    <url>%2F2019%2F06%2F02%2Ftapable%2F</url>
+    <content type="text"><![CDATA[本文主要讲webpack核心工作流 tapable的一些用法 apply 方法12345Tapable.prototype.apply = function apply() &#123; for(var i = 0; i &lt; arguments.length; i++) &#123; arguments[i].apply(this); &#125;&#125;; 毫无悬念，就是 挨个顺序 执行传入到该函数方法中对象的 apply 方法；通常传入该函数的对象也是 Tapable 插件 对象，因此必然也存在 apply 方法；（Webpack 的插件就是Tapable对象，因此必须要提供 apply 方法 ） 只是更改上下文为当前 this 因此当前这里最大的作用就是传入当前 Tapable 的上下文 tap注册函数 call触发同步方法 SyncHock依次执行所有的注册函数 syncBailHock依次执行所有的注册函数，但是可以判断当返回undefined 停止执行 syncWaterfallHock依次执行所有的注册函数，前一个函数的返回值为后一个的参数 syncLoopHock循环执行注册函数 只有返回undefined 才会继续向下执行 tapAsync注册异步方法 多一个参数回调函数 callAsync触发异步方法 tapPromise注册一个promise函数，返回一个promise对象 promise最后执行注册函数 promise.then()来进行所有完成后的回调 AsyncParallelHook并发执行当所有的注册函数执行完毕 执行最后的方法 比同步多一个回调函数 AsyncParallelBailHook并发执行当所有的注册函数执行完毕 执行最后的方法 比同步多一个回调函数 如果出错了 将不再执行]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>webpack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[VUE懒加载]]></title>
+    <url>%2F2019%2F06%2F02%2Fvue%E6%87%92%E5%8A%A0%E8%BD%BD%2F</url>
+    <content type="text"><![CDATA[本章会介绍 vue如何进行懒加载 什么是懒加载懒加载也叫延迟加载，即在需要的时候进行加载，随用随载。 如何与webpack配合实现组件懒加载 在webpack配置文件中的output路径配置chunkFilename属性123456output: &#123; path: resolve(__dirname, 'dist'), filename: options.dev ? '[name].js' : '[name].js?[chunkhash]', chunkFilename: 'chunk[id].js?[chunkhash]', publicPath: options.dev ? '/assets/' : publicPath&#125;, chunkFilename路径将会作为组件懒加载的路径 配合webpack支持的异步加载方法 resolve =&gt; require([URL], resolve), 支持性好 () =&gt; import(URL), webpack2官网推荐使用, 属于es7范畴, 需要配合babel的syntax-dynamic-import插件使用, 具体使用方法如下npm install --save-dev babel-core babel-loader babel-plugin-syntax-dynamic-import babel-preset-es20151234567use: [&#123; loader: 'babel-loader', options: &#123; presets: [['es2015', &#123;modules: false&#125;]], plugins: ['syntax-dynamic-import'] &#125; &#125;] 具体实例中实现懒加载 路由中配置异步组件 12345678910export default new Router(&#123; routes: [ &#123; mode: 'history', path: '/my', name: 'my', component: resolve =&gt; require(['../page/my/my.vue'], resolve),//懒加载 &#125;, ]&#125;) 实例中配置异步组件 1234components: &#123; historyTab: resolve =&gt; &#123;require(['../../component/historyTab/historyTab.vue'], resolve)&#125;,//懒加载 //historyTab: () =&gt; import('../../component/historyTab/historyTab.vue') &#125;, 全局注册异步组件 123Vue.component('mideaHeader', () =&gt; &#123; System.import('./component/header/header.vue')&#125;) 避免问题同时使用懒加载和正常引入1234567891011import historyTab from '../../component/historyTab/historyTab.vue';export default &#123; components: &#123; historyTab &#125;,&#125;export default &#123; components: &#123; historyTab: resolve =&gt; &#123;require(['../../component/historyTab/historyTab.vue'], resolve)&#125;,//懒加载 &#125;,&#125; 异步加载页面中载嵌入异步加载的组件因为在首次加载组件的时候会有加载时间，出现页面滞后，所以需要合理的进行页面结构设计，避免首次出现跳闪现象； 建议最终实现方案 路由页面全都使用懒加载 路由页面中的组件何磊安排 当一个页面中嵌套多个组件时将发送多次的http请求，可能会造成网页显示过慢且渲染参差不齐的问题，所以针对这种特殊情况需要合理安排 结合vuex 动态路由加载页面12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455 import Vue from 'vue'; import Vuex from 'vuex'; Vue.use(Vuex); export default new Vuex.Store(&#123; state: &#123; //路由组件存储器 routers: &#123;&#125; &#125;, getters: &#123; routers: state =&gt; &#123; return state.data; &#125; &#125;, mutations: &#123; //动态增加路由 addRouter: (state, data) =&gt; &#123; state.routers = Object.assign(&#123;&#125;, state.routers, &#123;[data.name]: data.component&#125;);&#125; &#125;, actions: &#123; acMethods(&#123;commit&#125;) &#123; &#125; &#125;,&#125;)//根目录中注册路由组件window.midea = &#123; registerRouter(name, component) &#123; Store.commit('addRouter', &#123; name: name, component: component &#125;) &#125;&#125;;//页面使用路由导航openAnyPage() &#123; midea.registerRouter('module', resolve =&gt; &#123;require(['../module/module.vue'], resolve)&#125;);//懒加载 this.$router.push(&#123;path: '/home/module', query: &#123;title: this.title&#125;&#125;);&#125;//页面中使用动态组件 &lt;template&gt;&lt;component :is="currentRouter" :moduleName="title"&gt;&lt;/component&gt; &lt;/template&gt;&lt;br&gt;&lt;script src="./any.js"&gt;export default &#123; data () &#123; return &#123; routeName: '', currentRouter: '', title: '', &#125; &#125;, created() &#123; this.routeName = this.$route.params.name; this.title = this.$route.query.title; this.currentRouter = this.$store.state.routers[this.routeName]; &#125;, methods: &#123; &#125;&#125;]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>VUE</tag>
       </tags>
   </entry>
   <entry>
@@ -199,130 +243,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[tapable]]></title>
-    <url>%2F2019%2F06%2F02%2Ftapable%2F</url>
-    <content type="text"><![CDATA[本文主要讲webpack核心工作流 tapable的一些用法 apply 方法12345Tapable.prototype.apply = function apply() &#123; for(var i = 0; i &lt; arguments.length; i++) &#123; arguments[i].apply(this); &#125;&#125;; 毫无悬念，就是 挨个顺序 执行传入到该函数方法中对象的 apply 方法；通常传入该函数的对象也是 Tapable 插件 对象，因此必然也存在 apply 方法；（Webpack 的插件就是Tapable对象，因此必须要提供 apply 方法 ） 只是更改上下文为当前 this 因此当前这里最大的作用就是传入当前 Tapable 的上下文 tap注册函数 call触发同步方法 SyncHock依次执行所有的注册函数 syncBailHock依次执行所有的注册函数，但是可以判断当返回undefined 停止执行 syncWaterfallHock依次执行所有的注册函数，前一个函数的返回值为后一个的参数 syncLoopHock循环执行注册函数 只有返回undefined 才会继续向下执行 tapAsync注册异步方法 多一个参数回调函数 callAsync触发异步方法 tapPromise注册一个promise函数，返回一个promise对象 promise最后执行注册函数 promise.then()来进行所有完成后的回调 AsyncParallelHook并发执行当所有的注册函数执行完毕 执行最后的方法 比同步多一个回调函数 AsyncParallelBailHook并发执行当所有的注册函数执行完毕 执行最后的方法 比同步多一个回调函数 如果出错了 将不再执行]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>webpack</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[迭代器模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 实现迭代器12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364//迭代器var Iterator = function(items)&#123; //获取长度，下标 var length = items.length, index = 0, splice = [].splice; return &#123; //第一个元素 first : function()&#123; index = 0; return items[index]; &#125;, //最后一个元素 last : function()&#123; index = length-1; return items[index]; &#125;, //前一个元素 pre : function()&#123; if(--index &gt; 0)&#123; return items[index] &#125;else&#123; index = 0; return null; &#125; &#125;, //下一个元素 next : function()&#123; if(++index &lt; length)&#123; return items[index] &#125;else&#123; index = length-1; return null; &#125; &#125;, //获取某一个 num 的元素 get : function(num)&#123; index = num&gt;=0 ? num % length : num % length + length; return items[index]; &#125;, //进行 fn 的全量处理 dealEach : function(fn)&#123; var args = splice.call(arguments,1); for(var i=0;i&lt;length;i++)&#123; fn.apply(items[i],args); &#125; &#125;, //对某一个 num 的元素进行 fn 的处理 dealItem : function(num,fn)&#123; fn.apply(this.get(num),splice.call(arguments,2)) &#125;, //对 mem 中的元素 进行 numFn 的处理 allFn 针对所有的处理 exclusive : function(mem,allFn,numFn)&#123; this.dealEach(allFn); if(Array.isArray(mem))&#123; for(var i=0;i&lt;mem.length;i++)&#123; this.dealItem(mem[i],numFn) &#125; &#125;else&#123; this.dealItem(mem,numFn) &#125; &#125; &#125;&#125; 数组迭代器123456789var eachArray = function(arr,fn)&#123; var i = 0, len = arr.length; for(;i &lt; len;i++)&#123; if(fn.call(arr[i],i,arr[i]) === false)&#123; break; &#125; &#125;&#125; 对象迭代器1234567var eachObj = function(obj,fn)&#123; for(var i in obj)&#123; if(fn.call(obj[i],i,obj[i]) === false)&#123; break; &#125; &#125;&#125; 分支循环嵌套123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051/* 绘制特效图片*param t 类型*param x x坐标*param y y坐标*param w 宽度*param h 高度*param a 透明度*/function dealImage(t,x,y,w,h,a)&#123; var canvasData = ctx.getImageData(x,y,w,h), data = canvasData.data, //封装算法 Deal = function ()&#123; var method = &#123; default : function(i)&#123; return method["gray"](i) &#125;, red : function()&#123; data[i + 1] = 0; data[i + 2] = 0; data[i + 3] = a; &#125;, green : function()&#123; data[i + 0] = 0; data[i + 2] = 0; data[i + 3] = a; &#125; blue : function()&#123; data[i + 1] = 0; data[i + 0] = 0; data[i + 3] = a; &#125;, grey : function()&#123; data[i] = data[i + 1]=parseInt(data[i + 2] = (data[i + 0] + data[i + 1] +data[i + 2])/3); data[i + 3] = a; &#125; &#125; return function(type)&#123; return method[type] || method["default"] &#125; &#125;(); //迭代器处理数据 function eachData(fn)&#123; for(var i = 0,len = data.length;i &lt; len;i += 4)&#123; fn(i); &#125; &#125;; //处理数据 eachData(Deal(t)); ctx.putImageData(canvasData,width+x,y);&#125;]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[订阅者模式]]></title>
     <url>%2F2019%2F06%2F01%2F%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[设计模式在JS应用 中介者对象1234567891011121314151617181920212223//订阅者var Mediator = function()&#123; //内部存储 var _msg = &#123;&#125;; return &#123; //注册消息 register : function(type,action)&#123; if(_msg[type])&#123; _msg[type].push(action) &#125;else&#123; _msg[type]=[action] &#125; &#125;, //发布消息 send : function(type)&#123; if(_msg[type])&#123; for(var i=0;i&lt;_msg[type].length;i++)&#123; _msg[type][i]&amp;&amp;_msg[type][i](); &#125; &#125; &#125; &#125;&#125;]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[策略模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 策略算法12345678910111213141516171819202122232425262728//表单验证对象var InputStrategy = function()&#123; var strategy=&#123; //是否为空 notNull : function(value)&#123; return /\s+/.test(value)?"":"请输入内容" &#125;, //是否为数字 number : function(value)&#123; return /^[0-9]+(\.[0-9]+)?$/.test(value)?"":"请输入数字" &#125;, //是否是手机号 phone : function(value)&#123; return /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d&#123;8&#125;$/.test(value)?"":"请输入正确的电话" &#125; &#125; return &#123; //验证 check : function(type,value)&#123; value = typeof value === "string" ? value.trim() : value; return strategy[type] ? strategy[type](value):"没有该类型"; &#125;, //添加验证类型 addStrategy :function(type,fn)&#123; strategy[type] = fn &#125; &#125;&#125;]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[继承]]></title>
-    <url>%2F2019%2F06%2F01%2F%E7%BB%A7%E6%89%BF%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 类式继承123456789101112131415161718//声明父类function SuperClass()&#123; this.superVal = true&#125;//为父类添加方法SuperClass.prototype.getSuperVal = function()&#123; return this.superVal&#125;//声明子类function SubClass()&#123; this.subVal=false&#125;//继承父类SubClass.prototype=new SuperClass();//添加子类方法SubClass.prototype.getSubVal = function()&#123; return this.subVal&#125; 构造函数继承12345678910111213141516171819//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id)&#123; //继承父类 SuperClass.call(this,id)&#125;//创建子类实例var instance1 = new SubClass(10);var instance2 = new SubClass(11); 组合继承12345678910111213141516171819202122232425262728//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id,time)&#123; //继承父类 SuperClass.call(this,id) //新增共有属性 this.time=time&#125;//类式继承SubClass.prototype = new SuperClass();//子类原型方法SubClass.prototype.getTime = function()&#123; console.log(this.time)&#125;//创建子类实例var instance1 = new SubClass(10,"2017");var instance2 = new SubClass(11,"2018"); 寄生组合式继承复制一个对象的prototype Object.create(o.prototype) function object(o){ function F(){} F.prototype = o; return new F(); } 寄生组合12345678function inheritPrototype(subType,superType)&#123; //object()方法是ES5前Object.create()的非规范化实现 var prototype=object(superType.prototype); //增强对象 prototype.constructor = subType; //指定对象 subType.prototype = prototype;&#125; 使用123456789101112131415161718192021222324//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id,time)&#123; //继承父类 SuperClass.call(this,id) //新增共有属性 this.time=time&#125;//继承inheritPrototype(SubClass,SuperClass)'//子类增加原型方法SubClass.prototype.getTime = function()&#123; console.log(this.time);&#125;]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[状态模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253//新建玛丽的类var MarryState = function()&#123; //内部私有变量 var _currentState = &#123;&#125;, //状态和方法的映射 states = &#123; jump : function()&#123; //跳 console.log("jump") &#125;, move : function()&#123; //移动 console.log("move") &#125;, shoot : function()&#123; //射击 console.log("shoot") &#125;, squat : function()&#123; //蹲下 console.log("squat") &#125; &#125;, //动作控制类 Action = &#123; //改变状态方法 changeState : function()&#123; var arg = arguments; //重置动作 _currentState = &#123;&#125;; //追加动作 if(arg.length)&#123; for(var i = 0,len = arg.length;i&lt;len;i++)&#123; _currentState[arg[i]] = true; &#125; &#125; return this; &#125;, //执行动作 goes : function()&#123; //遍历执行动作 for(var i in _currentState)&#123; states[i] &amp;&amp; states[i](); &#125; return this; &#125; &#125;; //返回动作类 return &#123; change : Action.changeState, goes : Action.goes &#125;&#125; 使用方法12345678910//new marry个人var marry = new MarryState();//方法的调用marry .change("jump","shoot") .goes() .change("move","shoot") .goes() .change("squat","shoot") .goes();]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[观察者模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E8%A7%82%E5%AF%9F%E8%80%85%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 创建一个观察者123456789101112131415161718192021222324252627282930313233343536373839404142434445464748var Observer=(function()&#123; //建立闭包保存消息 var _messages=&#123;&#125;; return&#123; //注册接口 regist : function(type,fn)&#123; //如果不存在这个消息类型，创建一个，否则推入对应的执行队列中去 if(typeof _messages[type] === "undefined")&#123; //将消息推入动作执行队列中 _messages[type] = [fn]; &#125;else&#123; //将消息推入动作执行队列中 _messages[type].push(fn); &#125; &#125; , //发布信息接口 fire : function(type,args)&#123; //如果不存在，直接退出 if(!_messages[type]) return; //定义消息的信息及参数 var events = &#123; type:type,//消息类型 args :args || &#123;&#125;//消息参数 &#125;,i = 0,len = _messages[type].length; //便利消息队列 for(;i&lt; len;i++)&#123; //依次执行对应的动作 _messages[type][i].call(this,events) &#125; &#125;, //移出信息接口 remove : function(type,fn)&#123; debugger; //判断消息队列存在 if(_messages[type] instanceof Array)&#123; //遍历消息队列 var i = _messages[type].length - 1; for(;i&gt;=0;i--)&#123; //移除相应的动作函数 _messages[type][i] === fn &amp;&amp; _messages[type].splice(i,1); &#125; &#125; &#125;, getMessages:function()&#123; return _messages; &#125; &#125;&#125;)() 对象间解耦1234567891011121314151617181920212223242526272829303132333435363738//学生类var Student = function(result)&#123; var that=this; //回答结果； that.result = result; //回答问题 that.say = function()&#123; console.log(that.result) &#125;&#125;//回答问题的方法Student.prototype.answer = function(quertion)&#123; Observer.regist(quertion,this.say)&#125;//增加睡觉的方法Student.prototype.sleep = function(quertion)&#123; //解除说话的队列 Observer.remove(quertion,this.say)&#125;//教师类var Teacher = function()&#123;&#125;//发布问题Teacher.prototype.ask = function(question)&#123; Observer.fire(question)&#125;var student1 = new Student("11");var student2 = new Student("22");var student3 = new Student("33");student1.answer("who")student2.answer("who")student3.answer("who")student1.answer("where")student2.answer("where")var teacher = new Teacher();teacher.ask("who")teacher.ask("where")]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[构造函数]]></title>
-    <url>%2F2019%2F06%2F01%2F%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 闭包实现构造函数var Book=(function(){ //静态私有变量 var bookNum=100; //静态私有方法 function checkBook(name){} //创建类 function _book(newId, newName, newPrice){ //私有变量 //var name,price; //私有方法 function checkId(id){} //特权方法 this.getName=function(){} this.getPrice=function(){} this.setName=function(){} this.setPrice=function(){} //公有属性 this.id=newId; //公有方法 this.copy=function(){}; bookNum++; if(bookNum&gt;100) throw new Error(&quot;只有100本书可以被创建&quot;) //构造器 this.setName(name); this.setPrice(price); } //构建原型 _book.prototype = { //静态公有变量 isJsBook : false, //静态公有方法 display : function(){} }; //返回类 return _book; })() 安全模式12345678910//构造函数，防止未new直接var mybook = Book();var Book=function(title,time,type)&#123; if(this instanceof Book)&#123; this.title = title; this.time = time; this.type = type; &#125;else&#123; return new Book(title,time,type); &#125;&#125;]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[命令模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 以canvas为例123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869//定义构造函数var CanvasCommand = function(domId)&#123; //获取当前id的dom var canvas = document.getElementById(domId), ctx = canvas.getContext("2d"), //定义一些方法 Action = &#123; //填充色 fillStyle : function(c)&#123; ctx.fillStyle = c; &#125;, //填充方块 fillRect : function(x,y,width,height)&#123; ctx.fillRect(x,y,width,height) &#125;, //描边色 strokeStyle : function(c)&#123; ctx.strokeStyle(c); &#125;, //描边方块 strokeRect : function(x,y,width,height)&#123; ctx.strokeRect(x,y,width,height); &#125;, //画文字 fillText : function(text,x,y)&#123; ctx.fillText(text,x,y) &#125;, //开始路径 beginPath : function()&#123; ctx.beginPath() &#125;, //移动到 moveTo : function(x,y)&#123; ctx.moveTo(x,y) &#125;, //画直线 lineTo : function(x,y)&#123; ctx.lineTo(x,y) &#125;, //画孤线 arc : function(x,y,r,begin,end,dir)&#123; ctx.arc(x,y,r,begin,end,dir) &#125;, //填充 fill : function()&#123; ctx.fill() &#125;, //描边 stroke : function()&#123; ctx.stroke() &#125;, &#125;; return &#123; //返回的方法 excute : function(msg)&#123; //没有指令 if(!msg) return; //多个指令，逐个遍历 if(msg.length)&#123; for(var i = 0;i&lt;msg.length;i++)&#123; arguments.callee(msg[i]); &#125; &#125;else&#123; msg.param = Object.prototype.toString.call(msg.param) === "[object Array]" ? msg.param : [msg.param]; Action[msg.command].apply(Action,msg.param); &#125; &#125; &#125;&#125; 使用方法1234567//初始化domIdvar mycanvas = new CanvasCommand("domId");//使用命令画图mycanvas.excute([ &#123;command : 'fillStyle',param : "red"&#125;, &#123;command : 'fillRect',param : [20,20,100,100]&#125;])]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[数据管理器]]></title>
-    <url>%2F2019%2F06%2F01%2F%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 定义类1234567891011/**本地存储类*参数 preId 本地存储数据库前缀*参数 timeSign 定义时间戳与存储数据之间的拼接符*/var BaseLocalStorage = function(preId,timeSign)&#123; //定义本地存储数据库前缀 this.preId = preId; //定义时间戳与存储数据之间的拼接符 this.timeSign = timeSign || '|-|'&#125; 定义方法123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114BaseLocalStorage.prototype = &#123; //状态 status : &#123; SUCCESS : 0,//成功 FAILURE : 1.//失败 OVERFLOW : 2,//溢出 TIMEOUT : 3//过期 &#125;, //window的本地存储 storage : localStorage || window.localStrorage, //获取当前的key getKey : function(key)&#123; return this.preId + key; &#125;, //设置数据 set : function(key,value,callback,time)&#123; //默认成功 var status = this.status.SUCCESS, //获得key值 key = this.getKey(key); try&#123; //获取时间戳 time = new Date(time).getTime() || time.getTime(); &#125;catch(e)&#123; //如果没有获取到，默认一个月 time = new Date(time).getTime() + 1000 * 60 * 60 * 24 * 31; &#125; try&#123; //设置 this.storage.setItem(key , time + this.timeSign + value); &#125;catch(e)&#123; //如果失败了，溢出了 status = this.syatus.OVERFLOW &#125; //执行回调函数 callback &amp;&amp; callback.call(this, status ,key ,value) &#125;, //获取数据 get : function(key,callback)&#123; //默认成功，设置key var status = this.status.SUCCESS, key = this.getKey(key), value = null, timeSignLen = this.timeSign.length, that = this, index, result; //尝试获取值 try&#123; value = that.stirage.getItem(key); &#125;catch(e)&#123; //如果没有获取到 result = &#123; //定义失败。 status : that.status.FAILURE, value : null &#125; //执行回调函数 callback &amp;&amp; callback.call(this, result.status ,result.value); //返回失败 return result; &#125; //拿到数据 if(value)&#123; //获取时间标记下标值 index = value.indexOf(that.timeSign); //获取时间 time = +value.slice(0,index); //比较时间是否过期 if(new Date(time).getTime() &gt; new Date().getTime() || 0)&#123; //没有过期获取真的value value = value.slice(index + timeSignLen); &#125;else&#123; //过期了，设置过期，并移除原来的数据 value = null, status = that.status.TIMEOUT; that.remove(key); &#125; &#125;else&#123; //获取失败 status = that.status.FAILURE; &#125; //定义结果 result = &#123; status : status, value : value &#125;; //执行回掉函数并返回值 callback &amp;&amp; callback.call(this, result.status ,result.value); return result; &#125;, //移除数据 remove : function(key,callback)&#123; //定义初始失败，并获取key var status = this.status.FAILURE, key = this.getKey(key), value = null; //尝试获取值 try&#123; //得到值了 value = that.stirage.getItem(key); &#125;catch(e)&#123;&#125; //如果获取到了值 if(value)&#123; try&#123; //移除值，并设置成功 this.storage.removeItem(key); status = this.status.SUCCESS; &#125;catch(e)&#123;&#125; &#125; //执行回掉函数 callback &amp;&amp; callback.call(this, status ,status &gt; 0 ? null : value.slice(value.indexOf(this.timeSign) + this.timeSign.length)); &#125;&#125;]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[备忘录模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 列表缓存123456789101112131415161718192021//列表var Page = function()&#123; //定义缓存 var cache=&#123;&#125;; return function(page,fn)&#123; //命中缓存 if(cache[page])&#123; showPage(page,cacge[page]); fn&amp;&amp;fn(); &#125;else&#123; //对请求回来的数据进行缓存 $.post("",&#123;&#125;,function(res)&#123; if(res)&#123; showPage(page,res.data); cache[page]=res.data; fn&amp;&amp;fn() &#125; &#125;) &#125; &#125;&#125;]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[惰性模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E6%83%B0%E6%80%A7%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 事件绑定方法一 加载的时候重新定义 on方法12345678910111213141516171819//对事件绑定的重新定义A.on = function(dom, type,fn)&#123; //不是ie的情况下 if(document.addEventListenter)&#123; return function(dom, type,fn)&#123; dom.addEventListenter(type,fn,false); &#125; &#125;else if(document.attachEvent)&#123; //IE的情况下 return function(dom, type,fn)&#123; dom.attachEvent("on" + type,fn); &#125; &#125;else&#123; //否则 return function(dom, type,fn)&#123; dom.attachEvent("on" + type) = fn; &#125; &#125;&#125;(); 方法二 执行的时候定义方法123456789101112131415161718192021//对事件绑定的重新定义A.on = function(dom, type,fn)&#123; //不是ie的情况下 if(document.addEventListenter)&#123; A.on = function(dom, type,fn)&#123; dom.addEventListenter(type,fn,false); &#125; &#125;else if(document.attachEvent)&#123; //IE的情况下 A.on = function(dom, type,fn)&#123; dom.attachEvent("on" + type,fn); &#125; &#125;else&#123; //否则 A.on = function(dom, type,fn)&#123; dom.attachEvent("on" + type) = fn; &#125; &#125; //定义后重新执行方法 A.on(dom, type,fn);&#125;();]]></content>
       <categories>
         <category>设计模式</category>
       </categories>
@@ -342,6 +265,83 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[继承]]></title>
+    <url>%2F2019%2F06%2F01%2F%E7%BB%A7%E6%89%BF%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 类式继承123456789101112131415161718//声明父类function SuperClass()&#123; this.superVal = true&#125;//为父类添加方法SuperClass.prototype.getSuperVal = function()&#123; return this.superVal&#125;//声明子类function SubClass()&#123; this.subVal=false&#125;//继承父类SubClass.prototype=new SuperClass();//添加子类方法SubClass.prototype.getSubVal = function()&#123; return this.subVal&#125; 构造函数继承12345678910111213141516171819//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id)&#123; //继承父类 SuperClass.call(this,id)&#125;//创建子类实例var instance1 = new SubClass(10);var instance2 = new SubClass(11); 组合继承12345678910111213141516171819202122232425262728//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id,time)&#123; //继承父类 SuperClass.call(this,id) //新增共有属性 this.time=time&#125;//类式继承SubClass.prototype = new SuperClass();//子类原型方法SubClass.prototype.getTime = function()&#123; console.log(this.time)&#125;//创建子类实例var instance1 = new SubClass(10,"2017");var instance2 = new SubClass(11,"2018"); 寄生组合式继承复制一个对象的prototype Object.create(o.prototype) function object(o){ function F(){} F.prototype = o; return new F(); } 寄生组合12345678function inheritPrototype(subType,superType)&#123; //object()方法是ES5前Object.create()的非规范化实现 var prototype=object(superType.prototype); //增强对象 prototype.constructor = subType; //指定对象 subType.prototype = prototype;&#125; 使用123456789101112131415161718192021222324//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id,time)&#123; //继承父类 SuperClass.call(this,id) //新增共有属性 this.time=time&#125;//继承inheritPrototype(SubClass,SuperClass)'//子类增加原型方法SubClass.prototype.getTime = function()&#123; console.log(this.time);&#125;]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[策略模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 策略算法12345678910111213141516171819202122232425262728//表单验证对象var InputStrategy = function()&#123; var strategy=&#123; //是否为空 notNull : function(value)&#123; return /\s+/.test(value)?"":"请输入内容" &#125;, //是否为数字 number : function(value)&#123; return /^[0-9]+(\.[0-9]+)?$/.test(value)?"":"请输入数字" &#125;, //是否是手机号 phone : function(value)&#123; return /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d&#123;8&#125;$/.test(value)?"":"请输入正确的电话" &#125; &#125; return &#123; //验证 check : function(type,value)&#123; value = typeof value === "string" ? value.trim() : value; return strategy[type] ? strategy[type](value):"没有该类型"; &#125;, //添加验证类型 addStrategy :function(type,fn)&#123; strategy[type] = fn &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[观察者模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E8%A7%82%E5%AF%9F%E8%80%85%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 创建一个观察者123456789101112131415161718192021222324252627282930313233343536373839404142434445464748var Observer=(function()&#123; //建立闭包保存消息 var _messages=&#123;&#125;; return&#123; //注册接口 regist : function(type,fn)&#123; //如果不存在这个消息类型，创建一个，否则推入对应的执行队列中去 if(typeof _messages[type] === "undefined")&#123; //将消息推入动作执行队列中 _messages[type] = [fn]; &#125;else&#123; //将消息推入动作执行队列中 _messages[type].push(fn); &#125; &#125; , //发布信息接口 fire : function(type,args)&#123; //如果不存在，直接退出 if(!_messages[type]) return; //定义消息的信息及参数 var events = &#123; type:type,//消息类型 args :args || &#123;&#125;//消息参数 &#125;,i = 0,len = _messages[type].length; //便利消息队列 for(;i&lt; len;i++)&#123; //依次执行对应的动作 _messages[type][i].call(this,events) &#125; &#125;, //移出信息接口 remove : function(type,fn)&#123; debugger; //判断消息队列存在 if(_messages[type] instanceof Array)&#123; //遍历消息队列 var i = _messages[type].length - 1; for(;i&gt;=0;i--)&#123; //移除相应的动作函数 _messages[type][i] === fn &amp;&amp; _messages[type].splice(i,1); &#125; &#125; &#125;, getMessages:function()&#123; return _messages; &#125; &#125;&#125;)() 对象间解耦1234567891011121314151617181920212223242526272829303132333435363738//学生类var Student = function(result)&#123; var that=this; //回答结果； that.result = result; //回答问题 that.say = function()&#123; console.log(that.result) &#125;&#125;//回答问题的方法Student.prototype.answer = function(quertion)&#123; Observer.regist(quertion,this.say)&#125;//增加睡觉的方法Student.prototype.sleep = function(quertion)&#123; //解除说话的队列 Observer.remove(quertion,this.say)&#125;//教师类var Teacher = function()&#123;&#125;//发布问题Teacher.prototype.ask = function(question)&#123; Observer.fire(question)&#125;var student1 = new Student("11");var student2 = new Student("22");var student3 = new Student("33");student1.answer("who")student2.answer("who")student3.answer("who")student1.answer("where")student2.answer("where")var teacher = new Teacher();teacher.ask("who")teacher.ask("where")]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[状态模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253//新建玛丽的类var MarryState = function()&#123; //内部私有变量 var _currentState = &#123;&#125;, //状态和方法的映射 states = &#123; jump : function()&#123; //跳 console.log("jump") &#125;, move : function()&#123; //移动 console.log("move") &#125;, shoot : function()&#123; //射击 console.log("shoot") &#125;, squat : function()&#123; //蹲下 console.log("squat") &#125; &#125;, //动作控制类 Action = &#123; //改变状态方法 changeState : function()&#123; var arg = arguments; //重置动作 _currentState = &#123;&#125;; //追加动作 if(arg.length)&#123; for(var i = 0,len = arg.length;i&lt;len;i++)&#123; _currentState[arg[i]] = true; &#125; &#125; return this; &#125;, //执行动作 goes : function()&#123; //遍历执行动作 for(var i in _currentState)&#123; states[i] &amp;&amp; states[i](); &#125; return this; &#125; &#125;; //返回动作类 return &#123; change : Action.changeState, goes : Action.goes &#125;&#125; 使用方法12345678910//new marry个人var marry = new MarryState();//方法的调用marry .change("jump","shoot") .goes() .change("move","shoot") .goes() .change("squat","shoot") .goes();]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[命令模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 以canvas为例123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869//定义构造函数var CanvasCommand = function(domId)&#123; //获取当前id的dom var canvas = document.getElementById(domId), ctx = canvas.getContext("2d"), //定义一些方法 Action = &#123; //填充色 fillStyle : function(c)&#123; ctx.fillStyle = c; &#125;, //填充方块 fillRect : function(x,y,width,height)&#123; ctx.fillRect(x,y,width,height) &#125;, //描边色 strokeStyle : function(c)&#123; ctx.strokeStyle(c); &#125;, //描边方块 strokeRect : function(x,y,width,height)&#123; ctx.strokeRect(x,y,width,height); &#125;, //画文字 fillText : function(text,x,y)&#123; ctx.fillText(text,x,y) &#125;, //开始路径 beginPath : function()&#123; ctx.beginPath() &#125;, //移动到 moveTo : function(x,y)&#123; ctx.moveTo(x,y) &#125;, //画直线 lineTo : function(x,y)&#123; ctx.lineTo(x,y) &#125;, //画孤线 arc : function(x,y,r,begin,end,dir)&#123; ctx.arc(x,y,r,begin,end,dir) &#125;, //填充 fill : function()&#123; ctx.fill() &#125;, //描边 stroke : function()&#123; ctx.stroke() &#125;, &#125;; return &#123; //返回的方法 excute : function(msg)&#123; //没有指令 if(!msg) return; //多个指令，逐个遍历 if(msg.length)&#123; for(var i = 0;i&lt;msg.length;i++)&#123; arguments.callee(msg[i]); &#125; &#125;else&#123; msg.param = Object.prototype.toString.call(msg.param) === "[object Array]" ? msg.param : [msg.param]; Action[msg.command].apply(Action,msg.param); &#125; &#125; &#125;&#125; 使用方法1234567//初始化domIdvar mycanvas = new CanvasCommand("domId");//使用命令画图mycanvas.excute([ &#123;command : 'fillStyle',param : "red"&#125;, &#123;command : 'fillRect',param : [20,20,100,100]&#125;])]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[惰性模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E6%83%B0%E6%80%A7%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 事件绑定方法一 加载的时候重新定义 on方法12345678910111213141516171819//对事件绑定的重新定义A.on = function(dom, type,fn)&#123; //不是ie的情况下 if(document.addEventListenter)&#123; return function(dom, type,fn)&#123; dom.addEventListenter(type,fn,false); &#125; &#125;else if(document.attachEvent)&#123; //IE的情况下 return function(dom, type,fn)&#123; dom.attachEvent("on" + type,fn); &#125; &#125;else&#123; //否则 return function(dom, type,fn)&#123; dom.attachEvent("on" + type) = fn; &#125; &#125;&#125;(); 方法二 执行的时候定义方法123456789101112131415161718192021//对事件绑定的重新定义A.on = function(dom, type,fn)&#123; //不是ie的情况下 if(document.addEventListenter)&#123; A.on = function(dom, type,fn)&#123; dom.addEventListenter(type,fn,false); &#125; &#125;else if(document.attachEvent)&#123; //IE的情况下 A.on = function(dom, type,fn)&#123; dom.attachEvent("on" + type,fn); &#125; &#125;else&#123; //否则 A.on = function(dom, type,fn)&#123; dom.attachEvent("on" + type) = fn; &#125; &#125; //定义后重新执行方法 A.on(dom, type,fn);&#125;();]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[备忘录模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 列表缓存123456789101112131415161718192021//列表var Page = function()&#123; //定义缓存 var cache=&#123;&#125;; return function(page,fn)&#123; //命中缓存 if(cache[page])&#123; showPage(page,cacge[page]); fn&amp;&amp;fn(); &#125;else&#123; //对请求回来的数据进行缓存 $.post("",&#123;&#125;,function(res)&#123; if(res)&#123; showPage(page,res.data); cache[page]=res.data; fn&amp;&amp;fn() &#125; &#125;) &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[搭建本地运行环境]]></title>
     <url>%2F2019%2F06%2F01%2F%E6%90%AD%E5%BB%BA%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%2F</url>
     <content type="text"><![CDATA[如何利用http-serve搭建环境 利用http-serverhttp http-server全局安装http-servernpm install http-server -g使用httphttp-server [path] [options]具体含义123456789101112131415161718192021222324252627282930313233-p 要使用的端口（默认为8080）-a 要使用的地址（默认为0.0.0.0）-d 显示目录列表（默认为“True”）-i 显示autoIndex（默认为“True”）-g或--gzip启用时（默认为“False”），它将用于./public/some-file.js.gz代替./public/some-file.jsgzip压缩版本的文件，并且该请求接受gzip编码。-e或--ext默认文件扩展名（如果没有提供）（默认为&apos;html&apos;）-s或--silent从输出中抑制日志消息--cors通过Access-Control-Allow-Origin标题启用CORS-o 启动服务器后打开浏览器窗口-c设置缓存控制max-age头的缓存时间（以秒为单位），例如-c10 10秒（默认为&apos;3600&apos;）。要禁用缓存，请使用-c-1。-U或--utc在日志消息中使用UTC时间格式。-P或--proxy代理无法在本地解决给定网址的所有请求。例如：-P http://someurl.com-S或--ssl启用https。-C或--certssl证书文件的路径（默认值：cert.pem）。-K或--keyssl密钥文件的路径（默认值：key.pem）。-r或者--robots提供一个/robots.txt（其内容默认为&apos;User-agent：* \ nDisallow：/&apos;）-h或--help打印此列表并退出。 使用httpsopenssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem http-server -S -C cert.pem -o 安装XAMPP利用xampp搭建本地服务第一步：安装第二部：找到 C:\xampp\htdocs 将文件放置在次目录下第三部：启动 config 可以对端口号进行配置]]></content>
@@ -350,6 +350,39 @@
       </categories>
       <tags>
         <tag>HTTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[迭代器模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 实现迭代器12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364//迭代器var Iterator = function(items)&#123; //获取长度，下标 var length = items.length, index = 0, splice = [].splice; return &#123; //第一个元素 first : function()&#123; index = 0; return items[index]; &#125;, //最后一个元素 last : function()&#123; index = length-1; return items[index]; &#125;, //前一个元素 pre : function()&#123; if(--index &gt; 0)&#123; return items[index] &#125;else&#123; index = 0; return null; &#125; &#125;, //下一个元素 next : function()&#123; if(++index &lt; length)&#123; return items[index] &#125;else&#123; index = length-1; return null; &#125; &#125;, //获取某一个 num 的元素 get : function(num)&#123; index = num&gt;=0 ? num % length : num % length + length; return items[index]; &#125;, //进行 fn 的全量处理 dealEach : function(fn)&#123; var args = splice.call(arguments,1); for(var i=0;i&lt;length;i++)&#123; fn.apply(items[i],args); &#125; &#125;, //对某一个 num 的元素进行 fn 的处理 dealItem : function(num,fn)&#123; fn.apply(this.get(num),splice.call(arguments,2)) &#125;, //对 mem 中的元素 进行 numFn 的处理 allFn 针对所有的处理 exclusive : function(mem,allFn,numFn)&#123; this.dealEach(allFn); if(Array.isArray(mem))&#123; for(var i=0;i&lt;mem.length;i++)&#123; this.dealItem(mem[i],numFn) &#125; &#125;else&#123; this.dealItem(mem,numFn) &#125; &#125; &#125;&#125; 数组迭代器123456789var eachArray = function(arr,fn)&#123; var i = 0, len = arr.length; for(;i &lt; len;i++)&#123; if(fn.call(arr[i],i,arr[i]) === false)&#123; break; &#125; &#125;&#125; 对象迭代器1234567var eachObj = function(obj,fn)&#123; for(var i in obj)&#123; if(fn.call(obj[i],i,obj[i]) === false)&#123; break; &#125; &#125;&#125; 分支循环嵌套123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051/* 绘制特效图片*param t 类型*param x x坐标*param y y坐标*param w 宽度*param h 高度*param a 透明度*/function dealImage(t,x,y,w,h,a)&#123; var canvasData = ctx.getImageData(x,y,w,h), data = canvasData.data, //封装算法 Deal = function ()&#123; var method = &#123; default : function(i)&#123; return method["gray"](i) &#125;, red : function()&#123; data[i + 1] = 0; data[i + 2] = 0; data[i + 3] = a; &#125;, green : function()&#123; data[i + 0] = 0; data[i + 2] = 0; data[i + 3] = a; &#125; blue : function()&#123; data[i + 1] = 0; data[i + 0] = 0; data[i + 3] = a; &#125;, grey : function()&#123; data[i] = data[i + 1]=parseInt(data[i + 2] = (data[i + 0] + data[i + 1] +data[i + 2])/3); data[i + 3] = a; &#125; &#125; return function(type)&#123; return method[type] || method["default"] &#125; &#125;(); //迭代器处理数据 function eachData(fn)&#123; for(var i = 0,len = data.length;i &lt; len;i += 4)&#123; fn(i); &#125; &#125;; //处理数据 eachData(Deal(t)); ctx.putImageData(canvasData,width+x,y);&#125;]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[构造函数]]></title>
+    <url>%2F2019%2F06%2F01%2F%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 闭包实现构造函数var Book=(function(){ //静态私有变量 var bookNum=100; //静态私有方法 function checkBook(name){} //创建类 function _book(newId, newName, newPrice){ //私有变量 //var name,price; //私有方法 function checkId(id){} //特权方法 this.getName=function(){} this.getPrice=function(){} this.setName=function(){} this.setPrice=function(){} //公有属性 this.id=newId; //公有方法 this.copy=function(){}; bookNum++; if(bookNum&gt;100) throw new Error(&quot;只有100本书可以被创建&quot;) //构造器 this.setName(name); this.setPrice(price); } //构建原型 _book.prototype = { //静态公有变量 isJsBook : false, //静态公有方法 display : function(){} }; //返回类 return _book; })() 安全模式12345678910//构造函数，防止未new直接var mybook = Book();var Book=function(title,time,type)&#123; if(this instanceof Book)&#123; this.title = title; this.time = time; this.type = type; &#125;else&#123; return new Book(title,time,type); &#125;&#125;]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[数据管理器]]></title>
+    <url>%2F2019%2F06%2F01%2F%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 定义类1234567891011/**本地存储类*参数 preId 本地存储数据库前缀*参数 timeSign 定义时间戳与存储数据之间的拼接符*/var BaseLocalStorage = function(preId,timeSign)&#123; //定义本地存储数据库前缀 this.preId = preId; //定义时间戳与存储数据之间的拼接符 this.timeSign = timeSign || '|-|'&#125; 定义方法123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114BaseLocalStorage.prototype = &#123; //状态 status : &#123; SUCCESS : 0,//成功 FAILURE : 1.//失败 OVERFLOW : 2,//溢出 TIMEOUT : 3//过期 &#125;, //window的本地存储 storage : localStorage || window.localStrorage, //获取当前的key getKey : function(key)&#123; return this.preId + key; &#125;, //设置数据 set : function(key,value,callback,time)&#123; //默认成功 var status = this.status.SUCCESS, //获得key值 key = this.getKey(key); try&#123; //获取时间戳 time = new Date(time).getTime() || time.getTime(); &#125;catch(e)&#123; //如果没有获取到，默认一个月 time = new Date(time).getTime() + 1000 * 60 * 60 * 24 * 31; &#125; try&#123; //设置 this.storage.setItem(key , time + this.timeSign + value); &#125;catch(e)&#123; //如果失败了，溢出了 status = this.syatus.OVERFLOW &#125; //执行回调函数 callback &amp;&amp; callback.call(this, status ,key ,value) &#125;, //获取数据 get : function(key,callback)&#123; //默认成功，设置key var status = this.status.SUCCESS, key = this.getKey(key), value = null, timeSignLen = this.timeSign.length, that = this, index, result; //尝试获取值 try&#123; value = that.stirage.getItem(key); &#125;catch(e)&#123; //如果没有获取到 result = &#123; //定义失败。 status : that.status.FAILURE, value : null &#125; //执行回调函数 callback &amp;&amp; callback.call(this, result.status ,result.value); //返回失败 return result; &#125; //拿到数据 if(value)&#123; //获取时间标记下标值 index = value.indexOf(that.timeSign); //获取时间 time = +value.slice(0,index); //比较时间是否过期 if(new Date(time).getTime() &gt; new Date().getTime() || 0)&#123; //没有过期获取真的value value = value.slice(index + timeSignLen); &#125;else&#123; //过期了，设置过期，并移除原来的数据 value = null, status = that.status.TIMEOUT; that.remove(key); &#125; &#125;else&#123; //获取失败 status = that.status.FAILURE; &#125; //定义结果 result = &#123; status : status, value : value &#125;; //执行回掉函数并返回值 callback &amp;&amp; callback.call(this, result.status ,result.value); return result; &#125;, //移除数据 remove : function(key,callback)&#123; //定义初始失败，并获取key var status = this.status.FAILURE, key = this.getKey(key), value = null; //尝试获取值 try&#123; //得到值了 value = that.stirage.getItem(key); &#125;catch(e)&#123;&#125; //如果获取到了值 if(value)&#123; try&#123; //移除值，并设置成功 this.storage.removeItem(key); status = this.status.SUCCESS; &#125;catch(e)&#123;&#125; &#125; //执行回掉函数 callback &amp;&amp; callback.call(this, status ,status &gt; 0 ? null : value.slice(value.indexOf(this.timeSign) + this.timeSign.length)); &#125;&#125;]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
       </tags>
   </entry>
   <entry>
@@ -452,17 +485,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[JS规范]]></title>
-    <url>%2F2019%2F05%2F27%2FJS%E8%A7%84%E8%8C%83%2F</url>
-    <content type="text"><![CDATA[编码规范统一团队的编码规范，有助于代码的维护。本章是传统意义上的 Style Guideline，目的是统一一些相对主观化的代码风格。 单行代码块在单行代码块中使用空格 不推荐 12function foo () &#123;return true&#125;if (foo) &#123;bar = 0&#125; 推荐 12function foo () &#123; return true &#125;if (foo) &#123; bar = 0 &#125; 大括号风格在编程过程中，大括号风格与缩进风格紧密联系，用来描述大括号相对代码块位置的方法有很多。在 JavaScript 中，主要有三种风格，如下： One True Brace Style 12345if (foo) &#123; bar()&#125; else &#123; baz()&#125; Stroustrup 123456if (foo) &#123; bar()&#125;else &#123; baz()&#125; Allman 12345678if (foo)&#123; bar()&#125;else&#123; baz()&#125; 我们团队约定使用 One True Brace Style 风格 变量命名当命名变量时，主流分为驼峰式命名（variableName）和下划线命名（variable_name）两大阵营。 团队约定使用驼峰式命名 拖尾逗号在 ECMAScript5 里面，对象字面量中的拖尾逗号是合法的，但在 IE8（非 IE8 文档模式）下，当出现拖尾逗号，则会抛出错误。 拖尾逗号的例子： 1234var foo = &#123; name: 'foo', age: '22',&#125; 拖尾逗号的好处是，简化了对象和数组添加或删除元素，我们只需要修改新增的行即可，并不会增加差异化的代码行数。 因为拖尾逗号有好也有不好，所以团队约定允许在最后一个元素或属性与闭括号 ] 或 } 在不同行时，可以（但不要求）使用拖尾逗号。当在同一行时，禁止使用拖尾逗号。 逗号空格逗号前后的空格可以提高代码的可读性，团队约定在逗号后面使用空格，逗号前面不加空格。 不推荐 123var foo = 1,bar = 2var foo = 1 , bar = 2var foo = 1 ,bar = 2 推荐 1var foo = 1, bar = 2 逗号风格逗号分隔列表时，在 JavaScript 中主要有两种逗号风格： 标准风格，逗号放置在当前行的末尾 逗号前置风格，逗号放置在下一行的开始位置 团队约定使用标准风格 不推荐 123456789var foo = 1,bar = 2var foo = 1, bar = 2var foo = ['name' , 'age'] 推荐 12345var foo = 1, bar = 2var foo = ['name', 'age'] 计算属性的空格团队约定在对象的计算属性内，禁止使用空格 不推荐 123obj['foo' ]obj[ 'foo']obj[ 'foo' ] 推荐 1obj['foo'] 拖尾换行在非空文件中，存在拖尾换行是一个常见的 UNIX 风格，它的好处是可以方便在串联和追加文件时不会打断 Shell 的提示。在日常的项目中，保留拖尾换行的好处是，可以减少版本控制时的代码冲突。 不推荐 123function func () &#123; // do something&#125; 推荐 1234function func () &#123; // do something&#125; // 此处是新的一行 可以通过 .editorconfig 添加 EOL 函数调用为了避免语法错误，团队约定在函数调用时，禁止使用空格 不推荐 123fn ()fn() 推荐 1fn() 缩进代码保持一致的缩进，是作为工程师的职业素养。但缩进用两个空格，还是四个空格，是用 Tab 还是空格呢？这样的争论太多了，也得不出答案。本规范结合了市面上优秀的开源项目，姑且约定使用 空格 来缩进，而且缩进使用两个空格。 那是不是不能使用 Tab 进行缩进了？我们可以通过配置 .editorconfig ，将 Tab 自动转换为空格。 对象字面量的键值缩进团队约定对象字面量的键和值之间不能存在空格，且要求对象字面量的冒号和值之间存在一个空格 不推荐 1var obj = &#123; 'foo' : 'haha' &#125; 推荐 1var obj = &#123; 'foo': 'haha' &#125; 构造函数首字母大写在 JavaScript 中 new 操作符用来创建某个特定类型的对象的一个实例，该类型的对象是由一个构造函数表示的。由于构造函数只是常规函数，唯一区别是使用 new 来调用。所以我们团队约定构造函数的首字母要大小，以此来区分构造函数和普通函数。 不推荐 1var fooItem = new foo() 推荐 1var fooItem = new Foo() 构造函数的参数在 JavaScript 中，通过 new 调用构造函数时，如果不带参数，可以省略后面的圆括号。但这样会造成与整体的代码风格不一致，所以团队约定使用圆括号 不推荐 1var person = new Person 推荐 1var person = new Person() 链式调用链式调用如果放在同一行，往往会造成代码的可读性差，但有些时候，短的链式调用并不会影响美观。所以本规范约定一行最多只能有四个链式调用，超过就要求换行。 空行空白行对于分离代码逻辑有帮助，但过多的空行会占据屏幕的空间，影响可读性。团队约定最大连续空行数为 2 不推荐 12345var a = 1var b = 2 推荐 1234var a = 1var b = 2 链式赋值链式赋值容易造成代码的可读性差，所以团队约定禁止使用链式赋值 不推荐 1var a = b = c = 1 推荐 123var a = 1var b = 1var c = 1 变量声明JavaScript 允许在一个声明中，声明多个变量。团队约定在声明变量时，一个声明只能有一个变量 不推荐 1var a, b, c 推荐 123var avar bvar c 分号JavaScript 在所有类 C 语言中是比较独特的，它不需要在每个语句的末尾有分号。在很多情况下，JavaScript 引擎可以确定一个分号应该在什么位置然后自动添加它。此特征被称为 自动分号插入 (ASI)，被认为是 JavaScript 中较为有争议的特征。 团队中对于是否应该使用分号，也有许多争论，本规范推荐不使用分号，因为我们认为好的工程师应该知道什么时候该加，什么时候不该加。 相关参考 ：semi 代码块空格一致性是任何风格指南的重要组成部分。虽然在哪里放置块的开括号纯属个人偏好，但在整个项目中应该保持一致。不一致的风格将会分散读者阅读代码的注意力。 团队约定代码块前要添加空格 不推荐 12345if (a)&#123; b()&#125;function a ()&#123;&#125; 推荐 12345if (a) &#123; b()&#125;function a () &#123;&#125; 函数声明的空格当格式化一个函数，函数名或 function 关键字与左括号之间允许有空白。命名函数要求函数名和 function 关键字之间有空格，但是匿名函数要求不加空格。 团队约定函数括号前要加空格 不推荐 123function func(x) &#123; // ...&#125; 推荐 123function func (x) &#123; // ...&#125; 操作符的空格团队约定操作符前后都需要添加空格 不推荐 1var sum = 1+2 推荐 1var sum = 1 + 2 BOMUnicode 字节顺序标记 (BOM) 用来指定代码单元是高字节序还是低字节序。也就是说，是高位在前还是低位在前。UTF-8 不需要 BOM 来表明字节顺序，因为单个字节并不影响字节顺序。 相信不少同学遇到过 BOM 的坑，这里不多说了，切记不要使用 windows 的记事本改代码！]]></content>
-      <categories>
-        <category>前端规范</category>
-      </categories>
-      <tags>
-        <tag>JS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[html模板]]></title>
     <url>%2F2019%2F05%2F27%2FHTML%E6%A8%A1%E6%9D%BF%2F</url>
     <content type="text"><![CDATA[HTML模版指的是团队使用的初始化HTML文件，里面会根据不同平台而采用不一样的设置，一般主要不同的设置就是 mata 标签的设置，以下是 PC 和移动端的 HTML 模版。 HTML5标准模版123456789101112131415&lt;!DOCTYPE html&gt;&lt;html lang="zh-CN"&gt;&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;meta http-equiv="x-dns-prefetch-control" content="on" /&gt;&lt;meta HTTP-EQUIV="pragma" CONTENT="no-cache"&gt; &lt;meta HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate"&gt; &lt;meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT"&gt; &lt;meta HTTP-EQUIV="expires" CONTENT="0"&gt;&lt;title&gt;HTML5标准模版&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;/body&gt;&lt;/html&gt; 团队约定移动端123456789101112131415161718192021&lt;!DOCTYPE html&gt;&lt;html lang="zh-CN"&gt;&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;meta HTTP-EQUIV="pragma" CONTENT="no-cache"&gt; &lt;meta http-equiv="x-dns-prefetch-control" content="on" /&gt;&lt;meta HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate"&gt; &lt;meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT"&gt; &lt;meta HTTP-EQUIV="expires" CONTENT="0"&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" &gt;&lt;meta name="format-detection" content="telephone=no" &gt;&lt;title&gt;移动端HTML模版&lt;/title&gt; &lt;!-- DNS预解析 --&gt;&lt;link rel="dns-prefetch" href=""&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt; PC端123456789101112131415161718192021222324&lt;!DOCTYPE html&gt;&lt;html lang="zh-CN"&gt;&lt;head&gt;&lt;meta charset="UTF-8"&gt;&lt;meta http-equiv="x-dns-prefetch-control" content="on" /&gt;&lt;meta name="keywords" content="your keywords"&gt;&lt;meta name="description" content="your description"&gt;&lt;meta name="author" content="author,email address"&gt;&lt;meta HTTP-EQUIV="pragma" CONTENT="no-cache"&gt; &lt;meta HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate"&gt; &lt;meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT"&gt; &lt;meta HTTP-EQUIV="expires" CONTENT="0"&gt;&lt;meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"&gt;&lt;meta name="renderer" content="ie-stand"&gt;&lt;title&gt;PC端HTML模版&lt;/title&gt;&lt;!-- DNS预解析 --&gt; &lt;link rel="dns-prefetch" href=""&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
@@ -471,6 +493,17 @@
       </categories>
       <tags>
         <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JS规范]]></title>
+    <url>%2F2019%2F05%2F27%2FJS%E8%A7%84%E8%8C%83%2F</url>
+    <content type="text"><![CDATA[编码规范统一团队的编码规范，有助于代码的维护。本章是传统意义上的 Style Guideline，目的是统一一些相对主观化的代码风格。 单行代码块在单行代码块中使用空格 不推荐 12function foo () &#123;return true&#125;if (foo) &#123;bar = 0&#125; 推荐 12function foo () &#123; return true &#125;if (foo) &#123; bar = 0 &#125; 大括号风格在编程过程中，大括号风格与缩进风格紧密联系，用来描述大括号相对代码块位置的方法有很多。在 JavaScript 中，主要有三种风格，如下： One True Brace Style 12345if (foo) &#123; bar()&#125; else &#123; baz()&#125; Stroustrup 123456if (foo) &#123; bar()&#125;else &#123; baz()&#125; Allman 12345678if (foo)&#123; bar()&#125;else&#123; baz()&#125; 我们团队约定使用 One True Brace Style 风格 变量命名当命名变量时，主流分为驼峰式命名（variableName）和下划线命名（variable_name）两大阵营。 团队约定使用驼峰式命名 拖尾逗号在 ECMAScript5 里面，对象字面量中的拖尾逗号是合法的，但在 IE8（非 IE8 文档模式）下，当出现拖尾逗号，则会抛出错误。 拖尾逗号的例子： 1234var foo = &#123; name: 'foo', age: '22',&#125; 拖尾逗号的好处是，简化了对象和数组添加或删除元素，我们只需要修改新增的行即可，并不会增加差异化的代码行数。 因为拖尾逗号有好也有不好，所以团队约定允许在最后一个元素或属性与闭括号 ] 或 } 在不同行时，可以（但不要求）使用拖尾逗号。当在同一行时，禁止使用拖尾逗号。 逗号空格逗号前后的空格可以提高代码的可读性，团队约定在逗号后面使用空格，逗号前面不加空格。 不推荐 123var foo = 1,bar = 2var foo = 1 , bar = 2var foo = 1 ,bar = 2 推荐 1var foo = 1, bar = 2 逗号风格逗号分隔列表时，在 JavaScript 中主要有两种逗号风格： 标准风格，逗号放置在当前行的末尾 逗号前置风格，逗号放置在下一行的开始位置 团队约定使用标准风格 不推荐 123456789var foo = 1,bar = 2var foo = 1, bar = 2var foo = ['name' , 'age'] 推荐 12345var foo = 1, bar = 2var foo = ['name', 'age'] 计算属性的空格团队约定在对象的计算属性内，禁止使用空格 不推荐 123obj['foo' ]obj[ 'foo']obj[ 'foo' ] 推荐 1obj['foo'] 拖尾换行在非空文件中，存在拖尾换行是一个常见的 UNIX 风格，它的好处是可以方便在串联和追加文件时不会打断 Shell 的提示。在日常的项目中，保留拖尾换行的好处是，可以减少版本控制时的代码冲突。 不推荐 123function func () &#123; // do something&#125; 推荐 1234function func () &#123; // do something&#125; // 此处是新的一行 可以通过 .editorconfig 添加 EOL 函数调用为了避免语法错误，团队约定在函数调用时，禁止使用空格 不推荐 123fn ()fn() 推荐 1fn() 缩进代码保持一致的缩进，是作为工程师的职业素养。但缩进用两个空格，还是四个空格，是用 Tab 还是空格呢？这样的争论太多了，也得不出答案。本规范结合了市面上优秀的开源项目，姑且约定使用 空格 来缩进，而且缩进使用两个空格。 那是不是不能使用 Tab 进行缩进了？我们可以通过配置 .editorconfig ，将 Tab 自动转换为空格。 对象字面量的键值缩进团队约定对象字面量的键和值之间不能存在空格，且要求对象字面量的冒号和值之间存在一个空格 不推荐 1var obj = &#123; 'foo' : 'haha' &#125; 推荐 1var obj = &#123; 'foo': 'haha' &#125; 构造函数首字母大写在 JavaScript 中 new 操作符用来创建某个特定类型的对象的一个实例，该类型的对象是由一个构造函数表示的。由于构造函数只是常规函数，唯一区别是使用 new 来调用。所以我们团队约定构造函数的首字母要大小，以此来区分构造函数和普通函数。 不推荐 1var fooItem = new foo() 推荐 1var fooItem = new Foo() 构造函数的参数在 JavaScript 中，通过 new 调用构造函数时，如果不带参数，可以省略后面的圆括号。但这样会造成与整体的代码风格不一致，所以团队约定使用圆括号 不推荐 1var person = new Person 推荐 1var person = new Person() 链式调用链式调用如果放在同一行，往往会造成代码的可读性差，但有些时候，短的链式调用并不会影响美观。所以本规范约定一行最多只能有四个链式调用，超过就要求换行。 空行空白行对于分离代码逻辑有帮助，但过多的空行会占据屏幕的空间，影响可读性。团队约定最大连续空行数为 2 不推荐 12345var a = 1var b = 2 推荐 1234var a = 1var b = 2 链式赋值链式赋值容易造成代码的可读性差，所以团队约定禁止使用链式赋值 不推荐 1var a = b = c = 1 推荐 123var a = 1var b = 1var c = 1 变量声明JavaScript 允许在一个声明中，声明多个变量。团队约定在声明变量时，一个声明只能有一个变量 不推荐 1var a, b, c 推荐 123var avar bvar c 分号JavaScript 在所有类 C 语言中是比较独特的，它不需要在每个语句的末尾有分号。在很多情况下，JavaScript 引擎可以确定一个分号应该在什么位置然后自动添加它。此特征被称为 自动分号插入 (ASI)，被认为是 JavaScript 中较为有争议的特征。 团队中对于是否应该使用分号，也有许多争论，本规范推荐不使用分号，因为我们认为好的工程师应该知道什么时候该加，什么时候不该加。 相关参考 ：semi 代码块空格一致性是任何风格指南的重要组成部分。虽然在哪里放置块的开括号纯属个人偏好，但在整个项目中应该保持一致。不一致的风格将会分散读者阅读代码的注意力。 团队约定代码块前要添加空格 不推荐 12345if (a)&#123; b()&#125;function a ()&#123;&#125; 推荐 12345if (a) &#123; b()&#125;function a () &#123;&#125; 函数声明的空格当格式化一个函数，函数名或 function 关键字与左括号之间允许有空白。命名函数要求函数名和 function 关键字之间有空格，但是匿名函数要求不加空格。 团队约定函数括号前要加空格 不推荐 123function func(x) &#123; // ...&#125; 推荐 123function func (x) &#123; // ...&#125; 操作符的空格团队约定操作符前后都需要添加空格 不推荐 1var sum = 1+2 推荐 1var sum = 1 + 2 BOMUnicode 字节顺序标记 (BOM) 用来指定代码单元是高字节序还是低字节序。也就是说，是高位在前还是低位在前。UTF-8 不需要 BOM 来表明字节顺序，因为单个字节并不影响字节顺序。 相信不少同学遇到过 BOM 的坑，这里不多说了，切记不要使用 windows 的记事本改代码！]]></content>
+      <categories>
+        <category>前端规范</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
       </tags>
   </entry>
   <entry>
