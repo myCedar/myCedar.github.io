@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="本文主要记下自己看过一下jsBridege的知识">
-<meta name="keywords" content="webAPP">
+  <meta name="description" content="节流与防抖">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jsBridge">
-<meta property="og:url" content="http://yoursite.com/2019/06/28/jsBridge/index.html">
+<meta property="og:title" content="节流和防抖">
+<meta property="og:url" content="http://yoursite.com/2019/07/11/节流和防抖/index.html">
 <meta property="og:site_name" content="记下点滴">
-<meta property="og:description" content="本文主要记下自己看过一下jsBridege的知识">
+<meta property="og:description" content="节流与防抖">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-27T16:10:18.281Z">
+<meta property="og:updated_time" content="2019-07-11T10:43:20.716Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jsBridge">
-<meta name="twitter:description" content="本文主要记下自己看过一下jsBridege的知识">
+<meta name="twitter:title" content="节流和防抖">
+<meta name="twitter:description" content="节流与防抖">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/28/jsBridge/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/11/节流和防抖/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>jsBridge | 记下点滴</title>
+  <title>节流和防抖 | 记下点滴</title>
   
 
 
@@ -381,7 +381,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/28/jsBridge/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/11/节流和防抖/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="akCedar">
@@ -398,7 +398,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">jsBridge
+          <h1 class="post-title" itemprop="name headline">节流和防抖
 
               
             
@@ -424,12 +424,24 @@
                 
               
 
-              <time title="创建时间：2019-06-27 22:36:42 / 修改时间：16:10:18" itemprop="dateCreated datePublished" datetime="2019-06-27T22:36:42Z">2019-06-27</time>
+              <time title="创建时间：2019-07-10 19:03:37" itemprop="dateCreated datePublished" datetime="2019-07-10T19:03:37Z">2019-07-10</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-11 10:43:20" itemprop="dateModified" datetime="2019-07-11T10:43:20Z">2019-07-11</time>
               
             
           </span>
@@ -481,110 +493,32 @@
       
 
       
-        <p>本文主要记下自己看过一下jsBridege的知识<br><a id="more"></a></p>
-<h2 id="参照网站"><a href="#参照网站" class="headerlink" title="参照网站"></a>参照网站</h2><ul>
-<li><a href="https://blog.ymfe.org/%E6%B7%B7%E5%90%88%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84JSBridge/" target="_blank" rel="noopener">移动混合开发中的 JSBridge</a></li>
-<li><a href="https://juejin.im/post/5bda6f276fb9a0226d18931f" target="_blank" rel="noopener">JSBridge实战</a></li>
-<li><a href="https://juejin.im/post/5ab48a79f265da23a0497da5" target="_blank" rel="noopener">时下app分以下几种技术选型</a></li>
-<li><a href="https://awhisper.github.io/2017/09/09/injectUIWebView/" target="_blank" rel="noopener">UIWebView代码注入时机与姿势</a></li>
-<li><a href="https://juejin.im/post/5934e984ac502e0068ad14d0#heading-4" target="_blank" rel="noopener">JSSDK</a><h2 id="当前的技术选型"><a href="#当前的技术选型" class="headerlink" title="当前的技术选型"></a>当前的技术选型</h2></li>
-<li>Webapp，框架有cordova，ionic等</li>
-<li>Hybrid，即Native+h5方式</li>
-<li>React Native, weex方向</li>
-<li>纯Native，这个没啥好说的</li>
-<li>flutter，明日之星<h2 id="bridge原理"><a href="#bridge原理" class="headerlink" title="bridge原理"></a>bridge原理</h2>为了解决 H5和Native的双向通信的问题。主旨思想是在H5和NA之间搭建一个桥梁（Bridge），给两端留好更友好、更合理的接口。</li>
+        <p>节流与防抖<br><a id="more"></a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>如果是业务中需要实现的节流与防抖等需求，最好还是根据业务需求自己编写定时器，简洁方便。</li>
+<li>如果是复杂的计算，最好结合webworker，启用多线程的方式。也能优化体验<br>lodash<h2 id="节流与防抖定义"><a href="#节流与防抖定义" class="headerlink" title="节流与防抖定义"></a>节流与防抖定义</h2>节流：在一定时间多次触发函数，保证一段时间仅执行一次。如页面resize，重绘大小的时候，间隔一段时间重绘一次。<br>防抖：当持续触发事件时，一定时间段内没有再触发事件，事件处理函数才会执行一次，如果设定的时间到来之前，又一次触发了事件，就重新开始延时<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2></li>
+<li>第一次进入  timerId为空 执行leadingEdge（设置定时器，时间为等待时间，执行函数为timerExpired）</li>
+<li>如果设置了leading为true，则立刻执行invokeFunc（执行一遍任务函数）</li>
+<li>期间用户未操作，定时器时间到了，执行timerExpired（如果可以立刻执行，执行trailingEdge，否则重置定时器：时间为等待时间，执行函数timerExpired）</li>
+<li>执行trailingEdge，清空定时器ID，判断是否周期结束后是否执行（如果是的，执行函数，不是，清空变量及参数）</li>
+<li>期间用户又操作了，判断是否应该执行（如果不应该且定时器是空的，则执行timerExpired[有定时器，不操作]；如果应该且设置最大等待时间，重新设置定时器并立刻执行一次；如果不能，则不做任何事）<h2 id="lodash防抖"><a href="#lodash防抖" class="headerlink" title="lodash防抖"></a>lodash防抖</h2><ul>
+<li>@param {Function}  实现的业务函数.</li>
+<li>@param {number} [wait=0] </li>
+<li>延迟执行的时间，默认值是0，如果不传，使用requestAnimationFrame来更新页面；</li>
+<li>@param {Object} [options={}] The options object.</li>
+<li>@param {boolean} [options.leading=false]</li>
+<li>Specify invoking on the leading edge of the timeout.</li>
+<li>@param {number} [options.maxWait]</li>
+<li>The maximum time <code>func</code> is allowed to be delayed before it’s invoked.</li>
+<li>@param {boolean} [options.trailing=true]</li>
+<li>Specify invoking on the trailing edge of the timeout.</li>
+<li>@returns {Function} Returns the new debounced function.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br></pre></td><td class="code"><pre><span class="line">function debounce(func, wait, options) &#123;</span><br><span class="line">  let lastArgs,     // debounced 被调用后被赋值,表示至少调用 debounced一次</span><br><span class="line">    lastThis,   // 保存 this</span><br><span class="line">    maxWait,     // 最大等待时间</span><br><span class="line">    result,      // 返回执行的函数</span><br><span class="line">    timerId,    // 定时器句柄</span><br><span class="line">    lastCallTime    // 上一次调用 debounced 的时间</span><br><span class="line"></span><br><span class="line">  let lastInvokeTime = 0  // 上一次执行 func 的时间</span><br><span class="line">  let leading = false     // 是否第一次触发时立即执行</span><br><span class="line">  let maxing = false     // 是否有最长等待时间</span><br><span class="line">  let trailing = true    // 是否在等待周期结束后执行用户传入的函数</span><br><span class="line"></span><br><span class="line">  // window.requestAnimationFrame() 方法告诉浏览器您希望执行动画并请求浏览器在下一次重绘之前调用指定的函数来更新动画。该方法使用一个回调函数作为参数，这个回调函数会在浏览器重绘之前调用。</span><br><span class="line">  const useRAF = (!wait &amp;&amp; wait !== 0 &amp;&amp; typeof root.requestAnimationFrame === &apos;function&apos;)</span><br><span class="line">  //  以上代码被我注释，可以先不关注</span><br><span class="line"></span><br><span class="line"> // 这个很好理解，如果传入的 func 不是函数，抛出错误，老子干不了这样的活</span><br><span class="line">  if (typeof func != &apos;function&apos;) &#123;</span><br><span class="line">    throw new TypeError(&apos;Expected a function&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">  // 如果不存在  默认为0</span><br><span class="line">  wait = +wait || 0</span><br><span class="line">  if (isObject(options)) &#123;</span><br><span class="line">    leading = !!options.leading</span><br><span class="line">    maxing = &apos;maxWait&apos; in options</span><br><span class="line">    maxWait = maxing ? Math.max(+options.maxWait || 0, wait) : maxWait</span><br><span class="line">    trailing = &apos;trailing&apos; in options ? !!options.trailing : trailing</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  执行 用户传入的 func</span><br><span class="line">//  lastInvokeTime 在此时被赋值，记录上一次调用 func的时间</span><br><span class="line">  function invokeFunc(time) &#123;</span><br><span class="line">    const args = lastArgs</span><br><span class="line">    const thisArg = lastThis</span><br><span class="line">//  重置 lastArgs，lastThis</span><br><span class="line">    lastArgs = lastThis = undefined</span><br><span class="line">    lastInvokeTime = time</span><br><span class="line">    result = func.apply(thisArg, args)</span><br><span class="line">    return result</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  setTimeout 一个定时器</span><br><span class="line">  function startTimer(pendingFunc, wait) &#123;</span><br><span class="line">    // 如果没有传wait   默认使用浏览器的requestAnimationFrame</span><br><span class="line">    if (useRAF) &#123;</span><br><span class="line">      return root.requestAnimationFrame(pendingFunc)</span><br><span class="line">    &#125;</span><br><span class="line">    return setTimeout(pendingFunc, wait)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  清除定时器</span><br><span class="line">  function cancelTimer(id) &#123;</span><br><span class="line">    if (useRAF) &#123;</span><br><span class="line">      return root.cancelAnimationFrame(id)</span><br><span class="line">    &#125;</span><br><span class="line">    clearTimeout(id)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  防抖开始时执行的操作</span><br><span class="line">//  lastInvokeTime 在此时被赋值，记录上一次调用 func的时间</span><br><span class="line">//  设置了立即执行func，则执行func， 否则设置定时器</span><br><span class="line">  function leadingEdge(time) &#123;</span><br><span class="line">    // Reset any `maxWait` timer.</span><br><span class="line">    lastInvokeTime = time</span><br><span class="line">    // Start the timer for the trailing edge.</span><br><span class="line">    timerId = startTimer(timerExpired, wait)</span><br><span class="line">    // Invoke the leading edge.</span><br><span class="line">    return leading ? invokeFunc(time) : result</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  计算还需要等待多久</span><br><span class="line">//  没设置最大等待时间，结果为 wait - (当前时间 - 上一次触发(scroll) )  时间，也就是  wait - 已经等候时间</span><br><span class="line">//  设置了最长等待时间，结果为 最长等待时间 和 按照wait 计算还需要等待时间 的最小值</span><br><span class="line">  function remainingWait(time) &#123;</span><br><span class="line">    const timeSinceLastCall = time - lastCallTime</span><br><span class="line">    const timeSinceLastInvoke = time - lastInvokeTime</span><br><span class="line">    const timeWaiting = wait - timeSinceLastCall</span><br><span class="line"></span><br><span class="line">    return maxing</span><br><span class="line">      ? Math.min(timeWaiting, maxWait - timeSinceLastInvoke)</span><br><span class="line">      : timeWaiting</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">// 此时是否应该设置定时器/执行用户传入的函数，有四种情况应该执行</span><br><span class="line">// 1, 第一次触发</span><br><span class="line">// 2. 距离上次触发超过 wait</span><br><span class="line">// 3. 当前时间小于 上次触发时间</span><br><span class="line">// 4. 设置了最长等待时间，并且等待时长不小于最长等待时间了</span><br><span class="line">  function shouldInvoke(time) &#123;</span><br><span class="line">    const timeSinceLastCall = time - lastCallTime</span><br><span class="line">    const timeSinceLastInvoke = time - lastInvokeTime</span><br><span class="line"></span><br><span class="line">    return (lastCallTime === undefined || (timeSinceLastCall &gt;= wait) ||</span><br><span class="line">      (timeSinceLastCall &lt; 0) || (maxing &amp;&amp; timeSinceLastInvoke &gt;= maxWait))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">// 执行函数呢 还是继续设置定时器呢？ 防抖的核心</span><br><span class="line">// 时间满足条件，执行</span><br><span class="line">// 否则 重新设置定时器</span><br><span class="line">  function timerExpired() &#123;</span><br><span class="line">    const time = Date.now()</span><br><span class="line">    if (shouldInvoke(time)) &#123;</span><br><span class="line">      return trailingEdge(time)</span><br><span class="line">    &#125;</span><br><span class="line">    // Restart the timer.</span><br><span class="line">    timerId = startTimer(timerExpired, remainingWait(time))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">// 执行用户传入的 func 之前的最后一道屏障</span><br><span class="line">// 重置 定时器</span><br><span class="line">// 执行 func</span><br><span class="line">// 重置 lastArgs = lastThis 为 undefined</span><br><span class="line">  function trailingEdge(time) &#123;</span><br><span class="line">    timerId = undefined</span><br><span class="line"></span><br><span class="line">    // Only invoke if we have `lastArgs` which means `func` has been</span><br><span class="line">    // debounced at least once.</span><br><span class="line">    if (trailing &amp;&amp; lastArgs) &#123;</span><br><span class="line">      return invokeFunc(time)</span><br><span class="line">    &#125;</span><br><span class="line">    lastArgs = lastThis = undefined</span><br><span class="line">    return result</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">// 取消防抖</span><br><span class="line">//  重置所有变量  清除定时器</span><br><span class="line">  function cancel() &#123;</span><br><span class="line">    if (timerId !== undefined) &#123;</span><br><span class="line">      cancelTimer(timerId)</span><br><span class="line">    &#125;</span><br><span class="line">    lastInvokeTime = 0</span><br><span class="line">    lastArgs = lastCallTime = lastThis = timerId = undefined</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">// 定时器已存在，去执行 嗯，我就是这么强势</span><br><span class="line">  function flush() &#123;</span><br><span class="line">    return timerId === undefined ? result : trailingEdge(Date.now())</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  是否正在 等待中</span><br><span class="line">  function pending() &#123;</span><br><span class="line">    return timerId !== undefined</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  正房来了！ 这是入口函数，在这里运筹帷幄，根据敌情调配各个函数，势必骗过用户那个傻子，我没有一直在执行但你以为我一直在响应你哦 </span><br><span class="line">  function debounced(...args) &#123;</span><br><span class="line">    const time = Date.now()</span><br><span class="line">    // 是否立刻执行</span><br><span class="line">    const isInvoking = shouldInvoke(time)</span><br><span class="line">    // 保存当前的参数</span><br><span class="line">    lastArgs = args</span><br><span class="line">    lastThis = this</span><br><span class="line">    lastCallTime = time</span><br><span class="line">    // 判断如果不应该执行</span><br><span class="line">    if (isInvoking) &#123;</span><br><span class="line">    //   定时器未执行（第一次进入）</span><br><span class="line">      if (timerId === undefined) &#123;</span><br><span class="line">        return leadingEdge(lastCallTime)</span><br><span class="line">      &#125;</span><br><span class="line">      if (maxing) &#123;</span><br><span class="line">        // Handle invocations in a tight loop.</span><br><span class="line">        timerId = startTimer(timerExpired, wait)</span><br><span class="line">        return invokeFunc(lastCallTime)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    // 保证最后执行一次</span><br><span class="line">    if (timerId === undefined) &#123;</span><br><span class="line">      timerId = startTimer(timerExpired, wait)</span><br><span class="line">    &#125;</span><br><span class="line">    return result</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  debounced.cancel = cancel</span><br><span class="line">  debounced.flush = flush</span><br><span class="line">  debounced.pending = pending</span><br><span class="line">  //  下面这句话证明 debounced 我是入口函数，是正宫娘娘！</span><br><span class="line">  return debounced</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default debounce</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<hr>
-<h3 id="H5调用NA方法梳理"><a href="#H5调用NA方法梳理" class="headerlink" title="H5调用NA方法梳理"></a>H5调用NA方法梳理</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">平台</th>
-<th style="text-align:left">方法</th>
-<th style="text-align:right">备注 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Android</td>
-<td style="text-align:left">shouldOverrideUrlLoading</td>
-<td style="text-align:right">scheme拦截方法</td>
-</tr>
-<tr>
-<td style="text-align:center">Android</td>
-<td style="text-align:left">addJavascriptInterface</td>
-<td style="text-align:right">API</td>
-</tr>
-<tr>
-<td style="text-align:center">Android</td>
-<td style="text-align:left">onJsAlert()、onJsConfirm()、onJsPrompt（）</td>
-<td style="text-align:right">无</td>
-</tr>
-<tr>
-<td style="text-align:center">IOS</td>
-<td style="text-align:left">拦截URL</td>
-<td style="text-align:right">无</td>
-</tr>
-<tr>
-<td style="text-align:center">IOS(UIwebview)</td>
-<td style="text-align:left">JavaScriptCore</td>
-<td style="text-align:right">API方法，IOS7+ 支持</td>
-</tr>
-<tr>
-<td style="text-align:center">IOS(WKwebview)</td>
-<td style="text-align:left">window.webkit.messageHandlers</td>
-<td style="text-align:right">APi方法，IOS8+支持</td>
-</tr>
-</tbody>
-</table>
-<h3 id="NA调用H5方法梳理"><a href="#NA调用H5方法梳理" class="headerlink" title="NA调用H5方法梳理"></a>NA调用H5方法梳理</h3><table>
-<thead>
-<tr>
-<th style="text-align:center">平台</th>
-<th style="text-align:left">方法</th>
-<th style="text-align:right">备注 </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Android</td>
-<td style="text-align:left">loadurl()</td>
-<td style="text-align:right"></td>
-</tr>
-<tr>
-<td style="text-align:center">Android</td>
-<td style="text-align:left">evaluateJavascript()</td>
-<td style="text-align:right">Android 4.4 +</td>
-</tr>
-<tr>
-<td style="text-align:center">IOS(UIwebview)</td>
-<td style="text-align:left">stringByEvaluatingJavaScriptFromString</td>
-<td style="text-align:right"></td>
-</tr>
-<tr>
-<td style="text-align:center">IOS(UIwebview)</td>
-<td style="text-align:left">JavaScriptCore</td>
-<td style="text-align:right">IOS7.0+</td>
-</tr>
-<tr>
-<td style="text-align:center">IOS(Wkwebview)</td>
-<td style="text-align:left">evaluateJavaScript:javaScriptString</td>
-<td style="text-align:right">iOS8.0+</td>
-</tr>
-</tbody>
-</table>
-<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><h3 id="拦截url"><a href="#拦截url" class="headerlink" title="拦截url"></a>拦截url</h3><p>H5和NA通信方面，最简单直接的思路是：NA拦截H5的URL获取消息（一般是通过修改iframe的src来实现 ①），经过业务处理，NA执行JS（在H5侧提前注册好的全局方法）回调通知H5。</p>
-<h4 id="H5代码实现如下："><a href="#H5代码实现如下：" class="headerlink" title="H5代码实现如下："></a>H5代码实现如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">...</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;content&quot;&gt;XXXXX&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">  </span><br><span class="line">&lt;script&gt;</span><br><span class="line">    // ① 注册全局函数,以便端调用</span><br><span class="line">    window.setAllContent = function()&#123;</span><br><span class="line">         </span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    // ② 通用方法函数</span><br><span class="line">    var sendschema = function(action,param)&#123;</span><br><span class="line">        let tempnode = document.createElement(&apos;iframe&apos;);</span><br><span class="line">        tempnode.src = &quot;bdnews://&quot;+action+param;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    // ③ H5逻辑开始 运行函数</span><br><span class="line">    document.addEventListener(&quot;DOMContentLoaded&quot;,function()&#123;</span><br><span class="line">        sendschema(&apos;load_finish&apos;);</span><br><span class="line">    &#125;,false);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">  </span><br><span class="line">...</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="Android原理大致如下："><a href="#Android原理大致如下：" class="headerlink" title="Android原理大致如下："></a>Android原理大致如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">webView.setWebViewClient(new WebViewClient() &#123;</span><br><span class="line">    public boolean shouldOverrideUrlLoading(WebView view, String url) &#123;</span><br><span class="line">         </span><br><span class="line">        // 场景一： 拦截请求、接收schema</span><br><span class="line">        if (url.equals(&quot;load_url&quot;)) &#123;</span><br><span class="line">           </span><br><span class="line">            // 处理逻辑</span><br><span class="line">            dosomething</span><br><span class="line">  </span><br><span class="line">            // 回掉</span><br><span class="line">            view.loadUrl(&quot;javascript:setAllContent(&quot; + json + &quot;);&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">        // 场景二：端自己调用H5，没有请求发起</span><br><span class="line">        clickbutton()&#123;</span><br><span class="line">            view.loadUrl(&quot;javascript:setAllContent(&quot; + json + &quot;);&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h4 id="IOS大概逻辑如下"><a href="#IOS大概逻辑如下" class="headerlink" title="IOS大概逻辑如下:"></a>IOS大概逻辑如下:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// 初始化webview</span><br><span class="line">UIWebView * view = [[UIWebView alloc]initWithFrame:self.view.frame];</span><br><span class="line">[view loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@&quot;http://www.xx.com&quot;]]];</span><br><span class="line">[self.view addSubview:view];&amp;nbsp;</span><br><span class="line">&amp;nbsp;</span><br><span class="line">/*</span><br><span class="line">webView协议中的方法</span><br><span class="line">shouldStartLoadWithRequest //准备加载内容时调用的方法，通过返回值来进行是否加载的设置</span><br><span class="line">webViewDidStartLoad //开始加载时调用的方法</span><br><span class="line">webViewDidFinishLoad //结束加载时调用的方法</span><br><span class="line">didFailLoadWithError //加载失败时调用的方法</span><br><span class="line">*/</span><br><span class="line">&amp;nbsp;</span><br><span class="line">- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType</span><br><span class="line">&#123;</span><br><span class="line">    if ([urlString hasPrefix:@&quot;scheme://hybrid?info=&quot;]) &#123;</span><br><span class="line">        if([name isEqualToString:@&quot;load_finish&quot;])&#123;</span><br><span class="line">            // [self.webView setContent];</span><br><span class="line">            [self.webView stringByEvaluatingJavaScriptFromString:strFormat];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">- clickbutton()&#123;</span><br><span class="line">    [self.webView setContent];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="函数名关联"><a href="#函数名关联" class="headerlink" title="函数名关联"></a>函数名关联</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">let BDAPPnode = &#123;</span><br><span class="line">   callbacks: &#123;&#125;,</span><br><span class="line">   // 调用函数注册</span><br><span class="line">   invoke(action, params, successfnname, successfn) &#123;</span><br><span class="line">       this.callbacks[successfnname] = &#123;</span><br><span class="line">           success: successfn</span><br><span class="line">       &#125;;</span><br><span class="line">       sendschema(action, params);</span><br><span class="line">   &#125;,</span><br><span class="line"> </span><br><span class="line">   // NA调用</span><br><span class="line">   callbackSuccess(callbackname, params) &#123;</span><br><span class="line">       try &#123;</span><br><span class="line">           BDAPPnode.callbackFromNative(callbackname, params, true);</span><br><span class="line">       &#125; catch (e) &#123;</span><br><span class="line">           console.log(&apos;Error in error callback: &apos; + callbackname + &apos; = &apos; + e);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;,</span><br><span class="line">   callbackFromNative(callbackname, params, isSuccess) &#123;</span><br><span class="line">       let callback = this.callbacks[callbackname];</span><br><span class="line">       if (callback) &#123;</span><br><span class="line">           if (isSuccess) &#123;</span><br><span class="line">               callback.success &amp;&amp; callback.success(params);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="ID关联"><a href="#ID关联" class="headerlink" title="ID关联"></a>ID关联</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">let BDAPPnode = &#123;</span><br><span class="line">   callbackId: Math.floor(Math.random() * 2000000000),</span><br><span class="line">   callbacks: &#123;&#125;,</span><br><span class="line">   invoke(action, params, onSuccess, onFail) &#123;</span><br><span class="line">       this.callbackId++;</span><br><span class="line">       this.callbacks[self.callbackId] = &#123;</span><br><span class="line">           success: onSuccess,</span><br><span class="line">           fail: onFail</span><br><span class="line">       &#125;;</span><br><span class="line">       sendschema(action, params, this.callbackId);</span><br><span class="line">   &#125;,</span><br><span class="line">   callbackSuccess(callbackId, params) &#123;</span><br><span class="line">       try &#123;</span><br><span class="line">           BDAPPnode.callbackFromNative(callbackId, params, true);</span><br><span class="line">       &#125; catch (e) &#123;</span><br><span class="line">           console.log(&apos;Error in error callback: &apos; + callbackId + &apos; = &apos; + e);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;,</span><br><span class="line">   callbackError(callbackId, params) &#123;</span><br><span class="line">       try &#123;</span><br><span class="line">           BDAPPnode.callbackFromNative(callbackId, params, false);</span><br><span class="line">       &#125; catch (e) &#123;</span><br><span class="line">           console.log(&apos;Error in error callback: &apos; + callbackId + &apos; = &apos; + e);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;,</span><br><span class="line">   callbackFromNative(callbackId, params, isSuccess) &#123;</span><br><span class="line">       let callback = this.callbacks[callbackId];</span><br><span class="line">       if (callback) &#123;</span><br><span class="line">           if (isSuccess) &#123;</span><br><span class="line">               callback.success &amp;&amp; callback.success(callbackId, params);</span><br><span class="line">           &#125; else &#123;</span><br><span class="line">               callback.fail &amp;&amp; callback.fail(callbackId, params);</span><br><span class="line">           &#125;</span><br><span class="line">           delete BDAPPnode.callbacks[callbackId];</span><br><span class="line">       &#125;;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="注入API"><a href="#注入API" class="headerlink" title="注入API"></a>注入API</h2><ul>
-<li>JavaScript 调用 Native 推荐使用 注入 API 的方式（iOS6 忽略，Android 4.2以下使用 WebViewClient 的 onJsPrompt 方式）。</li>
-<li>Native 调用 JavaScript 则直接执行拼接好的 JavaScript 代码即可。</li>
+</li>
 </ul>
-<p>注入 API 方式的主要原理是，通过 WebView 提供的接口，向 JavaScript 的 Context（window）中注入对象或者方法，让 JavaScript 调用时，直接执行相应的 Native 代码逻辑，达到 JavaScript 调用 Native 的目的。<br>在javascripte中  直接可以使用 利用window.method来使用注入的api<br>唯一标识 id 是这个回调逻辑的关键。 JSBridge：用一个自增的唯一 id，来标识并存储回调函数，并把此 id 以参数形式传递给 Native，而 Native 也以此 id 作为回溯的标识。这样，即可实现 Callback 回调逻辑。<br>一个案列<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">(function () &#123;</span><br><span class="line">    // 保存id</span><br><span class="line">    var id = 0,</span><br><span class="line">    // 将回调函数用键值对的模式保存下来</span><br><span class="line">        callbacks = &#123;&#125;,</span><br><span class="line">    // NA注册进来的方法</span><br><span class="line">        registerFuncs = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    window.JSBridge = &#123;</span><br><span class="line">        // 调用 Native</span><br><span class="line">        invoke: function(bridgeName, callback, data) &#123;</span><br><span class="line">            // 判断环境，获取不同的 nativeBridge</span><br><span class="line">            var thisId = id ++; // 获取唯一 id</span><br><span class="line">            callbacks[thisId] = callback; // 存储 Callback</span><br><span class="line">            nativeBridge.postMessage(&#123;</span><br><span class="line">                bridgeName: bridgeName,</span><br><span class="line">                data: data || &#123;&#125;,</span><br><span class="line">                callbackId: thisId // 传到 Native 端</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line">        receiveMessage: function(msg) &#123;</span><br><span class="line">            var bridgeName = msg.bridgeName,</span><br><span class="line">                data = msg.data || &#123;&#125;,</span><br><span class="line">                callbackId = msg.callbackId, // Native 将 callbackId 原封不动传回</span><br><span class="line">                responstId = msg.responstId;</span><br><span class="line">            // 具体逻辑</span><br><span class="line">            // bridgeName 和 callbackId 不会同时存在</span><br><span class="line">            if (callbackId) &#123;</span><br><span class="line">                if (callbacks[callbackId]) &#123; // 找到相应句柄</span><br><span class="line">                    callbacks[callbackId](msg.data); // 执行调用</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; else if (bridgeName) &#123;</span><br><span class="line">                if (registerFuncs[bridgeName]) &#123; // 通过 bridgeName 找到句柄</span><br><span class="line">                    var ret = &#123;&#125;,</span><br><span class="line">                        flag = false;</span><br><span class="line">                    registerFuncs[bridgeName].forEach(function(callback) =&gt; &#123;</span><br><span class="line">                        callback(data, function(r) &#123;</span><br><span class="line">                            flag = true;</span><br><span class="line">                            ret = Object.assign(ret, r);</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;);</span><br><span class="line">                    if (flag) &#123;</span><br><span class="line">                        nativeBridge.postMessage(&#123; // 回调 Native</span><br><span class="line">                            responstId: responstId,</span><br><span class="line">                            ret: ret</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        register: function(bridgeName, callback) &#123;</span><br><span class="line">            if (!registerFuncs[bridgeName])  &#123;</span><br><span class="line">                registerFuncs[bridgeName] = [];</span><br><span class="line">            &#125;</span><br><span class="line">            registerFuncs[bridgeName].push(callback); // 存储回调</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure></p>
-<h2 id="注入方式"><a href="#注入方式" class="headerlink" title="注入方式"></a>注入方式</h2><h3 id="native注入"><a href="#native注入" class="headerlink" title="native注入"></a>native注入</h3><p>注入方式和 Native 调用 JavaScript 类似，直接执行桥的全部代码。<br>它的优点在于：桥的版本很容易与 Native 保持一致，Native 端不用对不同版本的 JSBridge 进行兼容；与此同时，它的缺点是：注入时机不确定，需要实现注入失败后重试的机制，保证注入的成功率，同时 JavaScript 端在调用接口时，需要优先判断 JSBridge 是否已经注入成功。</p>
-<h3 id="js注入"><a href="#js注入" class="headerlink" title="js注入"></a>js注入</h3><p>直接与 JavaScript 一起执行。<br>与由 Native 端注入正好相反，它的优点在于：JavaScript 端可以确定 JSBridge 的存在，直接调用即可；缺点是：如果桥的实现方式有更改，JSBridge 需要兼容多版本的 Native Bridge 或者 Native Bridge 兼容多版本的 JSBridge。</p>
+<h2 id="lodash节流"><a href="#lodash节流" class="headerlink" title="lodash节流"></a>lodash节流</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function throttle(func, wait, options) &#123;</span><br><span class="line">  let leading = true</span><br><span class="line">  let trailing = true</span><br><span class="line"></span><br><span class="line">  if (typeof func !== &apos;function&apos;) &#123;</span><br><span class="line">    throw new TypeError(&apos;Expected a function&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">  if (isObject(options)) &#123;</span><br><span class="line">    leading = &apos;leading&apos; in options ? !!options.leading : leading</span><br><span class="line">    trailing = &apos;trailing&apos; in options ? !!options.trailing : trailing</span><br><span class="line">  &#125;</span><br><span class="line">  return debounce(func, wait, &#123;</span><br><span class="line">    leading,</span><br><span class="line">    trailing,</span><br><span class="line">    &apos;maxWait&apos;: wait,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/yygmind/blog/issues/41" target="_blank" rel="noopener">这个</a><br><a href="https://segmentfault.com/a/1190000017227559" target="_blank" rel="noopener">还有这个</a></p>
 
       
     </div>
@@ -641,7 +575,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/webAPP/" rel="tag"># webAPP</a>
+            <a href="/tags/JS/" rel="tag"># JS</a>
           
         </div>
       
@@ -654,8 +588,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/24/commander/" rel="next" title="commander">
-                <i class="fa fa-chevron-left"></i> commander
+              <a href="/2019/07/07/cedar/" rel="next" title="cedar">
+                <i class="fa fa-chevron-left"></i> cedar
               </a>
             
           </div>
@@ -664,8 +598,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/03/埋点/" rel="prev" title="埋点">
-                埋点 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/16/JS队列/" rel="prev" title="JS队列">
+                JS队列 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -901,7 +835,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#参照网站"><span class="nav-text">参照网站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#当前的技术选型"><span class="nav-text">当前的技术选型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bridge原理"><span class="nav-text">bridge原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#H5调用NA方法梳理"><span class="nav-text">H5调用NA方法梳理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NA调用H5方法梳理"><span class="nav-text">NA调用H5方法梳理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用法"><span class="nav-text">用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#拦截url"><span class="nav-text">拦截url</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#H5代码实现如下："><span class="nav-text">H5代码实现如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Android原理大致如下："><span class="nav-text">Android原理大致如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IOS大概逻辑如下"><span class="nav-text">IOS大概逻辑如下:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数名关联"><span class="nav-text">函数名关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ID关联"><span class="nav-text">ID关联</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注入API"><span class="nav-text">注入API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注入方式"><span class="nav-text">注入方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#native注入"><span class="nav-text">native注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js注入"><span class="nav-text">js注入</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节流与防抖定义"><span class="nav-text">节流与防抖定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程"><span class="nav-text">流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lodash防抖"><span class="nav-text">lodash防抖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lodash节流"><span class="nav-text">lodash节流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
