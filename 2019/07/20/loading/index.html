@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="本文主要讲了命令行的输入参数解析功能">
-<meta name="keywords" content="commander">
+  <meta name="description" content="自己封装的loading。">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="commander">
-<meta property="og:url" content="http://yoursite.com/2019/06/24/commander/index.html">
+<meta property="og:title" content="loading">
+<meta property="og:url" content="http://yoursite.com/2019/07/20/loading/index.html">
 <meta property="og:site_name" content="记下点滴">
-<meta property="og:description" content="本文主要讲了命令行的输入参数解析功能">
+<meta property="og:description" content="自己封装的loading。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-24T13:01:05.204Z">
+<meta property="og:updated_time" content="2019-07-19T09:02:39.518Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="commander">
-<meta name="twitter:description" content="本文主要讲了命令行的输入参数解析功能">
+<meta name="twitter:title" content="loading">
+<meta name="twitter:description" content="自己封装的loading。">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/24/commander/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/20/loading/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>commander | 记下点滴</title>
+  <title>loading | 记下点滴</title>
   
 
 
@@ -381,7 +381,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/24/commander/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/20/loading/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="akCedar">
@@ -398,7 +398,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">commander
+          <h1 class="post-title" itemprop="name headline">loading
 
               
             
@@ -424,7 +424,7 @@
                 
               
 
-              <time title="创建时间：2019-06-24 13:56:04 / 修改时间：13:01:05" itemprop="dateCreated datePublished" datetime="2019-06-24T13:56:04Z">2019-06-24</time>
+              <time title="创建时间：2019-07-19 16:47:37 / 修改时间：09:02:39" itemprop="dateCreated datePublished" datetime="2019-07-19T16:47:37Z">2019-07-19</time>
             
 
             
@@ -481,10 +481,19 @@
       
 
       
-        <p>本文主要讲了命令行的输入参数解析功能<br><a id="more"></a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><code>npm install commander</code></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">const commander = require(&apos;commander&apos;);</span><br><span class="line">const program = new commander.Command();</span><br><span class="line">program.version(&apos;0.0.1&apos;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .option(&apos;-d, --debug&apos;, &apos;output extra debugging&apos;)</span><br><span class="line">  .option(&apos;-s, --small&apos;, &apos;small pizza size&apos;)</span><br><span class="line">  .option(&apos;-p, --pizza-type &lt;type&gt;&apos;, &apos;flavour of pizza&apos;);</span><br><span class="line"></span><br><span class="line">program.parse(process.argv);</span><br><span class="line"></span><br><span class="line">if (program.debug) console.log(program.opts());</span><br><span class="line">console.log(&apos;pizza details:&apos;);</span><br><span class="line">if (program.small) console.log(&apos;- small pizza size&apos;);</span><br><span class="line">if (program.pizzaType) console.log(`- $&#123;program.pizzaType&#125;`);</span><br><span class="line"></span><br><span class="line">//  命令输出内容</span><br><span class="line">$ pizza-options -d</span><br><span class="line">&#123; debug: true, small: undefined, pizzaType: undefined &#125;</span><br><span class="line">pizza details:</span><br><span class="line">$ pizza-options -p</span><br><span class="line">error: option `-p, --pizza-type &lt;type&gt;&apos; argument missing</span><br><span class="line">$ pizza-options -ds -p vegetarian</span><br><span class="line">&#123; debug: true, small: true, pizzaType: &apos;vegetarian&apos; &#125;</span><br><span class="line">pizza details:</span><br><span class="line">- small pizza size</span><br><span class="line">- vegetarian</span><br><span class="line">$ pizza-options --pizza-type=cheese</span><br><span class="line">pizza details:</span><br><span class="line">- cheese</span><br></pre></td></tr></table></figure>
-<h2 id="官方案例"><a href="#官方案例" class="headerlink" title="官方案例"></a>官方案例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">var program = require(&apos;commander&apos;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .version(&apos;0.1.0&apos;)</span><br><span class="line">  .option(&apos;-C, --chdir &lt;path&gt;&apos;, &apos;change the working directory&apos;)</span><br><span class="line">  .option(&apos;-c, --config &lt;path&gt;&apos;, &apos;set config path. defaults to ./deploy.conf&apos;)</span><br><span class="line">  .option(&apos;-T, --no-tests&apos;, &apos;ignore test hook&apos;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .command(&apos;setup [env]&apos;)</span><br><span class="line">  .description(&apos;run setup commands for all envs&apos;)</span><br><span class="line">  .option(&quot;-s, --setup_mode [mode]&quot;, &quot;Which setup mode to use&quot;)</span><br><span class="line">  .action(function(env, options)&#123;</span><br><span class="line">    var mode = options.setup_mode || &quot;normal&quot;;</span><br><span class="line">    env = env || &apos;all&apos;;</span><br><span class="line">    console.log(&apos;setup for %s env(s) with %s mode&apos;, env, mode);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .command(&apos;exec &lt;cmd&gt;&apos;)</span><br><span class="line">  .alias(&apos;ex&apos;)</span><br><span class="line">  .description(&apos;execute the given remote cmd&apos;)</span><br><span class="line">  .option(&quot;-e, --exec_mode &lt;mode&gt;&quot;, &quot;Which exec mode to use&quot;)</span><br><span class="line">  .action(function(cmd, options)&#123;</span><br><span class="line">    console.log(&apos;exec &quot;%s&quot; using %s mode&apos;, cmd, options.exec_mode);</span><br><span class="line">  &#125;).on(&apos;--help&apos;, function() &#123;</span><br><span class="line">    console.log(&apos;&apos;);</span><br><span class="line">    console.log(&apos;Examples:&apos;);</span><br><span class="line">    console.log(&apos;&apos;);</span><br><span class="line">    console.log(&apos;  $ deploy exec sequential&apos;);</span><br><span class="line">    console.log(&apos;  $ deploy exec async&apos;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .command(&apos;*&apos;)</span><br><span class="line">  .action(function(env)&#123;</span><br><span class="line">    console.log(&apos;deploying &quot;%s&quot;&apos;, env);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">program.parse(process.argv);</span><br></pre></td></tr></table></figure>
+        <p>自己封装的loading。<br><a id="more"></a></p>
+<h2 id="LOADING"><a href="#LOADING" class="headerlink" title="LOADING"></a>LOADING</h2><p>自己实现的一个全局LOADING动画。可以用来加载等。</p>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><ul>
+<li>start 百分比 正整数 默认为0</li>
+<li>speed 速度 ’slow，littleSlow，normal，fast‘ 默认为normal</li>
+<li>autoClose 自动关闭 布尔值  true或者false 默认为false<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3></li>
+<li>start 开启动画</li>
+<li>set 设置参数  支持传入（start、speed、autoClose）对象传入</li>
+<li>end 结束</li>
+<li>restart 重启  设置初始 0%</li>
+<li>pause 暂停<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br></pre></td><td class="code"><pre><span class="line"> (function(root, factory) &#123;</span><br><span class="line">   if (typeof define === &apos;function&apos; &amp;&amp; define.amd) &#123;</span><br><span class="line">    define(factory);</span><br><span class="line">  &#125; else if (typeof exports === &apos;object&apos;) &#123;</span><br><span class="line">    module.exports = factory();</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    root.cwsProgress = factory();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)(window, function() &#123;</span><br><span class="line">  var cwsProgress = &#123;</span><br><span class="line">    // 版本号</span><br><span class="line">    version:&apos;0.0.0&apos;,</span><br><span class="line">    // 保存DOM元素，用来使用</span><br><span class="line">    dom:null,</span><br><span class="line">    // 保存计时器</span><br><span class="line">    timeId:null,</span><br><span class="line">    // 设置，speed：速度，start：起始的百分比</span><br><span class="line">    settings:&#123;</span><br><span class="line">      speed:&quot;normal&quot;,</span><br><span class="line">      start:0,</span><br><span class="line">      antoClose:false</span><br><span class="line">    &#125;,</span><br><span class="line">    level:&#123;</span><br><span class="line">      slow:2,</span><br><span class="line">      littleSlow:5,</span><br><span class="line">      normal:10,</span><br><span class="line">      fast:25</span><br><span class="line">    &#125;,</span><br><span class="line">    // 开启loading</span><br><span class="line">    start:function()&#123;</span><br><span class="line">      if(this.hasDom())&#123;</span><br><span class="line">        this.dom = document.getElementById(&apos;cwsprogress&apos;)</span><br><span class="line">        this.dom.style.display = &apos;block&apos;</span><br><span class="line">      &#125;else&#123;</span><br><span class="line">        var dom=document.createElement(&quot;div&quot;)</span><br><span class="line">        dom.id = &quot;cwsprogress&quot;</span><br><span class="line">        dom.innerHTML = this.tempalte(this.settings.start)</span><br><span class="line">        dom.setAttribute(&quot;style&quot;,&quot;position: fixed;width: 100%;height: 100%;top:0;left:0;background-color: rgba(0,0,0,0.2)&quot;)</span><br><span class="line">        dom.innerHTML = this.tempalte(this.settings.start)</span><br><span class="line">        document.body.appendChild(dom)</span><br><span class="line">        this.dom = dom</span><br><span class="line">      &#125;</span><br><span class="line">      // 调用计时器</span><br><span class="line">      if(this.timeId)&#123;</span><br><span class="line">        clearTimeout(this.timeId)</span><br><span class="line">      &#125;</span><br><span class="line">      this.stepFun()</span><br><span class="line">      return this</span><br><span class="line">    &#125;,</span><br><span class="line">    // 继续调用</span><br><span class="line">    reStart()&#123;</span><br><span class="line">      this.settings.start = 0</span><br><span class="line">      this.start()</span><br><span class="line">      return this</span><br><span class="line">    &#125;,</span><br><span class="line">    // 使用计时器</span><br><span class="line">    stepFun()&#123;</span><br><span class="line">      this.settings.start += parseInt(Math.random() * this.level[this.settings.speed])</span><br><span class="line">      if(this.settings.start &gt;= 100)&#123;</span><br><span class="line">        if(this.settings.antoClose)&#123;</span><br><span class="line">          this.end()</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;else&#123;</span><br><span class="line">        this.changePecent()</span><br><span class="line">        this.timeId = setTimeout(this.stepFun.bind(this),200)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 改变百分比进度</span><br><span class="line">    changePecent()&#123;</span><br><span class="line">      if(this.hasDom())&#123;</span><br><span class="line">        document.getElementById(&apos;processDiv&apos;).style.width = this.settings.start + &quot;%&quot;</span><br><span class="line">        document.getElementById(&apos;processSpan&apos;).innerHTML = &apos;努力中...&apos; + this.settings.start + &apos;%&apos;</span><br><span class="line">      &#125;else&#123;</span><br><span class="line">        console.log(&quot;DOM已经被移除了&quot;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 结束loading</span><br><span class="line">    end:function()&#123;</span><br><span class="line">      clearTimeout(this.timeId)</span><br><span class="line">      if(this.hasDom())&#123;</span><br><span class="line">        this.dom.style.display = &apos;none&apos;</span><br><span class="line">      &#125;</span><br><span class="line">      return this</span><br><span class="line">    &#125;,</span><br><span class="line">    // 暂停定时器</span><br><span class="line">    pause()&#123;</span><br><span class="line">      clearTimeout(this.timeId)</span><br><span class="line">    &#125;,</span><br><span class="line">    // 设置参数</span><br><span class="line">    set:function(config)&#123;</span><br><span class="line">      if(Object.prototype.toString.call(config) == &quot;[object Object]&quot;)&#123;</span><br><span class="line">        this.settings.start = parseInt(config.start) || 0</span><br><span class="line">        this.settings.speed = config.speed || &apos;normal&apos;</span><br><span class="line">        this.settings.antoClose = !!config.antoClose</span><br><span class="line">        if(this.settings.start &gt;= 100 || this.settings.start &lt;= 0)&#123;</span><br><span class="line">          console.log(&quot;请传入0-100的数字&quot;)</span><br><span class="line">          return this</span><br><span class="line">        &#125;</span><br><span class="line">        this.changePecent()</span><br><span class="line">        if(!this.level[this.settings.speed])&#123;</span><br><span class="line">          console.log(&quot;速度等级:slow、littleSlow、normal、fast&quot;)</span><br><span class="line">          return this</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;else&#123;</span><br><span class="line">        console.log(&apos;请传入一个对象&apos;)</span><br><span class="line">      &#125;</span><br><span class="line">      return this</span><br><span class="line">    &#125;,</span><br><span class="line">    // 组装模板</span><br><span class="line">    tempalte:function(percent)&#123;</span><br><span class="line">      var pre = parseInt(percent) || 0</span><br><span class="line">      var str = &apos;&apos;</span><br><span class="line">      str += &apos;&lt;div style=&quot;width: 40%;min-width: 200px;max-width: 600px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);&quot;&gt;&apos;</span><br><span class="line">      str += &apos;&lt;img src=&quot;http://hd-file01-ms.sf-express.com/uploads/f/f/e/ffeef69ebcacf3a50636f6f56c86761b.gif&quot; style=&quot;width: 100%&quot;&gt;&apos;</span><br><span class="line">      str += &apos;&lt;div style=&quot;margin-top: 25px;position: relative;&quot;&gt;&apos;</span><br><span class="line">      str += &apos;&lt;div style=&quot;width: 100%;height: 30px;background-color: #eee;border-radius: 30px;overflow: hidden;&quot;&gt;&apos;</span><br><span class="line">      str += &apos;&lt;div id=&quot;processDiv&quot; style=&quot;width:&apos;+percent+&apos;%;height:100%;background-color: #231815&quot;&gt;&lt;/div&gt;&lt;/div&gt;&apos;</span><br><span class="line">      str += &apos;&lt;span style=&quot;position: absolute;top: -10px;left: 50%;transform: translate(-50%,-100%); font-size: 16px;color: #050505;&quot; id=&quot;processSpan&quot;&gt;加载中...&apos;+percent+&apos;%&lt;/span&gt;&apos;</span><br><span class="line">      str += &apos;&lt;/div&gt;&lt;/div&gt;&apos;</span><br><span class="line">      return str</span><br><span class="line">    &#125;,</span><br><span class="line">    // 判断是否包含DOM</span><br><span class="line">    hasDom:function()&#123;</span><br><span class="line">      return !!document.getElementById(&apos;cwsprogress&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return cwsProgress</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
     </div>
 
@@ -540,7 +549,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/commander/" rel="tag"># commander</a>
+            <a href="/tags/JS/" rel="tag"># JS</a>
           
         </div>
       
@@ -553,8 +562,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/24/Inquirer/" rel="next" title="Inquirer">
-                <i class="fa fa-chevron-left"></i> Inquirer
+              <a href="/2019/07/16/JS队列/" rel="next" title="JS队列">
+                <i class="fa fa-chevron-left"></i> JS队列
               </a>
             
           </div>
@@ -562,10 +571,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/28/jsBridge/" rel="prev" title="jsBridge">
-                jsBridge <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -800,7 +805,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#官方案例"><span class="nav-text">官方案例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LOADING"><span class="nav-text">LOADING</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#属性"><span class="nav-text">属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-text">代码</span></a></li></ol></li></ol></div>
             
 
           </div>
