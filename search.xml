@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[用户认证]]></title>
+    <url>%2F2019%2F07%2F27%2F%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81%2F</url>
+    <content type="text"><![CDATA[主要讲讲JWT 和 session session与cookie优缺点优点 服务器可以主动清除sessionsession保存在服务器端结合cookie使用，较为灵活，兼容性较好缺点cookie + session在跨域场景表现并不好如果是分布式部署，需要做多机共享session机制，实现方法可将session存储到数据库中或者redis中基于 cookie 的机制很容易被 CSRF查询session信息可能会有数据库查询操作cookie存储大小约为4kb JWT认证JWT基本上由.分隔的三部分组成，分别是头部，有效载荷和签名优点可以实现多台服务的信息共享缺点JWT时效性比较差JWT TOKEN一般数据比较长解决办法将JWT token 存入redis中，用户传入是，先在redis中通过简单的token获取全部的token。然后在进行操作，同时退出登录，权限操作的时候也可快捷的更改用户的当前状态。 总结对于用户的认证，使用JWT TOKEN更加方便。但是不要把太多的用户信息存储在JWT-TOKEN中去，我们可以采用结合的方法，对于用户的一些常用信息可以存储在cookie中去，采用互相结合的办法。但是重要的是，用户的关键信息都需要做加密处理。这样才能保证用户的信息安。]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>用户认证</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[web安全]]></title>
+    <url>%2F2019%2F07%2F27%2Fweb%E5%AE%89%E5%85%A8%2F</url>
+    <content type="text"><![CDATA[主要讲述如何预防非法获取资源（用户信息，数据库资料）等 XSS攻击 （Cross site script）现象 DOM节点显示内容（script）。 利用DOM属性加载脚本。 js中会产生JS攻击 富文本保存产生标签 解决方法 将显示到DOM中的数据进行转义； 将显示在属性中的字符串进行转义 将JS中需要的进行JSON.stringfy 使用白名单来保留部分标签和属性 CSP () 一些库 xss cheerio CSRF 跨站请求伪造(Cross site Request Forggy)方法 sameSize (strict Lax) 不允许第三方网站携带cookie httpOnly 只允许http读取cookie。 验证码 （ccap） token referer 禁止第三方网站 加密库crypto 点击劫持原理将目标网站通过iframe 设置透明度为0，覆盖在当前网站上。用户看到的为外层的点击按钮。点击以后 实际点击为iframe中的按钮。 方法 禁止内嵌（JS办法以及X-FRAME_OPTIONS） sandbox （iframe属性） 验证信息等 HTTP传输窃听传输链路窃听篡改traceroute www.baidu.com (查看所有节点 ) 途径 插入广告 重定向网站 无法防御的XSS和CSRF攻击 防范 https防止 加密关键信息 文件上传通过读取文件内容类型设置文件读写权限防止文件执行]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[loading]]></title>
     <url>%2F2019%2F07%2F20%2Floading%2F</url>
     <content type="text"><![CDATA[自己封装的loading。 LOADING自己实现的一个全局LOADING动画。可以用来加载等。 属性 start 百分比 正整数 默认为0 speed 速度 ’slow，littleSlow，normal，fast‘ 默认为normal autoClose 自动关闭 布尔值 true或者false 默认为false方法 start 开启动画 set 设置参数 支持传入（start、speed、autoClose）对象传入 end 结束 restart 重启 设置初始 0% pause 暂停代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128 (function(root, factory) &#123; if (typeof define === &apos;function&apos; &amp;&amp; define.amd) &#123; define(factory); &#125; else if (typeof exports === &apos;object&apos;) &#123; module.exports = factory(); &#125; else &#123; root.cwsProgress = factory(); &#125;&#125;)(window, function() &#123; var cwsProgress = &#123; // 版本号 version:&apos;0.0.0&apos;, // 保存DOM元素，用来使用 dom:null, // 保存计时器 timeId:null, // 设置，speed：速度，start：起始的百分比 settings:&#123; speed:&quot;normal&quot;, start:0, antoClose:false &#125;, level:&#123; slow:2, littleSlow:5, normal:10, fast:25 &#125;, // 开启loading start:function()&#123; if(this.hasDom())&#123; this.dom = document.getElementById(&apos;cwsprogress&apos;) this.dom.style.display = &apos;block&apos; &#125;else&#123; var dom=document.createElement(&quot;div&quot;) dom.id = &quot;cwsprogress&quot; dom.innerHTML = this.tempalte(this.settings.start) dom.setAttribute(&quot;style&quot;,&quot;position: fixed;width: 100%;height: 100%;top:0;left:0;background-color: rgba(0,0,0,0.2)&quot;) dom.innerHTML = this.tempalte(this.settings.start) document.body.appendChild(dom) this.dom = dom &#125; // 调用计时器 if(this.timeId)&#123; clearTimeout(this.timeId) &#125; this.stepFun() return this &#125;, // 继续调用 reStart()&#123; this.settings.start = 0 this.start() return this &#125;, // 使用计时器 stepFun()&#123; this.settings.start += parseInt(Math.random() * this.level[this.settings.speed]) if(this.settings.start &gt;= 100)&#123; if(this.settings.antoClose)&#123; this.end() &#125; &#125;else&#123; this.changePecent() this.timeId = setTimeout(this.stepFun.bind(this),200) &#125; &#125;, // 改变百分比进度 changePecent()&#123; if(this.hasDom())&#123; document.getElementById(&apos;processDiv&apos;).style.width = this.settings.start + &quot;%&quot; document.getElementById(&apos;processSpan&apos;).innerHTML = &apos;努力中...&apos; + this.settings.start + &apos;%&apos; &#125;else&#123; console.log(&quot;DOM已经被移除了&quot;) &#125; &#125;, // 结束loading end:function()&#123; clearTimeout(this.timeId) if(this.hasDom())&#123; this.dom.style.display = &apos;none&apos; &#125; return this &#125;, // 暂停定时器 pause()&#123; clearTimeout(this.timeId) &#125;, // 设置参数 set:function(config)&#123; if(Object.prototype.toString.call(config) == &quot;[object Object]&quot;)&#123; this.settings.start = parseInt(config.start) || 0 this.settings.speed = config.speed || &apos;normal&apos; this.settings.antoClose = !!config.antoClose if(this.settings.start &gt;= 100 || this.settings.start &lt;= 0)&#123; console.log(&quot;请传入0-100的数字&quot;) return this &#125; this.changePecent() if(!this.level[this.settings.speed])&#123; console.log(&quot;速度等级:slow、littleSlow、normal、fast&quot;) return this &#125; &#125;else&#123; console.log(&apos;请传入一个对象&apos;) &#125; return this &#125;, // 组装模板 tempalte:function(percent)&#123; var pre = parseInt(percent) || 0 var str = &apos;&apos; str += &apos;&lt;div style=&quot;width: 40%;min-width: 200px;max-width: 600px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);&quot;&gt;&apos; str += &apos;&lt;img src=&quot;http://hd-file01-ms.sf-express.com/uploads/f/f/e/ffeef69ebcacf3a50636f6f56c86761b.gif&quot; style=&quot;width: 100%&quot;&gt;&apos; str += &apos;&lt;div style=&quot;margin-top: 25px;position: relative;&quot;&gt;&apos; str += &apos;&lt;div style=&quot;width: 100%;height: 30px;background-color: #eee;border-radius: 30px;overflow: hidden;&quot;&gt;&apos; str += &apos;&lt;div id=&quot;processDiv&quot; style=&quot;width:&apos;+percent+&apos;%;height:100%;background-color: #231815&quot;&gt;&lt;/div&gt;&lt;/div&gt;&apos; str += &apos;&lt;span style=&quot;position: absolute;top: -10px;left: 50%;transform: translate(-50%,-100%); font-size: 16px;color: #050505;&quot; id=&quot;processSpan&quot;&gt;加载中...&apos;+percent+&apos;%&lt;/span&gt;&apos; str += &apos;&lt;/div&gt;&lt;/div&gt;&apos; return str &#125;, // 判断是否包含DOM hasDom:function()&#123; return !!document.getElementById(&apos;cwsprogress&apos;) &#125; &#125; return cwsProgress&#125;)]]></content>
@@ -210,28 +232,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[AST]]></title>
-    <url>%2F2019%2F06%2F02%2FAST%2F</url>
-    <content type="text"><![CDATA[本文主要讲一种js语法树 ASTAST有很多解析的JS 如：Babylon、esprima、acorn、UglifyJS2、AST explorer。在这个网址可以看到解析结果 解析结果下方的的js123var a = 42;var b = 5;var c = a + b; 展示结果123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596&#123; "type": "Program", "start": 0, "end": 37, "body": [ &#123; "type": "VariableDeclaration", "start": 0, "end": 11, "declarations": [ &#123; "type": "VariableDeclarator", "start": 4, "end": 10, "id": &#123; "type": "Identifier", "start": 4, "end": 5, "name": "a" &#125;, "init": &#123; "type": "Literal", "start": 8, "end": 10, "value": 42, "raw": "42" &#125; &#125; ], "kind": "var" &#125;, &#123; "type": "VariableDeclaration", "start": 12, "end": 22, "declarations": [ &#123; "type": "VariableDeclarator", "start": 16, "end": 21, "id": &#123; "type": "Identifier", "start": 16, "end": 17, "name": "b" &#125;, "init": &#123; "type": "Literal", "start": 20, "end": 21, "value": 5, "raw": "5" &#125; &#125; ], "kind": "var" &#125;, &#123; "type": "VariableDeclaration", "start": 23, "end": 37, "declarations": [ &#123; "type": "VariableDeclarator", "start": 27, "end": 36, "id": &#123; "type": "Identifier", "start": 27, "end": 28, "name": "c" &#125;, "init": &#123; "type": "BinaryExpression", "start": 31, "end": 36, "left": &#123; "type": "Identifier", "start": 31, "end": 32, "name": "a" &#125;, "operator": "+", "right": &#123; "type": "Identifier", "start": 35, "end": 36, "name": "b" &#125; &#125; &#125; ], "kind": "var" &#125; ],&#125; 使用方法esprima estraverse escodegen babel esprima 解析 JS 生成 AST123456789101112131415161718192021const esprima = require('esprima');let code = 'function fn() &#123;&#125;';// 结果let tree = esprima.parseScript(code);console.log(tree);// Script &#123;// type: 'Program',// body:// [ FunctionDeclaration &#123;// type: 'FunctionDeclaration',// id: [Identifier],// params: [],// body: [BlockStatement],// generator: false,// expression: false,// async: false &#125; ],// sourceType: 'script' &#125; estraverse 遍历 AST1234567891011121314151617181920212223const esprima = require('esprima');const estraverse = require('estraverse');let code = 'function fn() &#123;&#125;';// 遍历路径estraverse.traverse(esprima.parseScript(code), &#123; enter(node) &#123; console.log('enter', node.type); &#125;, leave() &#123; console.log('leave', node.type); &#125;&#125;);// enter Program// enter FunctionDeclaration// enter Identifier// leave Identifier// enter BlockStatement// leave BlockStatement// leave FunctionDeclaration// leave Program escodegen 将AST重新生成为源码：1234567891011121314151617181920212223242526const esprima = require('esprima');const estraverse = require('estraverse');const escodegen = require('escodegen');let code = 'function fn() &#123;&#125;';// 解析let tree = esprima.parseScript(code);// 遍历estraverse.traverse(tree, &#123; enter(node) &#123; // 判断类型，改变函数名称 if (node.type === 'FunctionDeclaration') &#123; node.id.name = 'ast'; &#125; &#125;&#125;);// 重新生成JS源码let result = escodegen.generate(tree);console.log(result);// function ast() &#123;// &#125; AST三板斧： 通过 esprima 把源码转化为AST 通过 estraverse 遍历并更新AST 通过 escodegen 将AST重新生成源码 UglifyJS2进行代码混淆压缩]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>webpack</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[BFF]]></title>
-    <url>%2F2019%2F06%2F02%2FBFF%2F</url>
-    <content type="text"><![CDATA[本文主要讲一种前端设计思想参照这个网站 什么是BFFBFF，即 Backend For Frontend（服务于前端的后端），也就是服务器设计 API 时会考虑前端的使用，并在服务端直接进行业务逻辑的处理，又称为用户体验适配器。 什么时候用BFF 多端运用 我们在设计 API 时会考虑到不同设备的需求，也就是为不同的设备提供不同的 API，虽然它们可能是实现相同的功能，但因为不同设备的特殊性，它们对服务端的 API 访问也各有其特点，需要区别处理。 服务聚合 随着微服务的兴起，原本在同一个进程内运行的业务流程被拆分到了不同的服务中。这在增加业务灵活性的同时，也让前端的调用变得更复杂。BFF 的出现为前端应用提供了一个对业务服务调用的聚合点，它屏蔽了复杂的服务调用链，让前端可以聚焦在所需要的数据上，而不用关注底层提供这些数据的服务。 非必要，莫新增 我们在看到 BFF 带来的各种好处的同时，也要注意到它所带来的代码重复和工作量增加方面的问题。如果与已有 BFF 功能类似，且展现数据的要求也相近的话，一定要谨慎对待新增 BFF 的行为。因此，建议非必要，莫新增。 用法 访问控制 例如，服务中的权限控制，将所有服务中的权限控制集中在 BFF 层，使下层服务更加纯粹和独立。 应用缓存 项目中时常存在一些需要缓存的临时数据，此时 BFF 作为业务的汇聚点，距离用户请求最近，遂将该缓存操作放在 BFF 层。 第三方入口 在业务中需要与第三交互时，将该交互放在 BFF 层，这样可以只暴露必要信息给第三方，从而便于控制第三方的访问。]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[VUE懒加载]]></title>
     <url>%2F2019%2F06%2F02%2Fvue%E6%87%92%E5%8A%A0%E8%BD%BD%2F</url>
     <content type="text"><![CDATA[本章会介绍 vue如何进行懒加载 什么是懒加载懒加载也叫延迟加载，即在需要的时候进行加载，随用随载。 如何与webpack配合实现组件懒加载 在webpack配置文件中的output路径配置chunkFilename属性123456output: &#123; path: resolve(__dirname, 'dist'), filename: options.dev ? '[name].js' : '[name].js?[chunkhash]', chunkFilename: 'chunk[id].js?[chunkhash]', publicPath: options.dev ? '/assets/' : publicPath&#125;, chunkFilename路径将会作为组件懒加载的路径 配合webpack支持的异步加载方法 resolve =&gt; require([URL], resolve), 支持性好 () =&gt; import(URL), webpack2官网推荐使用, 属于es7范畴, 需要配合babel的syntax-dynamic-import插件使用, 具体使用方法如下npm install --save-dev babel-core babel-loader babel-plugin-syntax-dynamic-import babel-preset-es20151234567use: [&#123; loader: 'babel-loader', options: &#123; presets: [['es2015', &#123;modules: false&#125;]], plugins: ['syntax-dynamic-import'] &#125; &#125;] 具体实例中实现懒加载 路由中配置异步组件 12345678910export default new Router(&#123; routes: [ &#123; mode: 'history', path: '/my', name: 'my', component: resolve =&gt; require(['../page/my/my.vue'], resolve),//懒加载 &#125;, ]&#125;) 实例中配置异步组件 1234components: &#123; historyTab: resolve =&gt; &#123;require(['../../component/historyTab/historyTab.vue'], resolve)&#125;,//懒加载 //historyTab: () =&gt; import('../../component/historyTab/historyTab.vue') &#125;, 全局注册异步组件 123Vue.component('mideaHeader', () =&gt; &#123; System.import('./component/header/header.vue')&#125;) 避免问题同时使用懒加载和正常引入1234567891011import historyTab from '../../component/historyTab/historyTab.vue';export default &#123; components: &#123; historyTab &#125;,&#125;export default &#123; components: &#123; historyTab: resolve =&gt; &#123;require(['../../component/historyTab/historyTab.vue'], resolve)&#125;,//懒加载 &#125;,&#125; 异步加载页面中载嵌入异步加载的组件因为在首次加载组件的时候会有加载时间，出现页面滞后，所以需要合理的进行页面结构设计，避免首次出现跳闪现象； 建议最终实现方案 路由页面全都使用懒加载 路由页面中的组件何磊安排 当一个页面中嵌套多个组件时将发送多次的http请求，可能会造成网页显示过慢且渲染参差不齐的问题，所以针对这种特殊情况需要合理安排 结合vuex 动态路由加载页面12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455 import Vue from 'vue'; import Vuex from 'vuex'; Vue.use(Vuex); export default new Vuex.Store(&#123; state: &#123; //路由组件存储器 routers: &#123;&#125; &#125;, getters: &#123; routers: state =&gt; &#123; return state.data; &#125; &#125;, mutations: &#123; //动态增加路由 addRouter: (state, data) =&gt; &#123; state.routers = Object.assign(&#123;&#125;, state.routers, &#123;[data.name]: data.component&#125;);&#125; &#125;, actions: &#123; acMethods(&#123;commit&#125;) &#123; &#125; &#125;,&#125;)//根目录中注册路由组件window.midea = &#123; registerRouter(name, component) &#123; Store.commit('addRouter', &#123; name: name, component: component &#125;) &#125;&#125;;//页面使用路由导航openAnyPage() &#123; midea.registerRouter('module', resolve =&gt; &#123;require(['../module/module.vue'], resolve)&#125;);//懒加载 this.$router.push(&#123;path: '/home/module', query: &#123;title: this.title&#125;&#125;);&#125;//页面中使用动态组件 &lt;template&gt;&lt;component :is="currentRouter" :moduleName="title"&gt;&lt;/component&gt; &lt;/template&gt;&lt;br&gt;&lt;script src="./any.js"&gt;export default &#123; data () &#123; return &#123; routeName: '', currentRouter: '', title: '', &#125; &#125;, created() &#123; this.routeName = this.$route.params.name; this.title = this.$route.query.title; this.currentRouter = this.$store.state.routers[this.routeName]; &#125;, methods: &#123; &#125;&#125;]]></content>
@@ -254,14 +254,25 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[QRCode]]></title>
-    <url>%2F2019%2F06%2F02%2FQRCODE%20%E4%BA%8C%E7%BB%B4%E7%A0%81%2F</url>
-    <content type="text"><![CDATA[QRCode.js 是一个用于生成二维码的 JavaScript 库。主要是通过获取 DOM 的标签,再通过 HTML5 Canvas 绘制而成,不依赖任何库QRCode.js ：https://www.jianshu.com/p/b53eae520de4 案例12345678910111213&lt;div id='qrcode'&gt;&lt;/div&gt;&lt;button onclick='createQrcode();'&gt;生成二维码&lt;button&gt;var qrcode = new QRCode('qrcode', &#123; width: 150, height: 150,&#125;)qrcode.clear();function createQrcode()&#123; qrcode.clear(); var QRCodeStr = "https://www.baidu.com" qrcode.makeCode(QRCodeStr);&#125; 小程序里面生成二维码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465&lt;view&gt; &lt;!-- 存放二维码的图片--&gt; &lt;view class='container'&gt; &lt;image style='width:310rpx;height:310rpx;margin-top:30rpx;' src="&#123;&#123;imagePath&#125;&#125;"&gt;&lt;/image&gt; &lt;/view&gt; &lt;!-- 画布，用来画二维码，只用来站位，不用来显示 --&gt; &lt;view class="canvas-box"&gt; &lt;canvas hidden="&#123;&#123;canvasHidden&#125;&#125;" style="width: 170px;height: 170px;background:#f1f1f1;" canvas-id="mycanvas" /&gt; &lt;/view&gt;&lt;/view&gt;//小程序js的配置var QR = require("../../utils/qrcode.js");/*** 页面的初始数据*/data: &#123; canvasHidden: false, //默认不让canvas二维码隐藏，否则不能生成二维码 imagePath: "" //弹出框二维码显示图片地址&#125;,/*** 生命周期函数--监听页面加载*/onLoad: function(options) &#123; var that = this; var initUrl = 'https://www.baidu.com?id='+id; //创建二维码 that.createQrCode(initUrl, "mycanvas", 170, 170);&#125;/*** 绘制二维码图片*/createQrCode: function(url, canvasId, cavW, cavH) &#123; //调用插件中的draw方法，绘制二维码图片 QR.api.draw(url, canvasId, cavW, cavH); setTimeout(() =&gt; &#123; this.canvasToTempImage(); &#125;, 500); &#125;,/*** 获取临时缓存照片路径，存入data中*/canvasToTempImage: function() &#123; var that = this; //把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径。 wx.canvasToTempFilePath(&#123; canvasId: 'mycanvas', success: function(res) &#123; var tempFilePath = res.tempFilePath; that.setData(&#123; imagePath: tempFilePath, // canvasHidden:true &#125;); &#125;, fail: function(res) &#123; console.log(res); &#125; &#125;);&#125;,]]></content>
+    <title><![CDATA[AST]]></title>
+    <url>%2F2019%2F06%2F02%2FAST%2F</url>
+    <content type="text"><![CDATA[本文主要讲一种js语法树 ASTAST有很多解析的JS 如：Babylon、esprima、acorn、UglifyJS2、AST explorer。在这个网址可以看到解析结果 解析结果下方的的js123var a = 42;var b = 5;var c = a + b; 展示结果123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596&#123; "type": "Program", "start": 0, "end": 37, "body": [ &#123; "type": "VariableDeclaration", "start": 0, "end": 11, "declarations": [ &#123; "type": "VariableDeclarator", "start": 4, "end": 10, "id": &#123; "type": "Identifier", "start": 4, "end": 5, "name": "a" &#125;, "init": &#123; "type": "Literal", "start": 8, "end": 10, "value": 42, "raw": "42" &#125; &#125; ], "kind": "var" &#125;, &#123; "type": "VariableDeclaration", "start": 12, "end": 22, "declarations": [ &#123; "type": "VariableDeclarator", "start": 16, "end": 21, "id": &#123; "type": "Identifier", "start": 16, "end": 17, "name": "b" &#125;, "init": &#123; "type": "Literal", "start": 20, "end": 21, "value": 5, "raw": "5" &#125; &#125; ], "kind": "var" &#125;, &#123; "type": "VariableDeclaration", "start": 23, "end": 37, "declarations": [ &#123; "type": "VariableDeclarator", "start": 27, "end": 36, "id": &#123; "type": "Identifier", "start": 27, "end": 28, "name": "c" &#125;, "init": &#123; "type": "BinaryExpression", "start": 31, "end": 36, "left": &#123; "type": "Identifier", "start": 31, "end": 32, "name": "a" &#125;, "operator": "+", "right": &#123; "type": "Identifier", "start": 35, "end": 36, "name": "b" &#125; &#125; &#125; ], "kind": "var" &#125; ],&#125; 使用方法esprima estraverse escodegen babel esprima 解析 JS 生成 AST123456789101112131415161718192021const esprima = require('esprima');let code = 'function fn() &#123;&#125;';// 结果let tree = esprima.parseScript(code);console.log(tree);// Script &#123;// type: 'Program',// body:// [ FunctionDeclaration &#123;// type: 'FunctionDeclaration',// id: [Identifier],// params: [],// body: [BlockStatement],// generator: false,// expression: false,// async: false &#125; ],// sourceType: 'script' &#125; estraverse 遍历 AST1234567891011121314151617181920212223const esprima = require('esprima');const estraverse = require('estraverse');let code = 'function fn() &#123;&#125;';// 遍历路径estraverse.traverse(esprima.parseScript(code), &#123; enter(node) &#123; console.log('enter', node.type); &#125;, leave() &#123; console.log('leave', node.type); &#125;&#125;);// enter Program// enter FunctionDeclaration// enter Identifier// leave Identifier// enter BlockStatement// leave BlockStatement// leave FunctionDeclaration// leave Program escodegen 将AST重新生成为源码：1234567891011121314151617181920212223242526const esprima = require('esprima');const estraverse = require('estraverse');const escodegen = require('escodegen');let code = 'function fn() &#123;&#125;';// 解析let tree = esprima.parseScript(code);// 遍历estraverse.traverse(tree, &#123; enter(node) &#123; // 判断类型，改变函数名称 if (node.type === 'FunctionDeclaration') &#123; node.id.name = 'ast'; &#125; &#125;&#125;);// 重新生成JS源码let result = escodegen.generate(tree);console.log(result);// function ast() &#123;// &#125; AST三板斧： 通过 esprima 把源码转化为AST 通过 estraverse 遍历并更新AST 通过 escodegen 将AST重新生成源码 UglifyJS2进行代码混淆压缩]]></content>
       <categories>
         <category>学习</category>
       </categories>
       <tags>
-        <tag>二维码</tag>
+        <tag>webpack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[BFF]]></title>
+    <url>%2F2019%2F06%2F02%2FBFF%2F</url>
+    <content type="text"><![CDATA[本文主要讲一种前端设计思想参照这个网站 什么是BFFBFF，即 Backend For Frontend（服务于前端的后端），也就是服务器设计 API 时会考虑前端的使用，并在服务端直接进行业务逻辑的处理，又称为用户体验适配器。 什么时候用BFF 多端运用 我们在设计 API 时会考虑到不同设备的需求，也就是为不同的设备提供不同的 API，虽然它们可能是实现相同的功能，但因为不同设备的特殊性，它们对服务端的 API 访问也各有其特点，需要区别处理。 服务聚合 随着微服务的兴起，原本在同一个进程内运行的业务流程被拆分到了不同的服务中。这在增加业务灵活性的同时，也让前端的调用变得更复杂。BFF 的出现为前端应用提供了一个对业务服务调用的聚合点，它屏蔽了复杂的服务调用链，让前端可以聚焦在所需要的数据上，而不用关注底层提供这些数据的服务。 非必要，莫新增 我们在看到 BFF 带来的各种好处的同时，也要注意到它所带来的代码重复和工作量增加方面的问题。如果与已有 BFF 功能类似，且展现数据的要求也相近的话，一定要谨慎对待新增 BFF 的行为。因此，建议非必要，莫新增。 用法 访问控制 例如，服务中的权限控制，将所有服务中的权限控制集中在 BFF 层，使下层服务更加纯粹和独立。 应用缓存 项目中时常存在一些需要缓存的临时数据，此时 BFF 作为业务的汇聚点，距离用户请求最近，遂将该缓存操作放在 BFF 层。 第三方入口 在业务中需要与第三交互时，将该交互放在 BFF 层，这样可以只暴露必要信息给第三方，从而便于控制第三方的访问。]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
       </tags>
   </entry>
   <entry>
@@ -273,6 +284,50 @@
       </categories>
       <tags>
         <tag>VUE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[QRCode]]></title>
+    <url>%2F2019%2F06%2F02%2FQRCODE%20%E4%BA%8C%E7%BB%B4%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[QRCode.js 是一个用于生成二维码的 JavaScript 库。主要是通过获取 DOM 的标签,再通过 HTML5 Canvas 绘制而成,不依赖任何库QRCode.js ：https://www.jianshu.com/p/b53eae520de4 案例12345678910111213&lt;div id='qrcode'&gt;&lt;/div&gt;&lt;button onclick='createQrcode();'&gt;生成二维码&lt;button&gt;var qrcode = new QRCode('qrcode', &#123; width: 150, height: 150,&#125;)qrcode.clear();function createQrcode()&#123; qrcode.clear(); var QRCodeStr = "https://www.baidu.com" qrcode.makeCode(QRCodeStr);&#125; 小程序里面生成二维码1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465&lt;view&gt; &lt;!-- 存放二维码的图片--&gt; &lt;view class='container'&gt; &lt;image style='width:310rpx;height:310rpx;margin-top:30rpx;' src="&#123;&#123;imagePath&#125;&#125;"&gt;&lt;/image&gt; &lt;/view&gt; &lt;!-- 画布，用来画二维码，只用来站位，不用来显示 --&gt; &lt;view class="canvas-box"&gt; &lt;canvas hidden="&#123;&#123;canvasHidden&#125;&#125;" style="width: 170px;height: 170px;background:#f1f1f1;" canvas-id="mycanvas" /&gt; &lt;/view&gt;&lt;/view&gt;//小程序js的配置var QR = require("../../utils/qrcode.js");/*** 页面的初始数据*/data: &#123; canvasHidden: false, //默认不让canvas二维码隐藏，否则不能生成二维码 imagePath: "" //弹出框二维码显示图片地址&#125;,/*** 生命周期函数--监听页面加载*/onLoad: function(options) &#123; var that = this; var initUrl = 'https://www.baidu.com?id='+id; //创建二维码 that.createQrCode(initUrl, "mycanvas", 170, 170);&#125;/*** 绘制二维码图片*/createQrCode: function(url, canvasId, cavW, cavH) &#123; //调用插件中的draw方法，绘制二维码图片 QR.api.draw(url, canvasId, cavW, cavH); setTimeout(() =&gt; &#123; this.canvasToTempImage(); &#125;, 500); &#125;,/*** 获取临时缓存照片路径，存入data中*/canvasToTempImage: function() &#123; var that = this; //把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径。 wx.canvasToTempFilePath(&#123; canvasId: 'mycanvas', success: function(res) &#123; var tempFilePath = res.tempFilePath; that.setData(&#123; imagePath: tempFilePath, // canvasHidden:true &#125;); &#125;, fail: function(res) &#123; console.log(res); &#125; &#125;);&#125;,]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>二维码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[命令模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 以canvas为例123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869//定义构造函数var CanvasCommand = function(domId)&#123; //获取当前id的dom var canvas = document.getElementById(domId), ctx = canvas.getContext("2d"), //定义一些方法 Action = &#123; //填充色 fillStyle : function(c)&#123; ctx.fillStyle = c; &#125;, //填充方块 fillRect : function(x,y,width,height)&#123; ctx.fillRect(x,y,width,height) &#125;, //描边色 strokeStyle : function(c)&#123; ctx.strokeStyle(c); &#125;, //描边方块 strokeRect : function(x,y,width,height)&#123; ctx.strokeRect(x,y,width,height); &#125;, //画文字 fillText : function(text,x,y)&#123; ctx.fillText(text,x,y) &#125;, //开始路径 beginPath : function()&#123; ctx.beginPath() &#125;, //移动到 moveTo : function(x,y)&#123; ctx.moveTo(x,y) &#125;, //画直线 lineTo : function(x,y)&#123; ctx.lineTo(x,y) &#125;, //画孤线 arc : function(x,y,r,begin,end,dir)&#123; ctx.arc(x,y,r,begin,end,dir) &#125;, //填充 fill : function()&#123; ctx.fill() &#125;, //描边 stroke : function()&#123; ctx.stroke() &#125;, &#125;; return &#123; //返回的方法 excute : function(msg)&#123; //没有指令 if(!msg) return; //多个指令，逐个遍历 if(msg.length)&#123; for(var i = 0;i&lt;msg.length;i++)&#123; arguments.callee(msg[i]); &#125; &#125;else&#123; msg.param = Object.prototype.toString.call(msg.param) === "[object Array]" ? msg.param : [msg.param]; Action[msg.command].apply(Action,msg.param); &#125; &#125; &#125;&#125; 使用方法1234567//初始化domIdvar mycanvas = new CanvasCommand("domId");//使用命令画图mycanvas.excute([ &#123;command : 'fillStyle',param : "red"&#125;, &#123;command : 'fillRect',param : [20,20,100,100]&#125;])]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[策略模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 策略算法12345678910111213141516171819202122232425262728//表单验证对象var InputStrategy = function()&#123; var strategy=&#123; //是否为空 notNull : function(value)&#123; return /\s+/.test(value)?"":"请输入内容" &#125;, //是否为数字 number : function(value)&#123; return /^[0-9]+(\.[0-9]+)?$/.test(value)?"":"请输入数字" &#125;, //是否是手机号 phone : function(value)&#123; return /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d&#123;8&#125;$/.test(value)?"":"请输入正确的电话" &#125; &#125; return &#123; //验证 check : function(type,value)&#123; value = typeof value === "string" ? value.trim() : value; return strategy[type] ? strategy[type](value):"没有该类型"; &#125;, //添加验证类型 addStrategy :function(type,fn)&#123; strategy[type] = fn &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[节流模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E8%8A%82%E6%B5%81%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 节流函数12345678910111213141516171819202122232425262728293031//节流器var throttle = function()&#123; //获取第一个参数 var isClear = arguments[0],fn; //如果第一个参数是boolean类型，那么第一个参数则表示是否清楚计时器 if(typeof isClear === 'boolean')&#123; //第二个参数则为函数 fn = arguments[1]; //函数计时器句柄存在，则清楚函数计时器 fn._throttleID &amp;&amp; clearTimeout(fn._throttleID); //通过计时器延迟函数的执行 &#125;else&#123; //第一个参数为函数 fn = isClear; //第二个参数为函数执行时的参数 param = arguments[1]; //对执行时的参数适配默认值，这里我们用到以前学过的extend方法 var p = extend(&#123; context:null, args:[], time:300 &#125;,param); //清楚函数执行计时器句柄， arguments.callee(true,fn); //作为函数绑定延迟计时器句柄，延迟执行函数 fn._throttleID = setTimeout(function()&#123; //执行函数 fn.apply(p.context,p.args); &#125;,p.time); &#125;&#125;]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
       </tags>
   </entry>
   <entry>
@@ -298,50 +353,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[命令模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 以canvas为例123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869//定义构造函数var CanvasCommand = function(domId)&#123; //获取当前id的dom var canvas = document.getElementById(domId), ctx = canvas.getContext("2d"), //定义一些方法 Action = &#123; //填充色 fillStyle : function(c)&#123; ctx.fillStyle = c; &#125;, //填充方块 fillRect : function(x,y,width,height)&#123; ctx.fillRect(x,y,width,height) &#125;, //描边色 strokeStyle : function(c)&#123; ctx.strokeStyle(c); &#125;, //描边方块 strokeRect : function(x,y,width,height)&#123; ctx.strokeRect(x,y,width,height); &#125;, //画文字 fillText : function(text,x,y)&#123; ctx.fillText(text,x,y) &#125;, //开始路径 beginPath : function()&#123; ctx.beginPath() &#125;, //移动到 moveTo : function(x,y)&#123; ctx.moveTo(x,y) &#125;, //画直线 lineTo : function(x,y)&#123; ctx.lineTo(x,y) &#125;, //画孤线 arc : function(x,y,r,begin,end,dir)&#123; ctx.arc(x,y,r,begin,end,dir) &#125;, //填充 fill : function()&#123; ctx.fill() &#125;, //描边 stroke : function()&#123; ctx.stroke() &#125;, &#125;; return &#123; //返回的方法 excute : function(msg)&#123; //没有指令 if(!msg) return; //多个指令，逐个遍历 if(msg.length)&#123; for(var i = 0;i&lt;msg.length;i++)&#123; arguments.callee(msg[i]); &#125; &#125;else&#123; msg.param = Object.prototype.toString.call(msg.param) === "[object Array]" ? msg.param : [msg.param]; Action[msg.command].apply(Action,msg.param); &#125; &#125; &#125;&#125; 使用方法1234567//初始化domIdvar mycanvas = new CanvasCommand("domId");//使用命令画图mycanvas.excute([ &#123;command : 'fillStyle',param : "red"&#125;, &#123;command : 'fillRect',param : [20,20,100,100]&#125;])]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[状态模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253//新建玛丽的类var MarryState = function()&#123; //内部私有变量 var _currentState = &#123;&#125;, //状态和方法的映射 states = &#123; jump : function()&#123; //跳 console.log("jump") &#125;, move : function()&#123; //移动 console.log("move") &#125;, shoot : function()&#123; //射击 console.log("shoot") &#125;, squat : function()&#123; //蹲下 console.log("squat") &#125; &#125;, //动作控制类 Action = &#123; //改变状态方法 changeState : function()&#123; var arg = arguments; //重置动作 _currentState = &#123;&#125;; //追加动作 if(arg.length)&#123; for(var i = 0,len = arg.length;i&lt;len;i++)&#123; _currentState[arg[i]] = true; &#125; &#125; return this; &#125;, //执行动作 goes : function()&#123; //遍历执行动作 for(var i in _currentState)&#123; states[i] &amp;&amp; states[i](); &#125; return this; &#125; &#125;; //返回动作类 return &#123; change : Action.changeState, goes : Action.goes &#125;&#125; 使用方法12345678910//new marry个人var marry = new MarryState();//方法的调用marry .change("jump","shoot") .goes() .change("move","shoot") .goes() .change("squat","shoot") .goes();]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[策略模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 策略算法12345678910111213141516171819202122232425262728//表单验证对象var InputStrategy = function()&#123; var strategy=&#123; //是否为空 notNull : function(value)&#123; return /\s+/.test(value)?"":"请输入内容" &#125;, //是否为数字 number : function(value)&#123; return /^[0-9]+(\.[0-9]+)?$/.test(value)?"":"请输入数字" &#125;, //是否是手机号 phone : function(value)&#123; return /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d&#123;8&#125;$/.test(value)?"":"请输入正确的电话" &#125; &#125; return &#123; //验证 check : function(type,value)&#123; value = typeof value === "string" ? value.trim() : value; return strategy[type] ? strategy[type](value):"没有该类型"; &#125;, //添加验证类型 addStrategy :function(type,fn)&#123; strategy[type] = fn &#125; &#125;&#125;]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[订阅者模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 中介者对象1234567891011121314151617181920212223//订阅者var Mediator = function()&#123; //内部存储 var _msg = &#123;&#125;; return &#123; //注册消息 register : function(type,action)&#123; if(_msg[type])&#123; _msg[type].push(action) &#125;else&#123; _msg[type]=[action] &#125; &#125;, //发布消息 send : function(type)&#123; if(_msg[type])&#123; for(var i=0;i&lt;_msg[type].length;i++)&#123; _msg[type][i]&amp;&amp;_msg[type][i](); &#125; &#125; &#125; &#125;&#125;]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>JS设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[迭代器模式]]></title>
     <url>%2F2019%2F06%2F01%2F%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[设计模式在JS应用 实现迭代器12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364//迭代器var Iterator = function(items)&#123; //获取长度，下标 var length = items.length, index = 0, splice = [].splice; return &#123; //第一个元素 first : function()&#123; index = 0; return items[index]; &#125;, //最后一个元素 last : function()&#123; index = length-1; return items[index]; &#125;, //前一个元素 pre : function()&#123; if(--index &gt; 0)&#123; return items[index] &#125;else&#123; index = 0; return null; &#125; &#125;, //下一个元素 next : function()&#123; if(++index &lt; length)&#123; return items[index] &#125;else&#123; index = length-1; return null; &#125; &#125;, //获取某一个 num 的元素 get : function(num)&#123; index = num&gt;=0 ? num % length : num % length + length; return items[index]; &#125;, //进行 fn 的全量处理 dealEach : function(fn)&#123; var args = splice.call(arguments,1); for(var i=0;i&lt;length;i++)&#123; fn.apply(items[i],args); &#125; &#125;, //对某一个 num 的元素进行 fn 的处理 dealItem : function(num,fn)&#123; fn.apply(this.get(num),splice.call(arguments,2)) &#125;, //对 mem 中的元素 进行 numFn 的处理 allFn 针对所有的处理 exclusive : function(mem,allFn,numFn)&#123; this.dealEach(allFn); if(Array.isArray(mem))&#123; for(var i=0;i&lt;mem.length;i++)&#123; this.dealItem(mem[i],numFn) &#125; &#125;else&#123; this.dealItem(mem,numFn) &#125; &#125; &#125;&#125; 数组迭代器123456789var eachArray = function(arr,fn)&#123; var i = 0, len = arr.length; for(;i &lt; len;i++)&#123; if(fn.call(arr[i],i,arr[i]) === false)&#123; break; &#125; &#125;&#125; 对象迭代器1234567var eachObj = function(obj,fn)&#123; for(var i in obj)&#123; if(fn.call(obj[i],i,obj[i]) === false)&#123; break; &#125; &#125;&#125; 分支循环嵌套123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051/* 绘制特效图片*param t 类型*param x x坐标*param y y坐标*param w 宽度*param h 高度*param a 透明度*/function dealImage(t,x,y,w,h,a)&#123; var canvasData = ctx.getImageData(x,y,w,h), data = canvasData.data, //封装算法 Deal = function ()&#123; var method = &#123; default : function(i)&#123; return method["gray"](i) &#125;, red : function()&#123; data[i + 1] = 0; data[i + 2] = 0; data[i + 3] = a; &#125;, green : function()&#123; data[i + 0] = 0; data[i + 2] = 0; data[i + 3] = a; &#125; blue : function()&#123; data[i + 1] = 0; data[i + 0] = 0; data[i + 3] = a; &#125;, grey : function()&#123; data[i] = data[i + 1]=parseInt(data[i + 2] = (data[i + 0] + data[i + 1] +data[i + 2])/3); data[i + 3] = a; &#125; &#125; return function(type)&#123; return method[type] || method["default"] &#125; &#125;(); //迭代器处理数据 function eachData(fn)&#123; for(var i = 0,len = data.length;i &lt; len;i += 4)&#123; fn(i); &#125; &#125;; //处理数据 eachData(Deal(t)); ctx.putImageData(canvasData,width+x,y);&#125;]]></content>
@@ -353,9 +364,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[节流模式]]></title>
-    <url>%2F2019%2F06%2F01%2F%E8%8A%82%E6%B5%81%E6%A8%A1%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[设计模式在JS应用 节流函数12345678910111213141516171819202122232425262728293031//节流器var throttle = function()&#123; //获取第一个参数 var isClear = arguments[0],fn; //如果第一个参数是boolean类型，那么第一个参数则表示是否清楚计时器 if(typeof isClear === 'boolean')&#123; //第二个参数则为函数 fn = arguments[1]; //函数计时器句柄存在，则清楚函数计时器 fn._throttleID &amp;&amp; clearTimeout(fn._throttleID); //通过计时器延迟函数的执行 &#125;else&#123; //第一个参数为函数 fn = isClear; //第二个参数为函数执行时的参数 param = arguments[1]; //对执行时的参数适配默认值，这里我们用到以前学过的extend方法 var p = extend(&#123; context:null, args:[], time:300 &#125;,param); //清楚函数执行计时器句柄， arguments.callee(true,fn); //作为函数绑定延迟计时器句柄，延迟执行函数 fn._throttleID = setTimeout(function()&#123; //执行函数 fn.apply(p.context,p.args); &#125;,p.time); &#125;&#125;]]></content>
+    <title><![CDATA[订阅者模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 中介者对象1234567891011121314151617181920212223//订阅者var Mediator = function()&#123; //内部存储 var _msg = &#123;&#125;; return &#123; //注册消息 register : function(type,action)&#123; if(_msg[type])&#123; _msg[type].push(action) &#125;else&#123; _msg[type]=[action] &#125; &#125;, //发布消息 send : function(type)&#123; if(_msg[type])&#123; for(var i=0;i&lt;_msg[type].length;i++)&#123; _msg[type][i]&amp;&amp;_msg[type][i](); &#125; &#125; &#125; &#125;&#125;]]></content>
       <categories>
         <category>设计模式</category>
       </categories>
@@ -411,6 +422,17 @@
     <title><![CDATA[继承]]></title>
     <url>%2F2019%2F06%2F01%2F%E7%BB%A7%E6%89%BF%2F</url>
     <content type="text"><![CDATA[设计模式在JS应用 类式继承123456789101112131415161718//声明父类function SuperClass()&#123; this.superVal = true&#125;//为父类添加方法SuperClass.prototype.getSuperVal = function()&#123; return this.superVal&#125;//声明子类function SubClass()&#123; this.subVal=false&#125;//继承父类SubClass.prototype=new SuperClass();//添加子类方法SubClass.prototype.getSubVal = function()&#123; return this.subVal&#125; 构造函数继承12345678910111213141516171819//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id)&#123; //继承父类 SuperClass.call(this,id)&#125;//创建子类实例var instance1 = new SubClass(10);var instance2 = new SubClass(11); 组合继承12345678910111213141516171819202122232425262728//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id,time)&#123; //继承父类 SuperClass.call(this,id) //新增共有属性 this.time=time&#125;//类式继承SubClass.prototype = new SuperClass();//子类原型方法SubClass.prototype.getTime = function()&#123; console.log(this.time)&#125;//创建子类实例var instance1 = new SubClass(10,"2017");var instance2 = new SubClass(11,"2018"); 寄生组合式继承复制一个对象的prototype Object.create(o.prototype) function object(o){ function F(){} F.prototype = o; return new F(); } 寄生组合12345678function inheritPrototype(subType,superType)&#123; //object()方法是ES5前Object.create()的非规范化实现 var prototype=object(superType.prototype); //增强对象 prototype.constructor = subType; //指定对象 subType.prototype = prototype;&#125; 使用123456789101112131415161718192021222324//声明父类function SuperClass(id)&#123; //值类型共有属性 this.id=id; //引用类型共有属性 this.books=["java","css"]&#125;//父类型声明原型方法SuperClass.prototype.showBooks = function()&#123; console.log(this.books)&#125;//声明子类function SubClass(id,time)&#123; //继承父类 SuperClass.call(this,id) //新增共有属性 this.time=time&#125;//继承inheritPrototype(SubClass,SuperClass)'//子类增加原型方法SubClass.prototype.getTime = function()&#123; console.log(this.time);&#125;]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>JS设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[状态模式]]></title>
+    <url>%2F2019%2F06%2F01%2F%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[设计模式在JS应用 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253//新建玛丽的类var MarryState = function()&#123; //内部私有变量 var _currentState = &#123;&#125;, //状态和方法的映射 states = &#123; jump : function()&#123; //跳 console.log("jump") &#125;, move : function()&#123; //移动 console.log("move") &#125;, shoot : function()&#123; //射击 console.log("shoot") &#125;, squat : function()&#123; //蹲下 console.log("squat") &#125; &#125;, //动作控制类 Action = &#123; //改变状态方法 changeState : function()&#123; var arg = arguments; //重置动作 _currentState = &#123;&#125;; //追加动作 if(arg.length)&#123; for(var i = 0,len = arg.length;i&lt;len;i++)&#123; _currentState[arg[i]] = true; &#125; &#125; return this; &#125;, //执行动作 goes : function()&#123; //遍历执行动作 for(var i in _currentState)&#123; states[i] &amp;&amp; states[i](); &#125; return this; &#125; &#125;; //返回动作类 return &#123; change : Action.changeState, goes : Action.goes &#125;&#125; 使用方法12345678910//new marry个人var marry = new MarryState();//方法的调用marry .change("jump","shoot") .goes() .change("move","shoot") .goes() .change("squat","shoot") .goes();]]></content>
       <categories>
         <category>设计模式</category>
       </categories>
