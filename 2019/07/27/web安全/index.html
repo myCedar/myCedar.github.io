@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="记下点滴">
 <meta property="og:description" content="主要讲述如何预防非法获取资源（用户信息，数据库资料）等">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-28T10:15:01.403Z">
+<meta property="og:updated_time" content="2019-07-29T06:43:17.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web安全">
 <meta name="twitter:description" content="主要讲述如何预防非法获取资源（用户信息，数据库资料）等">
@@ -441,7 +441,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-28 10:15:01" itemprop="dateModified" datetime="2019-07-28T10:15:01Z">2019-07-28</time>
+                <time title="修改时间：2019-07-29 06:43:17" itemprop="dateModified" datetime="2019-07-29T06:43:17Z">2019-07-29</time>
               
             
           </span>
@@ -536,6 +536,25 @@
 <li>加密关键信息</li>
 </ul>
 <h3 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h3><p>通过读取文件内容类型<br>设置文件读写权限<br>防止文件执行</p>
+<h2 id="系统安全规范覆盖安全测试内容"><a href="#系统安全规范覆盖安全测试内容" class="headerlink" title="系统安全规范覆盖安全测试内容"></a>系统安全规范覆盖安全测试内容</h2><h3 id="代码安全"><a href="#代码安全" class="headerlink" title="代码安全"></a>代码安全</h3><p>代码及配置文件中不能存在明文用户名及口令秘钥；<br>代码及配置文件中不能存在个人敏感数据（如电话号码、身份证号等）；<br>加密至少采用强度AES256；<br>HASH算法: 至少采用强度HMAC-SHA512；<br>密钥信息不能存储在一个地方，应分别存储在三个部分：数据库、配置文件、代码中；<br>数据库连接 用户名、密码 需要使用加密数据（druid 自带，参考： 数据库链接加密）；<br>敏感信息不能以GET方式提交；</p>
+<h3 id="代码注释"><a href="#代码注释" class="headerlink" title="代码注释"></a>代码注释</h3><p>源码和注释中不存在数据库版本信息；</p>
+<p>源码和注释中不存在项目版本编号；</p>
+<p>源码和注释中不存在文件或者项目的绝对路径；</p>
+<p>错误请求返回不包含敏感信息（如：服务器版本）；</p>
+<p>源码和注释中不存在服务器路径信息；</p>
+<p>源码和注释中不存在打印程序的详细堆栈信息（e.printStackTrace()）；</p>
+<p>源码和注释中不存在定义范围的敏感数据（如password:123456）；</p>
+<h3 id="日志-抛异常"><a href="#日志-抛异常" class="headerlink" title="日志/抛异常"></a>日志/抛异常</h3><p> 日志不能打印明文的个人敏感信息（如：用户名密码、个人电话、个人邮箱、token等）；<br>不能打印堆栈信息；</p>
+<h3 id="数据库存储加密"><a href="#数据库存储加密" class="headerlink" title="数据库存储加密"></a>数据库存储加密</h3><p>数据库存储的敏感字段必须加密；<br>敏感信息包括：<br>订单/运单类：电话，地址，月结卡号；<br>客户类：电话，地址，证件号；<br>员工类：证件号，银行卡，薪资福利，绩效；<br>海外数据：证件号，邮箱，电话，地址；<br>权限类：密码、密钥；</p>
+<h3 id="密码复杂度"><a href="#密码复杂度" class="headerlink" title="密码复杂度"></a>密码复杂度</h3><p>必须由大小、小写、数字等组成；</p>
+<p>不能与用户名相似（如，不能包含用户名正反写大小等）；</p>
+<p>密码长度要求，最小8位；<br>登录业务系统必须要有验证码机制；</p>
+<h3 id="敏感数据脱敏保护"><a href="#敏感数据脱敏保护" class="headerlink" title="敏感数据脱敏保护"></a>敏感数据脱敏保护</h3><h4 id="非客户"><a href="#非客户" class="headerlink" title="非客户"></a>非客户</h4><p>需要将敏感信息脱敏；可以采用点击小眼睛开关的方式显示脱敏信息；<br>点击脱敏开关查看敏感信息，需要记录日志；<br>小眼睛操作需记录相关日志（操作人，操作对象，操作时间）；</p>
+<h4 id="客户"><a href="#客户" class="headerlink" title="客户"></a>客户</h4><p>看到自己的数据可以不脱敏，可以根据业务要求设定；<br>敏感信息包括：<br>订单/运单类：电话，地址，月结卡号；<br>客户类：电话，地址，证件号；<br>员工类：证件号，银行卡，薪资福利，绩效；<br>海外数据：证件号，邮箱，电话，地址；<br>权限类：密码、密钥；</p>
+<h3 id="接口安全要求"><a href="#接口安全要求" class="headerlink" title="接口安全要求"></a>接口安全要求</h3><p>应用系统接口调用，需进行访问控制；</p>
+<p>信息系统接口调用，必须在信息系统接口上进行认证；</p>
+<p>对于部署在公司内网信息系统之间的接口调用，必须设置IP地址级别的访问控制；<br>对于部署在公司内网的信息系统和部署在外部的信息系统之间的接口调用，在我司信息系统接口上必须使用数字签名、Oauth认证等方式对调用的信息系统进行认证，确保对接口调用的鉴权，鉴权信息的保密，以及数据防篡改；<br>接口调用信息数据流必须经过过滤，过滤多余的字段，仅传递业务必须的字段；<br>接口调用必须做权限控制，仅允许操作和本业务相关的数据，不允许传递多余的字段；<br>对于部署在公司内网的信息系统和部署在外部的信息系统之间的接口调用传递的涉密数据，必须经过加密传递，对于涉及与金钱有关的涉密数据必须采用加密算法确保数据的完整性；<br>接口调用中使用密码进行认证的，必须使用强密码，且每半年修改一次密码；<br>接口调用需要设置最高频率，防止调用频率过高对信息系统的性能影响，降低拒绝服务攻击的风险；<br>公司内网信息系统和外网信息系统之间传递数据必须经过信息系统之间的接口调用，禁止通过后台数据库直接进行数据传递；</p>
+<h3 id="系统部署"><a href="#系统部署" class="headerlink" title="系统部署"></a>系统部署</h3><p>使用SSL证书，使用https替换掉http请求；</p>
 
       
     </div>
@@ -688,7 +707,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">56</span>
+                    <span class="site-state-item-count">58</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -792,7 +811,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">28</span>
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -856,7 +877,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS攻击-（Cross-site-script）"><span class="nav-text">XSS攻击 （Cross site script）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#现象"><span class="nav-text">现象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法"><span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些库"><span class="nav-text">一些库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF-跨站请求伪造-Cross-site-Request-Forggy"><span class="nav-text">CSRF 跨站请求伪造(Cross site Request Forggy)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法"><span class="nav-text">方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加密库"><span class="nav-text">加密库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#点击劫持"><span class="nav-text">点击劫持</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法-1"><span class="nav-text">方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP传输窃听"><span class="nav-text">HTTP传输窃听</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#途径"><span class="nav-text">途径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#防范"><span class="nav-text">防范</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件上传"><span class="nav-text">文件上传</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS攻击-（Cross-site-script）"><span class="nav-text">XSS攻击 （Cross site script）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#现象"><span class="nav-text">现象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法"><span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些库"><span class="nav-text">一些库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF-跨站请求伪造-Cross-site-Request-Forggy"><span class="nav-text">CSRF 跨站请求伪造(Cross site Request Forggy)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法"><span class="nav-text">方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加密库"><span class="nav-text">加密库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#点击劫持"><span class="nav-text">点击劫持</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#原理"><span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法-1"><span class="nav-text">方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP传输窃听"><span class="nav-text">HTTP传输窃听</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#途径"><span class="nav-text">途径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#防范"><span class="nav-text">防范</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件上传"><span class="nav-text">文件上传</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#系统安全规范覆盖安全测试内容"><span class="nav-text">系统安全规范覆盖安全测试内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码安全"><span class="nav-text">代码安全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码注释"><span class="nav-text">代码注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#日志-抛异常"><span class="nav-text">日志/抛异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库存储加密"><span class="nav-text">数据库存储加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#密码复杂度"><span class="nav-text">密码复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#敏感数据脱敏保护"><span class="nav-text">敏感数据脱敏保护</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#非客户"><span class="nav-text">非客户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#客户"><span class="nav-text">客户</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口安全要求"><span class="nav-text">接口安全要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统部署"><span class="nav-text">系统部署</span></a></li></ol></li></div>
             
 
           </div>
