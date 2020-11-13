@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="如题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="粤省事小程序设计方案">
+<meta property="og:url" content="http://yoursite.com/2020/07/27/%E7%B2%A4%E7%9C%81%E4%BA%8B%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:site_name" content="记下点滴">
+<meta property="og:description" content="如题">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-1.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-3.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-4.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-5.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-6.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-7.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-8.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-9.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-10.jpeg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-11.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-12.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-13.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-14.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-15.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-16.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-18.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-17.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-18.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-19.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-20.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-2.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-21.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-22.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-23.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-24.jpg">
+<meta property="article:published_time" content="2020-07-27T11:08:11.000Z">
+<meta property="article:modified_time" content="2020-11-13T03:07:11.448Z">
+<meta property="article:author" content="akCedar">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-1.jpg">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2020/07/27/%E7%B2%A4%E7%9C%81%E4%BA%8B%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>粤省事小程序设计方案 | 记下点滴</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">记下点滴</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">在街角的小巷中记下那些曾经</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/27/%E7%B2%A4%E7%9C%81%E4%BA%8B%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%A1%88/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="akCedar"/>
+      <meta itemprop="description" content="写给以后的自己"/>
+      <meta itemprop="image" content="/images/avatar.jpeg"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记下点滴"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">粤省事小程序设计方案
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-07-27 11:08:11" itemprop="dateCreated datePublished" datetime="2020-07-27T11:08:11Z">2020-07-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-11-13 03:07:11" itemprop="dateModified" datetime="2020-11-13T03:07:11Z">2020-11-13</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%BE%8E%E5%B7%A5/" itemprop="url" rel="index"><span itemprop="name">美工</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>如题</p>
+<a id="more"></a>
+<p>粤省事小程序是一个基于移动端的聚合式政务服务平台。作为一个平台型产品，它集成了广东省各地市、各部门的多项民生、政务类服务内容；同时，它也承担着对不同政府部门、合作开发商、公众用户等多个相关主体的利益串联。数字广东公司（由广东省政府发起并领导，腾讯及三大运营商共建）是粤省事<a target="_blank" rel="noopener" href="https://www.uisdc.com/topic/%e5%b0%8f%e7%a8%8b%e5%ba%8f">小程序</a>的幕后建设统筹单位。「数广」体验设计团队（主要由来自腾讯的设计师组成）通过体系化的工作方法，在项目复杂、工期紧张的背景下，完成了对<a target="_blank" rel="noopener" href="https://www.uisdc.com/tag/%e7%b2%a4%e7%9c%81%e4%ba%8b%e5%b0%8f%e7%a8%8b%e5%ba%8f">粤省事小程序</a>的体验框架搭建。在这次实践中，设计团队探讨了基于互联网的设计理念与传统政务服务的结合模式，为推进「数广」产品体系中各模块的设计工作，整体重塑广东电子政务服务的远期目标积累了重要经验。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-1.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"></p>
+<h4 id="一、背景解读"><a href="#一、背景解读" class="headerlink" title="一、背景解读"></a>一、背景解读</h4><p>近年来，在党中央和国务院的大力支持下，我们国家逐渐完善了电子政务发展的顶层设计，为各地「互联网+政务」的建设制定了清晰、可执行落地的路径规划。广东省按照相关规划，在数字政府的建设模式上积极探索：一方面，在政府侧成立了专门的领导小组，对建设工作进行规划及协调 ；另一方面，由腾讯和三大运营商组建了数字广东公司，为实施过程提供专业的技术支撑、方案设计及建设运维能力。 在这样一个领导责任明确、建设支撑单位专业化能力完备的基础上，「数广」公司将按照领导单位的规划，联合各家合作开发商，逐步对广东各地市、各部门分散设立、重复建设、服务质量较差的电子政务系统进行整体重塑：通过规划中的一系列改造，降低信息化系统的整体运营成本，提升政府工作人员的办事效率，为公众带来更好的政务服务体验。</p>
+<h4 id="二、总体任务"><a href="#二、总体任务" class="headerlink" title="二、总体任务"></a>二、总体任务</h4><p>对全省范围内的电子政务体系进行整体重塑，是一项非常复杂的系统性工程，需要以架构设计的方式对技术底层到应用表层间不同环节的相关工作进行规划。按照相关规划，设计团队的总体任务既要聚焦于整个架构的顾客行为层面，也要协调 PPP 三方的合作方式：一方面基于一系列平台型产品，结合各级政府及开发商的运作特点，对各类政务服务进行体验重塑和整合，让政务服务变得更人性化、更方便好用；另一方面基于一系列工具型产品，为政务运作提供更好的效率支持。 粤省事小程序是数字广东产品体系中的重要一环，作为一个政务服务的聚合平台，通过对各类相关事项的整合处理和体验提升，为公众提供「一站式」、「能办成事」的移动端服务触点；而针对服务供给侧，粤省事平台为各级政府部门及合作开发商提供规范的对接模式，让这些相关主体能顺畅地把各类服务事项按照统一标准在粤省事平台上线，以充分利用平台的各项技术（高并发、稳定性等）和业务（身份、支付等）优势，以更低的成本为更广泛的用户带来更多、更好的服务。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-3.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> 「粤省事」三个字，「粤」即是广东省的简称，同时也和「越」同音；「省」代表了服务与省内，和「事」字组成「省事」也传递出小程序的核心要义「方便快捷」。「一站式，更省事」的 Slogan 更是强调了突出了我们的优势，希望给用户提供一站式便捷办理省内政务服务的平台。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-4.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> 接下来，我们将回顾「数广」设计团队在粤省事小程序项目中的各项工作实践，同时也对过程中关于「政务类服务及体验设计」的一些思考进行总结。</p>
+<h4 id="三、设计分析"><a href="#三、设计分析" class="headerlink" title="三、设计分析"></a>三、设计分析</h4><h5 id="1-竞品探索"><a href="#1-竞品探索" class="headerlink" title="1. 竞品探索"></a>1. 竞品探索</h5><p>第一类：在已有的高用户量平台里，搭建民生服务集合站点，例如微信城市服务、支付宝城市服务。这一类门户本身是众多官方或第三方服务的入口集散地，优点是提供了大而全的服务平台，群众可以比较容易的在固定平台里找到服务入口。但每个服务自成一体，独自开发，所以各个服务之间不存在统一或者规范。 第二类：渠道商自建 App 中的服务入口，例如中国邮政的车务代办。这一类服务散落在各个渠道商自建的 App 里。同时也受渠道的能力影响，功能相对比较简单。 第三类：业务部门自建公众号或 App。在部门的业务范围内，有很好的体验一致性及服务闭环。但公众号、服务号更多的被集合在第一类大平台里。而 App 必须先下载后使用，这就让使用门槛又高了一层。 综上所述，我们小程序是希望打造一站式的服务体验平台。所以，既应该有第一类竞品的全面、易找到的特性，也同时要具备第三类的体验一致性与业务闭环。最终需要我们自己去寻找一个适合的定位。</p>
+<h5 id="2-用户研究及分析"><a href="#2-用户研究及分析" class="headerlink" title="2. 用户研究及分析"></a>2. 用户研究及分析</h5><p>通过顾客旅程地图来梳理用户三种办事场景（线上办理办结、线上预约线下办结、线下办理）的每一个环节的需求，感受和痛点。从而推导出设计的机会点。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-5.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> 我们汇总发现用户的痛点集中在以下方面。归纳起来，便捷、清晰、易找到是用户关注的核心要素点。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-6.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"></p>
+<h5 id="3-设计统筹与战略分析"><a href="#3-设计统筹与战略分析" class="headerlink" title="3. 设计统筹与战略分析"></a>3. 设计统筹与战略分析</h5><p>和传统的 to C 项目不一样，粤省事小程序不仅是一个信息规模大、功能复杂的平台型产品，同时也涉及到政府各部门如何协调合作的问题。和业务、技术等其他相关团队一样，设计团队也需要基于全局视角，以统筹的思路介入工作，才能避免在纷杂的细节执行中走偏，实现对平台整体体验的有效把控。在节奏尤其紧张的项目初期，设计团队有意识地慢下来，对以下这些最可能影响设计走向的问题进行了梳理，作为对后续各类细节工作的总体指引。 <strong>自下而上的设计：做好预判，提前设计</strong> 小程序和广东省政务服务网的设计路径有很大区别。政务服务网是一个集合了政务服务全量功能的平台，设计路径也是自上而下的全盘改造。但小程序是一个开放的接入平台，各个部门愿意接入哪些移动端的业务能力，就接入哪些业务，是自下而上的设计。「多」，大概是对全省政务服务总量的一个安全的估算，但到底和我们的平台属性相吻合的服务有多少却不是显而易见的。通过有针对性的盘点，我们发现在全省50多个部门中只有20多个包含和我们的目标用户相关的服务，而这20多个中仅有三分一提供大部分用户较常使用的服务。粤省事平台需要对接的核心服务内容，其实仅来自7、8个相关部门，对信息总量和用户规模的整体梳理将有助于后续信息架构和关键路径的设计。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-7.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> <strong>以办成事情为目标，做服务整合</strong> 在对信息的盘点过程中，我们发现当前大量的政务服务是以行政事项的形式机械地罗列出来，是政府内部运转模式的直接呈现。用户要做成一件事情，往往需要分别办理若干个不同的事项。为此，我们得到一个设计各类服务流程的基本原则：在平台接入的服务内容需要以「办成事情」为任务目标来整合，尽可能解决用户的最终诉求。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-8.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> <strong>探寻品类通用模型</strong> 对比其他互联网化更充分的行业，大部分政务服务还没有成熟的品类通用体验模式（如：电商、外卖、视频应用的框架布局、基本操作大同小异）。 作为一家统筹单位，我们有条件集中力量处理好服务整合的问题，从而为不同政务服务找到各自领域的内容本质，形成通用体验模型，以满足在不同地市、场景快速复制的业务发展需求。</p>
+<h5 id="4-设计目标"><a href="#4-设计目标" class="headerlink" title="4. 设计目标"></a>4. 设计目标</h5><p>在有了前序比较完整的分析之后，我们归纳分析出整体目标。粤省事小程序的本质在于构建一个聚合各项政务服务的移动端平台，以平台的模式串联好用户、合作开发商、政府部门，让三个利益方各得其所。为此，我们对设计目标进行了针对各方核心需求特定的有针对性的定义： <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-9.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> 定义设计基础原则： <strong>清晰易用</strong> 根据业务状态推荐业务功能，降低用户决策负荷。确保信息元素具备优先级层次与可用性。确保界面更加符合用户心理直觉。 <strong>灵活高效</strong> 提供全局观的入口式设计方案，不轻易陷入细节流程。设计模式具备可扩展、完善包容的机制。 <strong>简单务实</strong> 摒弃不必要的设计元素，追求利落适用的特质。通盘考虑各端优势，移动端可作为复杂事项申办引流入口，不可处理过于复杂的事项流程。 进一步推导出基础设计语言： <strong>轻快</strong> 信息聚焦、扁平视觉、自然的视觉流、提高视觉信噪比。 <strong>亲和</strong> 简洁缓和、完整统一、操作可靠，体验上连续舒适。 <strong>直率</strong> 结构简单、信息富有韵律感，减少视觉分割和过于热闹的装饰。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-10.jpeg" alt="如何设计小程序？腾讯这个实战案例太赞了！"></p>
+<h5 id="5-信息架构构建"><a href="#5-信息架构构建" class="headerlink" title="5. 信息架构构建"></a>5. 信息架构构建</h5><p><strong>For 用户 – 以「办事为中心」组织整体信息</strong> 按相关部门主持的服务来组织功能是当前常见的处理方式，但这种组织方式从用户调研的反馈来看，用户并不能把事情和各个主管部门一一对应，且许多事情需要多个部门配合处理。所以常见的「部门」组织方式，不是直接解决用户问题的方式。因此摒弃以主管部门为维度的归类方式，换成改同类事情的集合。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-11.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> <strong>For 服务 – 基于地市组织服务信息</strong> 按行政属地划分是当前各类政务服务能力的基本组织形式，这种形式和基于地理的模型有许多共通之处，像订餐、差旅等行业都是以属地来组织信息的常见例子，这种模型和我们的情况最吻合。从服务侧来看，这样可以根据地理位置直接匹配相应的服务提供方。从用户侧来看，也可以更准确的提交服务诉求。 <strong>For 合作 – 划分三级页面体系</strong> 总体上，我们把小程序的架构处理成小程序主体+各个功能模块二级首页+具体办事流程页的三级体系。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-12.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> 小程序首页与各种全局功能（如登录、消息、进度、搜索等），涉及的内容直接反应小程序的初始体验感受。我们将这部分内容定义为「全部模型设计」的范畴，由数广设计团队主刀。 二级首页即各个业务的服务大厅，影响用户对业务的感知。我们将这部分内容定义为「业务模型设计」，同样由数广设计团队主刀，可以保证多业务的体验一致性。 而业务流程，我们则交给对业务熟悉程度更高的开发商。数广定制「流程模型」规范，让不同开发商能按照统一标准，在2个月内把152个事项接入到粤省事中。</p>
+<h4 id="四、设计实施"><a href="#四、设计实施" class="headerlink" title="四、设计实施"></a>四、设计实施</h4><h5 id="1-主程序设计"><a href="#1-主程序设计" class="headerlink" title="1. 主程序设计"></a>1. 主程序设计</h5><p><strong>以用户为中心，以证件为切入点</strong> 在过往的线上服务系统中，服务提供方倾向一次性展示更多的功能，希望众多功能总有一个是用户需要的。但这并不是以帮助用户办成事为第一目标的设计思维。 在前文中提到以事情为中心的信息组织方式，是为了让信息架构成更扁平直观，从而更易于用户理解。于是我们尝试了第一种整体的布局方案，小程序整体分为「服务」「证件」「我」三个大的 tab。但从用研测试反馈来看，相对具体的服务事项，证件才是用户对业务的第一认知方式。同时，粤省事的小程序属性，导致再次嵌套底部<a target="_blank" rel="noopener" href="https://www.uisdc.com/topic/%e5%af%bc%e8%88%aa">导航</a>的体验不够轻便。于是在仅剩1个月就要上线的前夕，我们推翻了第一种方案。把证件放到了首页的 C位，强化了证件的展示，通过最易理解的信息元素引导用户探索其他常用的功能。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-13.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> 证件本体的设计上，我们更多采用了轻质感拟物化设计。从实体证件中提取具有识别性的颜色和特征图形，进行视觉优化。同时，在 「视觉的颜色」 和 「跟真实颜色走」 两个点间，我们选择了跟真实颜色走。通过这些简单而必要的视觉隐喻，减少用户记忆压力，从直观层面上理解业务，更快作出反应和决定。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-14.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> <strong>入口信息处理</strong> 作为承载各类服务的平台，我们初次面对的是需要容纳142个细项的业务，后续还会不断的增加更多事项。如果不加以规范，很容易出现入口堆砌的窘境。既要保证服务内容的完整展示，又要保证用户能便捷地找到相关的内容，我们对首页的入口展现形式做了特定处理。 保持友好：在视觉表现上通过对留白和字号的控制，让用户尽可能舒适地浏览多入口信息。在类别标题上尽可能选用简单的名词来命名，不需要再次转译信息。 建立信任感：增加服务提供方的名称，即可以提高服务的公信度，也可以反向影响政府部门尽快上线更多的便民功能。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-15.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> <strong>平衡设计细节</strong> 整体界面采用扁平化的设计，去除冗余、繁杂的装饰效果，突出核心的设计元素，让用户使用时更为直观和更有目的性；为适用于不同年龄层的用户，整体界面采用了大字体，通过字号、字重、间距、留白来建立清晰的信息层级，提高用户的使用效率。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-16.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"></p>
+<h5 id="2-二级首页设计"><a href="#2-二级首页设计" class="headerlink" title="2. 二级首页设计"></a>2. 二级首页设计</h5><p><strong>通用基础模型搭建</strong> 不同类型的政务服务，从用户角度来看能抽象成相对简单的查询类、办理类、预约类三个大类。进一步梳理，我们把基本的「查」相关的数据更直接的展现出来。「办」和「约」则根据用户当前的状态，给予适合的任务推荐。简单的来说，通过「我的基本信息+我的状态+我能做什么」的公式来组合业务。通过这种模型，不仅可以使信息组织更有逻辑性，也可以减少因用户状态不满足条件引起的错误业务申请量。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-18.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> <strong>为用户提供服务全局观</strong> 二级首页承载的是以单个主题为中心的系列服务内容。许多政务服务内容自身有这样的特点：用户不是很频繁使用，许多时候用户并不能较清晰地理解相关业务名词的抽象概念。因此，我们首先打破了原有的以某某局，某某窗口为事情呈现的方式。但业务本身不能毫无章法的一股脑全部呈现给用户，为此，我们通过对不同服务的解构，在页面的主要区域展示通过梳理提取的服务主题核心名词或任务，帮助用户更好地理解各类抽象概念。同时，在整个页面信息布局上，尽可能展示某类服务的框架性信息。让用户先建立该主题的全局认知，再安心地探索自己感兴趣的内容。 以护照与通行证为例子，我们可以把护照与通行证基础的3类业务：护照相关、台湾通行证相关、港澳通行证相关，作为整个主题的主框架。再细分，每种证件的状态、相关的功能。那么用户对护照与通行证这里可以做什么，就可以有一个比较全局的认知和理解。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-17.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> <strong>通过状态判断简化任务</strong> 每个主题下，可办理的事项很多。在项目初期，我们快速输出了一个以分类事项入口为主导的样式。但这些事项往往是和特定的状态绑定的，用户当前的状态极有可能导致业务不可办理。例如，未办理过通行证的用户不能也不需要办理挂失、再次签注等业务，他仅可申请办理新的证件。利用这样的逻辑，我们为二级首页的内容设定这样的规则：任何功能入口都以用户的当前状态作为展示与否的依据。这样我们便能通过一些前端的基本处理，大大减低用户的选择任务负荷了。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-18.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> <strong>塑造亲和简洁的服务形象</strong> 为打造粤省事小程序服务便捷、贴近民生、专业可靠的品牌形象，选用「民生绿」作为主色，搭配充满活力的黄色为辅色。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-19.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"></p>
+<h5 id="3-服务场景整合设计"><a href="#3-服务场景整合设计" class="headerlink" title="3. 服务场景整合设计"></a>3. 服务场景整合设计</h5><p>真正地以用户为中心，从「罗列服务内容让用户来找」转变为「深入了解需求，把服务打包好端到用户面前」是我们其中一个设计目标。在实际设计过程中，我们重点重建了服务的使用场景。 我们前面多次提及的业务平铺罗列会让用户难以快速理解。同时，很多业务由于其专业性，其名称描述并不是普通老百姓一眼就能看懂的，这让服务使用的门槛又再高了一层。 以仲裁业务为例，大部分需要通过仲裁为自己争取权益的用户文化层次较低（如农民工），对相关法律术语不太了解。尽管许多仲裁事项已经进行了线上化改造，用户可在线上办理许多业务，不需要到线下排队等等。但大量的专业术语让普通用户也很难理解如何使用这些服务，对文化层次较低的农民工就更不友好了。于是在改造仲裁服务时，我们把原本列表式的入口呈现方式进行了整合，根据用户的诉求场景来归纳相关内容，在符合法律规定的基础上，尽可能减少专业术语的露出，让专业事项通过更直白的方式描述。分不同角色查看对应该使用的业务，再细分不同阶段可能会需要的业务。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-20.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"></p>
+<h5 id="4-流程设计"><a href="#4-流程设计" class="headerlink" title="4. 流程设计"></a>4. 流程设计</h5><p>小程序的100多项服务的具体流程分别由多家合作商开发完成。为了保证「粤省事」整体的体验一致性，我们对流程页的设计提出基础目标：先改造，后标准化。 <strong>服务改造</strong> 在没有粤省事综合服务平台之前，各个业务都自成一体。独立不互通的业务导致的用户每次办理时，都需要反复填写身份信息。另一方面，由于业务可能涉及多个管理部门，互相都要验证一遍用户的信息，在一个业务中也会出现反复填写的情况。针对这种不合理的存在，我们在推动前后台能力打通。前端上做了用户信息的判断，后端推动多部门数据打通，减少用户同类信息重复填写的工作。 在能力打通的基础上，我们以减少用户每一次跑动作为更高目标，去推动事项流程的优化。以残疾人证件申办为例，我们推动优图的图像识别能力与业务部门合作，减去残疾人去照相馆拍摄证件照的流程，在线上可完成证件申请流程，是实在有效的为弱势群体服务。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-2.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> <strong>模块标准化</strong> 在业务对接和设计的过程中，有一个绕不开的难点是业务流程数量庞大，无法快速针对每一个流程做个性化设计。为了更高效接入这些业务，我们采用了模块化的设计方法。将业务整理分类、抽象出最基础的业务模型，得出办事模型。以下模型可以涵盖小程序现在接入的70%的办理业务。使用办事模型套用所有业务后，降低了用户使用过程中的突兀感，统一了以前无预知的办事过程，减少了用户对业务办理的认知负荷。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-21.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> 在这个基础上，我们再针对单个模块进行细化设计。以「过程」这个模块为例子，办事过程是整个流程里最关键而且最多样性的环节。在这个环节设计里，我们使用了类似乐高的模块形式，让不同的过程以拼积木的形式组装完成，从而实现符合规范的个性化接入。每块积木都是业务抽象组件化设计，使得整个办事流程更加统一、高效。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-22.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"></p>
+<h4 id="五、政务服务类设计经验小结"><a href="#五、政务服务类设计经验小结" class="headerlink" title="五、政务服务类设计经验小结"></a>五、政务服务类设计经验小结</h4><p><strong>紧跟风口办好事</strong> 在跟政府的合作项目中，政府领导有想法有自己的意志，其实是一件好事。有了大领导的推动，项目的进展和执行速度都会加快。关键是做好预判和预留，风来了马上执行，也不出乱子。 <strong>创新思维重塑服务</strong> 设计师是服务改造的整合者。政务服务在过往的版本中大多是以技术导向来实现的，转换为用户导向需要设计师发挥更高的创造能力。离开业务角度和技术实现的角度，纯站在设计师考虑的角度，运用设计师的创新思维来改造服务流程。同时，设计也能反向影响，让政务服务变得更好，用设计思维把原本零散的点整合起来，是服务模式创新的一部分。 <strong>横向视野框架优先</strong> 政务服务通常都不是只有一件事或者只涉及到一个地市。面对体量较大的业务时，不着急进入业务流程的细节设计。平台级产品需要横向视野，可以同时评估多个业务中一致的部分。跳出单个业务流程的限制，需要把控整体的体验一致性。优先做好整体框架，建立起业务的全局观。有助于复杂多样的政务服务快速接入。 <strong>积极推动调节</strong> 尽管当前的政务类业务基本上都有了一套在线化的解决方案，但大多数仍然停留在技术实现阶段，体验断层等各种问题也参差不齐，在初期也会出现需求凌乱的状态。设计师可以发挥最大的能动性，根据片段性的资料、需求快速的输出具体的内容，主动推进项目进展，起到润滑、融合的作用。</p>
+<h4 id="六、阶段成果"><a href="#六、阶段成果" class="headerlink" title="六、阶段成果"></a>六、阶段成果</h4><p>粤省事小程序于5月21日上线，上线首日 pv 突破1000万，最高日访问量达到1394万。目前，粤省事小程序总用户数有338万，日均访问数179万，累计查询办理量约2202.5万次。分享次数日峰值达到7.6万次，平均每8个市民就产生了1次分享。粤省事常驻于55%的市民微信最近使用小程序，也是小程序热门排行榜第75位，成为唯一入榜的政务类应用。小马哥也频频在各种行业大会上，正面评价粤省事。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-23.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"> 广大用户对各类服务的使用体验反馈总体良好。我们的一些设计创新，如：提前暴露查询信息、根据状态展示可用服务得到了用户的认同。办理事情比以前也更容易了，例如申领居住证，以前最少跑一次，现在可以直接在线上完成申请。小程序整体上资料填写减少55%，41个事项零跑动，致力向更「人性化」的方向发展。 我们也密切关注用户担忧的声音，部分用户对隐私设置等问题存在顾虑。所以小程序并不是一步到位的产品，在后续的迭代中还需要针对各种细节问题进行设计调整。一步步把小程序的体验在基础体验框架的基础上优化。 <img src="https://image.uisdc.com/wp-content/uploads/2018/10/uisdc-tg-20181001-24.jpg" alt="如何设计小程序？腾讯这个实战案例太赞了！"></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechat.jpeg" alt="akCedar 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/27/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%AA%8C%E8%AF%81%E5%8E%9F%E5%9E%8B%E5%90%88%E9%9B%86/" rel="next" title="移动端验证原型合集">
+                <i class="fa fa-chevron-left"></i> 移动端验证原型合集
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/07/31/%E6%99%BA%E6%85%A7%E8%AD%A6%E5%8A%A1-%E5%85%AC%E5%AE%89%E6%8C%87%E6%8C%A5%E4%B8%AD%E5%BF%83%E8%BF%90%E8%A1%8C%E6%96%B0%E6%A8%A1%E5%BC%8F/" rel="prev" title="智慧警务 公安指挥中心运行新模式">
+                智慧警务 公安指挥中心运行新模式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="akCedar"/>
+            
+              <p class="site-author-name" itemprop="name">akCedar</p>
+              <div class="site-description motion-element" itemprop="description">写给以后的自己</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">134</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/%20%7C%7C%20th">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/%20%7C%7C%20tags">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/myCedar" title="GitHub &rarr; https://github.com/myCedar" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/1301172947@qq.com" title="E-Mail &rarr; 1301172947@qq.com"><i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%83%8C%E6%99%AF%E8%A7%A3%E8%AF%BB"><span class="nav-text">一、背景解读</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%80%BB%E4%BD%93%E4%BB%BB%E5%8A%A1"><span class="nav-text">二、总体任务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E8%AE%BE%E8%AE%A1%E5%88%86%E6%9E%90"><span class="nav-text">三、设计分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E7%AB%9E%E5%93%81%E6%8E%A2%E7%B4%A2"><span class="nav-text">1. 竞品探索</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E7%94%A8%E6%88%B7%E7%A0%94%E7%A9%B6%E5%8F%8A%E5%88%86%E6%9E%90"><span class="nav-text">2. 用户研究及分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E8%AE%BE%E8%AE%A1%E7%BB%9F%E7%AD%B9%E4%B8%8E%E6%88%98%E7%95%A5%E5%88%86%E6%9E%90"><span class="nav-text">3. 设计统筹与战略分析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E8%AE%BE%E8%AE%A1%E7%9B%AE%E6%A0%87"><span class="nav-text">4. 设计目标</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-%E4%BF%A1%E6%81%AF%E6%9E%B6%E6%9E%84%E6%9E%84%E5%BB%BA"><span class="nav-text">5. 信息架构构建</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%AE%BE%E8%AE%A1%E5%AE%9E%E6%96%BD"><span class="nav-text">四、设计实施</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E4%B8%BB%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="nav-text">1. 主程序设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%BA%8C%E7%BA%A7%E9%A6%96%E9%A1%B5%E8%AE%BE%E8%AE%A1"><span class="nav-text">2. 二级首页设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E6%9C%8D%E5%8A%A1%E5%9C%BA%E6%99%AF%E6%95%B4%E5%90%88%E8%AE%BE%E8%AE%A1"><span class="nav-text">3. 服务场景整合设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E6%B5%81%E7%A8%8B%E8%AE%BE%E8%AE%A1"><span class="nav-text">4. 流程设计</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%94%BF%E5%8A%A1%E6%9C%8D%E5%8A%A1%E7%B1%BB%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C%E5%B0%8F%E7%BB%93"><span class="nav-text">五、政务服务类设计经验小结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E9%98%B6%E6%AE%B5%E6%88%90%E6%9E%9C"><span class="nav-text">六、阶段成果</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">akCedar</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.2.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+<script>!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+</script>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

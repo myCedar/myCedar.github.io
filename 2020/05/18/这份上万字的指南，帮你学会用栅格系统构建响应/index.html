@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="如题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="这份上万字的指南，帮你学会用栅格系统构建响应式设计">
+<meta property="og:url" content="http://yoursite.com/2020/05/18/%E8%BF%99%E4%BB%BD%E4%B8%8A%E4%B8%87%E5%AD%97%E7%9A%84%E6%8C%87%E5%8D%97%EF%BC%8C%E5%B8%AE%E4%BD%A0%E5%AD%A6%E4%BC%9A%E7%94%A8%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F%E6%9E%84%E5%BB%BA%E5%93%8D%E5%BA%94/index.html">
+<meta property="og:site_name" content="记下点滴">
+<meta property="og:description" content="如题">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-3.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-4.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-6.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-5.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-7.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-8.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-9.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-10.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-11.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-12.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-13.jpeg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-14.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-15.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-16.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-17.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-18.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-19.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-20.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-21.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-22.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-23.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-24.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-25.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-26.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-27.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-28.gif">
+<meta property="article:published_time" content="2020-05-18T10:48:47.000Z">
+<meta property="article:modified_time" content="2020-11-13T03:07:15.367Z">
+<meta property="article:author" content="akCedar">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-3.gif">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2020/05/18/%E8%BF%99%E4%BB%BD%E4%B8%8A%E4%B8%87%E5%AD%97%E7%9A%84%E6%8C%87%E5%8D%97%EF%BC%8C%E5%B8%AE%E4%BD%A0%E5%AD%A6%E4%BC%9A%E7%94%A8%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F%E6%9E%84%E5%BB%BA%E5%93%8D%E5%BA%94/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>这份上万字的指南，帮你学会用栅格系统构建响应式设计 | 记下点滴</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">记下点滴</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">在街角的小巷中记下那些曾经</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/18/%E8%BF%99%E4%BB%BD%E4%B8%8A%E4%B8%87%E5%AD%97%E7%9A%84%E6%8C%87%E5%8D%97%EF%BC%8C%E5%B8%AE%E4%BD%A0%E5%AD%A6%E4%BC%9A%E7%94%A8%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F%E6%9E%84%E5%BB%BA%E5%93%8D%E5%BA%94/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="akCedar"/>
+      <meta itemprop="description" content="写给以后的自己"/>
+      <meta itemprop="image" content="/images/avatar.jpeg"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记下点滴"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">这份上万字的指南，帮你学会用栅格系统构建响应式设计
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-05-18 10:48:47" itemprop="dateCreated datePublished" datetime="2020-05-18T10:48:47Z">2020-05-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-11-13 03:07:15" itemprop="dateModified" datetime="2020-11-13T03:07:15Z">2020-11-13</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%BE%8E%E5%B7%A5/" itemprop="url" rel="index"><span itemprop="name">美工</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>如题</p>
+<a id="more"></a>
+<p>今天，90％ 的媒体互动都是基于屏幕的，通过手机，平板，笔记本电脑，电视和智能手表来与外界产生联系。多屏设计已成为商业设计中不可或缺的一部分，响应式设计正迅速成为常态。作为 UI 设计师，我们希望为我们的产品在不同尺寸下都能为用户提供良好的用户体验，栅格系统可以帮助我们做到这一点。 即使是我们只针对一个尺寸进行设计，我们也经常面临设计布局方面的问题。合理运用栅格系统可以帮助我们控制布局结构并实现一致和有组织的设计。栅格系统就像无形的胶水一样凝聚一个设计，即使元素看上去是彼此分离，但通过网格将它们连接在一起，实现良好的层次结构，位置关系和一致性。 设计师和开发者之间的协作过程中，栅格系统在前端开发中是被应用的很广泛一套体系，许多优秀的设计都使用了栅格系统，使用栅格系统可以加速开发并保证视觉还原。栅格系统虽然是传统设计方法中的一部分，但它仍旧能帮助我们去设计这个多终端的世界。看到这里，你可能非常想知道栅格系统在页面中是如何运作的，那么今天我们一起来学习并且实践我们的格栅系统。</p>
+<blockquote>
+<p>「The grid system is an aid, not a guarantee. It permits a number of possible uses and each designer can look for a solution appropriate to his personal style. But one must learn how to use the grid; it is an art that requires practice.」 「栅格系统可以帮助我们设计，但却不能保证我们的设计。它有多种可能的用途，并且每个设计师都可以寻找适合其个人风格的解决方案。但是必须学习如何使用网格。这是一门需要实践的艺术。」 ——Josef Müller-Brockmann《平面设计中的网格系统》作者</p>
+</blockquote>
+<p><img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-3.gif"></p>
+<h4 id="什么是栅格系统？"><a href="#什么是栅格系统？" class="headerlink" title="什么是栅格系统？"></a>什么是栅格系统？</h4><p>栅格系统可以让你依靠秩序与逻辑去完成设计。 早在 20 世纪初，德国、荷兰、瑞士等国的平面设计师们发现通过维持视觉秩序，从而使版面能更加清晰有效地传递信息，二战后这种理念在瑞士得到了良好的发展，直到 20 世纪 40 年代后期，第一次出现了使用网格进行辅助设计的印刷作品。由瑞士设计师大师 Josef Müller-Brockmann（约瑟夫·米勒-布罗克曼）所著的《平面设计中的网格系统》一书，自 1961 年出版以来畅销至今，对设计界有着深远的影响。史称 Swiss Typography Movement （瑞士新浪潮平面设计运动），后来成为全球风靡的 International Typographic Style （国际主义设计风格)）。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-4.jpg"> △ 约瑟夫·米勒一布罗克曼 (Josef Muller-brockmann, 1914-1996) 瑞士的一位平面设计师和教师。1958 年任《新平面设计》（New Graphic Design）主编 1966 年被任命为 IBM 的欧洲设计顾问。布罗克曼因他的极简主义设计与简洁的排版、图形和色彩而闻名，他的设计对 21 世纪的众多平面设计师都产生了重大影响。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-6.gif"> <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-5.gif"></p>
+<h4 id="栅格系统的优势"><a href="#栅格系统的优势" class="headerlink" title="栅格系统的优势"></a>栅格系统的优势</h4><p><strong>1. 减少决策成本提高设计理解力</strong> 栅格系统在页面排版布局、尺寸设定方面给了设计者直观的参考，它让页面设计变得有规律，从而减少了设计决策成本；UI 设计也是需要理性的、客观的、具有数学逻辑美感的。熟练运用网格系统能够让你的设计更有秩序和节奏感，页面信息的展现更加清晰，提高阅读效率，从而提供给用户舒适的使用体验。加快认知速度。这意味着用户在使用产品完成特定的任务时，例如发送消息，预订酒店房间或乘车。用户能够连贯地理解并找到下一条信息或下一步要采取的步骤。 <strong>2. 响应化</strong> 因为人们使用不同类型的设备与产品进行互动，从智能手表的小屏幕到超宽屏电视，交互是流畅的，并且没有固定的尺寸。使用产品时，人们通常会在多个设备之间切换，以完成该产品的单个任务。所以响应式设计不应该是一种奢侈品，而是一种必需品。这意味着设计师不能再为单个设备的屏幕构建。多设备环境迫使设计人员根据动态网格系统进行思考，而不是固定宽度。使用网格可以跨不同屏幕尺寸的多个设备创建连贯的体验。 <strong>3. 加速团队协作设计</strong> 当多位设计师共同设计产品时，一个统一标准就变得尤为重要。如果没有一个统一的框架去约束的话，我们的产品的页面和组件的标准可能各式各样，这样的话整个产品的页面都会比较混乱。因此，网格系统有助于将界面设计工作分开，因为多位设计师可以在统一的布局下进行不同部分工作，并且无缝集成并保持连贯。 <strong>4. 加速开发并保证视觉还原</strong> 大多数设计项目的实施，涉及到设计者和开发者之间的协作。栅格化提高了页面布局的一致性和复用性；避免了设计师与开发者在细节上的反复沟通确认，从而提升了整个设计开发流程的效率、并能帮助开发者实现较为理想的设计还原。</p>
+<h4 id="栅格系统的基本构成"><a href="#栅格系统的基本构成" class="headerlink" title="栅格系统的基本构成"></a>栅格系统的基本构成</h4><p><strong>1. 列和槽（Columns and Gutters）</strong> 列（Columns） 和槽（Gutters）。列（Column）是内容的容器，水槽（Gutter）用来调节相邻两个列的间距，把控页面留白；列和列间距加上页面边距（Margin）加起来屏幕的水平宽度。列和列间距的内容区域（Content width）由 N个列和（N-1）个水槽组成。通常情况下，web 端采用 12 列，平板采用 8 列，手机采用 4 列。当然，你可以根据项目特点来设计你的网格系统，列和水槽的宽度我们可以利用 8 点网格系统来定义，下面会讲到。列的数量越多，页面就会被分割得越「碎」，在页面设计时就会越难把控，适用于业务信息量大、信息分组较多、单个盒子内信息体积较小的页面设计，列间距宽度数值对页面的影响，与外边距大体类似，即间距越大页面越轻松简单，反之亦然。用户已经习惯通过鼠标滚轮或滚动条（scrollbar）来纵向浏览页面内容，因此竖直方向可以无限延伸，所以栅格系统在竖直方向的栅格可以不体现出来，我们在执行设计时只要在水平方向保持规律的变化就可以了。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-7.gif"> <strong>2. 页面边距（Side Margins）</strong> 页面边距就是内容区域（Content field）以外的空间，比较推荐的设计就是页面边距可以随着屏幕尺寸的增大而增大。页面边距在移动设备上通常是 12Px到 40Px 之间，在平板设备和桌面设备页面边距变化就相当多了。在响应式设计中，你选择了一个页面边距之后，缩小页面宽度时页面还是会有你设置的最小页面边距，直到到达下一个响应点（breakpoint）。当你增大页面宽度时，页面就有更多的页面边距，直到页面宽度到达下一个响应点（breakpoint）。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-8.gif"> <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-9.jpg"> <strong>3. 模块（Field Elements）</strong> 模块就是你的设计区块，可以是一段文字，一张图片，或是其他更加丰富的元素。背景元素并不能算作是设计模块，所以并不需要遵循栅格系统。模块的定义是很灵活的，它可以是个小的单位或是元素，也可以是一个元素丰富的区块。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-10.jpg"> 以 12 栅格系统为例，一个 12 栅格系统可以根据业务需要被 2 等分、3 等分、4 等分、6 等分、12 等分，还可以被 1:1:1、1：2：1、1：3：2、2：3：3、1:2、1:3、1:5、3:5 等不对称分割，具体采用哪种比例的组合需要我们根据自己业务需求来定。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-11.gif"> <strong>4. 8 点网格（8pt spatial system）</strong> 栅格系统大的层面可以帮助设计者更好的进行版式设计与内容布局，而小的方面可以辅助设计师规范页面内各种元素的对齐与间距的设定。从用户体验角度来讲，这两者同等重要，从执行层面来讲，我们一般先做版式设计与布局，然后再填充内容、调整细节。 由于列跟水槽的宽度是以网格作为基本单位来增加或者减小，所以栅格化的重要一步就是需要先定义好栅格的原子单位「网格」的大小。目前最普适易用的就是 8 点网格。我们也可以利用 8 点网格法来制定产品中的间距，建立 8 点为一个单位的网格，使用 8 的倍数来定义模块的间距与元素的尺寸。8 点网格有如下几点优势：</p>
+<ul>
+<li>  目前主流桌面设备的屏幕分辨率在竖直与水平方向基本都可以被 8 整除，使用 8 作为最小原子足够普适。可以确保不同布局之间的视觉一致性，同时可以灵活的适配多种尺寸的设计。以 8 为单位符合「偶数原则」。偶数原则可以在页面缩放中最大程度的避免类似于 0.5、0.75、1.25 等次像素的出现，从而使页面各类元素在大多数场景下都能有比较精致的细节表现。</li>
+<li>  在网格系统中应该更加注重的是间距，而间距要遵循网格系统（例如使用 4、8、16、24、32 等和 8 具有规律的数字）同时在产品中的各类元素也要遵循这类原则（例如图标大小、组件大小等）。所以布局的水平和垂直节奏和各个组件的节奏会相互重叠，整体的设计将更加完整。</li>
+<li>  开发工程师使用的前端开源组件库比如 Metronic、Antdesign 等也是基于 8 的原子单位来设计，因此如果设计师也使用以 8 为基本单位的栅格系统，开发与设计师相互对接就会更加方便，开发实现页面时也能更高品质地去还原我们的设计。</li>
+</ul>
+<p><img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-12.jpg"> <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-13.jpeg"> 如果设计上没有立即可识别的间距系统时，这种设计可能会让用户感觉廉价、不一致，而且通常不值得信任。如果设计上遵循一个 8pt 网格系统时，节奏变得可预测和视觉上的愉悦。对于用户来说，这种体验是经过修饰和可预测的，这增加了用户对品牌的信任和喜爱。 无论有多少个设计师在协同合作，现在都有一个一致的间距规范，决策成本将大大降低。设计师可以轻松地从另一个设计师停止的地方开始设计，或者轻松地并行构建。我们定义下规范可以及时和开发同学沟通，因此可以为工程师节省时间。 <strong>5. 基线网格（Baseline Grid）</strong> 基线网格由密集的水平行组成，这些行提供文本的对齐和间距准则，类似于您在直纹纸上书写的方式。在下面的示例中，每 8px 行在红色和白色之间交替。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-14.jpg"> △ 基线网格 提示：将所有行高设置为基本单位（8x 或 4px）的增量非常重要，这样您的文本才能与基线网格完美对齐。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-15.jpg"> △ 字体行高</p>
+<h4 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h4><p><strong>1. 什么是响应式？</strong> 设计师需要通过设计让内容在不同的平台上体验最大化，确保让用户在任何一个屏幕上看到内容的时候，会觉得这些内容就是为这个平台而设计的，而不是单纯的缩放而来。这种无缝的体验，才是跨屏幕设计的真正难点所在。想要制定一套针对不同设备和屏幕的设计方案，你需要一整套的策略。用户体验同时包含了性能、交互、效率等多方面内容，也就是说，对于一个线上的响应式页面，我们不仅要关注视觉上看到的，也要关注我们操作、使用时的感受，这些综合因素最终影响着用户使用时的效率与体验。</p>
+<h2 id="可能是最容易看懂的响应式知识科普"><a href="#可能是最容易看懂的响应式知识科普" class="headerlink" title="可能是最容易看懂的响应式知识科普"></a>可能是最容易看懂的响应式知识科普</h2><p>本篇文章希望能通过简单明了的文字及图文介绍，对我们设计响应式网站时经常会出现的问题进行清晰的说明。 阅读文章 <em>&gt;&gt;</em></p>
+<p><strong>2. 响应式设计的核心步骤</strong> <strong>确保核心的用户体验</strong> 虽然用户体验是无处不在的，但是对于特定产品，最核心的体验是存在的。产品通常是用来解决用户所面临的特定问题的，它的这一特质让产品变得有意义。关键的内容和关键的功能的组合，通常构成了产品的核心用户体验。如果你并没有想明白这个问题，不妨问问自己：用户需要完成哪些最常见/最重要的任务？找到问题的答案之后，你的产品就应当从各个方面、各个渠道，完整而全面地支撑这些功能，帮助用户完成这些任务。举个例子，Uber 的核心用户体验是随时随地叫车，无论设备的屏幕大小如何，你进行的设计全部都应该围绕着这个需求和功能来进行。叫车是 Uber 的核心功能，即使使用 Apple Watch 这种极小的屏幕尺寸都应该顺利地完成这个任务。 <strong>敲定你的产品所覆盖的设备类型</strong> 现在的移动端设备屏幕尺寸各不相同，单独为某一个设备设计内容无疑是不现实的。根据你的产品覆盖人群、受众分类、使用场景，综合考虑你的内容会优先呈现在哪些设备和平台上，然后有意识地筛选出常见的设备类型：手机，平板，桌面端，智能电视，智能手表…… 不同的设备组合通常是基于不同的场景、需求和服务来构成的，用户会针对不同的屏幕进行不同模式的交互，甚至处理的内容也会有差异。比如说，在手机上，用户更加倾向于使用轻量级的任务，并且进行一定量的沟通和交流。在平板上，用户行为更多集中在内容消费上，并且目前平板的使用量被认为在逐步降低。桌面端依然是用户完成较为专业、复杂任务的首选平台，足以应付复杂多样的内容。了解各种设备类型和使用场景是用来构建用户体验的关键。 <strong>针对不同内容来匹配用户体验</strong> 并非所有的内容都符合不同设备的使用场景，比如智能手表就不适合展示大量的文本内容。你的产品所覆盖的设备组当中，每种设备的使用场景不同，应该匹配的用户体验也不一样。移动端用户和桌面端用户的需求就是不同的，场景差异也很大。以 Evernote 为例，它可以在多种不同类型的设备之间同步和切换，其桌面端版本就针对用户的内容需求进行了优化：Evernote 的桌面端应用程序针对阅读性的内容和多媒体进行了优化，而移动端的 Evernote 则强化了拍摄记录、图片和音频记录的功能：其次，不同的设备屏幕具备不同的输入方式，设计师如果忽略输入方式上的独特性，也常常会出现许多问题，这里就不扩展开来了。 <strong>优先为最小的屏幕做设计</strong> 一直以来，设计师都习惯从最大的屏幕着手设计，最后考虑最小的屏幕上的显示效果，这意味着绝大多数的设计都是从桌面端开始设计的，通常桌面端的内容和功能更全面。当桌面端的整体设计完成之后，再推进到其他设备端的设计。然而，在进行桌面端设计的时候，我们常常会遭遇「厨房水槽」困境：由于产品通常会牵涉到多个利益相关方，许多多余的功能会被加入进来。而实践经验表明，移动端优先的设计往往能够更好的专注于核心功能，更适合作为产品设计的起点。当你优先设计最小屏幕所需要的界面的时候，这种局面会强制你从最关键最重要的地方开始设计。这也是之前设计圈和产品开发领域一直所强调的「移动端优先」的策略的由来。在此之后，再进行平板、桌面和电视端的设计，就是一个自然地做加法的过程了。在绝大多数的案例当中，最小屏幕通常是手机屏幕。</p>
+<h2 id="跨屏幕的响应式设计，你需要这样来设计用户体验"><a href="#跨屏幕的响应式设计，你需要这样来设计用户体验" class="headerlink" title="跨屏幕的响应式设计，你需要这样来设计用户体验"></a>跨屏幕的响应式设计，你需要这样来设计用户体验</h2><p>现在的响应式的设计已经很成熟了，一整套设计方案，小到智能手表的屏幕，大到电视显示屏，还兼顾到更普遍存在的智能手机、平板和电脑屏幕。在很多人看来，跨屏幕的响应式设计，只是… 阅读文章 <em>&gt;&gt;</em></p>
+<p><strong>测试你的设计</strong> 产品的测试环境并不一定都得是在现实世界中寻找，但是在尽可能让真实的用户来做可用性测试，并且在产品发布之前解决所有的用户体验上的问题。 <strong>3. 为何要利用栅格系统来进行响应式设计?</strong> 响应式可以响应的前提有两点：1、页面布局具有规律性、2、元素宽高可用百分比代替固定数值，而这两点正是栅格系统本身就具有的典型特点，所以利用栅格系统进行响应式的设计是顺理成章的，也比较高效快捷，所以响应式与栅格化天生一对好搭档。</p>
+<h4 id="如何建立栅格系统"><a href="#如何建立栅格系统" class="headerlink" title="如何建立栅格系统"></a>如何建立栅格系统</h4><p><strong>第1步：确定列的数量</strong> 第一阶段先不要限制自己的列数。首先，创建一个低保真或高保真的原型。设计一些基本元素和用户流程。在此之后，就开始设计最优的列数和大小。如果在项目开始设计之后不得不改变我们的栅格系统，不要有负担，我们需要有一些试错的空间。 我们在设计页面时，用到最多的布局方式就是等分布局，即页面内容区域被 N 等分，每一份的宽度则根据屏幕宽度自适应调整。那么就从这个角度出发，思考一下页面的网格应该设置为多少列，才能最大程度的满足各种等分布局的需要。与 web 类似，移动端最方便的网格之一是 12 列网格。这个网格将允许我们在一行中同时放置偶数和奇数个元素。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-16.jpg"> 对于移动端来说，12 列网格的缺点是一个列的宽度太小，你可能很少创建一个列宽度的元素。如果你选择 2、4 或 8 列网格，请记住在一行中放置奇数个元素可能会出现的问题。 <strong>Pro-Tip：</strong> 界面设计通常包含数百个不同的页面，因此，一个网格可能不适合所有的页面。如果需要，创建额外的栅格系统，但不要忘记设计的一致性。网格系统的一致性：相同的布局边距、列之间相等或成比例的水槽，以及更改列本身的宽度时其他模块也需要保持相同的比例。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-17.jpg"> <strong>第2步：定义水槽和边距</strong> 首先，让我们先翻阅目标屏幕的设计 Guideline，以找出通常页面边距（Side Margins）。目前，Android 和 iOs 的最小推荐布局边距为 16pt。web 端则依照屏幕尺寸不同而不同。这意味着，如果你希望遵循系统指南，则页面边距不应小于 16pt。（但可以更大的） 在选择 12 列网格时，列之间的水槽不应该太大，因为由于列的宽度小和它们之间的大宽度的水槽，列将在视觉上产生分裂的感觉。同时我建议你选择与8pt 间距系统成比例的水槽大小。所以布局的水平和垂直节奏会相互重叠。水槽与页面边距成比例。那么网格更加一致，也将允许我们轻松地在其中放置特殊元素，如轮播（carousel）。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-18.gif"> <strong>第3步：定义 8pt间距系统</strong> 了帮助不同设计能力的设计者们在界面布局上的一致性和韵律感，统一设计到开发的布局语言，减少还原损耗。在大量的实践中，我们提取了一组可以用于 UI 布局空间决策的数组，他们都保持了 8 倍数的原则、具备动态的韵律感。经过验证，可以在一定程度上帮助我们更快更好地实现布局空间上的设计决策。定义网格系统方法很多，如运用 8 点网格系统、斐波那契数列、某最小原子单位的增量、从底层系统参数化定义间距等，我们以最小原子单位的增量为例去定义网格系统。最小单元格的数值选择需要从两方面考虑：</p>
+<ul>
+<li>  一方面是该数值是否能被大多数手机屏幕的宽度整除，即广泛的适用性；</li>
+<li>  另一方面是在具体使用时是否具有一定的灵活性。</li>
+</ul>
+<p>在适用性方面，4、6、8、10 这四个数值都是基本可以满足的，在灵活性方面，4px 表现最佳，但是页面就会被分割的非常细碎，在设计时比较难于把控。因此我们需要根据 APP 的实际情况选择合适的数值，4px 或 6px 单元格比较适合页面内容信息较多，布局排版比较复杂的产品。而 8px 单元格对一般的设计场景都可以很好的满足，比较适合大多数的 项目，因此是比较推荐使用的。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-19.jpg"> 那么假设我们以 8 为基准的去延展系统间距，得到如下间距系统：</p>
+<blockquote>
+<p>1、2、8、16、24、32、40、48、56、64、72、80、88、96、192 等，这里都是 8 的倍数或能被 8 整除</p>
+</blockquote>
+<p>但是目前间距数量太多，过于细碎也会导致间距比较乱，所以我们继续优化梳理（以 6 为基准，前面个数是后面个数的 2 倍递增），得到以下间距系统：</p>
+<blockquote>
+<p>1、2、8、16、24、32、48、64、80、96</p>
+</blockquote>
+<p><img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-20.gif"> <strong>第4步：sketch布局设置</strong> 利用 sketch 的布局设置功能，即可快速搭建出网格系统的参考布局，在平时做设计的过程中，可以经常使用 Ctrl+L 快捷键切换布局的显示，提高设计效率。 我们来解释一下这些设置分别是什么：</p>
+<ul>
+<li>  Total Width：就是内容区域（Container）的值；</li>
+<li>  Offset：表示栅格的偏移量，我们只要设定完成以后按 Center 按钮即可，会自动居中；</li>
+<li>  Number of Columns：就是栅格数；</li>
+<li>  Gutter on outside：是非常重要的设置，勾选以后才能跟前端的栅格算法匹配；</li>
+<li>  Gutter Width：就是栅格之间的间距；</li>
+<li>  Columns Width：就是栅格的宽度。</li>
+</ul>
+<h4 id=""><a href="#" class="headerlink" title=""></a><img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-21.jpg"></h4><h4 id="如何做到响应式"><a href="#如何做到响应式" class="headerlink" title="如何做到响应式?"></a>如何做到响应式?</h4><p>在传统的栅格化系统设计中，列的宽度和水槽的宽度是保持不变的，只是列的「数量」发生变化。为什么要这么处理呢？这是为了让设计更简单。如果一组三张卡片分别放在桌面的四列上，那么在平板电脑上，会显示两张卡片，并把第三张卡片进行折行显示在第二行上。不需要做任何的调整，因为已经知道它位于第四列上了。在手机上，答案也很简单，只需要一张卡片，其他的就会自动堆到下面的行中。但是目前我有更多的响应策略，例如当视窗（Viewport）发生变化时，内容区域的元素如何去响应，具体到我们当前的栅格系统，就是 Columns、Gutters、Margins 以及由 Columns 跟 Gutter 组成的盒子（BOX）四者的值（主要是宽度）如何变化，以及在这种变化之下我们页面的布局如何调整。 <strong>1. 固定栅格或是断点系统（Fixed boxes or breakpoint system）</strong> 固定网格，列宽和水槽宽不会改变，只是改变列的数目，当窗口缩放时，排版布局不会发生任何改变，只有当达到一个临界值（开发那边设置好的固定的值），界面才会发生改变。在此之前界面排版都是不变的，就像一部分被切掉了。 如果开发那边写了一个固定栅格，当你从桌面缩小到平板电脑，就像是在桌面的浏览器宽度时，你不会看到任何变化，设计就像是被剪掉了一样。但当达到平板屏幕尺寸临界点时，设计布局马上就会改变，平板电脑上的显示效果就会好起来。如果继续减小这个值，同样的事情也会发生，在到达另一个临界值之前，设计看起来都是不变的。下面是常见的断点系统（Breakpoint System） <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-22.jpg"> 如图，响应式是以视窗的最小宽度作为基本依据来制定每种宽度下 Columns、Gutters、与 Margins 的响应策略，也就是说 Viewport Min-width 是做出响应的触发条件，视窗每达到一个最小宽度，就会触发该宽度下预设的页面布局方式，而每种布局都是在该宽度下的最佳布局，也是因此，响应式才会在各种复杂分辨率条件下都能给用户比较好的体验。 每个视窗宽度的最小值是触发响应的关键值，因此我们给这些用于触发的关键值起了个名字叫「Breakpoint」，每个 Breakpoint 触发一种响应策略。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-23.gif"> <strong>2. 流动栅格（Fluid Grid）</strong> 流动栅格系统是编辑内容，仪表板，图像，视频，数据可视化等理想的响应策略。当窗口缩小时，内容将动态地发生变化，文本会进行换行，元素也会变窄。然而，这些元素在内容宽度缩小到下一个临界值之前，布局是不会变化的。在各种情况下，对用户来说，扩展内容的大小比扩展可见内容的数量更有用。 所以我想说的是，断点 BreakPoint 只是一个更改布局的参考点。这就是为什么列宽和水槽的数量不会改变的原因，因为我们想让设计师在考虑布局时能够更容易地创建一致性。内容宽度会随着窗口的缩放而发生改变，例如图片会缩小，文本会换行。水槽的宽度不一定是固定的，可以随着页面宽度变化。 在每个断点处，列计数是固定的，列宽度是最小网格 8PT 的倍数。行高是列大小的倍数，遵循推荐的纵横比。边距和填充是小单位的固定倍数。在断点之间，实际列宽是网格区域的百分比，而不是一个小的单位倍数。内容尺度流畅。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-24.gif"> 首先从所以屏幕大小中选择一个基本尺寸，然后按照推荐的纵横比以基本大小的倍数构建每个响应式尺寸。当每个块使用相同基础大小的倍数时，就会出现网格。遵循此方法可确保栅格系统一致性，甚至跨产品的一致性。 <strong>3. 混合栅格（Hybrid Boxes）</strong> 在实际项目中，使用流动网格和固定网格的组合也是常见的做法。网站通常是流动网格，因为它要去适应各种不同终端的大小。后台系统设计、工具型的界面设计就比较经常使用网格和流动网格组合的形式。例如的后台管理系统（dashboard）侧边栏是固定网格，右侧内容是流动网格。混合栅格在每个维度上有不同的缩放规则，所以它们不使用统一的缩放比。当用户需要调整浏览器的大小以使内容在一个维度上伸缩而在另一个维度上不伸缩时，便使用混合网格。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-25.gif"></p>
+<h4 id="面板对栅格系统的影响"><a href="#面板对栅格系统的影响" class="headerlink" title="面板对栅格系统的影响"></a>面板对栅格系统的影响</h4><p><strong>1. 灵活面板（Flexible panels）</strong> 灵活的面板允许折叠和扩展状态。面板的展开状态为固定宽度，用户无法调节。当用户将鼠标悬停在折叠的面板上时，面板就会展开。当灵活的面板扩展时，它们要么压缩内容和网格，要么将内容推到浏览器边缘之外。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-26.gif"> <strong>2. 固定面板（Fixed panels）</strong> 固定面板保持静态宽度，不能折叠，也存在于响应网格之外。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-27.gif"> <strong>3. 悬浮面板（Floating panels）</strong> 此面板样式漂浮在主要内容区域之上，不影响响应网格。浮动面板将任何 UI 元素隐藏在其下方，用户必须将其移除。内联菜单、下拉菜单和工具提示也是浮动的。 <img src="https://image.uisdc.com/wp-content/uploads/2020/03/uisdc-sg-20200331-28.gif"></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>写这篇文章的目的是想提供一些关于如何在响应式设计中使用栅格系统，我知道对于我自己来说，我花了很多时间理解网格是如何工作的。我在 YouYube 上看了很多视频，也阅读了大量的文章，但每个人都在关注它为什么重要，却不去注重到底怎么在自己的项目中使用这些原则。 你要做的最好的事情就是从现在开始注意那些优秀设计是如何对齐元素的，你将会开始阅读这些设计系统。为了帮助理解，这里有一些设计系统概述了它们的网格使用：</p>
+<ul>
+<li>  Google’s Material Design System <a target="_blank" rel="noopener" href="https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-margins">https://material.io/design/layout/responsive-layout-grid.html#columns-gutters-margins</a></li>
+<li>  Intuit’s Design System <a target="_blank" rel="noopener" href="https://designsystem.quickbooks.com/foundations/responsive-column-grid/">https://designsystem.quickbooks.com/foundations/responsive-column-grid/</a></li>
+<li>  IBM’s Carbon Design System <a target="_blank" rel="noopener" href="https://www.carbondesignsystem.com/guidelines/layout#2x-grid-fundamentals">https://www.carbondesignsystem.com/guidelines/layout#2x-grid-fundamentals</a></li>
+</ul>
+<p>在完全理解了网格的工作原理之后，你将成为了一名更好的设计师，因为你知道了你的设计将如何在临界值之间进行转换。你也可以落地你的设计，使它们能够达到像素级完美。这样的规范带来了更一致，更简洁的设计，当用户从一个界面到另一个界面流转时，这真的提升了产品的档次。我建议在你的设计中去应用这些网格，并和开发同学一起，以实践的方式将它们落地，这将会是一个非常不错的进步。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechat.jpeg" alt="akCedar 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/18/%E6%99%BA%E6%85%A7%E7%A4%BE%E5%8C%BA%E8%BF%98%E6%9C%89%E6%96%87%E7%AB%A0%E5%8F%AF%E5%81%9A%E5%90%97%EF%BC%9F%E6%9C%AA%E6%9D%A5%E5%B0%86%E5%A6%82%E4%BD%95%E5%8F%91%E5%B1%95%EF%BC%9F/" rel="next" title="智慧社区还有文章可做吗？未来将如何发展？">
+                <i class="fa fa-chevron-left"></i> 智慧社区还有文章可做吗？未来将如何发展？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/20/pm2-%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B/" rel="prev" title="pm2 守护进程">
+                pm2 守护进程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="akCedar"/>
+            
+              <p class="site-author-name" itemprop="name">akCedar</p>
+              <div class="site-description motion-element" itemprop="description">写给以后的自己</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">134</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/%20%7C%7C%20th">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/%20%7C%7C%20tags">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/myCedar" title="GitHub &rarr; https://github.com/myCedar" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/1301172947@qq.com" title="E-Mail &rarr; 1301172947@qq.com"><i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F%EF%BC%9F"><span class="nav-text">什么是栅格系统？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-text">栅格系统的优势</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9E%84%E6%88%90"><span class="nav-text">栅格系统的基本构成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="nav-text">响应式设计</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E8%83%BD%E6%98%AF%E6%9C%80%E5%AE%B9%E6%98%93%E7%9C%8B%E6%87%82%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E7%9F%A5%E8%AF%86%E7%A7%91%E6%99%AE"><span class="nav-text">可能是最容易看懂的响应式知识科普</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E5%B1%8F%E5%B9%95%E7%9A%84%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1%EF%BC%8C%E4%BD%A0%E9%9C%80%E8%A6%81%E8%BF%99%E6%A0%B7%E6%9D%A5%E8%AE%BE%E8%AE%A1%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C"><span class="nav-text">跨屏幕的响应式设计，你需要这样来设计用户体验</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%BB%BA%E7%AB%8B%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F"><span class="nav-text">如何建立栅格系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link"><span class="nav-text"></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%81%9A%E5%88%B0%E5%93%8D%E5%BA%94%E5%BC%8F"><span class="nav-text">如何做到响应式?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%A2%E6%9D%BF%E5%AF%B9%E6%A0%85%E6%A0%BC%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-text">面板对栅格系统的影响</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">akCedar</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.2.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+<script>!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+</script>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

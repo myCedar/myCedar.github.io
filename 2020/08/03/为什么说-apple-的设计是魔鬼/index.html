@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="如题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么说 Apple 的设计是魔鬼">
+<meta property="og:url" content="http://yoursite.com/2020/08/03/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-apple-%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%98%AF%E9%AD%94%E9%AC%BC/index.html">
+<meta property="og:site_name" content="记下点滴">
+<meta property="og:description" content="如题">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-10.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-1.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-12.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-4.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-7.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-5.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-122.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-6.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-2.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-11.jpeg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-3.jpeg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-8.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-9.jpg">
+<meta property="article:published_time" content="2020-08-03T10:13:58.000Z">
+<meta property="article:modified_time" content="2020-11-13T03:15:31.192Z">
+<meta property="article:author" content="akCedar">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-10.gif">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2020/08/03/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-apple-%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%98%AF%E9%AD%94%E9%AC%BC/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>为什么说 Apple 的设计是魔鬼 | 记下点滴</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">记下点滴</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">在街角的小巷中记下那些曾经</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/03/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4-apple-%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%98%AF%E9%AD%94%E9%AC%BC/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="akCedar"/>
+      <meta itemprop="description" content="写给以后的自己"/>
+      <meta itemprop="image" content="/images/avatar.jpeg"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记下点滴"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">为什么说 Apple 的设计是魔鬼
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-08-03 10:13:58" itemprop="dateCreated datePublished" datetime="2020-08-03T10:13:58Z">2020-08-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-11-13 03:15:31" itemprop="dateModified" datetime="2020-11-13T03:15:31Z">2020-11-13</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%BE%8E%E5%B7%A5/" itemprop="url" rel="index"><span itemprop="name">美工</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>如题</p>
+<a id="more"></a>
+<p>Apple 致力于让每件产品都赏心悦目，与其说官网是产品展示平台，倒不如说它是苹果产品分支的延续。 我相信，从 <a target="_blank" rel="noopener" href="https://www.uisdc.com/tag/app">App</a>le.com 找设计灵感是每一位<a target="_blank" rel="noopener" href="https://www.uisdc.com/tag/%e8%ae%be%e8%ae%a1%e5%b8%88">设计师</a>都做过的事。那它到底有何魅力？跟我来一探究竟吧。</p>
+<h4 id="沉浸与交互式体验"><a href="#沉浸与交互式体验" class="headerlink" title="沉浸与交互式体验"></a>沉浸与交互式体验</h4><p>每当有新产品发布时，我们都会被它的 Landing page 所吸引。不管是 AirPods Pro 也好，和前段时间发布的 iPad Pro 也一样。 这背后是 Apple 基于 webGL 技术，创造的一种沉浸与交互式产品体验。 <strong>1. 连续性</strong> 我们在产品介绍页可以看到，苹果使用了大量的滚动 scroll 来体现连续性。 一方面，滚动作为大多数 Web 用户最自然的操作，学习成本极低。 另一方面，在冗长的页面下，滚动能让产品特性保持更自然的转场衔接。 <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-10.gif" alt="为什么说 Apple 的设计是魔鬼：网页篇"> △ iPad Pro 的连续性 <strong>2. 趣味性</strong> 另外，采用了大量的动画式转换（animated transition），即操作时展示的动态效果，以此来增加趣味性。 伴随着丰富的、若隐若显的章节文案，就像电影的旁白一样，娓娓道来。 通过滚动的方式增加交互性，这是明智之举。试想一下，如果只放置已渲染的演示视频，那么用户的操作会受到限制，只能在视频中前进或后退，毫无乐趣可言。 <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-1.gif" alt="为什么说 Apple 的设计是魔鬼：网页篇"> △ AirPods 的趣味性</p>
+<h4 id="言之有序"><a href="#言之有序" class="headerlink" title="言之有序"></a>言之有序</h4><p><strong>1. 秩序感</strong> 说到言之有序，我们看 iPad 的页面介绍。四款产品，分别是：iPad Pro、iPad Air、iPad、iPad mini。 拍摄角度的秩序感，可谓妙不可言。 <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-12.jpg" alt="为什么说 Apple 的设计是魔鬼：网页篇"> △ iPad 的秩序感</p>
+<ul>
+<li>  iPad Pro 的拍摄角度接近于正侧面。</li>
+<li>  iPad Air 是四分之三侧面。</li>
+<li>  iPad 是正面。</li>
+<li>  iPad mini 是俯视。</li>
+</ul>
+<p>如此一来，既显得有序，也不会导致视觉疲劳。 <strong>2. 设计语言</strong> 其次，官网与 iOS 保持协同的设计语言，给用户呈现了一致的感官体验。 从 iOS 11 开始，苹果就采用了 Large Title 大标题的字体风格。字重也从 Regular + Light 的组合，转向的 Medium + Bold ，以此增强信息传播中的识别力。 <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-4.jpg" alt="为什么说 Apple 的设计是魔鬼：网页篇"> △ HomePod 另外，高斯模糊的标题栏背景、产品的投影等设计语言也保持系统一贯的风格。我们可以很清晰地看到 Web 设计的同步转变。</p>
+<h4 id="层次"><a href="#层次" class="headerlink" title="层次"></a>层次</h4><p><strong>1. 视差</strong> 第三是视差带来的层次感。 苹果奉行包豪斯的无装饰和极简的理念。当然，它不是那种附庸的美观及外表的光鲜，而是将复杂难懂的技术以简洁的形式传达给用户。 <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-7.gif" alt="为什么说 Apple 的设计是魔鬼：网页篇"> △ Mac Pro 视差滚动 在信息层次方面，Apple 的编排设计由浅入深，犹如抽丝剥茧。很好地利用了视差滚动，传达图片与文字之间「层」的概念。这种深度感可以增加用户的理解和乐趣。 <strong>2. 视觉张力</strong> 不仅如此，样式上富有视觉张力。或扩张、或收缩、或吸引、或排斥之感觉，呈现刺激与震撼。举两个例子： <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-5.gif" alt="为什么说 Apple 的设计是魔鬼：网页篇"> △ A13芯片的扩张力 扩张力：整个画面以 A13 芯片为视觉中心点，元素和布局围绕这个视觉中心点向外扩张。采用发散式的视觉引导，视觉张力就出现了，让人感觉巍峨壮观。 <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-122.gif" alt="为什么说 Apple 的设计是魔鬼：网页篇"> △ Pro级摄像头的排斥力 排斥力：通过元素的大小对比，可以形成一定强度的视觉排斥力。Pro 级摄像头辅以大特写，传达空间意识。视觉上被其构图、美感触动。</p>
+<h4 id="高级感"><a href="#高级感" class="headerlink" title="高级感"></a>高级感</h4><p>再聊聊苹果的高级感是怎么来的？ <strong>1. 视觉降噪</strong> 我们都知道，高饱和度的色彩，会影响人的情绪波动。相反，低饱和度的<a target="_blank" rel="noopener" href="https://www.uisdc.com/tag/%e9%85%8d%e8%89%b2">配色</a>，对人眼的刺激较弱，会有一种冷静且克制的高级感。 <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-6.jpg" alt="为什么说 Apple 的设计是魔鬼：网页篇"> △ iMac Pro 高级感 回过头来看苹果官网的大部分页面，除了产品界面色彩和按钮栏之外，其他的文字、背景、控件一律采用黑白灰色系，以此营造高级感。 甚至是 iPhone 11 Pro 新出的暗夜绿，也是高级灰中加了一点点绿而已。 换言之，减少使用颜色的数量，降低色彩的饱和度都能削减色彩对人的情绪，起到提升产品高级感的效果。 <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-2.jpg" alt="为什么说 Apple 的设计是魔鬼：网页篇"> △ iPad 留白 除此之外，恰当的留白可以更加突出产品内容，让重要的信息更准确地传达。并且能营造出广阔的空间感，让画面得到延伸，呈现一种意境美。 所以我们做设计时应当多做减法，避免无意义的视觉元素堆砌，反而能让你的设计更有高级的气质。 这又印证了现代主义建筑大师密斯·凡德罗的那句话：Less Is More。 <strong>2. 配图</strong> 当然，只有留白是不够的。既然是做宣传，那么一份高分辨率、精致的配图就显得尤为重要。 苹果官网大部分的产品都是采用实拍+后期修图，而非渲染图。目的就是为了反映真实产品的质感、以及材质光影效果，这一点能看到苹果对于品质的极致追求。 <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-11.jpeg" alt="为什么说 Apple 的设计是魔鬼：网页篇"> <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-3.jpeg" alt="为什么说 Apple 的设计是魔鬼：网页篇"> △ Designed by Apple in California 不仅如此，苹果产品圣经《Designed by Apple in California》，以及壁纸同样是由摄影师拍摄完成。有兴趣的同学可以看下面这个幕后制作视频，相当硬核。 △ 苹果壁纸制作幕后 <strong>3. 苹果式文案</strong> 做过英文 Web 的设计师都知道，英文往往比中文更好设计，相同的布局英文出来的效果也更好看。 这不是崇洋媚外，心理学有个词叫做「母语羞涩」。简单来说就是，中文对于我们来说，太常见了会让人产生一种廉价感（实际上是羞涩感）的心理感受。 老外也一样，你可以看到美国企业：苹果、麦当劳、星巴克都是使用图形 Logo，而日本企业不用母语，而是用英文，比如 SONY、TOYOTA、Canon。 <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-8.jpg" alt="为什么说 Apple 的设计是魔鬼：网页篇"> △ 你的下一台电脑，何必是电脑。 回到苹果官网，我们看到一部分文案是英文产品名称，这个不会感觉羞涩。 那中文部分怎么办呢？比较有意思的是，Apple 的本土化团队用了完全不对仗但押韵、奇怪的排比、双关、重复等修辞手法。虽然语感很差，但基本上能明白字面意思。 其实这样做的目的就是为了创造一种陌生感、一种独特的语言风格，来凸品牌气质。举几个例子：</p>
+<ul>
+<li>  重复：比如说 iPad Pro「你的下一台电脑，何必是电脑。」</li>
+<li>  双关：比如说 Apple Watch 的「它会时时关心你的心。」</li>
+<li>  排比：比如说 iMac 的「从极速，到神速，任你提速。」</li>
+<li>  押韵：比如说配件的「可重复充电，又可圈可点。」</li>
+<li>  对比：比如说 iPad mini 的「身量小，能量大。」</li>
+</ul>
+<p><strong>4. 仪式感</strong> 最后一点。生活要有仪式感，苹果官网也有仪式感。 <img src="https://image.uisdc.com/wp-content/uploads/2020/05/uisdc-zx-20200531-9.jpg" alt="为什么说 Apple 的设计是魔鬼：网页篇"> △ 国际妇女节专题 在一些特殊的日子里，例如三八节当天，友商选择打广告促销。而苹果推出了国际妇女节专题，致敬女性的伟大，这一做法颇具人文情怀。 不过话又说回来，感动归感动，还是参与友商的打折活动香。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechat.jpeg" alt="akCedar 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/31/%E6%99%BA%E6%85%A7%E8%AD%A6%E5%8A%A1-%E5%85%AC%E5%AE%89%E6%8C%87%E6%8C%A5%E4%B8%AD%E5%BF%83%E8%BF%90%E8%A1%8C%E6%96%B0%E6%A8%A1%E5%BC%8F/" rel="next" title="智慧警务 公安指挥中心运行新模式">
+                <i class="fa fa-chevron-left"></i> 智慧警务 公安指挥中心运行新模式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/08/03/%E5%A4%8D%E5%88%B6%E7%99%BE%E5%BA%A6%E6%96%87%E5%BA%93/" rel="prev" title="复制百度文库">
+                复制百度文库 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="akCedar"/>
+            
+              <p class="site-author-name" itemprop="name">akCedar</p>
+              <div class="site-description motion-element" itemprop="description">写给以后的自己</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">134</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/%20%7C%7C%20th">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/%20%7C%7C%20tags">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/myCedar" title="GitHub &rarr; https://github.com/myCedar" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/1301172947@qq.com" title="E-Mail &rarr; 1301172947@qq.com"><i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B2%89%E6%B5%B8%E4%B8%8E%E4%BA%A4%E4%BA%92%E5%BC%8F%E4%BD%93%E9%AA%8C"><span class="nav-text">沉浸与交互式体验</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A8%80%E4%B9%8B%E6%9C%89%E5%BA%8F"><span class="nav-text">言之有序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%82%E6%AC%A1"><span class="nav-text">层次</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E6%84%9F"><span class="nav-text">高级感</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">akCedar</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.2.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+<script>!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+</script>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -15,11 +15,11 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
 
 
 
@@ -44,9 +44,9 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.1"/>
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
@@ -69,7 +69,7 @@
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '',
     scheme: 'Gemini',
     version: '7.1.1',
     sidebar: {"position":"right","display":"post","offset":12,"onmobile":false,"dimmer":false},
@@ -97,17 +97,17 @@
 
 
   <meta name="description" content="知识共享仓库confluence的搭建">
-<meta name="keywords" content="confluence">
 <meta property="og:type" content="article">
 <meta property="og:title" content="confluence搭建">
-<meta property="og:url" content="http://yoursite.com/2019/11/01/confluence搭建/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/11/01/confluence%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="记下点滴">
 <meta property="og:description" content="知识共享仓库confluence的搭建">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-04T08:35:47.888Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-01T11:53:04.000Z">
+<meta property="article:modified_time" content="2019-11-04T08:35:47.888Z">
+<meta property="article:author" content="akCedar">
+<meta property="article:tag" content="confluence">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="confluence搭建">
-<meta name="twitter:description" content="知识共享仓库confluence的搭建">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/11/01/confluence搭建/">
+  <link rel="canonical" href="http://yoursite.com/2019/11/01/confluence%E6%90%AD%E5%BB%BA/"/>
 
 
 
@@ -164,7 +164,7 @@
   </style>
 </noscript>
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -225,7 +225,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
 
   </li>
         
@@ -242,7 +242,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
 
   </li>
         
@@ -259,7 +259,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
 
   </li>
         
@@ -276,7 +276,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
 
   </li>
         
@@ -293,7 +293,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
 
   </li>
 
@@ -304,7 +304,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
         </li>
       
     </ul>
@@ -324,7 +324,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -351,7 +353,7 @@
 
   
 
-  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
 
@@ -381,16 +383,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/01/confluence搭建/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/01/confluence%E6%90%AD%E5%BB%BA/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="akCedar">
-      <meta itemprop="description" content="写给以后的自己">
-      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="akCedar"/>
+      <meta itemprop="description" content="写给以后的自己"/>
+      <meta itemprop="image" content="/images/avatar.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="记下点滴">
+      <meta itemprop="name" content="记下点滴"/>
     </span>
 
     
@@ -458,7 +460,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具方法/" itemprop="url" rel="index"><span itemprop="name">工具方法</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">工具方法</span></a></span>
 
                 
                 
@@ -493,22 +495,21 @@
       
 
       
-        <p>知识共享仓库confluence的搭建<br><a id="more"></a></p>
-<h2 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 利用 docker 安装</span><br><span class="line">docker pull cptactionhank/atlassian-confluence:latest</span><br><span class="line">docker run -d --name confluence -p 8090:8090 --user root:root cptactionhank/atlassian-confluence:latest</span><br><span class="line">// 破解</span><br><span class="line">opt/confluence/conflence/Web-info/lib/atlassian-extras-decoder-v2-3.3.0.jar</span><br><span class="line">// 破解后覆盖原文件 如果使用mysql  还要加入 mysql的链接jar包 放在上边的目录下</span><br><span class="line">mysql-connector-java-5.1.44-bin</span><br><span class="line">// 在页面中8090端口打开进行配置，下载资料中的文件，在本机运行下方代码，把 serveID 放入破解中进行破解。</span><br><span class="line">java -jar  confluence_keygen.jar</span><br></pre></td></tr></table></figure>
+        <p>知识共享仓库confluence的搭建</p>
+<a id="more"></a>
+<h2 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 利用 docker 安装</span><br><span class="line">docker pull cptactionhank&#x2F;atlassian-confluence:latest</span><br><span class="line">docker run -d --name confluence -p 8090:8090 --user root:root cptactionhank&#x2F;atlassian-confluence:latest</span><br><span class="line">&#x2F;&#x2F; 破解</span><br><span class="line">opt&#x2F;confluence&#x2F;conflence&#x2F;Web-info&#x2F;lib&#x2F;atlassian-extras-decoder-v2-3.3.0.jar</span><br><span class="line">&#x2F;&#x2F; 破解后覆盖原文件 如果使用mysql  还要加入 mysql的链接jar包 放在上边的目录下</span><br><span class="line">mysql-connector-java-5.1.44-bin</span><br><span class="line">&#x2F;&#x2F; 在页面中8090端口打开进行配置，下载资料中的文件，在本机运行下方代码，把 serveID 放入破解中进行破解。</span><br><span class="line">java -jar  confluence_keygen.jar</span><br></pre></td></tr></table></figure>
 <h2 id="配置mysql"><a href="#配置mysql" class="headerlink" title="配置mysql"></a>配置mysql</h2><p>修改mysql的配置文件，添加如下内容</p>
 <p>[mysqld]<br>character-set-server=utf8<br>collation-server=utf8_bin<br>default-storage-engine=INNODB<br>max_allowed_packet=512M<br>innodb_log_file_size=1024M<br>transaction-isolation = READ-COMMITTED</p>
 <p>Note：需要Restart MySQL上述参数才能生效</p>
-<p>创建confluence数据库及用户<br>mysql&gt;CREATE DATABASE confluence CHARACTER SET utf8 COLLATE utf8_bin;<br>mysql&gt;GRANT ALL PRIVILEGES ON confluence.* TO ‘confluence‘@’192.168.11.246’  IDENTIFIED BY ‘mima’;</p>
-<p>Note：上述Grant授权命令中的ip地址是confluence Server的ip。<br>Confluence 同理<br>mysql&gt;CREATE DATABASE confluence CHARACTER SET utf8 COLLATE utf8_bin;<br>mysql&gt;GRANT ALL PRIVILEGES ON confluence.* TO ‘confluence‘@’192.168.11.246’  IDENTIFIED BY ‘mima’;</p>
+<p>创建confluence数据库及用户<br>mysql&gt;CREATE DATABASE confluence CHARACTER SET utf8 COLLATE utf8_bin;<br>mysql&gt;GRANT ALL PRIVILEGES ON confluence.* TO ‘confluence’@’192.168.11.246’  IDENTIFIED BY ‘mima’;</p>
+<p>Note：上述Grant授权命令中的ip地址是confluence Server的ip。<br>Confluence 同理<br>mysql&gt;CREATE DATABASE confluence CHARACTER SET utf8 COLLATE utf8_bin;<br>mysql&gt;GRANT ALL PRIVILEGES ON confluence.* TO ‘confluence’@’192.168.11.246’  IDENTIFIED BY ‘mima’;</p>
 <p>mysql&gt;FLUSH PRIVILEGES;<br>mysql&gt;QUIT</p>
-<h2 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h2><p>链接：<a href="https://pan.baidu.com/s/1HZFwNc0OL5z43fNyb6ZC-A" target="_blank" rel="noopener">https://pan.baidu.com/s/1HZFwNc0OL5z43fNyb6ZC-A</a><br>提取码：8j1b<br>复制这段内容后打开百度网盘手机App，操作更方便哦<br>docker复制命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">从主机复制到容器sudo docker cp host_path containerID:container_path</span><br><span class="line">从容器复制到主机sudo docker cp containerID:container_path host_path</span><br></pre></td></tr></table></figure></p>
+<h2 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h2><p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1HZFwNc0OL5z43fNyb6ZC-A">https://pan.baidu.com/s/1HZFwNc0OL5z43fNyb6ZC-A</a><br>提取码：8j1b<br>复制这段内容后打开百度网盘手机App，操作更方便哦<br>docker复制命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">从主机复制到容器sudo docker cp host_path containerID:container_path</span><br><span class="line">从容器复制到主机sudo docker cp containerID:container_path host_path</span><br></pre></td></tr></table></figure>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
 <li>mysql要用5.6 版本的</li>
-<li><p>数据库要设置utf-8</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">collation_server=utf8_unicode_ci</span><br><span class="line">character_set_server=utf8</span><br><span class="line">skip-character-set-client-handshake</span><br><span class="line">// my_conf</span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line">collation-server=utf8_bin</span><br><span class="line">character_set_server=utf8</span><br><span class="line">init_connect=&apos;SET NAMES utf8&apos;</span><br><span class="line">max_allowed_packet=256M</span><br><span class="line">innodb_log_file_size=2GB</span><br><span class="line">sql_mode = NO_AUTO_VALUE_ON_ZERO</span><br><span class="line">transaction-isolation=READ-COMMITTED</span><br><span class="line">binlog_format=row</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>服务器内存最好2核4G</p>
-</li>
+<li>数据库要设置utf-8<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">collation_server&#x3D;utf8_unicode_ci</span><br><span class="line">character_set_server&#x3D;utf8</span><br><span class="line">skip-character-set-client-handshake</span><br><span class="line">&#x2F;&#x2F; my_conf</span><br><span class="line">default-storage-engine&#x3D;INNODB</span><br><span class="line">collation-server&#x3D;utf8_bin</span><br><span class="line">character_set_server&#x3D;utf8</span><br><span class="line">init_connect&#x3D;&#39;SET NAMES utf8&#39;</span><br><span class="line">max_allowed_packet&#x3D;256M</span><br><span class="line">innodb_log_file_size&#x3D;2GB</span><br><span class="line">sql_mode &#x3D; NO_AUTO_VALUE_ON_ZERO</span><br><span class="line">transaction-isolation&#x3D;READ-COMMITTED</span><br><span class="line">binlog_format&#x3D;row</span><br></pre></td></tr></table></figure></li>
+<li>服务器内存最好2核4G</li>
 <li>链接mysql要增加jar</li>
 </ul>
 
@@ -541,7 +542,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/wechat.jpeg" alt="akCedar 微信支付">
+        <img src="/images/wechat.jpeg" alt="akCedar 微信支付"/>
         <p>微信支付</p>
       </div>
     
@@ -550,7 +551,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝">
+        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝"/>
         <p>支付宝</p>
       </div>
     
@@ -590,7 +591,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/05/初学docker/" rel="prev" title="初学docker">
+              <a href="/2019/11/05/%E5%88%9D%E5%AD%A6docker/" rel="prev" title="初学docker">
                 初学docker <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -650,7 +651,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpeg" alt="akCedar">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="akCedar"/>
             
               <p class="site-author-name" itemprop="name">akCedar</p>
               <div class="site-description motion-element" itemprop="description">写给以后的自己</div>
@@ -661,9 +664,9 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives/%20%7C%7C%20archive">
                 
-                    <span class="site-state-item-count">73</span>
+                    <span class="site-state-item-count">134</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -675,7 +678,7 @@
                 <div class="site-state-item site-state-categories">
                   
                     
-                      <a href="/categories/">
+                      <a href="/categories/%20%7C%7C%20th">
                     
                   
                     
@@ -696,7 +699,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -708,7 +719,7 @@
                 <div class="site-state-item site-state-tags">
                   
                     
-                      <a href="/tags/">
+                      <a href="/tags/%20%7C%7C%20tags">
                     
                   
                     
@@ -789,7 +800,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">38</span>
+                      
+                    
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -853,7 +866,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建过程"><span class="nav-text">搭建过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置mysql"><span class="nav-text">配置mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关资料"><span class="nav-text">相关资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-text">问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="nav-text">搭建过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEmysql"><span class="nav-text">配置mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99"><span class="nav-text">相关资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-text">问题</span></a></li></ol></div>
             
 
           </div>
@@ -862,7 +875,7 @@
       
 
       
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
     </div>
   </aside>
   
@@ -886,7 +899,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.2.0</div>
 
 
 

@@ -15,11 +15,11 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
 
 
 
@@ -44,9 +44,9 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.1"/>
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
@@ -69,7 +69,7 @@
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '',
     scheme: 'Gemini',
     version: '7.1.1',
     sidebar: {"position":"right","display":"post","offset":12,"onmobile":false,"dimmer":false},
@@ -97,17 +97,17 @@
 
 
   <meta name="description" content="对于两种便利方式的学习，深度优先和广度优先，以及在路有权限上应用的思考">
-<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="两种遍历方式">
-<meta property="og:url" content="http://yoursite.com/2019/08/15/两种遍历方式/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/08/15/%E4%B8%A4%E7%A7%8D%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F/index.html">
 <meta property="og:site_name" content="记下点滴">
 <meta property="og:description" content="对于两种便利方式的学习，深度优先和广度优先，以及在路有权限上应用的思考">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-15T15:20:00.800Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-08-14T21:08:52.000Z">
+<meta property="article:modified_time" content="2019-08-15T15:20:00.800Z">
+<meta property="article:author" content="akCedar">
+<meta property="article:tag" content="JS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="两种遍历方式">
-<meta name="twitter:description" content="对于两种便利方式的学习，深度优先和广度优先，以及在路有权限上应用的思考">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/08/15/两种遍历方式/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/15/%E4%B8%A4%E7%A7%8D%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F/"/>
 
 
 
@@ -164,7 +164,7 @@
   </style>
 </noscript>
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -225,7 +225,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
 
   </li>
         
@@ -242,7 +242,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
 
   </li>
         
@@ -259,7 +259,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
 
   </li>
         
@@ -276,7 +276,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
 
   </li>
         
@@ -293,7 +293,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
 
   </li>
 
@@ -304,7 +304,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
         </li>
       
     </ul>
@@ -324,7 +324,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -351,7 +353,7 @@
 
   
 
-  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
 
@@ -381,16 +383,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/15/两种遍历方式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/15/%E4%B8%A4%E7%A7%8D%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="akCedar">
-      <meta itemprop="description" content="写给以后的自己">
-      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="akCedar"/>
+      <meta itemprop="description" content="写给以后的自己"/>
+      <meta itemprop="image" content="/images/avatar.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="记下点滴">
+      <meta itemprop="name" content="记下点滴"/>
     </span>
 
     
@@ -458,7 +460,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习/" itemprop="url" rel="index"><span itemprop="name">学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a></span>
 
                 
                 
@@ -493,10 +495,14 @@
       
 
       
-        <p>对于两种便利方式的学习，深度优先和广度优先，以及在路有权限上应用的思考<br><a id="more"></a></p>
+        <p>对于两种便利方式的学习，深度优先和广度优先，以及在路有权限上应用的思考</p>
+<a id="more"></a>
 <h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>在使用VUE的时候我们采用了动态路由的方式，全部的页面路由就相当于一棵树。而因为权限的控制，用户有的权限也是一棵树，我们在渲染DOM的时候会遍历树形结构，从而对比得到最终的菜单树。</p>
-<h2 id="返回为树状结构的时候"><a href="#返回为树状结构的时候" class="headerlink" title="返回为树状结构的时候"></a>返回为树状结构的时候</h2><p>我们在拿到后台的树形结构，在我们已经有的树中去查找。是否存在相同的节点。存在的话则保存，不存在则剔除掉。<br>所以我们采用深度优先的算法。因为路由是逐层嵌套的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">// 假设路由抽象成下方的树--router</span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        path:&apos;/sys&apos;,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/user&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/role&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/org&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/menu&apos;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:&apos;/server&apos;,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/order&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/product&apos;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br><span class="line">// 后台返回的用户权限的树-- menuTree</span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        path:&apos;/server&apos;,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/order&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/product&apos;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br><span class="line">// 则我们需要遍历用户权限树，同时在路由的树中去寻找相同的.则我们在查找的时候选择的是深度遍历的方案。</span><br><span class="line">checkArr(menuTree,router)</span><br><span class="line">function checkArr(arr1,arr2)&#123;</span><br><span class="line">    let len = arr2.length</span><br><span class="line">    for(let i=0;i&lt;arr1.length;i++)&#123;</span><br><span class="line">        let obj = arr1[i],notHas = true</span><br><span class="line">        for(let j=0;j&lt;len;j++)&#123;</span><br><span class="line">            if(arr2[j].path === obj.path)&#123;</span><br><span class="line">                if(obj.children &amp;&amp; obj.children.length &amp;&amp; arr2[j].children)&#123;</span><br><span class="line">                    checkArr(obj.children,arr2[j].children)</span><br><span class="line">                &#125;else if(obj.children &amp;&amp; !arr2[j].children)&#123;</span><br><span class="line">                    arr1[i].children = []</span><br><span class="line">                &#125;   </span><br><span class="line">                notHas = false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(notHas)&#123;</span><br><span class="line">           arr1.splice(i,1)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 经过遍历以后我们得到最后的路由，可以动态添加</span><br></pre></td></tr></table></figure></p>
-<h2 id="返回为list的时候"><a href="#返回为list的时候" class="headerlink" title="返回为list的时候"></a>返回为list的时候</h2><p>当我们拿到列表结构的时候，这样则就可以利用广度优先的模式，可以更快更方便的找到路由对比，从而提高页面的运行速度。因为后台的存储在表中的是一条一条的数据，如果返回列表的话，减少树的组装时间，从而提高运行速度。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">// 假设路由抽象成下方的树--router</span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        path:&apos;/sys&apos;,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/user&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/role&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/org&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/menu&apos;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:&apos;/server&apos;,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/order&apos;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&apos;/product&apos;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br><span class="line">// 我们从后台获取为如下的内容 menuList</span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        path:&apos;/server&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:&apos;/sys&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:&apos;/user&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:&apos;/org&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:&apos;/order&apos;</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br><span class="line">// 我们选择遍历 得到最终的router，包含的则其has为true</span><br><span class="line">// 当然这样子有一个缺点，在不同菜单下的菜单名称必须不能相同，如果不限制相同名称可以考虑增加lelev字段，进行判断当前所在的路由层级</span><br><span class="line">checkArr(menuList,router)</span><br><span class="line">function checkArr(arr1,arr2)&#123;</span><br><span class="line">    let len1 = arr1.length,len2 = arr2.length</span><br><span class="line">    for(let i = 0;i&lt;len1,i++)&#123;</span><br><span class="line">        let obj = arr1[i], stack = JSON.parse(JSON.stringfy(arr2))</span><br><span class="line">        while (stack.length) &#123;</span><br><span class="line">            let item = stack.shift()</span><br><span class="line">            let children = item.children</span><br><span class="line">            for (let i = 0; i &lt; children.length; i++) &#123;</span><br><span class="line">                stack.push(children[i])</span><br><span class="line">            &#125;</span><br><span class="line">            if(item.path ===  obj.path)&#123;</span><br><span class="line">                arr1[i][&apos;has&apos;] = true</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 最后我们在遍历router，将不需要的删除掉。</span><br><span class="line">deleteArr(router)</span><br><span class="line">function deleteArr (arr)&#123;</span><br><span class="line">    for(let i = 0;i&lt;arr.length,i++)&#123;</span><br><span class="line">        if(!arr[i].has)&#123;</span><br><span class="line">            arr[i].splice(i,1)</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            deleteArr(arr[i].children)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="返回为树状结构的时候"><a href="#返回为树状结构的时候" class="headerlink" title="返回为树状结构的时候"></a>返回为树状结构的时候</h2><p>我们在拿到后台的树形结构，在我们已经有的树中去查找。是否存在相同的节点。存在的话则保存，不存在则剔除掉。<br>所以我们采用深度优先的算法。因为路由是逐层嵌套的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 假设路由抽象成下方的树--router</span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        path:&#39;&#x2F;sys&#39;,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;user&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;role&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;org&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;menu&#39;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:&#39;&#x2F;server&#39;,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;order&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;product&#39;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br><span class="line">&#x2F;&#x2F; 后台返回的用户权限的树-- menuTree</span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        path:&#39;&#x2F;server&#39;,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;order&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;product&#39;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br><span class="line">&#x2F;&#x2F; 则我们需要遍历用户权限树，同时在路由的树中去寻找相同的.则我们在查找的时候选择的是深度遍历的方案。</span><br><span class="line">checkArr(menuTree,router)</span><br><span class="line">function checkArr(arr1,arr2)&#123;</span><br><span class="line">    let len &#x3D; arr2.length</span><br><span class="line">    for(let i&#x3D;0;i&lt;arr1.length;i++)&#123;</span><br><span class="line">        let obj &#x3D; arr1[i],notHas &#x3D; true</span><br><span class="line">        for(let j&#x3D;0;j&lt;len;j++)&#123;</span><br><span class="line">            if(arr2[j].path &#x3D;&#x3D;&#x3D; obj.path)&#123;</span><br><span class="line">                if(obj.children &amp;&amp; obj.children.length &amp;&amp; arr2[j].children)&#123;</span><br><span class="line">                    checkArr(obj.children,arr2[j].children)</span><br><span class="line">                &#125;else if(obj.children &amp;&amp; !arr2[j].children)&#123;</span><br><span class="line">                    arr1[i].children &#x3D; []</span><br><span class="line">                &#125;   </span><br><span class="line">                notHas &#x3D; false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if(notHas)&#123;</span><br><span class="line">           arr1.splice(i,1)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 经过遍历以后我们得到最后的路由，可以动态添加</span><br></pre></td></tr></table></figure>
+
+<h2 id="返回为list的时候"><a href="#返回为list的时候" class="headerlink" title="返回为list的时候"></a>返回为list的时候</h2><p>当我们拿到列表结构的时候，这样则就可以利用广度优先的模式，可以更快更方便的找到路由对比，从而提高页面的运行速度。因为后台的存储在表中的是一条一条的数据，如果返回列表的话，减少树的组装时间，从而提高运行速度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 假设路由抽象成下方的树--router</span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        path:&#39;&#x2F;sys&#39;,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;user&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;role&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;org&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;menu&#39;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:&#39;&#x2F;server&#39;,</span><br><span class="line">        children:[</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;order&#39;,</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                path:&#39;&#x2F;product&#39;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br><span class="line">&#x2F;&#x2F; 我们从后台获取为如下的内容 menuList</span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        path:&#39;&#x2F;server&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:&#39;&#x2F;sys&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:&#39;&#x2F;user&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:&#39;&#x2F;org&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        path:&#39;&#x2F;order&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br><span class="line">&#x2F;&#x2F; 我们选择遍历 得到最终的router，包含的则其has为true</span><br><span class="line">&#x2F;&#x2F; 当然这样子有一个缺点，在不同菜单下的菜单名称必须不能相同，如果不限制相同名称可以考虑增加lelev字段，进行判断当前所在的路由层级</span><br><span class="line">checkArr(menuList,router)</span><br><span class="line">function checkArr(arr1,arr2)&#123;</span><br><span class="line">    let len1 &#x3D; arr1.length,len2 &#x3D; arr2.length</span><br><span class="line">    for(let i &#x3D; 0;i&lt;len1,i++)&#123;</span><br><span class="line">        let obj &#x3D; arr1[i], stack &#x3D; JSON.parse(JSON.stringfy(arr2))</span><br><span class="line">        while (stack.length) &#123;</span><br><span class="line">            let item &#x3D; stack.shift()</span><br><span class="line">            let children &#x3D; item.children</span><br><span class="line">            for (let i &#x3D; 0; i &lt; children.length; i++) &#123;</span><br><span class="line">                stack.push(children[i])</span><br><span class="line">            &#125;</span><br><span class="line">            if(item.path &#x3D;&#x3D;&#x3D;  obj.path)&#123;</span><br><span class="line">                arr1[i][&#39;has&#39;] &#x3D; true</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 最后我们在遍历router，将不需要的删除掉。</span><br><span class="line">deleteArr(router)</span><br><span class="line">function deleteArr (arr)&#123;</span><br><span class="line">    for(let i &#x3D; 0;i&lt;arr.length,i++)&#123;</span><br><span class="line">        if(!arr[i].has)&#123;</span><br><span class="line">            arr[i].splice(i,1)</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            deleteArr(arr[i].children)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>其实一直对广度优先和深度优先的算法有一点点的了解，但是在前端中应用的更多的还是深度优先，所以我们要多思考、多想。这样才能学以致用。</p>
 
       
@@ -528,7 +534,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/wechat.jpeg" alt="akCedar 微信支付">
+        <img src="/images/wechat.jpeg" alt="akCedar 微信支付"/>
         <p>微信支付</p>
       </div>
     
@@ -537,7 +543,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝">
+        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝"/>
         <p>支付宝</p>
       </div>
     
@@ -567,7 +573,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/31/vue装饰器/" rel="next" title="vue装饰器">
+              <a href="/2019/07/31/vue%E8%A3%85%E9%A5%B0%E5%99%A8/" rel="next" title="vue装饰器">
                 <i class="fa fa-chevron-left"></i> vue装饰器
               </a>
             
@@ -577,7 +583,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/16/打印/" rel="prev" title="打印">
+              <a href="/2019/08/16/%E6%89%93%E5%8D%B0/" rel="prev" title="打印">
                 打印 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -637,7 +643,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpeg" alt="akCedar">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="akCedar"/>
             
               <p class="site-author-name" itemprop="name">akCedar</p>
               <div class="site-description motion-element" itemprop="description">写给以后的自己</div>
@@ -648,9 +656,9 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives/%20%7C%7C%20archive">
                 
-                    <span class="site-state-item-count">73</span>
+                    <span class="site-state-item-count">134</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -662,7 +670,7 @@
                 <div class="site-state-item site-state-categories">
                   
                     
-                      <a href="/categories/">
+                      <a href="/categories/%20%7C%7C%20th">
                     
                   
                     
@@ -683,7 +691,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -695,7 +711,7 @@
                 <div class="site-state-item site-state-tags">
                   
                     
-                      <a href="/tags/">
+                      <a href="/tags/%20%7C%7C%20tags">
                     
                   
                     
@@ -776,7 +792,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">38</span>
+                      
+                    
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -840,7 +858,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用场景"><span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#返回为树状结构的时候"><span class="nav-text">返回为树状结构的时候</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#返回为list的时候"><span class="nav-text">返回为list的时候</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E4%B8%BA%E6%A0%91%E7%8A%B6%E7%BB%93%E6%9E%84%E7%9A%84%E6%97%B6%E5%80%99"><span class="nav-text">返回为树状结构的时候</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E4%B8%BAlist%E7%9A%84%E6%97%B6%E5%80%99"><span class="nav-text">返回为list的时候</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -849,7 +867,7 @@
       
 
       
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
     </div>
   </aside>
   
@@ -873,7 +891,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.2.0</div>
 
 
 

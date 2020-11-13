@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="如题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇">
+<meta property="og:url" content="http://yoursite.com/2020/07/06/%E8%85%BE%E8%AE%AF%E4%B8%87%E5%AD%97%E5%B9%B2%E8%B4%A7%EF%BC%812020-2021-%E8%AE%BE%E8%AE%A1%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A%EF%BC%9A%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%AF%87/index.html">
+<meta property="og:site_name" content="记下点滴">
+<meta property="og:description" content="如题">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-33.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-39.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-43.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-18.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-12.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-2.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-34.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-14.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-7.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-11.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-9.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-38.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-49.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-16.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-1.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-10.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-13.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-37.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-21.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-15.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-41.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-22.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-36.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-48.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-50.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-30.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-20.jpeg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-47.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-32.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-24.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-23.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-25.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-53.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-44.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-29.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-19.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-4.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-6.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-40.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-28.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-35.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-42.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-51.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-8.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-ct-20200705-20.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-3.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-5.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-17.gif">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-45.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-31.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-26.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-27.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-46.jpg">
+<meta property="og:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-52.jpg">
+<meta property="article:published_time" content="2020-07-06T11:41:18.000Z">
+<meta property="article:modified_time" content="2020-11-13T02:45:36.712Z">
+<meta property="article:author" content="akCedar">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-33.jpg">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2020/07/06/%E8%85%BE%E8%AE%AF%E4%B8%87%E5%AD%97%E5%B9%B2%E8%B4%A7%EF%BC%812020-2021-%E8%AE%BE%E8%AE%A1%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A%EF%BC%9A%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%AF%87/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>腾讯万字干货！2020-2021 设计趋势报告：用户体验篇 | 记下点滴</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">记下点滴</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">在街角的小巷中记下那些曾经</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/06/%E8%85%BE%E8%AE%AF%E4%B8%87%E5%AD%97%E5%B9%B2%E8%B4%A7%EF%BC%812020-2021-%E8%AE%BE%E8%AE%A1%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A%EF%BC%9A%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E7%AF%87/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="akCedar"/>
+      <meta itemprop="description" content="写给以后的自己"/>
+      <meta itemprop="image" content="/images/avatar.jpeg"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记下点滴"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">腾讯万字干货！2020-2021 设计趋势报告：用户体验篇
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-07-06 11:41:18" itemprop="dateCreated datePublished" datetime="2020-07-06T11:41:18Z">2020-07-06</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-11-13 02:45:36" itemprop="dateModified" datetime="2020-11-13T02:45:36Z">2020-11-13</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>如题</p>
+<a id="more"></a>
+<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>任何一个新事物的悄悄冒头，都有可能在未知的将来影响着用户体验设计师。我们能做的是，在起初感受到微微震幅时，便沿着震感逐步寻找源头，并思考未来的发展走向。赶在变化降临前先拥抱变化。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-33.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 本文通过研究近一两年科技、社会文化以及自身用户体验领域的变化，从用户体验领域关键的用户、媒介(设备与应用）、交互行为、信息与场景的五个角度出发，探索用户体验设计未来的趋势，希望能带来启发。 随着人工时代到来，过去机械的单向交互方式逐渐被打破，机器渐渐演化成了会主动「观察」真实场景，「感受」用户情感，预判用户意图并自动完成任务的贴心小棉袄。机器如何为人们提供更智能便捷的服务，未来还有非常大的想象空间。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-39.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"></p>
+<h4 id="更智能的服务提供方式"><a href="#更智能的服务提供方式" class="headerlink" title="更智能的服务提供方式"></a>更智能的服务提供方式</h4><p>随着人工时代到来，过去机械的单向交互方式逐渐被打破，机器渐渐演化成了会主动「观察」真实场景，「感受」用户情感，预判用户意图并自动完成任务的贴心小棉袄。机器如何为人们提供更智能便捷的服务，未来还有非常大的想象空间。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-43.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>1. 基于真实场景推理用户意图</strong> 随着AI技术的发展，智能设备可以越来越无缝地将数字世界和物理世界嫁接起来，主动感知用户所处情境并智能提供相应服务。 在2019的 Google I/O 大会上，Google Lens 展示的AR点菜功能可以智能识别用户扫描的菜单并将美食网站上的相关推荐直接呈现在屏幕上。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-18.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 当用 Google Lens 识别到小票信息时，可快速提取小票上的金额，且可自动弹起计算器快速帮助用户计算人均消费，节省人工计算的时间成本。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-12.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 随着信息入口从数字空间延伸到周围的物理空间中，未来万物皆可为用户体验的媒介，设计师未来在设计的时候需要注意： 寻找适合的打通真实世界的切入点：在陌生语言、信息复杂或者难以处理等苛刻的环境下，充分发挥智能设备对信息智能读取、批量识别与翻译等强大能力，帮助用户高效完成任务； 将用户旅程的上下游串联：根据生活常识和经验预判用户行为目的，前置推荐服务； 更加系统细心地考量干扰因素：真实场景是动态变化的，需要更全方位考虑光线的强弱、多源的噪音、实体的可视性、人员和事件的打断等因素。 <strong>2. 任务自动化，简化用户旅程</strong> 为了完成一项任务，用户往往需要借助多个应用来回切换配合，使用起来琐碎麻烦。如今应用越做越强大也越复杂，过去仅仅解决单一场景的解决方案不再适应于用户对于高效完成任务的诉求。 Google Assistant 的新能力 Duplex on the web 可以通过自动跨应用任务处理来简化用户旅程。只需要用户发出语音指令「预定一辆去某地的车」，助手便可自动跨邮件、日历、付款等应用调取信息、自动根据使用习惯做选择，并自动填写信息，而用户全程需要的只是在关键节点轻敲「确认」即可。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-2.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 2019年随着 iOS 13 的更新，「快捷指令」推出了「自动化」能力，用户通过「if…then…」语法便可为自己的App设计一套程序，实现如：「当我回到公司时提醒我打卡」、「每天早上10点给我的女朋友发送一条表白短信」等能力，将不相关的场景动作串联字一起自动化执行，大大节省人工操作成本。 提升使用效率是用户体验设计孜孜不倦努力的方向之一。在利用新技术进一步简化用户旅程时，设计师可以充分利用以下因素： 借助语音输入：比起界面触控操作，语音交互的直达性可以「穿透」复杂界面，让设备第一时间明确用户目标； 基于用户行为形成习惯记忆：对用户长期重复的行为做分析处理，构建用户习惯模型并主动提供服务； 适当考虑专家级用户：随着部分用户的智能设备使用水平越来越高，可以考虑为专家用户提供自定义操作脚本，满足其自身的独特需求。 <strong>3. 基于情感感知，主动理解用户需求</strong> 随着人脸识别、表情识别、肢体跟踪等技术的提升，机器逐渐学会感性语言，主动感知用户内在情感和心理需求。 2019年1月的CES展上起亚亮相的互动式「情感驾驶空间」技术，可通过传感器读取用户的面部表情、心率等反应，调整驾驶空间内的灯光、影片类型、音乐风格等，舒缓舱内乘客心情，由此提供更人性化的出行体验。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-34.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 用户总是会期待更贴心的服务，设计师未来对同理心的情感嗅觉更加敏锐： 利用感性线索定位用户情绪：需要通过面部表情、特殊时间节点或者识别到的关键词，对用户情绪进行理解和定位，判断用户情感理解用户内心诉求是自由探索、趣味娱乐、或者静谧修行并提供符合用户当下心境的服务。 综合使用感性元素进行设计：通过使用线条、色彩、声音和动作等传达并唤起相对应的情感，提供更加人性化的体验。 <strong>4. 小结</strong> 更智能的服务提供方式会让人们生活拥有更多可能性，但一旦火候把握不得当，可能就会造成对人们生活的野蛮入侵。关于如何让科技更好造福于人们，早在上个世纪，施乐帕克研究中心提出了宁静技术（Calm Technology）的愿景，认为影响最深远的技术应该是隐匿不见的，它们如纤维般融入日常生活，丝丝入扣，直至不可分辨。 随着科技的发展，设计师对新技术不应是不加克制地应用，而应该润物细无声般地提供服务，帮助人们从繁杂喧嚣的数字世界中解脱出来，将宝贵的注意力资源投放在让生活更美好的事物上。</p>
+<h4 id="更自然丰富的交互方式"><a href="#更自然丰富的交互方式" class="headerlink" title="更自然丰富的交互方式"></a>更自然丰富的交互方式</h4><p>回顾人类和机器的交流语言，从命令行界面、图形用户界面到自然用户界面，人机交互方式越来越贴合人与人之间更自然的交流方式，其背后是心智模型与实现模型的高度拟合的趋势。 在自然用户界面中，为满足新形态智能硬件对新接口的需求，以及人们对更丰富强大的交互方式的自然诉求，越来越多的自然用户界面被开发出来。语音交互和隔空手势交互便是近几年迅速发展并落地的两种交互方式。 <strong>1. 隔空手势交互：更自由、更灵动</strong> 为了让机器更好地读懂用户的身体语言，能够感知深度信息的摄像头走进了日常手机。2019年国内外手机厂商的发布大会上，LG 手机 G8 ThinQ 以及华为发布 Mate 30 系列推出的隔空手势，可实现一些简单的诸如滑动、切歌、截屏等效果。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-14.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-7.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 除此以外，隔空手势支持更加细微的手势，如旋转、揉搓等，可以更直观、更灵活的方式操控界面，让用户获得一种像魔术师用意念控制事物运作的快感。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-11.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 对于隔空手势操作网上的言论褒贬不一，其中争议性最大的就是隔空手势宛如「杀鸡用牛刀」，明明可以用更加精准的手势触控，为什么还要用看似很酷炫其实精准度更低的隔空手势操作？ 隔空手势并不是要替代触控手势成为主流的人机交互方式，更多是对情境式障碍场景的补充。在某些场景下，用户使用设备的条件可能是充满干扰的。想想看当你边看手机食谱边炒菜的时候、边煲剧边剥小龙虾的时候、疫情期间出门佩戴橡胶手套无法正常触控手机屏幕时…..隔空手势是不是特别好用？ 每个人在特殊的场景下都有可能面临感官障碍，未来的设计也应该更多地考虑情境式障碍的场景，让用户无论身处何时何地依旧能一如既往无障碍地使用设备。 <strong>2. 语音交互：更精准、更好玩</strong> 语音交互作为更趋近于人与人之间最自然的交流方式，近些年有许多发展的突破点。 在发展主线上，语音交互趋向更自然、更人性化、更个性化。过去反人类的一些沟通方式慢慢被「调教」。此外，多人会话场景下的技术方案日渐增多。 2019的 Google I/O 大会展示了一个视频片段，视频中的两位嘉宾相继吐槽，经常出现针锋相对难以听清的时候，这时用户可以调节音源音量选择性增强自己关注的人物声音，让另一个人「静音」。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-9.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> △ 滑动选择音源 此外，语音交互除了在智能音箱领域广泛应用以外，也逐渐应用在广告等更多的传播媒介中，刷新人们日常使用体验。2020年2月索尼提交了一项广告播放新专利。当用户在观看电视节目时，如果出现广告，只要站起来大喊广告中对应品牌的名字，便可直接跳过这个广告。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-38.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 设计师在语音交互场景下，需要留意以下几个比较容易被忽视的因素： 用户语音交互习惯培养：如今还处于培养用户语音交互使用习惯阶段，设计师需要更多地考虑应用的语音交互规则如何才能更趋近于人们日常的沟通习惯，并进一步为人们的社会习俗所接纳。 真实场景下的多人音源：在现实情境中， 在多人对话场景下将面临音源不清、穿插停顿、噪音过多等影响体验的情况，由于计算机听觉分析能力开始从单人音源拓宽到了多人音源，多人对话解决方案上还有很大想象空间。 改变传统的视听体验：在使用场景上，语音交互接口也将逐渐运用到更多的媒介上，更全面地刷新用户体验。 <strong>3. 小结</strong> 人类拥有双手、眼睛、耳朵和发声的嘴巴，但是并不总是在每个使用场景下都能自如地使用：在安静的自习室下声音收到限制，在驾驶场景下注意力受到限制，在双手拎着东西场景下双手受到限制……但目前许多产品设计都建立在用户能完整使用感官功能这一理想化的基础上。 未来的发展趋势倾向于将视、听、触、嗅等多通道信息完美整合起来，综合使用多种输入通道和输出通道，根据用户使用场景用最恰当的方式传递服务，满足用户多方位的需求。</p>
+<h4 id="硬件形态带来新的挑战"><a href="#硬件形态带来新的挑战" class="headerlink" title="硬件形态带来新的挑战"></a>硬件形态带来新的挑战</h4><p>尽管乔布斯曾断言3.5英寸是手机的黄金尺寸，但作为人们日常内容消费与娱乐的窗口，手机屏幕毫无疑问地变得越来越大，甚至超出传统物理限制。人们对大屏享受的追求与设备携带便捷性之间的矛盾由来已久，硬件形态的变化对旧有的用户体验设计思路带来的新的挑战。</p>
+<h5 id="1-大屏幕：单手持握新挑战"><a href="#1-大屏幕：单手持握新挑战" class="headerlink" title="1. 大屏幕：单手持握新挑战"></a>1. 大屏幕：单手持握新挑战</h5><p>屏幕横纵比越来越大，而人类的手部具有先天限制，曾经惯用的界面布局方式在高横纵比的屏幕上可能无法被大拇指无障碍全覆盖，使得越来越多的设计更加重视利用移动屏幕下半部分。 操作与信息进一步下移： 高德地图、苹果地图的搜索框下移，方便单手操作用户快速激活输入框； 影视资讯平台IMDB强化底部标签栏功能，双击「搜索」tab即可激活输入框，无须艰难地触摸顶部。 即时战斗类手游皇室战争的说明卡片主要展示在下半部分，方便用户进行卡片上的相关操作。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-49.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 底部导航被赋予更多能力： Pocket的底部标签栏现在兼任汉堡菜单功能，在激活状态下再次点击主页icon可选择主页上须展示的内容。 利用下滑手势代替点击： Snapchat的许多表示前后进退关系的页面都不是」返回「按钮，而是向下箭头，用户可下滑退出当前页面。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-16.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"></p>
+<h5 id="2-折叠屏：新形态的交互方式"><a href="#2-折叠屏：新形态的交互方式" class="headerlink" title="2. 折叠屏：新形态的交互方式"></a>2. 折叠屏：新形态的交互方式</h5><p>为了解决设备形态和人类手部先天限制之间的矛盾，折叠屏诞生浏览并颠覆旧有的界面设计方式。 <strong>更灵活的信息布局</strong> 过去在单屏设计下，考虑到用户注意力由上到下纵向衰减，因此信息布局更多是按照优先级从上往下排序。而折叠屏中，屏幕展开后便可以开辟出更大的可利用空间，将次级页面或者较为重要的内容曝光在第二屏，对信息的布局将带来全新的变化。设计师为保证大小屏下顺畅的阅读体验，需要对信息模块在不同空间布局下的流动性有更强的把控能力。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-1.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>更便捷的多任务操作</strong> 在过去的单屏体验中，用户只能将注意力完全集中在当前的界面中，一次只做一件事。但在实际生活中，用户面临的情景往往是主线任务和支线任务的频繁交错，并且根据会任务不同的性质自由调动自己的注意力重心，如边看视频边聊天、边看直播边逛街等等。在折叠屏中，设计师可以探索更多主线和支线交错进行的场景，利用折叠屏带来的更大的屏幕空间，可以让用户在不离开主线场景的基础上进行支线任务的处理，大大节约了在不同App上来回切换的操作成本。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-10.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>更直观的拖拽交互</strong> 此外，随着多任务处理越来越广泛使用，拖拽交互将成为重要的交互模式之一。文本、表情包、图片、视频等交互对象，不再需要经过复杂的分享转发流程才能在不同App中流转，通过拖拽的方式可以更直观地进行交互。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-13.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>双面屏互动玩法</strong> 外折叠屏在折叠状态下可转为双面屏，等于是给用户增加多一个观看视角。例如华为 Mate X 的镜像拍摄可以让被拍摄者即时获知自己的镜头影像是否满意，这一拍女友神器有望成为直男拍摄终结者。在未来更多的多人观看和互动玩法将被开拓出来。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-37.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> △ 华为Mate X 的镜像拍摄 未来随着5G通讯技术的成长，越来越多的设备可以同时加入物联网，人们的生活将被各种智能设备围绕，设计师需要参与更多屏幕外的设计，让不同设备串联在一起协同合作，让用户能更加自在地享受科技的便利。</p>
+<h4 id="疫情催生新的线上体验"><a href="#疫情催生新的线上体验" class="headerlink" title="疫情催生新的线上体验"></a>疫情催生新的线上体验</h4><p>席卷全球的新冠疫情让数十亿用户乖乖待在家里。过去需要花费大量精力去教育的用户使用习惯因为疫情纷纷转变。云购物、云蹦迪、云赏樱、云监工……人们足不出户便可还原许多线下场景。随着用户线上和线下生活的界限进一步模糊，用户对于应用的效率和情感诉求也发生了变化。</p>
+<h5 id="1-更关注效率导向"><a href="#1-更关注效率导向" class="headerlink" title="1. 更关注效率导向"></a>1. 更关注效率导向</h5><p>疫情让远程办公学习需求剧增，多人协作场景越来越频繁，许多企业随之升级了电话、视频会议、文档制作等多人协作效率软件。过去仅仅考虑少人场景协作的方式不适用，设计师需要比以往更多地考虑多人协作场景下，如何对海量密集的信息进行分析处理和展示。 在学习方式上，由于线下学习转移至线上，学生群体对于娱乐向软件也有了效率诉求。为了顺应用户诉求变化，2020年5月QQ推出学习模式，屏蔽娱乐性的内容推送，让学生更专注在学习上。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-21.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"></p>
+<h5 id="2-更注重缓解社交疏离感"><a href="#2-更注重缓解社交疏离感" class="headerlink" title="2. 更注重缓解社交疏离感"></a>2. 更注重缓解社交疏离感</h5><p>除了效率诉求急剧提升以外，随着长时间的线上学习与办公所产生社交疏离感和缺失感，人们对于线上学习工作的情感化诉求也进一步增强。 2020年推出的plagi远程办公软件支持设置每个人的avartar形象，让大家在远程办公时依旧能时刻感受到彼此的存在。在完成任务时还可以放鞭炮庆祝，让员工能感受到亲密无间的线上办公体验。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-15.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 设计师需要更加关注如何让线上生活进一步与现实生活圈和时间线接轨，通过拓展真实社交下的更多伴生行为让线上也能还原线下的真实场景细节和互动体验，以弥补用户对真实社交的缺失感。</p>
+<h5 id="3-加速人和信息的强连接"><a href="#3-加速人和信息的强连接" class="headerlink" title="3. 加速人和信息的强连接"></a>3. 加速人和信息的强连接</h5><p>疫情的发生加速了人与信息之间的连接。人们越来越习惯将自身的身体资料、心情状态等信息沉淀在智能设备上。 为了做好广大市民群众的健康监测服务，辅助疫情防控工作，微信和支付宝在2020年年初都上线了健康码服务，不同颜色的健康码代表人们不同的健康情况，市民出入特定场所都需初始健康码。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-41.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 随着人的数据化越来越深入，个人身份信息的线上化在各平台上将成为更加通用的能力。设计师需要考虑如何更自然更低成本地将线下动态变化的资料信息线上化，更有效地对用户信息进行加工处理，以及记忆用户的使用习惯和行为，以便帮助用户更高效地完成任务。 疫情的出现加速了线下生活线上化，短短时间内我们看到日常习以为常的应用为响应疫情下的特殊需求纷纷出现改造，钉钉、QQ群被改造成上网课、批改作业的地方，医疗卫生公众号开辟了实时疫情播报与辟谣通道，无接触设计和服务需求异常突出……这也启发了设计师需要保持对突发事件的敏感力以及应急能力，在日常生活中留心思考，为日后突发事件提供充足的场景支撑。</p>
+<h4 id="关注以人为本"><a href="#关注以人为本" class="headerlink" title="关注以人为本"></a>关注以人为本</h4><p>在汹涌的资本语境下，互联网设计师裹挟在商业驱动的结果导向中狂奔，对设计的伦理和责任鲜有发声，但伴随着互联网红利退潮，发展放缓，狂奔之下的人本问题也逐渐浮出水面。在大趋势下，UX设计师需要培养自身设计对伦理和责任的敏感度，在满足商业目的外，重拾节操，为多群体，为大社会设计，更加注重「以人为本」。</p>
+<h5 id="1-更包容性的设计"><a href="#1-更包容性的设计" class="headerlink" title="1. 更包容性的设计"></a>1. 更包容性的设计</h5><p>包容性设计师指在做设计产品的时候，考虑到各类用户的诉求，输出具有包容性的设计方案。包容性设计依旧是2020年设计主题之一，伴随着互联网产品全球化，在通用性和包容性上也提出了新的要求。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-22.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>为身障人士设计</strong> 三星在2019年针对东南亚市场推出了一款让聋盲人士和健全人实时交流的app：Good Vibes，盲聋人轻击屏幕输入摩斯电码，预先连线好的另一台手机就会显示从盲聋人发来的短信。健全人用普通的文字输入回复，在盲聋人这一端就会翻译成摩斯电码、以手机振动的方式读出短信内容。 GOOD VIBES宣传视频：<a target="_blank" rel="noopener" href="https://v.qq.com/x/page/g3108sr8qc9.html">https://v.qq.com/x/page/g3108sr8qc9.html</a> 饿了么：在饿了么送货骑手中，约8%受色盲色弱的困扰（全国男性群体中红绿色盲色弱占比达8%-9%，饿了么骑手男性占比90%），为此饿了么设计团队在2019年对app的进行了重新设计，包括使用WCAG无障碍色彩对比度，以及无障碍色盘，以及调整字阶，使用辅助图形等设计手段来解决部分骑手在送货途中使用APP的痛点问题。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-36.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> △ 饿了么UED：《为骑士创造平等 — 配送 App 的包容性设计》 <strong>跨年龄段设计</strong> 谷歌助手礼貌功能 ( Google Pretty Please ) ：开启谷歌助手礼貌功能后，如果使用者在下达指令的语句中包括「Please」，谷歌助手会对礼貌的请求表示感谢，以此培养孩子的礼貌言行。 Google Pretty Please功能宣传：<a target="_blank" rel="noopener" href="https://v.qq.com/x/page/e3108ue3e2t.html">https://v.qq.com/x/page/e3108ue3e2t.html</a> Swift Playground：当10后小学生VITA君的编程课被「可敬的发量」刷满弹幕时，Swift playgrounds功不可没，这款为儿童新手学习编程的软件，用趣味的游戏方式为4岁以上低龄用户提供了一个学习编程的低门槛平台。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-48.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>为性别平等而设计</strong> 苹果emoji：回看历年苹果emoji的更新，从肤色平等，到性别、性向平等，再到为残疾人设计，2020年再为跨性别者增加新表情，性别平等依旧是包容性设计中重要一环。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-50.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> Airbnb插画：爱彼迎在插画系统中，也为不同肤色，不同职业，不同性别，以及身障人士进行了人物的绘制。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-30.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"></p>
+<h5 id="2-关注用户隐私"><a href="#2-关注用户隐私" class="headerlink" title="2. 关注用户隐私"></a>2. 关注用户隐私</h5><p>2019是互联网科技隐私问题沉浮的一年，国外有Facebook因泄露隐私收到史上最大罚单，国内则打响了「人脸识别第一案」。笼罩在隐私信任危机下，个人信息和数据立法突飞猛进，美国推动《加州消费者隐私法案》，国内也将在2020年出台《个人信息保护法》和《数据安全法》。 <strong>MIUI12推出隐匿面具功能</strong> Android开放生态导致的权限隐私问题一直被用户所诟病，某些APP存在用户不授权就无法使用情况，针对这一情况，MIUI12推出了隐匿面具功能。当用户在开启某些APP要求授权权限时，可以选择空白通行证进行授权，从而保护用户真实信息。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-20.jpeg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 在MIUI12的更新中，还推出了照明弹、拦截网两项隐私保护功能 <strong>iOS 14剪贴板提醒</strong> 在iOS 14的更新中，保护用户隐私方面进一步升级。 其中剪贴板提醒设计很贴心，当用户打开应用，如果该应用读取了你剪贴板的内容，会在系统顶部弹出提示，用户能在第一时间意识到剪贴板内容被读取，帮助用户更好的保护自己的隐私内容。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-47.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"></p>
+<h5 id="3-健康的数码生活方式"><a href="#3-健康的数码生活方式" class="headerlink" title="3. 健康的数码生活方式"></a>3. 健康的数码生活方式</h5><p>科技的发展是一把双刃剑，互联网产品的发展给用户带来便捷和沉浸体验的同时，也使得用户沉溺于科技所带来的惰性和投食之下，逐渐丧失了对真实生活的把控权，被科技绑架。 数字福祉（digital wellbeing）近年被频频提起，指科技产品需要权衡好数码产品和真实生活之间的平衡，防止数码产品过渡分散用户的注意力而影响生活质量。 Android Q 专注模式 Google Android Q Focus Mode Android Q的更新加入了专注模式，用户在专注模式下，可以在系统层面快捷地关闭使你分心的应用，让你聚焦于更重要的事情。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-32.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>防沉迷系统升级</strong> 推荐技术的进步，产品体验的升级，给用户带来了更合胃口的菜式和沉浸体验，但同时也被冠上了「电子海洛因」的称号。游戏或者内容产品的防沉迷系统依旧会是数字福祉下不可避免的趋势。 王者荣耀在2020年升级防沉迷系统，对青少年的娱乐时间和点券充值的限制进行了进一步升级。承接话。B站在2019年推出青少年模式，在该模式下，使用时长和内容推荐等做了定制化处理。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-24.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 2020年的UI设计趋势，一方面是对往年风格的衍变和细化，另一方面，在扁平克制的界面风格盛行后，设计师们向往更自由、更突破的视觉表达。</p>
+<h4 id="UI的继承和创新"><a href="#UI的继承和创新" class="headerlink" title="UI的继承和创新"></a>UI的继承和创新</h4><p><strong>1. 深色模式</strong> 2019年iOS 13深色模式姗姗来迟，紧接着大厂APP相继推出此功能。在2020年，深色模式会继续普及外，也会在可视性和实现成本方面有更多细节打磨和研究。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-23.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-25.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>2. 新拟态</strong> 设计趋势的发展是螺旋式上升的，在扁平化设计流行之后，对物体的拟真再一次回归设计圈，新拟态以一种对旧拟物风格的再创新，重新流行起来。 新拟物风格（Neumorphism）缘起于设计师Alexander Plyuto发布在<a target="_blank" rel="noopener" href="https://www.uisdc.com/topic/dribbble">dribbble</a>的一组作品，以投影重新对扁平界面进行了塑造，模仿出类似浮雕的视觉效果，感受耳目一新，引起大量设计师相尽模仿。 新拟态的实用性和可落地性有待商榷，但是作为一种新的风格受到设计师拥趸，也不失为下一波风潮到来前的灵感缪斯。</p>
+<h2 id="壹周速读：「新拟物化设计」完全指南"><a href="#壹周速读：「新拟物化设计」完全指南" class="headerlink" title="壹周速读：「新拟物化设计」完全指南"></a>壹周速读：「新拟物化设计」完全指南</h2><p>上周文章不多，但是干货不少。 阅读文章 <em>&gt;&gt;</em></p>
+<p><img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-53.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> WWDC2020对mac OS的更新也重新定义了新拟态设计语言，在mac OS新系统Big Sur中，图标的设计增添了轻微的渐变、投影、高光，以此来营造图标内元素之间的纵深关系。</p>
+<h2 id="风格大变！设计师要知道的-macOS-11-核心设计规范"><a href="#风格大变！设计师要知道的-macOS-11-核心设计规范" class="headerlink" title="风格大变！设计师要知道的 macOS 11 核心设计规范"></a>风格大变！设计师要知道的 macOS 11 核心设计规范</h2><p>在今年的 WWDC 上，一直延续着拟物化设计接近 20 年的 Mac OS X 终于画上句号，新的 macOS Big Sur 则作为第 11 个大版本迈入全新的世代。 阅读文章 <em>&gt;&gt;</em></p>
+<p><img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-44.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>3. 多彩配色</strong> 在扁平简洁UI风格盛行之后，丰富的色彩依旧是设计趋势之一，大面积色块，碰撞配色，带来更具冲击感的视觉体验。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-29.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>4. 字体装饰化</strong> UI界面逐渐扁平，色块图标弱化，为突出页面重心和内容，iOS 11在界面标题上使用更大的字号，更粗的字重。近年在大标题的风格衍变下，文字在传达信息外，也开始有了装饰性作用，采用超大字体，成为页面排版美化的一部分。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-19.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-4.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-6.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>5. 更大圆角</strong> 大圆角的风格会继续延续，相较以往，卡片的处理圆角会更大，随之带来的是多的留白处理，结合大字号，带来更透气通透的视觉感受。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-40.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> Mac OS Big Sur的界面相对旧版本采用了更大的圆角；系统图标的设计统一成圆角矩形。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-28.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-35.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>6. 更丰富的插图</strong> UI插图的丰富体现在样式和内容上，样式上开始3D化，内容上更注重插图叙事的表达。 <strong>7. 3D插图</strong> 3D图形往年更多运用在动态影像或运营类设计中，随着3D的普及运用，UI插图也会迎来3D化，给用户带来更立体，更新鲜的视觉感受。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-42.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>8. 讲求叙事表意</strong> 相较于往年追求形式的UI插图，新趋势下的插图更讲求功能性，每一副插图都承载一定的作用——传达功能信息或透传品牌情感；同时插图更讲求画面表意和情节，给用户叙事性的视觉体验，增进用户和产品之间的情感联系。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-51.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>9. 插图组件化</strong> 插画的流行，随之而来的是成本的水涨船高——一套系列插图为保持风格统一，往往由唯一设计师绘制，同时为兼容各类场景，设计师往往要绘制多张。 为解决插图的成本和效率，插图开始以组件化的方式进行绘制——插图设计师将插画进行拆分绘制——不同人物，不同场景，不同物件等，再通过组件化的拼接合成，使用组件的设计师可以根据需求场景自由组合，也避免了风格不统一问题。 设计师Pablo Stanley将日常绘制的插画制成一套矢量插图组件库，将人物分为：半身、全身和坐姿3大类。通过不同表情、发型和服装可自由搭配出近60万种组合。 Pablo Stanley人物插画系统：<a target="_blank" rel="noopener" href="https://v.qq.com/x/page/s3108yeyhmt.html">https://v.qq.com/x/page/s3108yeyhmt.html</a></p>
+<h2 id="免费可商用！这个网站提供超过-58-万种组合的手绘插画素材"><a href="#免费可商用！这个网站提供超过-58-万种组合的手绘插画素材" class="headerlink" title="免费可商用！这个网站提供超过 58 万种组合的手绘插画素材"></a>免费可商用！这个网站提供超过 58 万种组合的手绘插画素材</h2><p>本文要推荐的「Open Peeps」是一个矢量的手绘免费图库，主要以人物为主，比较特别的是它其实是一个有系统的涂鸦，可以在人物间进行混搭，产生更多种变化。 阅读文章 <em>&gt;&gt;</em></p>
+<p><strong>10. 多维度动画表现</strong> 新趋势下，动画一方面回溯复古线描手绘风格，另一方面追求更三维的体验，同时帧率进一步提升，追求更流畅的视觉感受。 <strong>11. 手绘动画</strong> 手绘插图是往年的热门，其随性自然的笔触，能给用户带来亲切的感受，在新的趋势下，动画的加入赋予<a target="_blank" rel="noopener" href="https://www.uisdc.com/tag/%e6%89%8b%e7%bb%98">手绘</a>插图一份灵性和趣味。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-8.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-ct-20200705-20.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>12. 3D运动</strong> Google Material Design通过卡片投影层级和二维动画规律，赋予扁平界面Z轴的纵深感。随着3D的普及流行，新趋势下的界面，界面的运动从二维走向三维，表现出3D场景下透视感。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-3.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-5.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>13. 高帧率动画</strong> 高帧率影视从线下电影院移步到线上流媒体，手机高帧率屏幕从90Hz到120Hz逐步升级，用户对画面流畅的定义一再刷新，UI动画的帧率升级也会是新的一轮趋势。 Telegram的表情采用了高帧率动画，给用户更流畅的视觉感受。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-17.gif" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"></p>
+<h4 id="更高效的涉及协作方式"><a href="#更高效的涉及协作方式" class="headerlink" title="更高效的涉及协作方式"></a>更高效的涉及协作方式</h4><p>体验的持续升级，产品的高速迭代，对UX设计师的设计师效率提出了更高的要求。高效的设计方式是一个永恒的趋势。 <strong>1. 从本地文件到云端协作</strong> 传统的文件交接方式效率低下，导致设计师之间信息不对称，最终影响产品的一致性体验。近些年在线设计协同工具发展迅速，从UI设计、 设计交付以及组件协同等环节上给设计师提供更加高效实时的协作体验，获得大量UX设计师的簇拥。在2019 uxtool的设计工具调研中，在线设计协同工具佼佼者figma以其协作和性能优势，大有追赶<a target="_blank" rel="noopener" href="https://www.uisdc.com/tag/sketch">sketch</a>之势。</p>
+<h2 id="Figma会取代Sketch的地位吗？来看这篇超全面的对比分析！"><a href="#Figma会取代Sketch的地位吗？来看这篇超全面的对比分析！" class="headerlink" title="Figma会取代Sketch的地位吗？来看这篇超全面的对比分析！"></a>Figma会取代Sketch的地位吗？来看这篇超全面的对比分析！</h2><p>写在前面：最近因为疫情的影响，很多公司使用了远程办公的模式，同时也把很多远程协作的问题摆在了台面上。 阅读文章 <em>&gt;&gt;</em></p>
+<p>随着团队对设计效率要求的提高，设计文档从本地走向云端协作是不可逆趋势。不过设计工具的迭代是需要成本的，尤其在大型设计团队，设计工具需要渡过阵痛期来完成迭代，进而提升设计效率和体验一致性。 <strong>2. 科学有效的设计系统</strong> UX的发展，从早期的静态规范到当下的动态设计系统，是为解决产品迭代增速后带来的设计效率和产品体验问题。商业驱动下的产品迭代速度有增无减，设计系统依旧会是未来几年的设计趋势之一。 这里说的设计系统不是广义上的设计系统，而是在互联网设计的发展中，对组件化设计逐步迭代升华的一套设计协作方法： 「设计系统（Design systems）是一组为了共同目标而服务的内在相互联系的设计模式和多人协同执行的方法。」（引自《Design systems》，Alla Kholmatova，C7210翻译）。 <strong>3. 设计系统历程衍变</strong> 组件化的发展历经规范文档到UI组件，再到设计系统，形态从最初对设计一致性的指导规范，到对产品研发流程的规范，以及产品设计价值观的输出，当下的设计系统以集大成者形式影响整个产品的设计形态。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-45.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 设计系统的结构见下图： <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-31.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> <strong>4. 设计系统的求同存异</strong> 设计系统并非一成不变的，他是一个动态进化的系统，会根据团队性质、产品特性在内容上有所区分——比如大团队更应该大而全，小团队更倾向小而精；成熟产品的设计系统更倾向于打造完整闭环的合作流程机制，新产品的设计系统应该以小为始，快速迭代…… 随着产品的垂直化，细分化，设计系统的趋势会是在趋势大同之下找到适合产品和团队自身的形态和节奏。 Material Design是一个包含了指导规范、组件，以及设计开发工具的自适应性设计系统。 它作为平台型性设计系统，更为大而全的规范了整个生态系统的设计风格，以及提供工具让研发者能快速产出符合规范的产品。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-26.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> △ Google生态庞大繁杂，Material Design更为全面 Ant Design作为一个为to B产品提供解决方案的平台，更多从设计可用性和完整性考虑设计系统的搭建。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-27.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> △ Ant Design通过模块化解决方案，降低冗余的生产成本，让设计者专注于更好的用户体验 QQ作为一款面向95后的2C社交产品，其设计系统Q语言从风格调性上对设计进行规范，同时给予设计师一定的自由度；也考虑到QQ内兼顾多个产品，以及界面主题样式，对基础组件的使用场景和代码进行了规范，方便设计和开发敏捷开发。</p>
+<h2 id="大厂如何做设计？来看腾讯出品的-Q-设计语言"><a href="#大厂如何做设计？来看腾讯出品的-Q-设计语言" class="headerlink" title="大厂如何做设计？来看腾讯出品的 Q 设计语言"></a>大厂如何做设计？来看腾讯出品的 Q 设计语言</h2><p>已过弱冠之年的QQ不仅传递用户的信息与情感，更缩短了亿万用户的社交距离。 阅读文章 <em>&gt;&gt;</em></p>
+<p><img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-46.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> Q语言，给予产品的自由调性之外，也针对主题和基础组件进行了规范。 每个产品和团队都有自身的特征，设计系统的建设也应该有的放矢，没有可照搬的标准答案，在大方向下找到适合自身的解决方案才是的可行之道，将效率最大化。 <strong>5. 科学有效的优化迭代</strong> 组件是设计系统中的重要组成部分，但是以往静态的、孤立的协作方式使得组件的更新迭代滞后和阻塞。随着设计系统的发展，设计师组件化思维的普及，组件的更新需要更科学高效的方式进行管理。 Figma在2019年推出的Design System Analytics功能，组件设计师可以借此查看组件的使用情况，包括引用次数，解组次数等，并可以生成组件使用情况的曲线趋势图，以数据的形式，科学高效地推动组件的优化迭代。 <img src="https://image.uisdc.com/wp-content/uploads/2020/07/uisdc-sj-20200705-52.jpg" alt="腾讯万字干货！2020-2021 设计趋势报告：用户体验篇"> 选择分析的时间段；组件使用的次数曲线图；团队使用情况；所有组件使用情况</p>
+<h4 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h4><p>未来的用户体验会出现什么新趋势？人工智能等算法的发展、5G技术普及、新的智能设备形态、新的信息处理技术、新一代用户的喜好和口味……这些往后或将影响用户体验发展的走向。未来用户对体验的要求只会越来越高。 用户体验设计师需要了解更多的技术动向，但安身立命之本还是让用户真正受益：立足于用户真实使用场景，在理性价值层面上，打造可用、易用、高效的设计；在感性需求层上赋予情感上的愉悦性，在反思层面赋予意义价值。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechat.jpeg" alt="akCedar 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/04/%E7%AE%80%E4%BD%93%E7%B9%81%E4%BD%93%E5%88%87%E6%8D%A2/" rel="next" title="简体繁体切换">
+                <i class="fa fa-chevron-left"></i> 简体繁体切换
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/07/06/%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%8420%E6%9D%A1%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97/" rel="prev" title="数据表的20条设计指南">
+                数据表的20条设计指南 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="akCedar"/>
+            
+              <p class="site-author-name" itemprop="name">akCedar</p>
+              <div class="site-description motion-element" itemprop="description">写给以后的自己</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">134</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/%20%7C%7C%20th">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/%20%7C%7C%20tags">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/myCedar" title="GitHub &rarr; https://github.com/myCedar" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="/1301172947@qq.com" title="E-Mail &rarr; 1301172947@qq.com"><i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%99%BA%E8%83%BD%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E6%96%B9%E5%BC%8F"><span class="nav-text">更智能的服务提供方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E8%87%AA%E7%84%B6%E4%B8%B0%E5%AF%8C%E7%9A%84%E4%BA%A4%E4%BA%92%E6%96%B9%E5%BC%8F"><span class="nav-text">更自然丰富的交互方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E5%BD%A2%E6%80%81%E5%B8%A6%E6%9D%A5%E6%96%B0%E7%9A%84%E6%8C%91%E6%88%98"><span class="nav-text">硬件形态带来新的挑战</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%A4%A7%E5%B1%8F%E5%B9%95%EF%BC%9A%E5%8D%95%E6%89%8B%E6%8C%81%E6%8F%A1%E6%96%B0%E6%8C%91%E6%88%98"><span class="nav-text">1. 大屏幕：单手持握新挑战</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%8A%98%E5%8F%A0%E5%B1%8F%EF%BC%9A%E6%96%B0%E5%BD%A2%E6%80%81%E7%9A%84%E4%BA%A4%E4%BA%92%E6%96%B9%E5%BC%8F"><span class="nav-text">2. 折叠屏：新形态的交互方式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%96%AB%E6%83%85%E5%82%AC%E7%94%9F%E6%96%B0%E7%9A%84%E7%BA%BF%E4%B8%8A%E4%BD%93%E9%AA%8C"><span class="nav-text">疫情催生新的线上体验</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%9B%B4%E5%85%B3%E6%B3%A8%E6%95%88%E7%8E%87%E5%AF%BC%E5%90%91"><span class="nav-text">1. 更关注效率导向</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%9B%B4%E6%B3%A8%E9%87%8D%E7%BC%93%E8%A7%A3%E7%A4%BE%E4%BA%A4%E7%96%8F%E7%A6%BB%E6%84%9F"><span class="nav-text">2. 更注重缓解社交疏离感</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%8A%A0%E9%80%9F%E4%BA%BA%E5%92%8C%E4%BF%A1%E6%81%AF%E7%9A%84%E5%BC%BA%E8%BF%9E%E6%8E%A5"><span class="nav-text">3. 加速人和信息的强连接</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E6%B3%A8%E4%BB%A5%E4%BA%BA%E4%B8%BA%E6%9C%AC"><span class="nav-text">关注以人为本</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%9B%B4%E5%8C%85%E5%AE%B9%E6%80%A7%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="nav-text">1. 更包容性的设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%85%B3%E6%B3%A8%E7%94%A8%E6%88%B7%E9%9A%90%E7%A7%81"><span class="nav-text">2. 关注用户隐私</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%81%A5%E5%BA%B7%E7%9A%84%E6%95%B0%E7%A0%81%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F"><span class="nav-text">3. 健康的数码生活方式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UI%E7%9A%84%E7%BB%A7%E6%89%BF%E5%92%8C%E5%88%9B%E6%96%B0"><span class="nav-text">UI的继承和创新</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A3%B9%E5%91%A8%E9%80%9F%E8%AF%BB%EF%BC%9A%E3%80%8C%E6%96%B0%E6%8B%9F%E7%89%A9%E5%8C%96%E8%AE%BE%E8%AE%A1%E3%80%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97"><span class="nav-text">壹周速读：「新拟物化设计」完全指南</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A3%8E%E6%A0%BC%E5%A4%A7%E5%8F%98%EF%BC%81%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84-macOS-11-%E6%A0%B8%E5%BF%83%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83"><span class="nav-text">风格大变！设计师要知道的 macOS 11 核心设计规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%8D%E8%B4%B9%E5%8F%AF%E5%95%86%E7%94%A8%EF%BC%81%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99%E6%8F%90%E4%BE%9B%E8%B6%85%E8%BF%87-58-%E4%B8%87%E7%A7%8D%E7%BB%84%E5%90%88%E7%9A%84%E6%89%8B%E7%BB%98%E6%8F%92%E7%94%BB%E7%B4%A0%E6%9D%90"><span class="nav-text">免费可商用！这个网站提供超过 58 万种组合的手绘插画素材</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E9%AB%98%E6%95%88%E7%9A%84%E6%B6%89%E5%8F%8A%E5%8D%8F%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="nav-text">更高效的涉及协作方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Figma%E4%BC%9A%E5%8F%96%E4%BB%A3Sketch%E7%9A%84%E5%9C%B0%E4%BD%8D%E5%90%97%EF%BC%9F%E6%9D%A5%E7%9C%8B%E8%BF%99%E7%AF%87%E8%B6%85%E5%85%A8%E9%9D%A2%E7%9A%84%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90%EF%BC%81"><span class="nav-text">Figma会取代Sketch的地位吗？来看这篇超全面的对比分析！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E5%8E%82%E5%A6%82%E4%BD%95%E5%81%9A%E8%AE%BE%E8%AE%A1%EF%BC%9F%E6%9D%A5%E7%9C%8B%E8%85%BE%E8%AE%AF%E5%87%BA%E5%93%81%E7%9A%84-Q-%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80"><span class="nav-text">大厂如何做设计？来看腾讯出品的 Q 设计语言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-text">后记</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">akCedar</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.2.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+<script>!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+</script>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

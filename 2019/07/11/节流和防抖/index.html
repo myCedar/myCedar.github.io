@@ -15,11 +15,11 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
 
 
 
@@ -44,9 +44,9 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.1"/>
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
@@ -69,7 +69,7 @@
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '',
     scheme: 'Gemini',
     version: '7.1.1',
     sidebar: {"position":"right","display":"post","offset":12,"onmobile":false,"dimmer":false},
@@ -97,17 +97,17 @@
 
 
   <meta name="description" content="节流与防抖">
-<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="节流和防抖">
-<meta property="og:url" content="http://yoursite.com/2019/07/11/节流和防抖/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/07/11/%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/index.html">
 <meta property="og:site_name" content="记下点滴">
 <meta property="og:description" content="节流与防抖">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-11T10:43:20.716Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-07-10T19:03:37.000Z">
+<meta property="article:modified_time" content="2019-07-11T10:43:20.716Z">
+<meta property="article:author" content="akCedar">
+<meta property="article:tag" content="JS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="节流和防抖">
-<meta name="twitter:description" content="节流与防抖">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/11/节流和防抖/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/11/%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/"/>
 
 
 
@@ -164,7 +164,7 @@
   </style>
 </noscript>
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -225,7 +225,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
 
   </li>
         
@@ -242,7 +242,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
 
   </li>
         
@@ -259,7 +259,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
 
   </li>
         
@@ -276,7 +276,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
 
   </li>
         
@@ -293,7 +293,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
 
   </li>
 
@@ -304,7 +304,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
         </li>
       
     </ul>
@@ -324,7 +324,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -351,7 +353,7 @@
 
   
 
-  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
 
@@ -381,16 +383,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/11/节流和防抖/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/11/%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="akCedar">
-      <meta itemprop="description" content="写给以后的自己">
-      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="akCedar"/>
+      <meta itemprop="description" content="写给以后的自己"/>
+      <meta itemprop="image" content="/images/avatar.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="记下点滴">
+      <meta itemprop="name" content="记下点滴"/>
     </span>
 
     
@@ -458,7 +460,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习/" itemprop="url" rel="index"><span itemprop="name">学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a></span>
 
                 
                 
@@ -493,7 +495,8 @@
       
 
       
-        <p>节流与防抖<br><a id="more"></a></p>
+        <p>节流与防抖</p>
+<a id="more"></a>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
 <li>如果是业务中需要实现的节流与防抖等需求，最好还是根据业务需求自己编写定时器，简洁方便。</li>
 <li>如果是复杂的计算，最好结合webworker，启用多线程的方式。也能优化体验<br>lodash<h2 id="节流与防抖定义"><a href="#节流与防抖定义" class="headerlink" title="节流与防抖定义"></a>节流与防抖定义</h2>节流：在一定时间多次触发函数，保证一段时间仅执行一次。如页面resize，重绘大小的时候，间隔一段时间重绘一次。<br>防抖：当持续触发事件时，一定时间段内没有再触发事件，事件处理函数才会执行一次，如果设定的时间到来之前，又一次触发了事件，就重新开始延时<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2></li>
@@ -501,24 +504,23 @@
 <li>如果设置了leading为true，则立刻执行invokeFunc（执行一遍任务函数）</li>
 <li>期间用户未操作，定时器时间到了，执行timerExpired（如果可以立刻执行，执行trailingEdge，否则重置定时器：时间为等待时间，执行函数timerExpired）</li>
 <li>执行trailingEdge，清空定时器ID，判断是否周期结束后是否执行（如果是的，执行函数，不是，清空变量及参数）</li>
-<li>期间用户又操作了，判断是否应该执行（如果不应该且定时器是空的，则执行timerExpired[有定时器，不操作]；如果应该且设置最大等待时间，重新设置定时器并立刻执行一次；如果不能，则不做任何事）<h2 id="lodash防抖"><a href="#lodash防抖" class="headerlink" title="lodash防抖"></a>lodash防抖</h2><ul>
+<li>期间用户又操作了，判断是否应该执行（如果不应该且定时器是空的，则执行timerExpired[有定时器，不操作]；如果应该且设置最大等待时间，重新设置定时器并立刻执行一次；如果不能，则不做任何事）<h2 id="lodash防抖"><a href="#lodash防抖" class="headerlink" title="lodash防抖"></a>lodash防抖</h2></li>
+</ul>
+<ul>
 <li>@param {Function}  实现的业务函数.</li>
 <li>@param {number} [wait=0] </li>
-<li>延迟执行的时间，默认值是0，如果不传，使用requestAnimationFrame来更新页面；</li>
+<li> 延迟执行的时间，默认值是0，如果不传，使用requestAnimationFrame来更新页面；</li>
 <li>@param {Object} [options={}] The options object.</li>
 <li>@param {boolean} [options.leading=false]</li>
-<li>Specify invoking on the leading edge of the timeout.</li>
+<li> Specify invoking on the leading edge of the timeout.</li>
 <li>@param {number} [options.maxWait]</li>
-<li>The maximum time <code>func</code> is allowed to be delayed before it’s invoked.</li>
+<li> The maximum time <code>func</code> is allowed to be delayed before it’s invoked.</li>
 <li>@param {boolean} [options.trailing=true]</li>
-<li>Specify invoking on the trailing edge of the timeout.</li>
-<li>@returns {Function} Returns the new debounced function.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br></pre></td><td class="code"><pre><span class="line">function debounce(func, wait, options) &#123;</span><br><span class="line">  let lastArgs,     // debounced 被调用后被赋值,表示至少调用 debounced一次</span><br><span class="line">    lastThis,   // 保存 this</span><br><span class="line">    maxWait,     // 最大等待时间</span><br><span class="line">    result,      // 返回执行的函数</span><br><span class="line">    timerId,    // 定时器句柄</span><br><span class="line">    lastCallTime    // 上一次调用 debounced 的时间</span><br><span class="line"></span><br><span class="line">  let lastInvokeTime = 0  // 上一次执行 func 的时间</span><br><span class="line">  let leading = false     // 是否第一次触发时立即执行</span><br><span class="line">  let maxing = false     // 是否有最长等待时间</span><br><span class="line">  let trailing = true    // 是否在等待周期结束后执行用户传入的函数</span><br><span class="line"></span><br><span class="line">  // window.requestAnimationFrame() 方法告诉浏览器您希望执行动画并请求浏览器在下一次重绘之前调用指定的函数来更新动画。该方法使用一个回调函数作为参数，这个回调函数会在浏览器重绘之前调用。</span><br><span class="line">  const useRAF = (!wait &amp;&amp; wait !== 0 &amp;&amp; typeof root.requestAnimationFrame === &apos;function&apos;)</span><br><span class="line">  //  以上代码被我注释，可以先不关注</span><br><span class="line"></span><br><span class="line"> // 这个很好理解，如果传入的 func 不是函数，抛出错误，老子干不了这样的活</span><br><span class="line">  if (typeof func != &apos;function&apos;) &#123;</span><br><span class="line">    throw new TypeError(&apos;Expected a function&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">  // 如果不存在  默认为0</span><br><span class="line">  wait = +wait || 0</span><br><span class="line">  if (isObject(options)) &#123;</span><br><span class="line">    leading = !!options.leading</span><br><span class="line">    maxing = &apos;maxWait&apos; in options</span><br><span class="line">    maxWait = maxing ? Math.max(+options.maxWait || 0, wait) : maxWait</span><br><span class="line">    trailing = &apos;trailing&apos; in options ? !!options.trailing : trailing</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  执行 用户传入的 func</span><br><span class="line">//  lastInvokeTime 在此时被赋值，记录上一次调用 func的时间</span><br><span class="line">  function invokeFunc(time) &#123;</span><br><span class="line">    const args = lastArgs</span><br><span class="line">    const thisArg = lastThis</span><br><span class="line">//  重置 lastArgs，lastThis</span><br><span class="line">    lastArgs = lastThis = undefined</span><br><span class="line">    lastInvokeTime = time</span><br><span class="line">    result = func.apply(thisArg, args)</span><br><span class="line">    return result</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  setTimeout 一个定时器</span><br><span class="line">  function startTimer(pendingFunc, wait) &#123;</span><br><span class="line">    // 如果没有传wait   默认使用浏览器的requestAnimationFrame</span><br><span class="line">    if (useRAF) &#123;</span><br><span class="line">      return root.requestAnimationFrame(pendingFunc)</span><br><span class="line">    &#125;</span><br><span class="line">    return setTimeout(pendingFunc, wait)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  清除定时器</span><br><span class="line">  function cancelTimer(id) &#123;</span><br><span class="line">    if (useRAF) &#123;</span><br><span class="line">      return root.cancelAnimationFrame(id)</span><br><span class="line">    &#125;</span><br><span class="line">    clearTimeout(id)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  防抖开始时执行的操作</span><br><span class="line">//  lastInvokeTime 在此时被赋值，记录上一次调用 func的时间</span><br><span class="line">//  设置了立即执行func，则执行func， 否则设置定时器</span><br><span class="line">  function leadingEdge(time) &#123;</span><br><span class="line">    // Reset any `maxWait` timer.</span><br><span class="line">    lastInvokeTime = time</span><br><span class="line">    // Start the timer for the trailing edge.</span><br><span class="line">    timerId = startTimer(timerExpired, wait)</span><br><span class="line">    // Invoke the leading edge.</span><br><span class="line">    return leading ? invokeFunc(time) : result</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  计算还需要等待多久</span><br><span class="line">//  没设置最大等待时间，结果为 wait - (当前时间 - 上一次触发(scroll) )  时间，也就是  wait - 已经等候时间</span><br><span class="line">//  设置了最长等待时间，结果为 最长等待时间 和 按照wait 计算还需要等待时间 的最小值</span><br><span class="line">  function remainingWait(time) &#123;</span><br><span class="line">    const timeSinceLastCall = time - lastCallTime</span><br><span class="line">    const timeSinceLastInvoke = time - lastInvokeTime</span><br><span class="line">    const timeWaiting = wait - timeSinceLastCall</span><br><span class="line"></span><br><span class="line">    return maxing</span><br><span class="line">      ? Math.min(timeWaiting, maxWait - timeSinceLastInvoke)</span><br><span class="line">      : timeWaiting</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">// 此时是否应该设置定时器/执行用户传入的函数，有四种情况应该执行</span><br><span class="line">// 1, 第一次触发</span><br><span class="line">// 2. 距离上次触发超过 wait</span><br><span class="line">// 3. 当前时间小于 上次触发时间</span><br><span class="line">// 4. 设置了最长等待时间，并且等待时长不小于最长等待时间了</span><br><span class="line">  function shouldInvoke(time) &#123;</span><br><span class="line">    const timeSinceLastCall = time - lastCallTime</span><br><span class="line">    const timeSinceLastInvoke = time - lastInvokeTime</span><br><span class="line"></span><br><span class="line">    return (lastCallTime === undefined || (timeSinceLastCall &gt;= wait) ||</span><br><span class="line">      (timeSinceLastCall &lt; 0) || (maxing &amp;&amp; timeSinceLastInvoke &gt;= maxWait))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">// 执行函数呢 还是继续设置定时器呢？ 防抖的核心</span><br><span class="line">// 时间满足条件，执行</span><br><span class="line">// 否则 重新设置定时器</span><br><span class="line">  function timerExpired() &#123;</span><br><span class="line">    const time = Date.now()</span><br><span class="line">    if (shouldInvoke(time)) &#123;</span><br><span class="line">      return trailingEdge(time)</span><br><span class="line">    &#125;</span><br><span class="line">    // Restart the timer.</span><br><span class="line">    timerId = startTimer(timerExpired, remainingWait(time))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">// 执行用户传入的 func 之前的最后一道屏障</span><br><span class="line">// 重置 定时器</span><br><span class="line">// 执行 func</span><br><span class="line">// 重置 lastArgs = lastThis 为 undefined</span><br><span class="line">  function trailingEdge(time) &#123;</span><br><span class="line">    timerId = undefined</span><br><span class="line"></span><br><span class="line">    // Only invoke if we have `lastArgs` which means `func` has been</span><br><span class="line">    // debounced at least once.</span><br><span class="line">    if (trailing &amp;&amp; lastArgs) &#123;</span><br><span class="line">      return invokeFunc(time)</span><br><span class="line">    &#125;</span><br><span class="line">    lastArgs = lastThis = undefined</span><br><span class="line">    return result</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">// 取消防抖</span><br><span class="line">//  重置所有变量  清除定时器</span><br><span class="line">  function cancel() &#123;</span><br><span class="line">    if (timerId !== undefined) &#123;</span><br><span class="line">      cancelTimer(timerId)</span><br><span class="line">    &#125;</span><br><span class="line">    lastInvokeTime = 0</span><br><span class="line">    lastArgs = lastCallTime = lastThis = timerId = undefined</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">// 定时器已存在，去执行 嗯，我就是这么强势</span><br><span class="line">  function flush() &#123;</span><br><span class="line">    return timerId === undefined ? result : trailingEdge(Date.now())</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  是否正在 等待中</span><br><span class="line">  function pending() &#123;</span><br><span class="line">    return timerId !== undefined</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//  正房来了！ 这是入口函数，在这里运筹帷幄，根据敌情调配各个函数，势必骗过用户那个傻子，我没有一直在执行但你以为我一直在响应你哦 </span><br><span class="line">  function debounced(...args) &#123;</span><br><span class="line">    const time = Date.now()</span><br><span class="line">    // 是否立刻执行</span><br><span class="line">    const isInvoking = shouldInvoke(time)</span><br><span class="line">    // 保存当前的参数</span><br><span class="line">    lastArgs = args</span><br><span class="line">    lastThis = this</span><br><span class="line">    lastCallTime = time</span><br><span class="line">    // 判断如果不应该执行</span><br><span class="line">    if (isInvoking) &#123;</span><br><span class="line">    //   定时器未执行（第一次进入）</span><br><span class="line">      if (timerId === undefined) &#123;</span><br><span class="line">        return leadingEdge(lastCallTime)</span><br><span class="line">      &#125;</span><br><span class="line">      if (maxing) &#123;</span><br><span class="line">        // Handle invocations in a tight loop.</span><br><span class="line">        timerId = startTimer(timerExpired, wait)</span><br><span class="line">        return invokeFunc(lastCallTime)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    // 保证最后执行一次</span><br><span class="line">    if (timerId === undefined) &#123;</span><br><span class="line">      timerId = startTimer(timerExpired, wait)</span><br><span class="line">    &#125;</span><br><span class="line">    return result</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  debounced.cancel = cancel</span><br><span class="line">  debounced.flush = flush</span><br><span class="line">  debounced.pending = pending</span><br><span class="line">  //  下面这句话证明 debounced 我是入口函数，是正宫娘娘！</span><br><span class="line">  return debounced</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default debounce</span><br></pre></td></tr></table></figure>
-</li>
+<li> Specify invoking on the trailing edge of the timeout.</li>
+<li>@returns {Function} Returns the new debounced function.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br></pre></td><td class="code"><pre><span class="line">function debounce(func, wait, options) &#123;</span><br><span class="line">  let lastArgs,     &#x2F;&#x2F; debounced 被调用后被赋值,表示至少调用 debounced一次</span><br><span class="line">    lastThis,   &#x2F;&#x2F; 保存 this</span><br><span class="line">    maxWait,     &#x2F;&#x2F; 最大等待时间</span><br><span class="line">    result,      &#x2F;&#x2F; 返回执行的函数</span><br><span class="line">    timerId,    &#x2F;&#x2F; 定时器句柄</span><br><span class="line">    lastCallTime    &#x2F;&#x2F; 上一次调用 debounced 的时间</span><br><span class="line"></span><br><span class="line">  let lastInvokeTime &#x3D; 0  &#x2F;&#x2F; 上一次执行 func 的时间</span><br><span class="line">  let leading &#x3D; false     &#x2F;&#x2F; 是否第一次触发时立即执行</span><br><span class="line">  let maxing &#x3D; false     &#x2F;&#x2F; 是否有最长等待时间</span><br><span class="line">  let trailing &#x3D; true    &#x2F;&#x2F; 是否在等待周期结束后执行用户传入的函数</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; window.requestAnimationFrame() 方法告诉浏览器您希望执行动画并请求浏览器在下一次重绘之前调用指定的函数来更新动画。该方法使用一个回调函数作为参数，这个回调函数会在浏览器重绘之前调用。</span><br><span class="line">  const useRAF &#x3D; (!wait &amp;&amp; wait !&#x3D;&#x3D; 0 &amp;&amp; typeof root.requestAnimationFrame &#x3D;&#x3D;&#x3D; &#39;function&#39;)</span><br><span class="line">  &#x2F;&#x2F;  以上代码被我注释，可以先不关注</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F; 这个很好理解，如果传入的 func 不是函数，抛出错误，老子干不了这样的活</span><br><span class="line">  if (typeof func !&#x3D; &#39;function&#39;) &#123;</span><br><span class="line">    throw new TypeError(&#39;Expected a function&#39;)</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F; 如果不存在  默认为0</span><br><span class="line">  wait &#x3D; +wait || 0</span><br><span class="line">  if (isObject(options)) &#123;</span><br><span class="line">    leading &#x3D; !!options.leading</span><br><span class="line">    maxing &#x3D; &#39;maxWait&#39; in options</span><br><span class="line">    maxWait &#x3D; maxing ? Math.max(+options.maxWait || 0, wait) : maxWait</span><br><span class="line">    trailing &#x3D; &#39;trailing&#39; in options ? !!options.trailing : trailing</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;  执行 用户传入的 func</span><br><span class="line">&#x2F;&#x2F;  lastInvokeTime 在此时被赋值，记录上一次调用 func的时间</span><br><span class="line">  function invokeFunc(time) &#123;</span><br><span class="line">    const args &#x3D; lastArgs</span><br><span class="line">    const thisArg &#x3D; lastThis</span><br><span class="line">&#x2F;&#x2F;  重置 lastArgs，lastThis</span><br><span class="line">    lastArgs &#x3D; lastThis &#x3D; undefined</span><br><span class="line">    lastInvokeTime &#x3D; time</span><br><span class="line">    result &#x3D; func.apply(thisArg, args)</span><br><span class="line">    return result</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;  setTimeout 一个定时器</span><br><span class="line">  function startTimer(pendingFunc, wait) &#123;</span><br><span class="line">    &#x2F;&#x2F; 如果没有传wait   默认使用浏览器的requestAnimationFrame</span><br><span class="line">    if (useRAF) &#123;</span><br><span class="line">      return root.requestAnimationFrame(pendingFunc)</span><br><span class="line">    &#125;</span><br><span class="line">    return setTimeout(pendingFunc, wait)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;  清除定时器</span><br><span class="line">  function cancelTimer(id) &#123;</span><br><span class="line">    if (useRAF) &#123;</span><br><span class="line">      return root.cancelAnimationFrame(id)</span><br><span class="line">    &#125;</span><br><span class="line">    clearTimeout(id)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;  防抖开始时执行的操作</span><br><span class="line">&#x2F;&#x2F;  lastInvokeTime 在此时被赋值，记录上一次调用 func的时间</span><br><span class="line">&#x2F;&#x2F;  设置了立即执行func，则执行func， 否则设置定时器</span><br><span class="line">  function leadingEdge(time) &#123;</span><br><span class="line">    &#x2F;&#x2F; Reset any &#96;maxWait&#96; timer.</span><br><span class="line">    lastInvokeTime &#x3D; time</span><br><span class="line">    &#x2F;&#x2F; Start the timer for the trailing edge.</span><br><span class="line">    timerId &#x3D; startTimer(timerExpired, wait)</span><br><span class="line">    &#x2F;&#x2F; Invoke the leading edge.</span><br><span class="line">    return leading ? invokeFunc(time) : result</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;  计算还需要等待多久</span><br><span class="line">&#x2F;&#x2F;  没设置最大等待时间，结果为 wait - (当前时间 - 上一次触发(scroll) )  时间，也就是  wait - 已经等候时间</span><br><span class="line">&#x2F;&#x2F;  设置了最长等待时间，结果为 最长等待时间 和 按照wait 计算还需要等待时间 的最小值</span><br><span class="line">  function remainingWait(time) &#123;</span><br><span class="line">    const timeSinceLastCall &#x3D; time - lastCallTime</span><br><span class="line">    const timeSinceLastInvoke &#x3D; time - lastInvokeTime</span><br><span class="line">    const timeWaiting &#x3D; wait - timeSinceLastCall</span><br><span class="line"></span><br><span class="line">    return maxing</span><br><span class="line">      ? Math.min(timeWaiting, maxWait - timeSinceLastInvoke)</span><br><span class="line">      : timeWaiting</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 此时是否应该设置定时器&#x2F;执行用户传入的函数，有四种情况应该执行</span><br><span class="line">&#x2F;&#x2F; 1, 第一次触发</span><br><span class="line">&#x2F;&#x2F; 2. 距离上次触发超过 wait</span><br><span class="line">&#x2F;&#x2F; 3. 当前时间小于 上次触发时间</span><br><span class="line">&#x2F;&#x2F; 4. 设置了最长等待时间，并且等待时长不小于最长等待时间了</span><br><span class="line">  function shouldInvoke(time) &#123;</span><br><span class="line">    const timeSinceLastCall &#x3D; time - lastCallTime</span><br><span class="line">    const timeSinceLastInvoke &#x3D; time - lastInvokeTime</span><br><span class="line"></span><br><span class="line">    return (lastCallTime &#x3D;&#x3D;&#x3D; undefined || (timeSinceLastCall &gt;&#x3D; wait) ||</span><br><span class="line">      (timeSinceLastCall &lt; 0) || (maxing &amp;&amp; timeSinceLastInvoke &gt;&#x3D; maxWait))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 执行函数呢 还是继续设置定时器呢？ 防抖的核心</span><br><span class="line">&#x2F;&#x2F; 时间满足条件，执行</span><br><span class="line">&#x2F;&#x2F; 否则 重新设置定时器</span><br><span class="line">  function timerExpired() &#123;</span><br><span class="line">    const time &#x3D; Date.now()</span><br><span class="line">    if (shouldInvoke(time)) &#123;</span><br><span class="line">      return trailingEdge(time)</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; Restart the timer.</span><br><span class="line">    timerId &#x3D; startTimer(timerExpired, remainingWait(time))</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 执行用户传入的 func 之前的最后一道屏障</span><br><span class="line">&#x2F;&#x2F; 重置 定时器</span><br><span class="line">&#x2F;&#x2F; 执行 func</span><br><span class="line">&#x2F;&#x2F; 重置 lastArgs &#x3D; lastThis 为 undefined</span><br><span class="line">  function trailingEdge(time) &#123;</span><br><span class="line">    timerId &#x3D; undefined</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; Only invoke if we have &#96;lastArgs&#96; which means &#96;func&#96; has been</span><br><span class="line">    &#x2F;&#x2F; debounced at least once.</span><br><span class="line">    if (trailing &amp;&amp; lastArgs) &#123;</span><br><span class="line">      return invokeFunc(time)</span><br><span class="line">    &#125;</span><br><span class="line">    lastArgs &#x3D; lastThis &#x3D; undefined</span><br><span class="line">    return result</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 取消防抖</span><br><span class="line">&#x2F;&#x2F;  重置所有变量  清除定时器</span><br><span class="line">  function cancel() &#123;</span><br><span class="line">    if (timerId !&#x3D;&#x3D; undefined) &#123;</span><br><span class="line">      cancelTimer(timerId)</span><br><span class="line">    &#125;</span><br><span class="line">    lastInvokeTime &#x3D; 0</span><br><span class="line">    lastArgs &#x3D; lastCallTime &#x3D; lastThis &#x3D; timerId &#x3D; undefined</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 定时器已存在，去执行 嗯，我就是这么强势</span><br><span class="line">  function flush() &#123;</span><br><span class="line">    return timerId &#x3D;&#x3D;&#x3D; undefined ? result : trailingEdge(Date.now())</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;  是否正在 等待中</span><br><span class="line">  function pending() &#123;</span><br><span class="line">    return timerId !&#x3D;&#x3D; undefined</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;  正房来了！ 这是入口函数，在这里运筹帷幄，根据敌情调配各个函数，势必骗过用户那个傻子，我没有一直在执行但你以为我一直在响应你哦 </span><br><span class="line">  function debounced(...args) &#123;</span><br><span class="line">    const time &#x3D; Date.now()</span><br><span class="line">    &#x2F;&#x2F; 是否立刻执行</span><br><span class="line">    const isInvoking &#x3D; shouldInvoke(time)</span><br><span class="line">    &#x2F;&#x2F; 保存当前的参数</span><br><span class="line">    lastArgs &#x3D; args</span><br><span class="line">    lastThis &#x3D; this</span><br><span class="line">    lastCallTime &#x3D; time</span><br><span class="line">    &#x2F;&#x2F; 判断如果不应该执行</span><br><span class="line">    if (isInvoking) &#123;</span><br><span class="line">    &#x2F;&#x2F;   定时器未执行（第一次进入）</span><br><span class="line">      if (timerId &#x3D;&#x3D;&#x3D; undefined) &#123;</span><br><span class="line">        return leadingEdge(lastCallTime)</span><br><span class="line">      &#125;</span><br><span class="line">      if (maxing) &#123;</span><br><span class="line">        &#x2F;&#x2F; Handle invocations in a tight loop.</span><br><span class="line">        timerId &#x3D; startTimer(timerExpired, wait)</span><br><span class="line">        return invokeFunc(lastCallTime)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 保证最后执行一次</span><br><span class="line">    if (timerId &#x3D;&#x3D;&#x3D; undefined) &#123;</span><br><span class="line">      timerId &#x3D; startTimer(timerExpired, wait)</span><br><span class="line">    &#125;</span><br><span class="line">    return result</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  debounced.cancel &#x3D; cancel</span><br><span class="line">  debounced.flush &#x3D; flush</span><br><span class="line">  debounced.pending &#x3D; pending</span><br><span class="line">  &#x2F;&#x2F;  下面这句话证明 debounced 我是入口函数，是正宫娘娘！</span><br><span class="line">  return debounced</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default debounce</span><br></pre></td></tr></table></figure>
+<h2 id="lodash节流"><a href="#lodash节流" class="headerlink" title="lodash节流"></a>lodash节流</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function throttle(func, wait, options) &#123;</span><br><span class="line">  let leading &#x3D; true</span><br><span class="line">  let trailing &#x3D; true</span><br><span class="line"></span><br><span class="line">  if (typeof func !&#x3D;&#x3D; &#39;function&#39;) &#123;</span><br><span class="line">    throw new TypeError(&#39;Expected a function&#39;)</span><br><span class="line">  &#125;</span><br><span class="line">  if (isObject(options)) &#123;</span><br><span class="line">    leading &#x3D; &#39;leading&#39; in options ? !!options.leading : leading</span><br><span class="line">    trailing &#x3D; &#39;trailing&#39; in options ? !!options.trailing : trailing</span><br><span class="line">  &#125;</span><br><span class="line">  return debounce(func, wait, &#123;</span><br><span class="line">    leading,</span><br><span class="line">    trailing,</span><br><span class="line">    &#39;maxWait&#39;: wait,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><a target="_blank" rel="noopener" href="https://github.com/yygmind/blog/issues/41">这个</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000017227559">还有这个</a></li>
 </ul>
-</li>
-</ul>
-<h2 id="lodash节流"><a href="#lodash节流" class="headerlink" title="lodash节流"></a>lodash节流</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function throttle(func, wait, options) &#123;</span><br><span class="line">  let leading = true</span><br><span class="line">  let trailing = true</span><br><span class="line"></span><br><span class="line">  if (typeof func !== &apos;function&apos;) &#123;</span><br><span class="line">    throw new TypeError(&apos;Expected a function&apos;)</span><br><span class="line">  &#125;</span><br><span class="line">  if (isObject(options)) &#123;</span><br><span class="line">    leading = &apos;leading&apos; in options ? !!options.leading : leading</span><br><span class="line">    trailing = &apos;trailing&apos; in options ? !!options.trailing : trailing</span><br><span class="line">  &#125;</span><br><span class="line">  return debounce(func, wait, &#123;</span><br><span class="line">    leading,</span><br><span class="line">    trailing,</span><br><span class="line">    &apos;maxWait&apos;: wait,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://github.com/yygmind/blog/issues/41" target="_blank" rel="noopener">这个</a><br><a href="https://segmentfault.com/a/1190000017227559" target="_blank" rel="noopener">还有这个</a></p>
 
       
     </div>
@@ -549,7 +551,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/wechat.jpeg" alt="akCedar 微信支付">
+        <img src="/images/wechat.jpeg" alt="akCedar 微信支付"/>
         <p>微信支付</p>
       </div>
     
@@ -558,7 +560,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝">
+        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝"/>
         <p>支付宝</p>
       </div>
     
@@ -598,7 +600,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/16/JS队列/" rel="prev" title="JS队列">
+              <a href="/2019/07/16/JS%E9%98%9F%E5%88%97/" rel="prev" title="JS队列">
                 JS队列 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -658,7 +660,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpeg" alt="akCedar">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="akCedar"/>
             
               <p class="site-author-name" itemprop="name">akCedar</p>
               <div class="site-description motion-element" itemprop="description">写给以后的自己</div>
@@ -669,9 +673,9 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives/%20%7C%7C%20archive">
                 
-                    <span class="site-state-item-count">73</span>
+                    <span class="site-state-item-count">134</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -683,7 +687,7 @@
                 <div class="site-state-item site-state-categories">
                   
                     
-                      <a href="/categories/">
+                      <a href="/categories/%20%7C%7C%20th">
                     
                   
                     
@@ -704,7 +708,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -716,7 +728,7 @@
                 <div class="site-state-item site-state-tags">
                   
                     
-                      <a href="/tags/">
+                      <a href="/tags/%20%7C%7C%20tags">
                     
                   
                     
@@ -797,7 +809,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">38</span>
+                      
+                    
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -861,7 +875,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节流与防抖定义"><span class="nav-text">节流与防抖定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程"><span class="nav-text">流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lodash防抖"><span class="nav-text">lodash防抖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lodash节流"><span class="nav-text">lodash节流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8A%82%E6%B5%81%E4%B8%8E%E9%98%B2%E6%8A%96%E5%AE%9A%E4%B9%89"><span class="nav-text">节流与防抖定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B"><span class="nav-text">流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lodash%E9%98%B2%E6%8A%96"><span class="nav-text">lodash防抖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lodash%E8%8A%82%E6%B5%81"><span class="nav-text">lodash节流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -870,7 +884,7 @@
       
 
       
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
     </div>
   </aside>
   
@@ -894,7 +908,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.2.0</div>
 
 
 

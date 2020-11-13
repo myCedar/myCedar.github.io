@@ -15,11 +15,11 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
 
 
 
@@ -44,9 +44,9 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.1"/>
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
@@ -69,7 +69,7 @@
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '',
     scheme: 'Gemini',
     version: '7.1.1',
     sidebar: {"position":"right","display":"post","offset":12,"onmobile":false,"dimmer":false},
@@ -97,17 +97,17 @@
 
 
   <meta name="description" content="一种新的搭建私有仓库的方法。（nodeAPP）">
-<meta name="keywords" content="npm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="verdaccio">
 <meta property="og:url" content="http://yoursite.com/2019/10/28/verdaccio/index.html">
 <meta property="og:site_name" content="记下点滴">
 <meta property="og:description" content="一种新的搭建私有仓库的方法。（nodeAPP）">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-29T07:16:41.698Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-10-28T14:48:54.000Z">
+<meta property="article:modified_time" content="2019-10-29T07:16:41.698Z">
+<meta property="article:author" content="akCedar">
+<meta property="article:tag" content="npm">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="verdaccio">
-<meta name="twitter:description" content="一种新的搭建私有仓库的方法。（nodeAPP）">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/10/28/verdaccio/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/28/verdaccio/"/>
 
 
 
@@ -164,7 +164,7 @@
   </style>
 </noscript>
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -225,7 +225,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
 
   </li>
         
@@ -242,7 +242,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
 
   </li>
         
@@ -259,7 +259,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
 
   </li>
         
@@ -276,7 +276,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
 
   </li>
         
@@ -293,7 +293,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
 
   </li>
 
@@ -304,7 +304,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
         </li>
       
     </ul>
@@ -324,7 +324,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -351,7 +353,7 @@
 
   
 
-  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
 
@@ -381,16 +383,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/28/verdaccio/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/28/verdaccio/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="akCedar">
-      <meta itemprop="description" content="写给以后的自己">
-      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="akCedar"/>
+      <meta itemprop="description" content="写给以后的自己"/>
+      <meta itemprop="image" content="/images/avatar.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="记下点滴">
+      <meta itemprop="name" content="记下点滴"/>
     </span>
 
     
@@ -458,7 +460,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具方法/" itemprop="url" rel="index"><span itemprop="name">工具方法</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">工具方法</span></a></span>
 
                 
                 
@@ -493,10 +495,11 @@
       
 
       
-        <p>一种新的搭建私有仓库的方法。（nodeAPP）<br><a id="more"></a></p>
-<h2 id="介绍一下verdaccio"><a href="#介绍一下verdaccio" class="headerlink" title="介绍一下verdaccio"></a>介绍一下verdaccio</h2><p>他是从<a href="mailto:sinopia@1.4.0" target="_blank" rel="noopener">sinopia@1.4.0</a> 复制过来的，因为原来的库已经不再维护更新了，是一个基于nodejs的私有npm仓库。支持Chrome, Firefox, Edge, and IE11这些浏览器</p>
-<h2 id="安装及运行"><a href="#安装及运行" class="headerlink" title="安装及运行"></a>安装及运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 安装</span><br><span class="line">npm install -g verdaccio</span><br><span class="line">yarn global add verdaccio</span><br><span class="line">// 运行</span><br><span class="line">$&gt; verdaccio</span><br><span class="line">warn --- config file  - /home/.config/verdaccio/config.yaml</span><br><span class="line">warn --- http address - http://localhost:4873/ - verdaccio/3.0.0</span><br><span class="line">// 使用</span><br><span class="line">npm set registry http://localhost:4873/</span><br><span class="line">npm install --registry http://localhost:4873</span><br><span class="line">// 更改端口号或者配置文件</span><br><span class="line">verdaccio --listen 4000 --config ~./config.yaml</span><br><span class="line">// 全局安装pm2，用来守护node进程</span><br><span class="line">npm i pm2 -g</span><br><span class="line">// 安装nginx，仍然在 /usr/local/lib下</span><br><span class="line">pm2 start verdaccio</span><br></pre></td></tr></table></figure>
-<h2 id="配置文件详解"><a href="#配置文件详解" class="headerlink" title="配置文件详解"></a>配置文件详解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">storage: ./storage  //npm包存放的路径</span><br><span class="line"></span><br><span class="line">auth:</span><br><span class="line">  htpasswd:</span><br><span class="line">    file: ./htpasswd   //保存用户的账号密码等信息</span><br><span class="line">    # Maximum amount of users allowed to register, defaults to &quot;+inf&quot;.</span><br><span class="line">    # You can set this to -1 to disable registration.</span><br><span class="line">    max_users: -1  //默认为1000，改为-1，禁止注册</span><br><span class="line"></span><br><span class="line"># a list of other known repositories we can talk to</span><br><span class="line">uplinks:</span><br><span class="line">  npmjs:</span><br><span class="line">    url: http://registry.npm.taobao.org/  //默认为npm的官网，由于国情，改为淘宝源</span><br><span class="line"># 网页显示</span><br><span class="line">web:</span><br><span class="line">  enable: true</span><br><span class="line">  title: Verdaccio</span><br><span class="line">  logo: logo.png</span><br><span class="line">  primary_color: &quot;#4b5e40&quot;</span><br><span class="line">  gravatar: true | false</span><br><span class="line">  scope: &quot;@scope&quot;</span><br><span class="line">  sort_packages: asc | desc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">packages:  //配置权限管理</span><br><span class="line">  &apos;@*/*&apos;:</span><br><span class="line">    # scoped packages</span><br><span class="line">    access: $all</span><br><span class="line">    publish: $authenticated</span><br><span class="line"></span><br><span class="line">  &apos;*&apos;:</span><br><span class="line">    # allow all users (including non-authenticated users) to read and</span><br><span class="line">    # publish all packages</span><br><span class="line">    #</span><br><span class="line">    # you can specify usernames/groupnames (depending on your auth plugin)</span><br><span class="line">    # and three keywords: &quot;$all&quot;, &quot;$anonymous&quot;, &quot;$authenticated&quot;</span><br><span class="line">    access: $all  // 所有人都能下载</span><br><span class="line"></span><br><span class="line">    # allow all known users to publish packages</span><br><span class="line">    # (anyone can register by default, remember?)</span><br><span class="line">    publish: $authenticated // 所有人都有发布包的权限，若想指定默认发布改成对应人的名字</span><br><span class="line"></span><br><span class="line">    # if package is not available locally, proxy requests to &apos;npmjs&apos; registry</span><br><span class="line">    proxy: npmjs  // 若安装的报在simopia没有，会去配置的npmjs地址去下载</span><br><span class="line"></span><br><span class="line"># log settings</span><br><span class="line">logs:</span><br><span class="line">  - &#123;type: stdout, format: pretty, level: http&#125;</span><br><span class="line">  #- &#123;type: file, path: verdaccio.log, level: info&#125;</span><br><span class="line"></span><br><span class="line"># you can specify listen address (or simply a port) </span><br><span class="line">listen: 0.0.0.0:4873  // 默认没有，只能在本机访问，添加后可以通过外网访问。</span><br></pre></td></tr></table></figure>
+        <p>一种新的搭建私有仓库的方法。（nodeAPP）</p>
+<a id="more"></a>
+<h2 id="介绍一下verdaccio"><a href="#介绍一下verdaccio" class="headerlink" title="介绍一下verdaccio"></a>介绍一下verdaccio</h2><p>他是从<a href="mailto:&#x73;&#105;&#110;&#111;&#x70;&#x69;&#97;&#x40;&#49;&#x2e;&#x34;&#x2e;&#x30;">&#x73;&#105;&#110;&#111;&#x70;&#x69;&#97;&#x40;&#49;&#x2e;&#x34;&#x2e;&#x30;</a> 复制过来的，因为原来的库已经不再维护更新了，是一个基于nodejs的私有npm仓库。支持Chrome, Firefox, Edge, and IE11这些浏览器</p>
+<h2 id="安装及运行"><a href="#安装及运行" class="headerlink" title="安装及运行"></a>安装及运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 安装</span><br><span class="line">npm install -g verdaccio</span><br><span class="line">yarn global add verdaccio</span><br><span class="line">&#x2F;&#x2F; 运行</span><br><span class="line">$&gt; verdaccio</span><br><span class="line">warn --- config file  - &#x2F;home&#x2F;.config&#x2F;verdaccio&#x2F;config.yaml</span><br><span class="line">warn --- http address - http:&#x2F;&#x2F;localhost:4873&#x2F; - verdaccio&#x2F;3.0.0</span><br><span class="line">&#x2F;&#x2F; 使用</span><br><span class="line">npm set registry http:&#x2F;&#x2F;localhost:4873&#x2F;</span><br><span class="line">npm install --registry http:&#x2F;&#x2F;localhost:4873</span><br><span class="line">&#x2F;&#x2F; 更改端口号或者配置文件</span><br><span class="line">verdaccio --listen 4000 --config ~.&#x2F;config.yaml</span><br><span class="line">&#x2F;&#x2F; 全局安装pm2，用来守护node进程</span><br><span class="line">npm i pm2 -g</span><br><span class="line">&#x2F;&#x2F; 安装nginx，仍然在 &#x2F;usr&#x2F;local&#x2F;lib下</span><br><span class="line">pm2 start verdaccio</span><br></pre></td></tr></table></figure>
+<h2 id="配置文件详解"><a href="#配置文件详解" class="headerlink" title="配置文件详解"></a>配置文件详解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">storage: .&#x2F;storage  &#x2F;&#x2F;npm包存放的路径</span><br><span class="line"></span><br><span class="line">auth:</span><br><span class="line">  htpasswd:</span><br><span class="line">    file: .&#x2F;htpasswd   &#x2F;&#x2F;保存用户的账号密码等信息</span><br><span class="line">    # Maximum amount of users allowed to register, defaults to &quot;+inf&quot;.</span><br><span class="line">    # You can set this to -1 to disable registration.</span><br><span class="line">    max_users: -1  &#x2F;&#x2F;默认为1000，改为-1，禁止注册</span><br><span class="line"></span><br><span class="line"># a list of other known repositories we can talk to</span><br><span class="line">uplinks:</span><br><span class="line">  npmjs:</span><br><span class="line">    url: http:&#x2F;&#x2F;registry.npm.taobao.org&#x2F;  &#x2F;&#x2F;默认为npm的官网，由于国情，改为淘宝源</span><br><span class="line"># 网页显示</span><br><span class="line">web:</span><br><span class="line">  enable: true</span><br><span class="line">  title: Verdaccio</span><br><span class="line">  logo: logo.png</span><br><span class="line">  primary_color: &quot;#4b5e40&quot;</span><br><span class="line">  gravatar: true | false</span><br><span class="line">  scope: &quot;@scope&quot;</span><br><span class="line">  sort_packages: asc | desc</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">packages:  &#x2F;&#x2F;配置权限管理</span><br><span class="line">  &#39;@*&#x2F;*&#39;:</span><br><span class="line">    # scoped packages</span><br><span class="line">    access: $all</span><br><span class="line">    publish: $authenticated</span><br><span class="line"></span><br><span class="line">  &#39;*&#39;:</span><br><span class="line">    # allow all users (including non-authenticated users) to read and</span><br><span class="line">    # publish all packages</span><br><span class="line">    #</span><br><span class="line">    # you can specify usernames&#x2F;groupnames (depending on your auth plugin)</span><br><span class="line">    # and three keywords: &quot;$all&quot;, &quot;$anonymous&quot;, &quot;$authenticated&quot;</span><br><span class="line">    access: $all  &#x2F;&#x2F; 所有人都能下载</span><br><span class="line"></span><br><span class="line">    # allow all known users to publish packages</span><br><span class="line">    # (anyone can register by default, remember?)</span><br><span class="line">    publish: $authenticated &#x2F;&#x2F; 所有人都有发布包的权限，若想指定默认发布改成对应人的名字</span><br><span class="line"></span><br><span class="line">    # if package is not available locally, proxy requests to &#39;npmjs&#39; registry</span><br><span class="line">    proxy: npmjs  &#x2F;&#x2F; 若安装的报在simopia没有，会去配置的npmjs地址去下载</span><br><span class="line"></span><br><span class="line"># log settings</span><br><span class="line">logs:</span><br><span class="line">  - &#123;type: stdout, format: pretty, level: http&#125;</span><br><span class="line">  #- &#123;type: file, path: verdaccio.log, level: info&#125;</span><br><span class="line"></span><br><span class="line"># you can specify listen address (or simply a port) </span><br><span class="line">listen: 0.0.0.0:4873  &#x2F;&#x2F; 默认没有，只能在本机访问，添加后可以通过外网访问。</span><br></pre></td></tr></table></figure>
 <h2 id="权限解释"><a href="#权限解释" class="headerlink" title="权限解释"></a>权限解释</h2><ul>
 <li>access: 表示哪一类用户可以对匹配的项目进行安装(install)</li>
 <li>publish: 表示哪一类用户可以对匹配的项目进行发布(publish)</li>
@@ -507,12 +510,10 @@
 <li>$all 表示所有人(已注册、未注册)都可以执行对应的操作</li>
 <li>$authenticated 表示只有通过验证的人(已注册)可以执行对应操作，注意，任何人都可以去注册账户。</li>
 <li>$anonymous 表示只有匿名者可以进行对应操作（通常无用）</li>
-<li>如果要指定某个用户才有权限，可以直接写上用户名，多个用户用空格隔开<h2 id="ng配置"><a href="#ng配置" class="headerlink" title="ng配置"></a>ng配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen       80;</span><br><span class="line">  server_name  registry.npm.your.server;</span><br><span class="line">  location / &#123;</span><br><span class="line">    proxy_pass    http://127.0.0.1:4873/;</span><br><span class="line">    proxy_set_header        Host $host;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li>如果要指定某个用户才有权限，可以直接写上用户名，多个用户用空格隔开<h2 id="ng配置"><a href="#ng配置" class="headerlink" title="ng配置"></a>ng配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen       80;</span><br><span class="line">  server_name  registry.npm.your.server;</span><br><span class="line">  location &#x2F; &#123;</span><br><span class="line">    proxy_pass    http:&#x2F;&#x2F;127.0.0.1:4873&#x2F;;</span><br><span class="line">    proxy_set_header        Host $host;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="避免缓存"><a href="#避免缓存" class="headerlink" title="避免缓存"></a>避免缓存</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 避免缓存压缩包</span><br><span class="line">uplinks:</span><br><span class="line">  npmjs:</span><br><span class="line">    url: https:&#x2F;&#x2F;registry.npmjs.org&#x2F;  &#x2F;&#x2F; 上层同源的库</span><br><span class="line">    cache: false  &#x2F;&#x2F; 缓存</span><br><span class="line">    maxage: 30m   &#x2F;&#x2F; 最大缓存时间</span><br><span class="line">&#x2F;&#x2F; 使用memory缓存</span><br><span class="line">npm install -g verdaccio-auth-memory</span><br><span class="line">npm install -g verdaccio-memory</span><br><span class="line">auth:</span><br><span class="line">  auth-memory:</span><br><span class="line">    users:</span><br><span class="line">      foo:</span><br><span class="line">        name: test</span><br><span class="line">        password: test</span><br><span class="line">store:</span><br><span class="line">  memory:</span><br><span class="line">    limit: 1000</span><br></pre></td></tr></table></figure>
+但是 当重启服务器的时候 数据会丢失<h2 id="参照"><a href="#参照" class="headerlink" title="参照"></a>参照</h2><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d32ce7e9d4d8">npm私服搭建—verdaccio方案及其最佳实践</a><br><a target="_blank" rel="noopener" href="https://verdaccio.org/docs/en/caching#avoid-caching-tarballs">verdaccio</a><br><a target="_blank" rel="noopener" href="https://github.com/verdaccio/verdaccio">verdaccio  github</a></li>
 </ul>
-<h2 id="避免缓存"><a href="#避免缓存" class="headerlink" title="避免缓存"></a>避免缓存</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 避免缓存压缩包</span><br><span class="line">uplinks:</span><br><span class="line">  npmjs:</span><br><span class="line">    url: https://registry.npmjs.org/  // 上层同源的库</span><br><span class="line">    cache: false  // 缓存</span><br><span class="line">    maxage: 30m   // 最大缓存时间</span><br><span class="line">// 使用memory缓存</span><br><span class="line">npm install -g verdaccio-auth-memory</span><br><span class="line">npm install -g verdaccio-memory</span><br><span class="line">auth:</span><br><span class="line">  auth-memory:</span><br><span class="line">    users:</span><br><span class="line">      foo:</span><br><span class="line">        name: test</span><br><span class="line">        password: test</span><br><span class="line">store:</span><br><span class="line">  memory:</span><br><span class="line">    limit: 1000</span><br></pre></td></tr></table></figure>
-<p>但是 当重启服务器的时候 数据会丢失</p>
-<h2 id="参照"><a href="#参照" class="headerlink" title="参照"></a>参照</h2><p><a href="https://www.jianshu.com/p/d32ce7e9d4d8" target="_blank" rel="noopener">npm私服搭建—verdaccio方案及其最佳实践</a><br><a href="https://verdaccio.org/docs/en/caching#avoid-caching-tarballs" target="_blank" rel="noopener">verdaccio</a><br><a href="https://github.com/verdaccio/verdaccio" target="_blank" rel="noopener">verdaccio  github</a></p>
 
       
     </div>
@@ -543,7 +544,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/wechat.jpeg" alt="akCedar 微信支付">
+        <img src="/images/wechat.jpeg" alt="akCedar 微信支付"/>
         <p>微信支付</p>
       </div>
     
@@ -552,7 +553,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝">
+        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝"/>
         <p>支付宝</p>
       </div>
     
@@ -652,7 +653,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpeg" alt="akCedar">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="akCedar"/>
             
               <p class="site-author-name" itemprop="name">akCedar</p>
               <div class="site-description motion-element" itemprop="description">写给以后的自己</div>
@@ -663,9 +666,9 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives/%20%7C%7C%20archive">
                 
-                    <span class="site-state-item-count">73</span>
+                    <span class="site-state-item-count">134</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -677,7 +680,7 @@
                 <div class="site-state-item site-state-categories">
                   
                     
-                      <a href="/categories/">
+                      <a href="/categories/%20%7C%7C%20th">
                     
                   
                     
@@ -698,7 +701,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -710,7 +721,7 @@
                 <div class="site-state-item site-state-tags">
                   
                     
-                      <a href="/tags/">
+                      <a href="/tags/%20%7C%7C%20tags">
                     
                   
                     
@@ -791,7 +802,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">38</span>
+                      
+                    
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -855,7 +868,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍一下verdaccio"><span class="nav-text">介绍一下verdaccio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装及运行"><span class="nav-text">安装及运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件详解"><span class="nav-text">配置文件详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#权限解释"><span class="nav-text">权限解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ng配置"><span class="nav-text">ng配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#避免缓存"><span class="nav-text">避免缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参照"><span class="nav-text">参照</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8Bverdaccio"><span class="nav-text">介绍一下verdaccio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%8F%8A%E8%BF%90%E8%A1%8C"><span class="nav-text">安装及运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3"><span class="nav-text">配置文件详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%83%E9%99%90%E8%A7%A3%E9%87%8A"><span class="nav-text">权限解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ng%E9%85%8D%E7%BD%AE"><span class="nav-text">ng配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%BF%E5%85%8D%E7%BC%93%E5%AD%98"><span class="nav-text">避免缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E7%85%A7"><span class="nav-text">参照</span></a></li></ol></div>
             
 
           </div>
@@ -864,7 +877,7 @@
       
 
       
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
     </div>
   </aside>
   
@@ -888,7 +901,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.2.0</div>
 
 
 

@@ -15,11 +15,11 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
 
 
 
@@ -44,9 +44,9 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.1"/>
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
@@ -69,7 +69,7 @@
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '',
     scheme: 'Gemini',
     version: '7.1.1',
     sidebar: {"position":"right","display":"post","offset":12,"onmobile":false,"dimmer":false},
@@ -97,17 +97,17 @@
 
 
   <meta name="description" content="本文主要讲了命令行的输入参数解析功能">
-<meta name="keywords" content="commander">
 <meta property="og:type" content="article">
 <meta property="og:title" content="commander">
 <meta property="og:url" content="http://yoursite.com/2019/06/24/commander/index.html">
 <meta property="og:site_name" content="记下点滴">
 <meta property="og:description" content="本文主要讲了命令行的输入参数解析功能">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-24T13:01:05.204Z">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-06-24T13:56:04.000Z">
+<meta property="article:modified_time" content="2019-06-24T13:01:05.204Z">
+<meta property="article:author" content="akCedar">
+<meta property="article:tag" content="commander">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="commander">
-<meta name="twitter:description" content="本文主要讲了命令行的输入参数解析功能">
 
 
 
@@ -115,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/24/commander/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/24/commander/"/>
 
 
 
@@ -164,7 +164,7 @@
   </style>
 </noscript>
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -225,7 +225,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
 
   </li>
         
@@ -242,7 +242,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
 
   </li>
         
@@ -259,7 +259,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
 
   </li>
         
@@ -276,7 +276,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
 
   </li>
         
@@ -293,7 +293,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
 
   </li>
 
@@ -304,7 +304,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
         </li>
       
     </ul>
@@ -324,7 +324,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -351,7 +353,7 @@
 
   
 
-  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+  <a href="https://github.com/myCedar/myCedar.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
 
@@ -381,16 +383,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/24/commander/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/24/commander/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="akCedar">
-      <meta itemprop="description" content="写给以后的自己">
-      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="akCedar"/>
+      <meta itemprop="description" content="写给以后的自己"/>
+      <meta itemprop="image" content="/images/avatar.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="记下点滴">
+      <meta itemprop="name" content="记下点滴"/>
     </span>
 
     
@@ -446,7 +448,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习/" itemprop="url" rel="index"><span itemprop="name">学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a></span>
 
                 
                 
@@ -481,10 +483,11 @@
       
 
       
-        <p>本文主要讲了命令行的输入参数解析功能<br><a id="more"></a></p>
+        <p>本文主要讲了命令行的输入参数解析功能</p>
+<a id="more"></a>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><code>npm install commander</code></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">const commander = require(&apos;commander&apos;);</span><br><span class="line">const program = new commander.Command();</span><br><span class="line">program.version(&apos;0.0.1&apos;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .option(&apos;-d, --debug&apos;, &apos;output extra debugging&apos;)</span><br><span class="line">  .option(&apos;-s, --small&apos;, &apos;small pizza size&apos;)</span><br><span class="line">  .option(&apos;-p, --pizza-type &lt;type&gt;&apos;, &apos;flavour of pizza&apos;);</span><br><span class="line"></span><br><span class="line">program.parse(process.argv);</span><br><span class="line"></span><br><span class="line">if (program.debug) console.log(program.opts());</span><br><span class="line">console.log(&apos;pizza details:&apos;);</span><br><span class="line">if (program.small) console.log(&apos;- small pizza size&apos;);</span><br><span class="line">if (program.pizzaType) console.log(`- $&#123;program.pizzaType&#125;`);</span><br><span class="line"></span><br><span class="line">//  命令输出内容</span><br><span class="line">$ pizza-options -d</span><br><span class="line">&#123; debug: true, small: undefined, pizzaType: undefined &#125;</span><br><span class="line">pizza details:</span><br><span class="line">$ pizza-options -p</span><br><span class="line">error: option `-p, --pizza-type &lt;type&gt;&apos; argument missing</span><br><span class="line">$ pizza-options -ds -p vegetarian</span><br><span class="line">&#123; debug: true, small: true, pizzaType: &apos;vegetarian&apos; &#125;</span><br><span class="line">pizza details:</span><br><span class="line">- small pizza size</span><br><span class="line">- vegetarian</span><br><span class="line">$ pizza-options --pizza-type=cheese</span><br><span class="line">pizza details:</span><br><span class="line">- cheese</span><br></pre></td></tr></table></figure>
-<h2 id="官方案例"><a href="#官方案例" class="headerlink" title="官方案例"></a>官方案例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">var program = require(&apos;commander&apos;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .version(&apos;0.1.0&apos;)</span><br><span class="line">  .option(&apos;-C, --chdir &lt;path&gt;&apos;, &apos;change the working directory&apos;)</span><br><span class="line">  .option(&apos;-c, --config &lt;path&gt;&apos;, &apos;set config path. defaults to ./deploy.conf&apos;)</span><br><span class="line">  .option(&apos;-T, --no-tests&apos;, &apos;ignore test hook&apos;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .command(&apos;setup [env]&apos;)</span><br><span class="line">  .description(&apos;run setup commands for all envs&apos;)</span><br><span class="line">  .option(&quot;-s, --setup_mode [mode]&quot;, &quot;Which setup mode to use&quot;)</span><br><span class="line">  .action(function(env, options)&#123;</span><br><span class="line">    var mode = options.setup_mode || &quot;normal&quot;;</span><br><span class="line">    env = env || &apos;all&apos;;</span><br><span class="line">    console.log(&apos;setup for %s env(s) with %s mode&apos;, env, mode);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .command(&apos;exec &lt;cmd&gt;&apos;)</span><br><span class="line">  .alias(&apos;ex&apos;)</span><br><span class="line">  .description(&apos;execute the given remote cmd&apos;)</span><br><span class="line">  .option(&quot;-e, --exec_mode &lt;mode&gt;&quot;, &quot;Which exec mode to use&quot;)</span><br><span class="line">  .action(function(cmd, options)&#123;</span><br><span class="line">    console.log(&apos;exec &quot;%s&quot; using %s mode&apos;, cmd, options.exec_mode);</span><br><span class="line">  &#125;).on(&apos;--help&apos;, function() &#123;</span><br><span class="line">    console.log(&apos;&apos;);</span><br><span class="line">    console.log(&apos;Examples:&apos;);</span><br><span class="line">    console.log(&apos;&apos;);</span><br><span class="line">    console.log(&apos;  $ deploy exec sequential&apos;);</span><br><span class="line">    console.log(&apos;  $ deploy exec async&apos;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .command(&apos;*&apos;)</span><br><span class="line">  .action(function(env)&#123;</span><br><span class="line">    console.log(&apos;deploying &quot;%s&quot;&apos;, env);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">program.parse(process.argv);</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">const commander &#x3D; require(&#39;commander&#39;);</span><br><span class="line">const program &#x3D; new commander.Command();</span><br><span class="line">program.version(&#39;0.0.1&#39;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .option(&#39;-d, --debug&#39;, &#39;output extra debugging&#39;)</span><br><span class="line">  .option(&#39;-s, --small&#39;, &#39;small pizza size&#39;)</span><br><span class="line">  .option(&#39;-p, --pizza-type &lt;type&gt;&#39;, &#39;flavour of pizza&#39;);</span><br><span class="line"></span><br><span class="line">program.parse(process.argv);</span><br><span class="line"></span><br><span class="line">if (program.debug) console.log(program.opts());</span><br><span class="line">console.log(&#39;pizza details:&#39;);</span><br><span class="line">if (program.small) console.log(&#39;- small pizza size&#39;);</span><br><span class="line">if (program.pizzaType) console.log(&#96;- $&#123;program.pizzaType&#125;&#96;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;  命令输出内容</span><br><span class="line">$ pizza-options -d</span><br><span class="line">&#123; debug: true, small: undefined, pizzaType: undefined &#125;</span><br><span class="line">pizza details:</span><br><span class="line">$ pizza-options -p</span><br><span class="line">error: option &#96;-p, --pizza-type &lt;type&gt;&#39; argument missing</span><br><span class="line">$ pizza-options -ds -p vegetarian</span><br><span class="line">&#123; debug: true, small: true, pizzaType: &#39;vegetarian&#39; &#125;</span><br><span class="line">pizza details:</span><br><span class="line">- small pizza size</span><br><span class="line">- vegetarian</span><br><span class="line">$ pizza-options --pizza-type&#x3D;cheese</span><br><span class="line">pizza details:</span><br><span class="line">- cheese</span><br></pre></td></tr></table></figure>
+<h2 id="官方案例"><a href="#官方案例" class="headerlink" title="官方案例"></a>官方案例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">var program &#x3D; require(&#39;commander&#39;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .version(&#39;0.1.0&#39;)</span><br><span class="line">  .option(&#39;-C, --chdir &lt;path&gt;&#39;, &#39;change the working directory&#39;)</span><br><span class="line">  .option(&#39;-c, --config &lt;path&gt;&#39;, &#39;set config path. defaults to .&#x2F;deploy.conf&#39;)</span><br><span class="line">  .option(&#39;-T, --no-tests&#39;, &#39;ignore test hook&#39;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .command(&#39;setup [env]&#39;)</span><br><span class="line">  .description(&#39;run setup commands for all envs&#39;)</span><br><span class="line">  .option(&quot;-s, --setup_mode [mode]&quot;, &quot;Which setup mode to use&quot;)</span><br><span class="line">  .action(function(env, options)&#123;</span><br><span class="line">    var mode &#x3D; options.setup_mode || &quot;normal&quot;;</span><br><span class="line">    env &#x3D; env || &#39;all&#39;;</span><br><span class="line">    console.log(&#39;setup for %s env(s) with %s mode&#39;, env, mode);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .command(&#39;exec &lt;cmd&gt;&#39;)</span><br><span class="line">  .alias(&#39;ex&#39;)</span><br><span class="line">  .description(&#39;execute the given remote cmd&#39;)</span><br><span class="line">  .option(&quot;-e, --exec_mode &lt;mode&gt;&quot;, &quot;Which exec mode to use&quot;)</span><br><span class="line">  .action(function(cmd, options)&#123;</span><br><span class="line">    console.log(&#39;exec &quot;%s&quot; using %s mode&#39;, cmd, options.exec_mode);</span><br><span class="line">  &#125;).on(&#39;--help&#39;, function() &#123;</span><br><span class="line">    console.log(&#39;&#39;);</span><br><span class="line">    console.log(&#39;Examples:&#39;);</span><br><span class="line">    console.log(&#39;&#39;);</span><br><span class="line">    console.log(&#39;  $ deploy exec sequential&#39;);</span><br><span class="line">    console.log(&#39;  $ deploy exec async&#39;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .command(&#39;*&#39;)</span><br><span class="line">  .action(function(env)&#123;</span><br><span class="line">    console.log(&#39;deploying &quot;%s&quot;&#39;, env);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">program.parse(process.argv);</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -514,7 +517,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/wechat.jpeg" alt="akCedar 微信支付">
+        <img src="/images/wechat.jpeg" alt="akCedar 微信支付"/>
         <p>微信支付</p>
       </div>
     
@@ -523,7 +526,7 @@
         
       
       <div style="display: inline-block">
-        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝">
+        <img src="/images/zhifubao.jpeg" alt="akCedar 支付宝"/>
         <p>支付宝</p>
       </div>
     
@@ -623,7 +626,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpeg" alt="akCedar">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpeg"
+                alt="akCedar"/>
             
               <p class="site-author-name" itemprop="name">akCedar</p>
               <div class="site-description motion-element" itemprop="description">写给以后的自己</div>
@@ -634,9 +639,9 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives/%20%7C%7C%20archive">
                 
-                    <span class="site-state-item-count">73</span>
+                    <span class="site-state-item-count">134</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -648,7 +653,7 @@
                 <div class="site-state-item site-state-categories">
                   
                     
-                      <a href="/categories/">
+                      <a href="/categories/%20%7C%7C%20th">
                     
                   
                     
@@ -669,7 +674,15 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -681,7 +694,7 @@
                 <div class="site-state-item site-state-tags">
                   
                     
-                      <a href="/tags/">
+                      <a href="/tags/%20%7C%7C%20tags">
                     
                   
                     
@@ -762,7 +775,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">38</span>
+                      
+                    
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -826,7 +841,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#官方案例"><span class="nav-text">官方案例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E6%A1%88%E4%BE%8B"><span class="nav-text">官方案例</span></a></li></ol></div>
             
 
           </div>
@@ -835,7 +850,7 @@
       
 
       
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=546043947&auto=1&height=66"></iframe>
     </div>
   </aside>
   
@@ -859,7 +874,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.2.0</div>
 
 
 
